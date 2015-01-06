@@ -1,0 +1,61 @@
+$leftColWidth: 16em;
+$gutterWidth: 2em;
+
+.container {
+  max-width: 80 + ($gutterWidth * 2);
+  padding: 0 $gutterWidth;
+  margin: 0 auto;
+}
+
+.content {
+
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
+
+  > aside {
+    padding: 2em 0;
+    width: $leftColWidth;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  > aside + section {
+    margin-left: $leftColWidth + $gutterWidth;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+    color: rgba(0, 0, 0, .65);
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+}
+
+.content .heading {
+  font-size: 2em;
+  padding: 2em;
+  margin-top: -1em;
+  margin-left: $gutterWidth * -1;
+  margin-right:  $gutterWidth * -1;
+  margin-bottom: 1em;
+  background-color: rgba(0, 0, 0, .05);
+
+  p {
+    font-size: .5em;
+    color: rgba(0, 0, 0, .65);
+    margin-bottom: 0;
+  }
+}

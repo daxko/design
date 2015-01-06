@@ -1,0 +1,113 @@
+// These are styleguide specific styles
+
+blockquote {
+  margin-left: .5em;
+  padding-left: 1em;
+  color: rgba(0, 0, 0, .65);
+  border-left: 5px solid rgba(0, 0, 0, .1);
+}
+
+.page-header {
+
+  color: #fff;
+  padding: 8em 0 4em;
+
+  h1 {
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+section :first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.good, .bad {
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  display: inline-block;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+  [class*=icon-] {
+    color: #fff;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 1em;
+    line-height: 20px;
+    text-align: center;
+    margin-right: .2em;
+  }
+}
+
+.good {
+  color: darken($key-lime, 10%);
+  [class*=icon-] {
+    background-color: $key-lime;
+  }
+}
+
+.bad {
+  color: $red-velvet;
+  [class*=icon-] {
+    background-color: $red-velvet;
+  }
+}
+
+ul.colors {
+  padding-left: 0;
+}
+
+.swatch {
+
+  display: block;
+  width: (100/4) - 1%;
+  margin-right: 1%;
+  float: left;
+  color: #fff;
+  font-weight: 100;
+  position: relative;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+
+  .details {
+    padding: 1em;
+  }
+
+  dl.hex {
+    float: left;
+  }
+
+  dl.rgb {
+    float: right;
+  }
+
+  dt {
+    opacity: .6;
+    font-size: .8em;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 73em) {
+  .swatch {
+    width: 100%;
+    display: block;
+    float: none;
+    height: 10em;
+  }
+}

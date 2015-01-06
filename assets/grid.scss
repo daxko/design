@@ -1,0 +1,28 @@
+.section {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.col {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 1.5rem;
+}
+
+.col + .col {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, .035);
+}
+
+@media (max-width: 73em) {
+  .section {
+    display: block;
+  }
+
+  .col {
+    display: block;
+    overflow: hidden;
+    padding-right: 0;
+  }
+}
