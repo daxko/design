@@ -7,6 +7,10 @@
   "scripts": {
     "deploy": "./deploy.sh"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daxko/design.git"
+  },
   "dependencies": {
     "wintersmith": "~2.1.0",
     "grunt": "~0.4.5",
