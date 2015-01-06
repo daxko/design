@@ -7,7 +7,7 @@ git remote set-url origin "https://${GH_TOKEN}@github.com/daxko/design.git"
 grunt build
 cd build
 
-git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/daxko/design .
+git clone --branch=gh-pages https://${GH_TOKEN}@github.com/daxko/design .
 git add --all
 git commit -m "Deploying ${TRAVIS_COMMIT} to gh-pages"
 git push
