@@ -6,7 +6,7 @@
   "license": "mit",
   "scripts": {
     "deploy": "./deploy.sh"
-  }
+  },
   "dependencies": {
     "wintersmith": "~2.1.0",
     "grunt": "~0.4.5",
