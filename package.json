@@ -1,9 +1,12 @@
 {
-  "name": "design @ daxko",
+  "name": "daxko.design",
   "version": "1.0.0",
   "description": "",
   "author": "Daxko",
   "license": "mit",
+  "scripts": {
+    "deploy": "./deploy.sh"
+  }
   "dependencies": {
     "wintersmith": "~2.1.0",
     "grunt": "~0.4.5",
