@@ -8,6 +8,9 @@ branches:
   - master
 script:
 - './deploy.sh'
+cache:
+  directories:
+    - node_modules
 env:
   global:
     secure: Di+FiweC9GPHz4oFPLMOezaKNt35lz4CfJZ00awVUtHqoRspcqfbk8R7DsQPtEO858TevhA9Yw7k24A6/Yp0tYu2MoxogrOz1u1qYXUnyymz/FqPcxYSX6DRPfV9oj0xeCA1SCHx/NRxt5uNQoPGczcZtzsb4ZRnRjqC1iNQoBk=
