@@ -19,5 +19,5 @@ notifications:
     rooms:
       secure: TenksGLcXSWdGbscxTtD1lPRSvt/xskjOn2LSkWImzR5+Wo0v9Xorj79xE/f7ifJ2LKCQwMEQlkT5OVZ5kte7tjrNPiC00PB6Fsdniu+BdTn8k3s6TBD+iZrakMtLJ7+7i67fKul+y4NJDgz4454TiFhL4EmUhgNF+JCsO1UVDE=
     template:
-      - "%{repository}#%{build_number} (%{commit} : %{author}): %{message}"
-      - "%{compare_url}"
+      - '%{repository_slug}#%{build_number} (%{author}): %{commit_message} (<a href="%{compare_url}">%{commit}</a>)'
+    format: html
