@@ -24,3 +24,7 @@ Allows you to edit sass files for them to be automatically compiled.
 `grunt build`
 
 Compiles the site down to the static assets.
+
+# Skipping Builds
+
+If you're making some minor changes that don't need to trigger a build, you can simply include `[skip ci]` anywhere as part of your commit message.
