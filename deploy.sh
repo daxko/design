@@ -10,7 +10,7 @@ rm -rf build/*
 grunt build && cd build
 
 # Prepend the basepath to all absolute links for gh-pages
-find . -name '*.html' -type f | xargs -L1 sed -i '' -E "s/((href|src)=\"?)(\/)/\1\/$BASE_PATH\//g"
+find . -name '*.html' -type f | xargs sed -i '' -E "s/((href|src)=\"?)(\/)/\1\/$BASE_PATH\//g"
 
 git add --all
 git commit -m "Deploying ${TRAVIS_COMMIT} to gh-pages"
