@@ -80,11 +80,11 @@ Approximately 8% of males and 0.5% of females have some sort of color blindness.
   <div class="col">
     <div style="float: left; width: 50%; text-align: center;">
       <h4>Normal Vision</h4>
-      <img src="images/colors1.png"/>
+      <img src="/images/colors1.png"/>
     </div>
     <div style="float: right; width: 50%; text-align: center;">
       <h4>Color Blind Vision</h4>
-      <img src="images/colors2.png"/>
+      <img src="/images/colors2.png"/>
     </div>
   </div>
 </div>
