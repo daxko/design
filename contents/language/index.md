@@ -3,7 +3,7 @@ title: "Language"
 theme: "cotton-candy"
 template: toc.hbs
 ---
-
+SPANISH RIGHT
 Our users are people, and they have emotions and feelings. You should talk to our users informally -- but be concise and to the point. Use language that encourages and empowers them to get their work done without patronizing or insulting them.
 
 When you're writing, consider what the user's state of mind currently is. Did they just complete a task successfully? Did the system encounter some sort of error? Think about how the user would feel in that situation and that will help you determine how best to craft your language.
