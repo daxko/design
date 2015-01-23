@@ -1,11 +1,12 @@
-@import "defaults";
 @import "colors";
+@import "defaults";
 @import "layout";
 @import "grid";
 
 // Styleguide specific styles
 @import "styleguide";
 @import "nav";
+@import "code";
 
 // Shared components
 @import "components/daxicons";

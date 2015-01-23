@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-theme: "dark-gray"
+theme: "gray-500"
 ---
 
 ## Branding

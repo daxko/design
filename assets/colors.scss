@@ -2,24 +2,10 @@ $red-velvet:     #ee264e;
 $banana-pudding: #efad1c;
 $key-lime:       #b3ba5a;
 $cotton-candy:   #a5dbd8;
-$dark-gray:      #6d6d6d;
 
-.red-velvet {
-  background-color: $red-velvet;
-}
-
-.cotton-candy {
-  background-color: $cotton-candy;
-}
-
-.banana-pudding {
-  background-color: $banana-pudding;
-}
-
-.key-lime {
-  background-color: $key-lime;
-}
-
-.dark-gray {
-  background-color: $dark-gray;
-}
+$gray-50:  lighten(#000, 97.5%); // #f9f9f9
+$gray-100: lighten(#000, 90.0%); // #e6e6e6
+$gray-300: lighten(#000, 65.0%); // #a6a6a6
+$gray-500: lighten(#000, 42.7%); // #6d6d6d
+$gray-700: lighten(#000, 33.0%); // #545454
+$gray-900: lighten(#000, 17.5%); // #2d2d2d

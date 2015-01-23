@@ -1,5 +1,46 @@
 // These are styleguide specific styles
 
+// Colors
+.red-velvet {
+  background-color: $red-velvet;
+}
+
+.cotton-candy {
+  background-color: $cotton-candy;
+}
+
+.banana-pudding {
+  background-color: $banana-pudding;
+}
+
+.key-lime {
+  background-color: $key-lime;
+}
+
+.gray-50 {
+  background-color: $gray-50;
+}
+
+.gray-100 {
+  background-color: $gray-100;
+}
+
+.gray-300 {
+  background-color: $gray-300;
+}
+
+.gray-500 {
+  background-color: $gray-500;
+}
+
+.gray-700 {
+  background-color: $gray-700;
+}
+
+.gray-900 {
+  background-color: $gray-900;
+}
+
 blockquote {
   margin-left: .5em;
   padding-left: 1em;
@@ -20,7 +61,7 @@ blockquote {
 
 }
 
-section :first-child {
+section > :first-child {
   margin-top: 0;
   padding-top: 0;
 }
@@ -84,6 +125,10 @@ ul.colors {
     padding: 1em;
   }
 
+  dl {
+    margin: 1em 0;
+  }
+
   dl.hex {
     float: left;
   }
@@ -99,6 +144,35 @@ ul.colors {
 
   dd {
     margin-left: 0;
+  }
+
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.swatch-list {
+  list-style-type: none;
+
+  li {
+    padding: .5em 1em;
+  }
+
+  em {
+    font-style: normal;
+    opacity: .6;
+    font-size: .8em;
+  }
+
+  .gray-500,
+  .gray-700,
+  .gray-900 {
+    color: #fff;
   }
 
 }

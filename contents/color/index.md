@@ -5,6 +5,10 @@ theme: "key-lime"
 
 ## Color palette
 
+This color palette is composed of primary colors to be used for accent and highlighting and gray scale colors to be used to shade text and to convey hierarchical information.
+
+### Primary Colors
+
 The primary color palette consists of daxko's four primary brand colors.
 
 <ul class="colors">
@@ -61,6 +65,75 @@ The primary color palette consists of daxko's four primary brand colors.
     </div>
   </li>
 </ul>
+
+### Gray Scale Colors
+
+<div class="section">
+  <div class="col">
+    <p>There are various shades of gray that can be used for application chrome colors or to make distinctions between different kinds of information. Anything with an background alpha value greater than 50% should have white <code>#fff</code> text and anything less should have black <code>#000</code> text to maintain good visual contrast.</p>
+    <p></p>
+  </div>
+  <div class="col">
+    <ul class="swatch-list">
+      <li class="gray-50">
+        50
+        <span class="pull-right">
+          <em>Hex</em> #f9f9f9
+        </span>
+      </li>
+      <li class="gray-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #e6e6e6
+        </span>
+      </li>
+      <li class="gray-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #a6a6a6
+        </span>
+      </li>
+      <li class="gray-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #6d6d6d
+        </span>
+      </li>
+      <li class="gray-700">
+        700
+        <span class="pull-right">
+          <em>Hex</em> #545454
+        </span>
+      </li>
+      <li class="gray-900">
+        900
+        <span class="pull-right">
+          <em>Hex</em> #2d2d2d
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+### Variables
+
+Every color is available as a variable as part of our [sass mixins](https://github.com/daxko/design/blob/master/assets/colors.scss).
+
+```scss
+// Primary Colors
+background-color: $red-velvet;
+background-color: $banana-pudding;
+background-color: $cotton-candy;
+background-color: $key-lime;
+
+// Gray Scale Colors
+background-color: $gray-50;
+background-color: $gray-100;
+background-color: $gray-300;
+background-color: $gray-500;
+background-color: $gray-700;
+background-color: $gray-900;
+```
 
 ## Primary & Secondary Colors
 
