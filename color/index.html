@@ -28,6 +28,8 @@
   <main class="content container" role="main">
 <section>
 <h2 id="color-palette">Color palette</h2>
+<p>This color palette is composed of primary colors to be used for accent and highlighting and gray scale colors to be used to shade text and to convey hierarchical information.</p>
+<h3 id="primary-colors">Primary Colors</h3>
 <p>The primary color palette consists of daxko’s four primary brand colors.</p>
 <ul class="colors">
   <li class="swatch red-velvet">
@@ -84,6 +86,70 @@
   </li>
 </ul>
 
+<h3 id="gray-scale-colors">Gray Scale Colors</h3>
+<div class="section">
+  <div class="col">
+    <p>There are various shades of gray that can be used for application chrome colors or to make distinctions between different kinds of information. Anything with an background alpha value greater than 50% should have white <code>#fff</code> text and anything less should have black <code>#000</code> text to maintain good visual contrast.</p>
+    <p></p>
+  </div>
+  <div class="col">
+    <ul class="swatch-list">
+      <li class="gray-50">
+        50
+        <span class="pull-right">
+          <em>Hex</em> #f9f9f9
+        </span>
+      </li>
+      <li class="gray-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #e6e6e6
+        </span>
+      </li>
+      <li class="gray-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #a6a6a6
+        </span>
+      </li>
+      <li class="gray-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #6d6d6d
+        </span>
+      </li>
+      <li class="gray-700">
+        700
+        <span class="pull-right">
+          <em>Hex</em> #545454
+        </span>
+      </li>
+      <li class="gray-900">
+        900
+        <span class="pull-right">
+          <em>Hex</em> #2d2d2d
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h3 id="variables">Variables</h3>
+<p>Every color is available as a variable as part of our <a href="https://github.com/daxko/design/blob/master/assets/colors.scss">sass mixins</a>.</p>
+<pre><code class="lang-scss"><span class="comment">// Primary Colors</span>
+<span class="attribute">background-color</span><span class="value">: $red-velvet;</span>
+<span class="attribute">background-color</span><span class="value">: $banana-pudding;</span>
+<span class="attribute">background-color</span><span class="value">: $cotton-candy;</span>
+<span class="attribute">background-color</span><span class="value">: $key-lime;</span>
+
+<span class="comment">// Gray Scale Colors</span>
+<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">50</span>;</span>
+<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">100</span>;</span>
+<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">300</span>;</span>
+<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">500</span>;</span>
+<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">700</span>;</span>
+<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">900</span>;</span>
+</code></pre>
 <h2 id="primary-secondary-colors">Primary &amp; Secondary Colors</h2>
 <p>Try not to have more than 2 primary colors on the screen - we don’t want to overwhelm the user. It’s okay to have one color for primary elements, and a secondary color for accents.</p>
 <h2 id="color-blindness">Color Blindness</h2>
