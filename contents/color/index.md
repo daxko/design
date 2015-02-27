@@ -78,7 +78,7 @@ The primary color palette consists of daxko's four primary brand colors.
       <li class="gray-50">
         50
         <span class="pull-right">
-          <em>Hex</em> #f9f9f9
+          <em>Hex</em> #f6f6f6
         </span>
       </li>
       <li class="gray-100">
