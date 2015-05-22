@@ -12,8 +12,8 @@ This color palette is composed of primary colors to be used for accent and highl
 The primary color palette consists of daxko's four primary brand colors.
 
 <ul class="colors">
-  <li class="swatch red-velvet">
-    <div class="details">
+  <li class="swatch">
+    <div class="details red-velvet">
       <h3>Red Velvet</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -25,8 +25,8 @@ The primary color palette consists of daxko's four primary brand colors.
       </dl>
     </div>
   </li>
-  <li class="swatch banana-pudding">
-    <div class="details">
+  <li class="swatch">
+    <div class="details banana-pudding">
       <h3>Banana Pudding</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -38,8 +38,8 @@ The primary color palette consists of daxko's four primary brand colors.
       </dl>
     </div>
   </li>
-  <li class="swatch key-lime">
-    <div class="details">
+  <li class="swatch">
+    <div class="details key-lime">
       <h3>Key Lime</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -51,8 +51,8 @@ The primary color palette consists of daxko's four primary brand colors.
       </dl>
     </div>
   </li>
-  <li class="swatch cotton-candy">
-    <div class="details">
+  <li class="swatch">
+    <div class="details cotton-candy">
       <h3>Cotton Candy</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -68,12 +68,12 @@ The primary color palette consists of daxko's four primary brand colors.
 
 ### Gray Scale Colors
 
-<div class="section">
-  <div class="col">
+<div class="grid">
+  <div class="col-7">
     <p>There are various shades of gray that can be used for application chrome colors or to make distinctions between different kinds of information. Anything with an background alpha value greater than 50% should have white <code>#fff</code> text and anything less should have black <code>#000</code> text to maintain good visual contrast.</p>
     <p></p>
   </div>
-  <div class="col">
+  <div class="col-5">
     <ul class="swatch-list">
       <li class="gray-50">
         50
@@ -121,18 +121,18 @@ Every color is available as a variable as part of our [sass mixins](https://gith
 
 ```scss
 // Primary Colors
-background-color: $red-velvet;
-background-color: $banana-pudding;
-background-color: $cotton-candy;
-background-color: $key-lime;
+$red-velvet:     #ee264e;
+$banana-pudding: #efad1c;
+$key-lime:       #b3ba5a;
+$cotton-candy:   #a5dbd8;
 
 // Gray Scale Colors
-background-color: $gray-50;
-background-color: $gray-100;
-background-color: $gray-300;
-background-color: $gray-500;
-background-color: $gray-700;
-background-color: $gray-900;
+$gray-50:  lighten(#000, 96.5%); // #f6f6f6
+$gray-100: lighten(#000, 90.0%); // #e6e6e6
+$gray-300: lighten(#000, 65.0%); // #a6a6a6
+$gray-500: lighten(#000, 42.7%); // #6d6d6d
+$gray-700: lighten(#000, 33.0%); // #545454
+$gray-900: lighten(#000, 17.5%); // #2d2d2d
 ```
 
 ## Primary & Secondary Colors

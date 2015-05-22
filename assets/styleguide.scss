@@ -1,4 +1,84 @@
+$base-font-family: "Noto Sans", sans-serif;
+
+@import "global";
+@import "nav";
+@import "code";
+
 // These are styleguide specific styles
+
+$leftColWidth: 16em;
+$gutterWidth: 2em;
+
+h2,
+h3 {
+  border-bottom: 1px solid $gray-100;
+  padding-bottom: 5px;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+
+* > :first-child {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 80 + ($gutterWidth * 2);
+  padding: 0 $gutterWidth;
+  margin: 0 auto;
+}
+
+.content {
+
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
+
+  > aside {
+    padding: 2em 0;
+    width: $leftColWidth;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  > aside + section {
+    margin-left: $leftColWidth + $gutterWidth;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+    color: rgba(0, 0, 0, .65);
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+}
+
+.content .heading {
+  font-size: 2em;
+  padding: 2em;
+  margin-top: -1em;
+  margin-left: $gutterWidth * -1;
+  margin-right:  $gutterWidth * -1;
+  margin-bottom: 1em;
+  background-color: rgba(0, 0, 0, .05);
+
+  p {
+    font-size: .5em;
+    color: rgba(0, 0, 0, .65);
+    margin-bottom: 0;
+  }
+}
 
 // Colors
 .red-velvet {
@@ -103,18 +183,13 @@ section > :first-child {
 }
 
 ul.colors {
-  padding-left: 0;
+  @include grid();
 }
 
 .swatch {
-
-  display: block;
-  width: (100/4) - 1%;
-  margin-right: 1%;
-  float: left;
+  @include col(1/4);
   color: #fff;
   font-weight: 100;
-  position: relative;
 
   h3 {
     margin-top: 0;
@@ -123,10 +198,12 @@ ul.colors {
 
   .details {
     padding: 1em;
+    position: relative;
+    overflow: hidden;
   }
 
   dl {
-    margin: 1em 0;
+    margin-top: 1em;
   }
 
   dl.hex {
@@ -175,6 +252,15 @@ ul.colors {
     color: #fff;
   }
 
+}
+
+.box {
+  height: 2em;
+  background-color: $gray-100;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 2em;
+  margin-bottom: $grid-gutter;
 }
 
 @media (max-width: 73em) {

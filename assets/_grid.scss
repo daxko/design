@@ -1,0 +1,49 @@
+$grid-gutter: 10px !default;
+$grid-columns: 12 !default;
+
+// Grids
+// ----------------------------------------------
+
+@mixin grid() {
+  display: block;
+  padding: 0;
+  margin: 0 (-.5 * $grid-gutter);
+  margin-bottom: -.5 * $grid-gutter;
+  font-size: 0; // remove whitespace between elements
+}
+
+@mixin col($width: 1) {
+  font-size: 1rem; // restore the base font-size to the column
+  display: inline-block;
+  width: percentage($width);
+  padding: 0 (.5 * $grid-gutter);
+  margin-bottom: $grid-gutter;
+  vertical-align: top;
+  text-align: left;
+}
+
+.grid {
+  @include grid();
+
+  .grid [class*=col-] {
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include col($i/$grid-columns);
+    }
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}

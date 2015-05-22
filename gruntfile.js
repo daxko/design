@@ -3,8 +3,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     config: {
-      contents: 'contents/',
-      assets: 'assets/'
+      contents: 'contents',
+      assets: 'assets'
     },
 
     sass: {
@@ -12,17 +12,9 @@ module.exports = function(grunt) {
         style: 'compact',
         sourcemap: true
       },
-      compile: {
+      dist: {
         files: {
-          '<%= config.contents %>css/global.css': '<%= config.assets %>global.scss'
-        }
-      }
-    },
-
-    less: {
-      bootstrap: {
-        files: {
-          '<%= config.contents %>css/bootstrap.css': ['<%= config.assets %>bootstrap/bootstrap.less']
+          '<%= config.contents %>/css/styleguide.css': '<%= config.assets %>/styleguide.scss'
         }
       }
     },
@@ -30,19 +22,15 @@ module.exports = function(grunt) {
     cssmin: {
       assets: {
         files: {
-          '<%= config.contents %>/css/global.css': ['<%= config.contents %>/css/bootstrap.css', '<%= config.contents %>/css/global.css']
+          '<%= config.contents %>/css/styleguide.min.css': ['<%= config.contents %>/css/styleguide.css']
         }
       }
     },
 
     watch: {
       sass: {
-        files: ['<%= config.assets %>/**/*.{scss,sass}'],
+        files: ['<%= config.assets %>/{,*/}*.{scss,sass}'],
         tasks: ['sass', 'cssmin']
-      },
-      less: {
-        files: ['<%= config.assets %>bootstrap/*.less'],
-        tasks: ['less', 'cssmin']
       }
     },
 
@@ -60,7 +48,7 @@ module.exports = function(grunt) {
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
-  grunt.registerTask('assets', ['sass', 'less', 'cssmin']);
+  grunt.registerTask('assets', ['sass', 'cssmin']);
   grunt.registerTask('build', ['assets', 'shell:wintersmith']);
   grunt.registerTask('preview', ['assets', 'shell:wintersmith-preview']);
 
