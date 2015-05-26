@@ -97,14 +97,14 @@ Standard buttons are easy -- just use a `.btn` class! You can apply this class t
 
 When using a `<button>` element, always specify the type. When using a `<a>` element, always include `role="button"` for accessibility.
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn">Button Button</button>
 <a class="btn" href="#" role="button">Link Button</a>
 {{/example}}
 
 Buttons come in two sizes, big and small. Just add a `.btn-mini` to use the smaller variation.
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn">Normal Button</button>
 <button type="button" class="btn btn-mini">Small Button</button>
 {{/example}}
@@ -113,7 +113,7 @@ Buttons come in two sizes, big and small. Just add a `.btn-mini` to use the smal
 
 Primary buttons are used to indicate a primary action, such as a form save. Just add a `.btn-primary` class to your button, and you're good to go!
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn btn-primary">Primary Button</button>
 <button type="button" class="btn btn-mini btn-primary">Small Primary Button</button>
 {{/example}}
@@ -122,7 +122,7 @@ Primary buttons are used to indicate a primary action, such as a form save. Just
 
 Welcome to the **danger zone**. Danger buttons are red, indicating that the following action may do something potentially dangerous. Just add a `.btn-danger`.
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn btn-danger">Danger Button</button>
 <button type="button" class="btn btn-mini btn-danger">Small Danger Button</button>
 {{/example}}
@@ -132,19 +132,19 @@ Welcome to the **danger zone**. Danger buttons are red, indicating that the foll
 `<button>` elements can be disabled with the `disabled` attribute, and `<a>` elements with the `.disabled` class.
 <button type="button" class="btn" disabled>Disabled Button</button> <a href="#" class="btn disabled">Disabled Link</a>
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn" disabled>Disabled Button</button>
 <a href="#" class="btn disabled">Disabled Link</a>
 {{/example}}
 
 Disabled styling is also applied to primary and danger buttons:
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn btn-primary" disabled>Primary Disabled Button</button>
 <a href="#" class="btn btn-primary disabled">Primary Disabled Link</a>
 {{/example}}
 
-{{example 'html'}}
+{{#example 'html'}}
 <button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
 <a href="#" class="btn btn-danger disabled">Danger Disabled Link</a>
 {{/example}}
