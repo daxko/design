@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Color — design @ daxko</title>
+  <title>Color — </title>
 </head>
 <body>
   <header>
@@ -25,15 +25,13 @@
       </div>
     </div>
   </header>
-  <main class="content container" role="main">
-<section>
-<h2 id="color-palette">Color palette</h2>
+  <main class="content container" role="main"><h2 id="color-palette">Color palette</h2>
 <p>This color palette is composed of primary colors to be used for accent and highlighting and gray scale colors to be used to shade text and to convey hierarchical information.</p>
 <h3 id="primary-colors">Primary Colors</h3>
-<p>The primary color palette consists of daxko’s four primary brand colors.</p>
+<p>The primary color palette consists of daxko&#39;s four primary brand colors.</p>
 <ul class="colors">
-  <li class="swatch red-velvet">
-    <div class="details">
+  <li class="swatch">
+    <div class="details red-velvet">
       <h3>Red Velvet</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -45,8 +43,8 @@
       </dl>
     </div>
   </li>
-  <li class="swatch banana-pudding">
-    <div class="details">
+  <li class="swatch">
+    <div class="details banana-pudding">
       <h3>Banana Pudding</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -58,8 +56,8 @@
       </dl>
     </div>
   </li>
-  <li class="swatch key-lime">
-    <div class="details">
+  <li class="swatch">
+    <div class="details key-lime">
       <h3>Key Lime</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -71,8 +69,8 @@
       </dl>
     </div>
   </li>
-  <li class="swatch cotton-candy">
-    <div class="details">
+  <li class="swatch">
+    <div class="details cotton-candy">
       <h3>Cotton Candy</h3>
       <dl class="hex">
         <dt>Hex</dt>
@@ -87,12 +85,12 @@
 </ul>
 
 <h3 id="gray-scale-colors">Gray Scale Colors</h3>
-<div class="section">
-  <div class="col">
+<div class="grid">
+  <div class="col-7">
     <p>There are various shades of gray that can be used for application chrome colors or to make distinctions between different kinds of information. Anything with an background alpha value greater than 50% should have white <code>#fff</code> text and anything less should have black <code>#000</code> text to maintain good visual contrast.</p>
     <p></p>
   </div>
-  <div class="col">
+  <div class="col-5">
     <ul class="swatch-list">
       <li class="gray-50">
         50
@@ -135,30 +133,30 @@
 </div>
 
 <h3 id="variables">Variables</h3>
-<p>Every color is available as a variable as part of our <a href="https://github.com/daxko/design/blob/master/assets/colors.scss">sass mixins</a>.</p>
+<p>Every color is available as a variable as part of our <a href="https://github.com/daxko/design/blob/master/scss/colors.scss">sass mixins</a>.</p>
 <pre><code class="lang-scss"><span class="comment">// Primary Colors</span>
-<span class="attribute">background-color</span><span class="value">: $red-velvet;</span>
-<span class="attribute">background-color</span><span class="value">: $banana-pudding;</span>
-<span class="attribute">background-color</span><span class="value">: $cotton-candy;</span>
-<span class="attribute">background-color</span><span class="value">: $key-lime;</span>
+<span class="variable">$red-velvet</span><span class="value">:     <span class="hexcolor">#ee264e</span>;</span>
+<span class="variable">$banana-pudding</span><span class="value">: <span class="hexcolor">#efad1c</span>;</span>
+<span class="variable">$key-lime</span><span class="value">:       <span class="hexcolor">#b3ba5a</span>;</span>
+<span class="variable">$cotton-candy</span><span class="value">:   <span class="hexcolor">#a5dbd8</span>;</span>
 
 <span class="comment">// Gray Scale Colors</span>
-<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">50</span>;</span>
-<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">100</span>;</span>
-<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">300</span>;</span>
-<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">500</span>;</span>
-<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">700</span>;</span>
-<span class="attribute">background-color</span><span class="value">: $gray-<span class="number">900</span>;</span>
+<span class="variable">$gray-50</span><span class="value">:  <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">96.5%</span>);</span> <span class="comment">// #f6f6f6</span>
+<span class="variable">$gray-100</span><span class="value">: <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">90.0%</span>);</span> <span class="comment">// #e6e6e6</span>
+<span class="variable">$gray-300</span><span class="value">: <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">65.0%</span>);</span> <span class="comment">// #a6a6a6</span>
+<span class="variable">$gray-500</span><span class="value">: <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">42.7%</span>);</span> <span class="comment">// #6d6d6d</span>
+<span class="variable">$gray-700</span><span class="value">: <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">33.0%</span>);</span> <span class="comment">// #545454</span>
+<span class="variable">$gray-900</span><span class="value">: <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">17.5%</span>);</span> <span class="comment">// #2d2d2d</span>
 </code></pre>
 <h2 id="primary-secondary-colors">Primary &amp; Secondary Colors</h2>
-<p>Try not to have more than 2 primary colors on the screen - we don’t want to overwhelm the user. It’s okay to have one color for primary elements, and a secondary color for accents.</p>
+<p>Try not to have more than 2 primary colors on the screen - we don&#39;t want to overwhelm the user. It&#39;s okay to have one color for primary elements, and a secondary color for accents.</p>
 <h2 id="color-blindness">Color Blindness</h2>
 <p>Approximately 8% of males and 0.5% of females have some sort of color blindness. Most people with color blindness have issues differentiating between red-green colors. Here are some tips on how you should take color blindness into consideration when using colors.</p>
-<h3 id="don-t-use-color-alone-for-feedback">Don’t use color alone for feedback</h3>
+<h3 id="don-t-use-color-alone-for-feedback">Don&#39;t use color alone for feedback</h3>
 <div class="section">
   <div class="col">
-    <p>It’s okay to use colors to indicate feedback (such as in success or error messages). However, without any additional information a color blind person may not be able to determine what the feedback is for.</p>
-    <p><em>This is also a very important rule for blind people, since they can’t see any color!</em></p>
+    <p>It&#39;s okay to use colors to indicate feedback (such as in success or error messages). However, without any additional information a color blind person may not be able to determine what the feedback is for.</p>
+    <p><em>This is also a very important rule for blind people, since they can&#39;t see any color!</em></p>
   </div>
   <div class="col">
     <div style="float: left; width: 50%; text-align: center;">
@@ -173,12 +171,10 @@
 </div>
 
 <h3 id="use-contrasting-colors-for-comparisons">Use contrasting colors for comparisons</h3>
-<p>If you pair 2 or more colors together, be sure to use contrasting colors that aren’t common in color blindness. It’s okay to use different shades of the same color.</p>
-<p>Try to avoid red-green color combinations when possible. If you can’t, always provide context as to what the different colors mean.</p>
-
-</section>
-  </main>
+<p>If you pair 2 or more colors together, be sure to use contrasting colors that aren&#39;t common in color blindness. It&#39;s okay to use different shades of the same color.</p>
+<p>Try to avoid red-green color combinations when possible. If you can&#39;t, always provide context as to what the different colors mean.</p>
+</main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/design/css/global.css"/>
+  <link rel="stylesheet" href="/design/css/styleguide.css"/>
 </body>
 </html>

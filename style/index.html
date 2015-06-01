@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Style Guide — design @ daxko</title>
+  <title>Style Guide — </title>
 </head>
 <body>
   <header>
@@ -25,19 +25,161 @@
       </div>
     </div>
   </header>
-  <main class="content container" role="main">
+  <main class="content container" role="main"><aside>
+  <ul class="section-nav"><li><a href="#grids">Grids</a><ul><li><a href="#3-column-layout">3 Column Layout</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default-buttons">Default buttons</a><li><a href="#primary-buttons">Primary Buttons</a><li><a href="#danger-buttons">Danger Buttons</a><li><a href="#disabled-buttons">Disabled Buttons</a></ul></li></ul>
+</aside>
 <section>
-<h2 id="style-guide">Style Guide</h2>
-<button class="btn">
-  This is a button
-</button>
+<h2 id="grids">Grids</h2>
+<p>The grid is a pretty standard 12 column responsive grid -- you create wrapper <code>.grid</code> with individual columns.</p>
+<div class="grid">
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-1">
+    <div class="box">col-1</div>
+  </div>
+  <div class="col-4">
+    <div class="box">col-4</div>
+  </div>
+  <div class="col-4">
+    <div class="box">col-4</div>
+  </div>
+  <div class="col-4">
+    <div class="box">col-4</div>
+  </div>
+  <div class="col-6">
+    <div class="box">col-6</div>
+  </div>
+  <div class="col-6">
+    <div class="box">col-6</div>
+  </div>
+  <div class="col-12">
+    <div class="box">col-12</div>
+  </div>
+</div>
 
-<button class="btn btn-primary">
-  This is a button
-</button>
-</section>
-  </main>
+<h3 id="3-column-layout">3 Column Layout</h3>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<div class="grid">
+  <div class="col-4">
+    <div class="box">col-4</div>
+  </div>
+  <div class="col-4">
+    <div class="box">col-4</div>
+  </div>
+  <div class="col-4">
+    <div class="box">col-4</div>
+  </div>
+</div>
+
+<h2 id="buttons">Buttons</h2>
+<p>Buttons are typically used for <strong>actions</strong>, while links are typically used for <strong>destinations</strong>.</p>
+<h3 id="default-buttons">Default buttons</h3>
+<p>Standard buttons are easy -- just use a <code>.btn</code> class! You can apply this class to both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements and they will both appear exactly the same.</p>
+<p>When using a <code>&lt;button&gt;</code> element, always specify the type. When using a <code>&lt;a&gt;</code> element, always include <code>role=&quot;button&quot;</code> for accessibility.</p>
+<div class='example'><button type="button" class="btn">Button Button</button>
+<a class="btn" href="#" role="button">Link Button</a>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Button Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"btn"</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Link Button<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p></div>
+Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to use the smaller variation.</p>
+<div class='example'><button type="button" class="btn">Normal Button</button>
+<button type="button" class="btn btn-mini">Small Button</button>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Normal Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini"</span>&gt;</span>Small Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="primary-buttons">Primary Buttons</h3>
+<p>Primary buttons are used to indicate a primary action, such as a form save. Just add a <code>.btn-primary</code> class to your button, and you&#39;re good to go!</p>
+<div class='example'><button type="button" class="btn btn-primary">Primary Button</button>
+<button type="button" class="btn btn-mini btn-primary">Small Primary Button</button>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary"</span>&gt;</span>Primary Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini btn-primary"</span>&gt;</span>Small Primary Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="danger-buttons">Danger Buttons</h3>
+<p>Welcome to the <strong>danger zone</strong>. Danger buttons are red, indicating that the following action may do something potentially dangerous. Just add a <code>.btn-danger</code>.</p>
+<div class='example'><button type="button" class="btn btn-danger">Danger Button</button>
+<button type="button" class="btn btn-mini btn-danger">Small Danger Button</button>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-danger"</span>&gt;</span>Danger Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini btn-danger"</span>&gt;</span>Small Danger Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="disabled-buttons">Disabled Buttons</h3>
+<p><code>&lt;button&gt;</code> elements can be disabled with the <code>disabled</code> attribute, and <code>&lt;a&gt;</code> elements with the <code>.disabled</code> class.</p>
+<p><button type="button" class="btn" disabled>Disabled Button</button> <a href="#" class="btn disabled">Disabled Link</a></p>
+<div class='example'><button type="button" class="btn" disabled>Disabled Button</button>
+<a href="#" class="btn disabled">Disabled Link</a>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span> <span class="attribute">disabled</span>&gt;</span>Disabled Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn disabled"</span>&gt;</span>Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p></div>
+Disabled styling is also applied to primary and danger buttons:</p>
+<div class='example'><button type="button" class="btn btn-primary" disabled>Primary Disabled Button</button>
+<a href="#" class="btn btn-primary disabled">Primary Disabled Link</a>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary"</span> <span class="attribute">disabled</span>&gt;</span>Primary Disabled Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary disabled"</span>&gt;</span>Primary Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<div class='example'><button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
+<a href="#" class="btn btn-danger disabled">Danger Disabled Link</a>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-danger"</span> <span class="attribute">disabled</span>&gt;</span>Danger Disabled Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-danger disabled"</span>&gt;</span>Danger Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p></div></p>
+
+</section></main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/design/css/global.css"/>
+  <link rel="stylesheet" href="/design/css/styleguide.css"/>
 </body>
 </html>
