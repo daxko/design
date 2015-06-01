@@ -7,7 +7,6 @@ var glob = require('glob')
   , markdown = require('metalsmith-markdown')
   , templates = require('metalsmith-templates')
   , layouts = require('metalsmith-layouts')
-  , metadata = require('metalsmith-metadata')
   , _ = require('lodash');
 
 glob('templates/helpers/**.js', function(err, files) {
