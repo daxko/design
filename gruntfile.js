@@ -42,6 +42,9 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
+      // options: {
+      //   sourceMap: true
+      // },
       dist: {
         files: {
           '<%= config.css %>/global.min.css': ['<%= config.css %>/global.css']
@@ -60,7 +63,7 @@ module.exports = function(grunt) {
         tasks: ['sass', 'cssmin']
       },
       docs: {
-        files: ['<%= config.contents %>/{,*/}*'],
+        files: ['<%= config.contents %>/{,*/}*', '<%= config.docs %>/templates/{,*/}*.{hbs,js}'],
         tasks: ['shell:metalsmith']
       }
     },
@@ -90,6 +93,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['assets']);
   grunt.registerTask('assets', ['sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('build', ['assets', 'shell:metalsmith']);
-  grunt.registerTask('preview', ['assets', 'concurrent:docs']);
+  grunt.registerTask('preview', ['assets', 'shell:metalsmith', 'concurrent:docs']);
 
 };

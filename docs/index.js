@@ -1,11 +1,13 @@
 var glob = require('glob')
   , path = require('path')
+  , fs = require('fs')
   , metalsmith = require('metalsmith')
   , handlebars = require('handlebars')
   , hljs = require('highlight.js')
   , markdown = require('metalsmith-markdown')
   , templates = require('metalsmith-templates')
   , layouts = require('metalsmith-layouts')
+  , metadata = require('metalsmith-metadata')
   , _ = require('lodash');
 
 glob('templates/helpers/**.js', function(err, files) {
@@ -28,11 +30,21 @@ function parsemd(files, metalsmith, done) {
   done();
 }
 
+function includePackageMetadata(files, metalsmith, done) {
+  var metadata = metalsmith.metadata()
+    , pkg = fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8');
+
+  metadata['pkg'] = JSON.parse(pkg);
+
+  done();
+}
+
 // No prefixed highlight classes
 hljs.configure({ classPrefix: '' });
 
 metalsmith = metalsmith(__dirname)
   .source('contents')
+  .use(includePackageMetadata)
   .use(parsemd)
   .use(markdown({
     highlight: function(code, lang, fn) {

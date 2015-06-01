@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>{{title}}{{#if title}} — {{/if}}{{name}}</title>
+  <title>{{title}}{{#if title}} — {{/if}}Design @ Daxko</title>
 </head>
 <body>
   <header>
@@ -25,7 +25,12 @@
       </div>
     </div>
   </header>
-  <main class="content container" role="main">{{{contents}}}</main>
+  <main class="content container" role="main">
+    {{{contents}}}
+    <footer>
+      Created and maintained by the design team at Daxko. <strong>v{{pkg.version}}</strong>
+    </footer>
+  </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/styleguide.css"/>
 </body>

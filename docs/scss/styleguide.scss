@@ -22,7 +22,7 @@ h3 {
   margin-bottom: 1em;
 }
 
-* > :first-child {
+.contentainer * > :first-child {
   margin-top: 0;
 }
 
@@ -50,20 +50,7 @@ h3 {
     margin-left: $leftColWidth + $gutterWidth;
   }
 
-  h2 {
-    font-size: 2em;
-  }
-
-  h3 {
-    font-size: 1.4em;
-  }
-
-  h4 {
-    font-size: 1.15em;
-    color: rgba(0, 0, 0, .65);
-  }
-
-  ul {
+  aside ul {
     padding-left: 1.5em;
   }
 
@@ -209,6 +196,7 @@ ul.colors {
 
   dl {
     margin-top: 1em;
+    margin-bottom: 0;
   }
 
   dl.hex {
@@ -259,13 +247,28 @@ ul.colors {
 
 }
 
+.example .grid [class*=col-] {
+  background-color: lighten($key-lime, 20%);
+  border-left: $grid-gutter * .5 solid #fff;
+  border-right: $grid-gutter * .5 solid #fff;
+}
+
 .box {
   height: 2em;
   background-color: $gray-100;
   border-radius: 4px;
   text-align: center;
   line-height: 2em;
-  margin-bottom: $grid-gutter;
+}
+
+footer {
+  margin-top: 4em;
+  border-top: 1px solid $gray-100;
+  padding: 2em 0;
+  color: $gray-500;
+  strong {
+    color: #000;
+  }
 }
 
 @media (max-width: 73em) {

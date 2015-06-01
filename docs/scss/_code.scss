@@ -5,6 +5,7 @@ code {
   color: darken($cotton-candy, 50%);
   padding: 2px 4px;
   border-radius: 3px;
+  font-size: $base-font-size - 2px;
 }
 
 .example {
