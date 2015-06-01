@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-- '0.10'
+- '0.12'
 before_script:
 - npm install -g grunt-cli
 branches:
   only:
   - master
 script:
-- ./deploy.sh
+- npm run deploy
 cache:
   directories:
   - node_modules
