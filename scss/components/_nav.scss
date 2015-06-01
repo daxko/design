@@ -1,0 +1,66 @@
+$navbar-color: $gray-900 !default;
+$navbar-accent-color: $cotton-candy !default;
+$navbar-link-color: $cotton-candy !default;
+
+// Navbar
+// ----------------------------------------------
+
+.navbar {
+  overflow: visible;
+  background-color: $navbar-color;
+  background-image: linear-gradient(to bottom, lighten($navbar-color, 10%), darken($navbar-color, 10%));
+  border-top: 5px solid $navbar-accent-color;
+  height: 45px;
+}
+
+.navbar.fixed {
+  position: sticky;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar-header {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  display: inline-block;
+  float: left;
+  margin-right: 1em;
+
+  a {
+    color: $navbar-accent-color;
+  }
+}
+
+.navbar .nav {
+  display: inline-block;
+  float: left;
+}
+
+.navbar .nav {
+
+  .caret {
+    border-top-color: $gray-300;
+  }
+
+  li {
+    display: inline-block;
+    float: left;
+  }
+
+  li a {
+    color: $gray-300;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+    font-size: $base-font-size;
+  }
+
+  li a:hover {
+    color: #fff;
+  }
+
+}

@@ -1,0 +1,54 @@
+$tab-border-color: $gray-100 !default;
+$tab-accent-color: $cotton-candy !default;
+
+// Tabs
+// ----------------------------------------------
+
+.tabs {
+
+  border-bottom: 1px solid $tab-border-color;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: $gray-300;
+    height: 2;
+    line-height: 2;
+    padding-left: .6em;
+    padding-right: .6em;
+    transition: color ease-in-out .15s;
+  }
+
+  a:hover {
+    color: $gray-900;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    border-bottom: 5px solid $tab-accent-color;
+    transform: scaleY(0);
+    transition: transform ease-in-out .15s;
+    transform-origin: 0 100%;
+  }
+
+  .active a {
+    color: $gray-900;
+  }
+
+  .active a:before {
+    transform: scaleY(1);
+  }
+
+}

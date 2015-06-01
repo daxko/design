@@ -1,0 +1,22 @@
+$input-focus-color: $cotton-candy !default;
+
+// Forms
+// ----------------------------------------------
+
+input {
+  border: 1px solid $gray-100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05) inset;
+  border-radius: .2em;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: $base-line-height;
+  vertical-align: middle;
+  outline: 0;
+}
+
+input:focus {
+  border-color: darken($input-focus-color, 10%);
+  box-shadow: 0 0 4px $input-focus-color;
+  z-index: z-index('input-focus');
+}
+

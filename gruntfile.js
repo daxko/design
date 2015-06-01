@@ -1,10 +1,14 @@
 module.exports = function(grunt) {
 
+  require('time-grunt')(grunt);
+
   grunt.initConfig({
 
     config: {
-      contents: 'contents/',
-      assets: 'assets/'
+      docs: 'docs',
+      contents: '<%= config.docs %>/contents',
+      css: 'css',
+      scss: 'scss'
     },
 
     sass: {
@@ -12,46 +16,70 @@ module.exports = function(grunt) {
         style: 'compact',
         sourcemap: true
       },
-      compile: {
+      dist: {
         files: {
-          '<%= config.contents %>css/global.css': '<%= config.assets %>global.scss'
+          '<%= config.css %>/global.css': '<%= config.scss %>/global.scss'
+        }
+      },
+      docs: {
+        files: {
+          '<%= config.contents %>/css/styleguide.css': '<%= config.docs %>/scss/styleguide.scss'
         }
       }
     },
 
-    less: {
-      bootstrap: {
-        files: {
-          '<%= config.contents %>css/bootstrap.css': ['<%= config.assets %>bootstrap/bootstrap.less']
-        }
+    autoprefixer: {
+      options: {
+        browsers: ['last 3 versions', 'ie >= 9'],
+        map: true
+      },
+      dist: {
+        src: '<%= config.css %>/*.css'
+      },
+      docs: {
+        src: '<%= config.contents %>/css/*.css'
       }
     },
 
     cssmin: {
-      assets: {
+      dist: {
         files: {
-          '<%= config.contents %>/css/global.css': ['<%= config.contents %>/css/bootstrap.css', '<%= config.contents %>/css/global.css']
+          '<%= config.css %>/global.min.css': ['<%= config.css %>/global.css']
+        }
+      },
+      docs: {
+        files: {
+          '<%= config.contents %>/css/styleguide.min.css': ['<%= config.contents %>/css/styleguide.css']
         }
       }
     },
 
     watch: {
       sass: {
-        files: ['<%= config.assets %>/**/*.{scss,sass}'],
+        files: ['<%= config.scss %>/{,*/}*.{scss,sass}', '<%= config.docs %>/scss/{,*/}*.{scss,sass}'],
         tasks: ['sass', 'cssmin']
       },
-      less: {
-        files: ['<%= config.assets %>bootstrap/*.less'],
-        tasks: ['less', 'cssmin']
+      docs: {
+        files: ['<%= config.contents %>/{,*/}*'],
+        tasks: ['shell:metalsmith']
+      }
+    },
+
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      docs: {
+        tasks: ['watch', 'shell:metalsmith-preview']
       }
     },
 
     shell: {
-      wintersmith: {
-        command: 'node node_modules/wintersmith/bin/wintersmith build'
+      metalsmith: {
+        command: 'cd docs && node index.js'
       },
-      'wintersmith-preview': {
-        command: 'node node_modules/wintersmith/bin/wintersmith preview'
+      'metalsmith-preview': {
+        command: 'node node_modules/.bin/http-server docs/build'
       }
     }
 
@@ -60,8 +88,8 @@ module.exports = function(grunt) {
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
-  grunt.registerTask('assets', ['sass', 'less', 'cssmin']);
-  grunt.registerTask('build', ['assets', 'shell:wintersmith']);
-  grunt.registerTask('preview', ['assets', 'shell:wintersmith-preview']);
+  grunt.registerTask('assets', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('build', ['assets', 'shell:metalsmith']);
+  grunt.registerTask('preview', ['assets', 'concurrent:docs']);
 
 };
