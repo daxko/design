@@ -3,7 +3,8 @@ $input-focus-color: $cotton-candy !default;
 // Forms
 // ----------------------------------------------
 
-input {
+input,
+select {
   border: 1px solid $gray-100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .05) inset;
   border-radius: .2em;
@@ -14,9 +15,58 @@ input {
   outline: 0;
 }
 
-input:focus {
+input.input-mini {
+  padding: 3px 6px 2px;
+}
+
+input:focus,
+select:focus {
   border-color: darken($input-focus-color, 10%);
   box-shadow: 0 0 4px $input-focus-color;
   z-index: z-index('input-focus');
 }
 
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset + fieldset {
+  margin-top: 1em;
+}
+
+// Form layouts
+.form-horizontal .control-group {
+
+  label {
+    text-align: right;
+    width: 12em;
+    margin-right: 1em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  label + .controls {
+    position: absolute;
+  }
+
+  .controls {
+    margin-left: 12em;
+    padding-left: 1.3em;
+  }
+
+  .btn-group {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  + .control-group {
+    margin-top: 1em;
+  }
+
+}
+
+.form-actions {
+  text-align: right;
+}
