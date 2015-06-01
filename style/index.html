@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Style Guide — </title>
+  <title>Style Guide — Design @ Daxko</title>
 </head>
 <body>
   <header>
@@ -25,91 +25,106 @@
       </div>
     </div>
   </header>
-  <main class="content container" role="main"><aside>
-  <ul class="section-nav"><li><a href="#grids">Grids</a><ul><li><a href="#3-column-layout">3 Column Layout</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default-buttons">Default buttons</a><li><a href="#primary-buttons">Primary Buttons</a><li><a href="#danger-buttons">Danger Buttons</a><li><a href="#disabled-buttons">Disabled Buttons</a></ul></li></ul>
+  <main class="content container" role="main">
+    <aside class="sticky">
+  <ul class="section-nav"><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#basic-3-column-layout">Basic 3 Column Layout</a><li><a href="#column-alignment">Column alignment</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li></ul>
 </aside>
 <section>
-<h2 id="grids">Grids</h2>
-<p>The grid is a pretty standard 12 column responsive grid -- you create wrapper <code>.grid</code> with individual columns.</p>
-<div class="grid">
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-1">
-    <div class="box">col-1</div>
-  </div>
-  <div class="col-4">
-    <div class="box">col-4</div>
-  </div>
-  <div class="col-4">
-    <div class="box">col-4</div>
-  </div>
-  <div class="col-4">
-    <div class="box">col-4</div>
-  </div>
-  <div class="col-6">
-    <div class="box">col-6</div>
-  </div>
-  <div class="col-6">
-    <div class="box">col-6</div>
-  </div>
-  <div class="col-12">
-    <div class="box">col-12</div>
-  </div>
-</div>
-
-<h3 id="3-column-layout">3 Column Layout</h3>
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<h2 id="layouts">Layouts</h2>
+<h3 id="container">Container</h3>
+<p>Center some page content with a <code>.container</code> class.</p>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+  <span class="comment">&lt;!-- contents to be centered --&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
-<div class="grid">
-  <div class="col-4">
-    <div class="box">col-4</div>
-  </div>
-  <div class="col-4">
-    <div class="box">col-4</div>
-  </div>
-  <div class="col-4">
-    <div class="box">col-4</div>
-  </div>
+<h3 id="grid">Grid</h3>
+<p>The grid is a pretty standard 12 column responsive grid -- you create a wrapper <code>.grid</code> with individual columns. Columns are placed using <code>inline-block</code> instead of floats which allows for a little bit cleaner markup and an easier way to handle certain layouts at smaller viewports.</p>
+<p>Since we&#39;re using <code>box-sizing</code>, the grid sizes can include the gutters as part of the column instead of trying to complex margin calculations. The size of the gutters can be adjusted by changing the <code>$grid-gutters</code> sass variable.</p>
+<div class='example'><div class="grid">
+  <div class="col-4">.col-4</div>
+  <div class="col-8">.col-8</div>
+  <div class="col-3">.col-3</div>
+  <div class="col-9">.col-9</div>
+  <div class="col-2">.col-2</div>
+  <div class="col-2">.col-2</div>
+  <div class="col-2">.col-2</div>
+  <div class="col-2">.col-2</div>
+  <div class="col-2">.col-2</div>
+  <div class="col-2">.col-2</div>
+</div>
 </div>
 
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-8"</span>&gt;</span>.col-8<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>.col-3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-9"</span>&gt;</span>.col-9<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="basic-3-column-layout">Basic 3 Column Layout</h3>
+<div class='example'><div class="grid">
+  <div class="col-4">.col-4</div>
+  <div class="col-4">.col-4</div>
+  <div class="col-4">.col-4</div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>.col-4<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="column-alignment">Column alignment</h3>
+<p>Columns can be centered by adding a <code>.center</code> class to the column.</p>
+<div class='example'><div class="grid center">
+  <div class="col-4">Centered</div>
+  <div class="col-4">Columns</div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid center"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>Centered<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>Columns<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p></div>
+You can also left or right align columns by adding a <code>.left</code> or <code>.right</code> class respectively.</p>
+<div class='example'><div class="grid right">
+  <div class="col-2">.col-2</div>
+  <div class="col-3">.col-3</div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid right"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>.col-3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<div class='example'><div class="grid left">
+  <div class="col-2">.col-2</div>
+  <div class="col-3">.col-3</div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid left"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>.col-2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>.col-3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p></div></p>
 <h2 id="buttons">Buttons</h2>
 <p>Buttons are typically used for <strong>actions</strong>, while links are typically used for <strong>destinations</strong>.</p>
-<h3 id="default-buttons">Default buttons</h3>
+<h3 id="default">Default</h3>
 <p>Standard buttons are easy -- just use a <code>.btn</code> class! You can apply this class to both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements and they will both appear exactly the same.</p>
 <p>When using a <code>&lt;button&gt;</code> element, always specify the type. When using a <code>&lt;a&gt;</code> element, always include <code>role=&quot;button&quot;</code> for accessibility.</p>
 <div class='example'><button type="button" class="btn">Button Button</button>
@@ -129,7 +144,7 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini"</span>&gt;</span>Small Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 </code></pre>
 <p></div></p>
-<h3 id="primary-buttons">Primary Buttons</h3>
+<h3 id="primary">Primary</h3>
 <p>Primary buttons are used to indicate a primary action, such as a form save. Just add a <code>.btn-primary</code> class to your button, and you&#39;re good to go!</p>
 <div class='example'><button type="button" class="btn btn-primary">Primary Button</button>
 <button type="button" class="btn btn-mini btn-primary">Small Primary Button</button>
@@ -139,7 +154,7 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini btn-primary"</span>&gt;</span>Small Primary Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 </code></pre>
 <p></div></p>
-<h3 id="danger-buttons">Danger Buttons</h3>
+<h3 id="danger">Danger</h3>
 <p>Welcome to the <strong>danger zone</strong>. Danger buttons are red, indicating that the following action may do something potentially dangerous. Just add a <code>.btn-danger</code>.</p>
 <div class='example'><button type="button" class="btn btn-danger">Danger Button</button>
 <button type="button" class="btn btn-mini btn-danger">Small Danger Button</button>
@@ -149,36 +164,133 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini btn-danger"</span>&gt;</span>Small Danger Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
 </code></pre>
 <p></div></p>
-<h3 id="disabled-buttons">Disabled Buttons</h3>
+<h3 id="disabled">Disabled</h3>
 <p><code>&lt;button&gt;</code> elements can be disabled with the <code>disabled</code> attribute, and <code>&lt;a&gt;</code> elements with the <code>.disabled</code> class.</p>
 <p><button type="button" class="btn" disabled>Disabled Button</button> <a href="#" class="btn disabled">Disabled Link</a></p>
 <div class='example'><button type="button" class="btn" disabled>Disabled Button</button>
-<a href="#" class="btn disabled">Disabled Link</a>
+<a href="#" class="btn disabled" role="button">Disabled Link</a>
 </div>
 
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span> <span class="attribute">disabled</span>&gt;</span>Disabled Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn disabled"</span>&gt;</span>Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn disabled"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 </code></pre>
 <p></div>
 Disabled styling is also applied to primary and danger buttons:</p>
 <div class='example'><button type="button" class="btn btn-primary" disabled>Primary Disabled Button</button>
-<a href="#" class="btn btn-primary disabled">Primary Disabled Link</a>
+<a href="#" class="btn btn-primary disabled" role="button">Primary Disabled Link</a>
 </div>
 
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary"</span> <span class="attribute">disabled</span>&gt;</span>Primary Disabled Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary disabled"</span>&gt;</span>Primary Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary disabled"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Primary Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 </code></pre>
 <p></div></p>
 <div class='example'><button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
-<a href="#" class="btn btn-danger disabled">Danger Disabled Link</a>
+<a href="#" class="btn btn-danger disabled" role="button">Danger Disabled Link</a>
 </div>
 
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn btn-danger"</span> <span class="attribute">disabled</span>&gt;</span>Danger Disabled Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-danger disabled"</span>&gt;</span>Danger Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-danger disabled"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Danger Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="button-groups">Button Groups</h3>
+<p>Buttons can also be combined into button groups. Wrap them with a <code>.btn-group</code> class and your buttons will automatically be displayed with the correct spacing.</p>
+<div class='example'><div class="btn-group">
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-mini">Mini Button</button>
+  <button class="btn btn-mini">Mini Button</button>
+  <button class="btn btn-mini">Mini Button</button>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"btn-group"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"btn-group"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini"</span>&gt;</span>Mini Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini"</span>&gt;</span>Mini Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini"</span>&gt;</span>Mini Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h3 id="block-buttons">Block Buttons</h3>
+<p>You can make any button take up the full width of its container by adding a <code>.btn-block</code> class.</p>
+<div class='example'><button class="btn btn-block">Button</button>
+<button class="btn btn-mini btn-block">Mini Button</button>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-block"</span>&gt;</span>Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-mini btn-block"</span>&gt;</span>Mini Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h2 id="tabs">Tabs</h2>
+<h3 id="horizontal-tabs">Horizontal Tabs</h3>
+<div class='example'><ul class="tabs">
+  <li class="active"><a href="#">Tab A</a></li>
+  <li><a href="#">Tab B</a></li>
+  <li><a href="#">Tab C</a></li>
+  <li><a href="#">Tab D</a></li>
+</ul>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<div class='example'><ul class="tabs-vertical">
+  <li class="active"><a href="#">Tab A</a></li>
+  <li><a href="#">Tab B</a></li>
+  <li><a href="#">Tab C</a></li>
+  <li><a href="#">Tab D</a></li>
+</ul>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs-vertical"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+</code></pre>
+<p></div></p>
+<h2 id="dropdowns">Dropdowns</h2>
+<div class='example'><div class="dropdown">
+  <button type="button" class="btn" data-trigger="dropdown">Dropdown <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Bacon</a></li>
+    <li><a href="#">Ham</a></li>
+    <li><a href="#">Sausage</a></li>
+  </ul>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dropdown"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span> <span class="attribute">data-trigger</span>=<span class="value">"dropdown"</span>&gt;</span>Dropdown <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"caret"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"dropdown-menu"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Bacon<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Ham<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Sausage<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
 <p></div></p>
 
-</section></main>
+</section>
+    <footer>
+      Created and maintained by the design team at Daxko. <strong>v0.0.1</strong>
+    </footer>
+  </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/design/css/styleguide.css"/>
 </body>
