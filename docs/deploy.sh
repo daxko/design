@@ -4,10 +4,10 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "travis-ci"
 BASE_PATH=design
 
-git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/daxko/design.git build > /dev/null
-rm -rf build/*
+git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/daxko/design.git stage > /dev/null
+rm -rf stage/*
 
-grunt build && cd build
+grunt build && mv build/* stage && cd stage
 
 # Prepend the basepath to all absolute links for gh-pages
 find . -name '*.html' -type f -exec sed -i -E "s/((href|src)=\"?\/)([^\/])/\1$BASE_PATH\/\3/g" {} \;

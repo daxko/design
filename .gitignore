@@ -1,8 +1,10 @@
 .DS_store
 node_modules/
+npm-debug.log
 
 *.sublime-project
 *.sublime-workspace
 
 # Docs
 docs/build
+docs/stage
