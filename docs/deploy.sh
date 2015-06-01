@@ -4,8 +4,8 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "travis-ci"
 BASE_PATH=design
 
-git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/daxko/design.git build > /dev/null
 rm -rf build/*
+git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/daxko/design.git build > /dev/null
 
 grunt build && cd build
 

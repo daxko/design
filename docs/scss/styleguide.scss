@@ -1,20 +1,25 @@
 $base-font-family: "Noto Sans", sans-serif;
 
-@import "global";
-@import "nav";
-@import "code";
+@import "../../scss/global";
 
 // These are styleguide specific styles
+
+@import "_nav";
+@import "_code";
 
 $leftColWidth: 16em;
 $gutterWidth: 2em;
 
-h2,
-h3 {
+h2 {
   border-bottom: 1px solid $gray-100;
   padding-bottom: 5px;
   margin-bottom: 1em;
   margin-top: 1.5em;
+}
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 * > :first-child {

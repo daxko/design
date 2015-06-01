@@ -501,7 +501,16 @@ code {
 
 .example {
   border: 1px solid #e6e6e6;
-  padding: 1em; }
+  padding: 1em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+
+.example + pre {
+  margin-top: 0; }
+  .example + pre code {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none; }
 
 pre > code {
   display: block;
@@ -555,12 +564,15 @@ pre .keyword,
 pre .lang-javascript .function {
   color: #8959a8; }
 
-h2,
-h3 {
+h2 {
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 5px;
   margin-bottom: 1em;
   margin-top: 1.5em; }
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 1em; }
 
 * > :first-child {
   margin-top: 0; }

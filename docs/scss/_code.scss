@@ -10,6 +10,17 @@ code {
 .example {
   border: 1px solid $gray-100;
   padding: 1em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.example + pre {
+  margin-top: 0;
+  code {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+  }
 }
 
 pre {

@@ -117,22 +117,10 @@ The primary color palette consists of daxko's four primary brand colors.
 
 ### Variables
 
-Every color is available as a variable as part of our [sass mixins](https://github.com/daxko/design/blob/master/assets/colors.scss).
+Every color is available as a variable as part of our [sass mixins](https://github.com/daxko/design/blob/master/scss/colors.scss).
 
 ```scss
-// Primary Colors
-$red-velvet:     #ee264e;
-$banana-pudding: #efad1c;
-$key-lime:       #b3ba5a;
-$cotton-candy:   #a5dbd8;
-
-// Gray Scale Colors
-$gray-50:  lighten(#000, 96.5%); // #f6f6f6
-$gray-100: lighten(#000, 90.0%); // #e6e6e6
-$gray-300: lighten(#000, 65.0%); // #a6a6a6
-$gray-500: lighten(#000, 42.7%); // #6d6d6d
-$gray-700: lighten(#000, 33.0%); // #545454
-$gray-900: lighten(#000, 17.5%); // #2d2d2d
+{{readfile "/scss/_colors.scss"}}
 ```
 
 ## Primary & Secondary Colors

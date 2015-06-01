@@ -2,8 +2,10 @@ var glob = require('glob')
   , path = require('path')
   , metalsmith = require('metalsmith')
   , handlebars = require('handlebars')
+  , hljs = require('highlight.js')
   , markdown = require('metalsmith-markdown')
   , templates = require('metalsmith-templates')
+  , layouts = require('metalsmith-layouts')
   , _ = require('lodash');
 
 glob('templates/helpers/**.js', function(err, files) {
@@ -13,21 +15,6 @@ glob('templates/helpers/**.js', function(err, files) {
     handlebars.registerHelper(helperName, require(filepath));
   });
 });
-
-function resolveLayout(files, metalsmith, done) {
-  // Regex pattern for layout directive. {{!< layout }}
-  var layoutPattern = /{{!<\s+([A-Za-z0-9\._\-\/]+)\s*}}/;
-  _.map(files, function(file, name) {
-    var template = file.contents.toString();
-    var match = template.match(layoutPattern);
-    if(match) {
-      var layout = match[1];
-      console.log(layout, template);
-    }
-    return file;
-  });
-  done();
-}
 
 function parsemd(files, metalsmith, done) {
   _.map(files, function(file, name) {
@@ -41,25 +28,31 @@ function parsemd(files, metalsmith, done) {
   done();
 }
 
-// function defaultTemplate(files, metalsmith, done) {
-//   _.map(files, function(contents, name) {
-//     if(name.match(/md$/) && !contents.template) {
-//       contents.template = 'page.hbs';
-//     }
-//     return contents;
-//   });
-//   done();
-// }
+// No prefixed highlight classes
+hljs.configure({ classPrefix: '' });
 
 metalsmith = metalsmith(__dirname)
   .source('contents')
   .use(parsemd)
-  .use(markdown())
-  .use(resolveLayout)
+  .use(markdown({
+    highlight: function(code, lang, fn) {
+      if(!lang) {
+        return hljs.highlight(lang).value;
+      } else {
+        return hljs.highlight(lang, code).value;
+      }
+    }
+  }))
   .use(templates({
     engine: 'handlebars',
     directory: 'templates',
     def: 'page.hbs'
+  }))
+  .use(layouts({
+    engine: 'handlebars',
+    directory: 'templates',
+    default: 'layout.hbs',
+    pattern: '**/*.html'
   }))
   .build(function(err) {
     if(err) throw err;
