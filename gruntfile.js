@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         logConcurrentOutput: true
       },
       docs: {
-        tasks: ['watch', 'shell:metalsmith-preview']
+        tasks: ['watch', 'shell:preview']
       }
     },
 
@@ -81,8 +81,8 @@ module.exports = function(grunt) {
       metalsmith: {
         command: 'cd docs && node index.js'
       },
-      'metalsmith-preview': {
-        command: 'node node_modules/.bin/http-server docs/build'
+      'preview': {
+        command: 'node node_modules/.bin/http-server docs/build -p 3000'
       }
     }
 
