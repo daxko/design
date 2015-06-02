@@ -40,7 +40,7 @@
 <h3 id="grid">Grid</h3>
 <p>The grid is a pretty standard 12 column responsive grid -- you create a wrapper <code>.grid</code> with individual columns. Columns are placed using <code>inline-block</code> instead of floats which allows for a little bit cleaner markup and an easier way to handle certain layouts at smaller viewports.</p>
 <p>Since we&#39;re using <code>box-sizing</code>, the grid sizes can include the gutters as part of the column instead of trying to complex margin calculations. The size of the gutters can be adjusted by changing the <code>$grid-gutters</code> sass variable.</p>
-<div class='example'><div class="grid">
+<div class='example grid-example'><div class="grid">
   <div class="col-4">.col-4</div>
   <div class="col-8">.col-8</div>
   <div class="col-3">.col-3</div>
@@ -69,7 +69,7 @@
 </code></pre>
 <p></div></p>
 <h3 id="basic-3-column-layout">Basic 3 Column Layout</h3>
-<div class='example'><div class="grid">
+<div class='example grid-example'><div class="grid">
   <div class="col-4">.col-4</div>
   <div class="col-4">.col-4</div>
   <div class="col-4">.col-4</div>
@@ -85,7 +85,7 @@
 <p></div></p>
 <h3 id="column-alignment">Column alignment</h3>
 <p>Columns can be centered by adding a <code>.center</code> class to the column.</p>
-<div class='example'><div class="grid center">
+<div class='example grid-example'><div class="grid center">
   <div class="col-4">Centered</div>
   <div class="col-4">Columns</div>
 </div>
@@ -98,7 +98,7 @@
 </code></pre>
 <p></div>
 You can also left or right align columns by adding a <code>.left</code> or <code>.right</code> class respectively.</p>
-<div class='example'><div class="grid right">
+<div class='example grid-example'><div class="grid right">
   <div class="col-2">.col-2</div>
   <div class="col-3">.col-3</div>
 </div>
@@ -110,7 +110,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
 <p></div></p>
-<div class='example'><div class="grid left">
+<div class='example grid-example'><div class="grid left">
   <div class="col-2">.col-2</div>
   <div class="col-3">.col-3</div>
 </div>
@@ -124,7 +124,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <p></div></p>
 <h2 id="typography">Typography</h2>
 <h3 id="headings">Headings</h3>
-<div class='example'><h1>h1. Heading</h1>
+<div class='example [object Object]'><h1>h1. Heading</h1>
 <h2>h2. Heading</h2>
 <h3>h3. Heading</h3>
 <h4>h4. Heading</h4>
@@ -142,7 +142,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <p></div></p>
 <h3 id="styled-text">Styled Text</h3>
 <p>You can style inline text elements.</p>
-<div class='example'><p>This text is <s>striked</s></p>
+<div class='example [object Object]'><p>This text is <s>striked</s></p>
 <p>This text is <mark>marked</mark></p>
 <p>This text is <strong>strong</strong></p>
 <p>This text is <em>emphasized</em></p>
@@ -165,7 +165,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <h2 id="lists">Lists</h2>
 <h3 id="unordered">Unordered</h3>
 <p>A list where the order of the items doesn&#39;t matter.</p>
-<div class='example'><ul>
+<div class='example [object Object]'><ul>
   <li>Bacon</li>
   <li>Ham</li>
   <li>Loin</li>
@@ -197,7 +197,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <p></div></p>
 <h3 id="ordered">Ordered</h3>
 <p>A list where the order of the items <em>does</em> matter.</p>
-<div class='example'><ol>
+<div class='example [object Object]'><ol>
   <li>Bacon</li>
   <li>Ham</li>
   <li>Loin</li>
@@ -230,7 +230,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <h2 id="navbar">Navbar</h2>
 <p>-- todo --</p>
 <h3 id="basic-navigation">Basic Navigation</h3>
-<div class='example'><nav class="navbar" role="navigation">
+<div class='example [object Object]'><nav class="navbar" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <a href="#">Association Name</a>
@@ -263,7 +263,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <h3 id="default">Default</h3>
 <p>Standard buttons are easy -- just use a <code>.btn</code> class! You can apply this class to both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements and they will both appear exactly the same.</p>
 <p>When using a <code>&lt;button&gt;</code> element, always specify the type. When using a <code>&lt;a&gt;</code> element, always include <code>role=&quot;button&quot;</code> for accessibility.</p>
-<div class='example'><button type="button" class="btn">Button Button</button>
+<div class='example [object Object]'><button type="button" class="btn">Button Button</button>
 <a class="btn" href="#" role="button">Link Button</a>
 </div>
 
@@ -272,7 +272,7 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 </code></pre>
 <p></div>
 Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to use the smaller variation.</p>
-<div class='example'><button type="button" class="btn">Normal Button</button>
+<div class='example [object Object]'><button type="button" class="btn">Normal Button</button>
 <button type="button" class="btn btn-mini">Small Button</button>
 </div>
 
@@ -282,7 +282,7 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 <p></div></p>
 <h3 id="primary">Primary</h3>
 <p>Primary buttons are used to indicate a primary action, such as a form save. Just add a <code>.btn-primary</code> class to your button, and you&#39;re good to go!</p>
-<div class='example'><button type="button" class="btn btn-primary">Primary Button</button>
+<div class='example [object Object]'><button type="button" class="btn btn-primary">Primary Button</button>
 <button type="button" class="btn btn-mini btn-primary">Small Primary Button</button>
 </div>
 
@@ -292,7 +292,7 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 <p></div></p>
 <h3 id="danger">Danger</h3>
 <p>Welcome to the <strong>danger zone</strong>. Danger buttons are red, indicating that the following action may do something potentially dangerous. Just add a <code>.btn-danger</code>.</p>
-<div class='example'><button type="button" class="btn btn-danger">Danger Button</button>
+<div class='example [object Object]'><button type="button" class="btn btn-danger">Danger Button</button>
 <button type="button" class="btn btn-mini btn-danger">Small Danger Button</button>
 </div>
 
@@ -303,7 +303,7 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 <h3 id="disabled">Disabled</h3>
 <p><code>&lt;button&gt;</code> elements can be disabled with the <code>disabled</code> attribute, and <code>&lt;a&gt;</code> elements with the <code>.disabled</code> class.</p>
 <p><button type="button" class="btn" disabled>Disabled Button</button> <a href="#" class="btn disabled">Disabled Link</a></p>
-<div class='example'><button type="button" class="btn" disabled>Disabled Button</button>
+<div class='example [object Object]'><button type="button" class="btn" disabled>Disabled Button</button>
 <a href="#" class="btn disabled" role="button">Disabled Link</a>
 </div>
 
@@ -312,7 +312,7 @@ Buttons come in two sizes, big and small. Just add a <code>.btn-mini</code> to u
 </code></pre>
 <p></div>
 Disabled styling is also applied to primary and danger buttons:</p>
-<div class='example'><button type="button" class="btn btn-primary" disabled>Primary Disabled Button</button>
+<div class='example [object Object]'><button type="button" class="btn btn-primary" disabled>Primary Disabled Button</button>
 <a href="#" class="btn btn-primary disabled" role="button">Primary Disabled Link</a>
 </div>
 
@@ -320,7 +320,7 @@ Disabled styling is also applied to primary and danger buttons:</p>
 <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary disabled"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Primary Disabled Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 </code></pre>
 <p></div></p>
-<div class='example'><button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
+<div class='example [object Object]'><button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
 <a href="#" class="btn btn-danger disabled" role="button">Danger Disabled Link</a>
 </div>
 
@@ -330,7 +330,7 @@ Disabled styling is also applied to primary and danger buttons:</p>
 <p></div></p>
 <h3 id="button-groups">Button Groups</h3>
 <p>Buttons can also be combined into button groups. Wrap them with a <code>.btn-group</code> class and your buttons will automatically be displayed with the correct spacing.</p>
-<div class='example'><div class="btn-group">
+<div class='example [object Object]'><div class="btn-group">
   <button class="btn">Button</button>
   <button class="btn">Button</button>
   <button class="btn">Button</button>
@@ -358,7 +358,7 @@ Disabled styling is also applied to primary and danger buttons:</p>
 <p></div></p>
 <h3 id="block-buttons">Block Buttons</h3>
 <p>You can make any button take up the full width of its container by adding a <code>.btn-block</code> class.</p>
-<div class='example'><button class="btn btn-block">Button</button>
+<div class='example [object Object]'><button class="btn btn-block">Button</button>
 <button class="btn btn-mini btn-block">Mini Button</button>
 </div>
 
@@ -368,7 +368,7 @@ Disabled styling is also applied to primary and danger buttons:</p>
 <p></div></p>
 <h2 id="tabs">Tabs</h2>
 <h3 id="horizontal-tabs">Horizontal Tabs</h3>
-<div class='example'><ul class="tabs">
+<div class='example [object Object]'><ul class="tabs">
   <li class="active"><a href="#">Tab A</a></li>
   <li><a href="#">Tab B</a></li>
   <li><a href="#">Tab C</a></li>
@@ -385,7 +385,8 @@ Disabled styling is also applied to primary and danger buttons:</p>
 </code></pre>
 <p></div></p>
 <h3 id="vertical-tabs">Vertical Tabs</h3>
-<div class='example'><ul class="tabs-vertical">
+<p>By default, vertical tabs will display on the left and will take up the full width of the container you place them in.</p>
+<div class='example [object Object]'><ul class="tabs vertical">
   <li class="active"><a href="#">Tab A</a></li>
   <li><a href="#">Tab B</a></li>
   <li><a href="#">Tab C</a></li>
@@ -393,16 +394,68 @@ Disabled styling is also applied to primary and danger buttons:</p>
 </ul>
 </div>
 
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs-vertical"</span>&gt;</span>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs vertical"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
   <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
   <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
   <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
 </code></pre>
+<p></div>
+You can also have vertical tabs displayed on the right by adding a <code>.right</code> class.</p>
+<div class='example [object Object]'><ul class="tabs vertical right">
+  <li class="active"><a href="#">Tab A</a></li>
+  <li><a href="#">Tab B</a></li>
+  <li><a href="#">Tab C</a></li>
+  <li><a href="#">Tab D</a></li>
+</ul>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs vertical right"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+</code></pre>
+<p></div>
+To take full advantage of tabs, you will probably want to place them in a grid in order to size them correctly.</p>
+<div class='example [object Object]'><div class="grid">
+  <div class="col-3">
+    <ul class="tabs vertical">
+      <li class="active"><a href="#">Tab A</a></li>
+      <li><a href="#">Tab B</a></li>
+      <li><a href="#">Tab C</a></li>
+      <li><a href="#">Tab D</a></li>
+    </ul>
+  </div>
+  <div class="col-9">
+    <div class="tab-panel">
+      -- tab content goes here --
+    </div>
+  </div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs vertical"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-9"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-panel"</span>&gt;</span>
+      -- tab content goes here --
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
 <p></div></p>
 <h2 id="dropdowns">Dropdowns</h2>
-<div class='example'><div class="dropdown">
+<div class='example [object Object]'><div class="dropdown">
   <button type="button" class="btn" data-trigger="dropdown">Dropdown <span class="caret"></span></button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
