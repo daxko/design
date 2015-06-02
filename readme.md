@@ -25,6 +25,23 @@ Allows you to edit sass files for them to be automatically compiled.
 
 Compiles the site down to the static assets.
 
-# Skipping Builds
+## Skipping Builds
 
 If you're making some minor changes that don't need to trigger a build, you can simply include `[skip ci]` anywhere as part of your commit message.
+
+# Contributing
+
+When making changes to the css, be sure to do the following steps:
+
+1. Bump the version number in `package.json`.
+2. Run `grunt` before pushing your changes.
+
+If you don't bump the version, other dependencies may not pick up on the latest changes.
+
+## Versioning
+
+Follow the [semver](http://semver.org/) guidelines when making a version bump:
+
+* **x**.0.0 for major releases with breaking changes.
+* 0.**x**.0 for minor releases with backwards-compatible changes.
+* 0.0.**0** for patch releases with for backwards-compatible bug fixes.

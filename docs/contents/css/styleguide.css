@@ -308,6 +308,7 @@ fieldset + fieldset {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -535,6 +536,7 @@ fieldset + fieldset {
 }
 
 .navbar.fixed {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -616,9 +618,14 @@ fieldset + fieldset {
   width: 100%;
   display: block;
   border-bottom: 5px solid #a5dbd8;
-  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  transition: -webkit-transform ease-in-out 0.15s;
   transition: transform ease-in-out 0.15s;
-  transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 .tabs .active a {
@@ -626,7 +633,9 @@ fieldset + fieldset {
 }
 
 .tabs .active a:before {
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .docs-nav {
@@ -663,6 +672,7 @@ fieldset + fieldset {
 }
 
 .section-nav {
+  position: -webkit-sticky;
   position: sticky;
   top: 10px;
 }
@@ -1050,5 +1060,4 @@ footer strong {
     height: 10em;
   }
 }
-
 /*# sourceMappingURL=styleguide.css.map */
