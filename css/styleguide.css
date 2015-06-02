@@ -90,7 +90,9 @@ a:hover {
 }
 
 @media (max-width: 84em) {
-  width: 100%;
+  .container {
+    width: 100%;
+  }
 }
 
 .grid {
