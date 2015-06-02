@@ -84,12 +84,12 @@ a:hover {
 }
 
 .container {
-  width: 84em;
+  width: 1200px;
   padding: 0 2em;
   margin: 0 auto;
 }
 
-@media (max-width: 84em) {
+@media (max-width: 1200px) {
   .container {
     width: 100%;
   }
@@ -551,7 +551,6 @@ fieldset + fieldset {
   display: inline-block;
   float: left;
   margin-right: 1em;
-  margin-left: 1em;
 }
 
 .navbar-header a {

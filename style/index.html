@@ -231,26 +231,30 @@ You can also left or right align columns by adding a <code>.left</code> or <code
 <p>-- todo --</p>
 <h3 id="basic-navigation">Basic Navigation</h3>
 <div class='example'><nav class="navbar" role="navigation">
-  <div class="navbar-header">
-    <a href="#">Association Name</a>
+  <div class="container">
+    <div class="navbar-header">
+      <a href="#">Association Name</a>
+    </div>
+    <ul class="nav">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
   </div>
-  <ul class="nav">
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>
 </nav>
 </div>
 
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"navbar"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Association Name<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Association Name<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
 </code></pre>
 <p></div></p>
@@ -421,7 +425,7 @@ Disabled styling is also applied to primary and danger buttons:</p>
 
 </section>
     <footer>
-      Created and maintained by the design team at Daxko. <strong>v0.0.1</strong>
+      Created and maintained by the design team at Daxko. <strong>v0.0.2</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
