@@ -4,11 +4,10 @@ $tab-accent-color: $cotton-candy !default;
 // Tabs
 // ----------------------------------------------
 
+// Horizontal Tabs
 .tabs {
 
   border-bottom: 1px solid $tab-border-color;
-  margin-top: 1em;
-  margin-bottom: 1em;
 
   li {
     display: inline-block;
@@ -19,7 +18,6 @@ $tab-accent-color: $cotton-candy !default;
     display: inline-block;
     text-decoration: none;
     color: $gray-300;
-    height: 2;
     line-height: 2;
     padding-left: .6em;
     padding-right: .6em;
@@ -37,7 +35,7 @@ $tab-accent-color: $cotton-candy !default;
     left: 0;
     width: 100%;
     display: block;
-    border-bottom: 5px solid $tab-accent-color;
+    border-bottom: 4px solid $tab-accent-color;
     transform: scaleY(0);
     transition: transform ease-in-out .15s;
     transform-origin: 0 100%;
@@ -49,6 +47,61 @@ $tab-accent-color: $cotton-candy !default;
 
   .active a:before {
     transform: scaleY(1);
+  }
+
+}
+
+// Vertical Tabs
+.tabs.vertical {
+
+  margin: 0;
+  min-width: 160px;
+  border-bottom: none;
+
+  &,
+  &.left {
+    border-right: 1px solid $tab-border-color;
+    a:before {
+      right: 0;
+      top: 0;
+      left: auto;
+      border-right: 5px solid $tab-accent-color;
+    }
+
+    a {
+      padding-right: 1em;
+    }
+  }
+
+  &.right {
+    border-right: none;
+    border-left: 1px solid $tab-border-color;
+    a:before {
+      left: 0;
+      top: 0;
+      right: 0;
+      border-right: none;
+      border-left: 5px solid $tab-accent-color;
+    }
+
+    a {
+      padding-left: 1em;
+    }
+  }
+
+  li,
+  a {
+    display: block;
+  }
+
+  a:before {
+    border-bottom: none;
+    border-right: 5px solid $tab-accent-color;
+    transform: scaleX(0);
+  }
+
+  .active a:before {
+    transform: scaleX(1);
   }
 
 }

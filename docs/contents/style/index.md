@@ -22,7 +22,7 @@ The grid is a pretty standard 12 column responsive grid -- you create a wrapper 
 
 Since we're using `box-sizing`, the grid sizes can include the gutters as part of the column instead of trying to complex margin calculations. The size of the gutters can be adjusted by changing the `$grid-gutters` sass variable.
 
-{{#example 'html'}}
+{{#example 'html' 'grid-example'}}
 <div class="grid">
   <div class="col-4">.col-4</div>
   <div class="col-8">.col-8</div>
@@ -39,7 +39,7 @@ Since we're using `box-sizing`, the grid sizes can include the gutters as part o
 
 ### Basic 3 Column Layout
 
-{{#example 'html'}}
+{{#example 'html' 'grid-example'}}
 <div class="grid">
   <div class="col-4">.col-4</div>
   <div class="col-4">.col-4</div>
@@ -51,7 +51,7 @@ Since we're using `box-sizing`, the grid sizes can include the gutters as part o
 
 Columns can be centered by adding a `.center` class to the column.
 
-{{#example 'html'}}
+{{#example 'html' 'grid-example'}}
 <div class="grid center">
   <div class="col-4">Centered</div>
   <div class="col-4">Columns</div>
@@ -60,14 +60,14 @@ Columns can be centered by adding a `.center` class to the column.
 
 You can also left or right align columns by adding a `.left` or `.right` class respectively.
 
-{{#example 'html'}}
+{{#example 'html' 'grid-example'}}
 <div class="grid right">
   <div class="col-2">.col-2</div>
   <div class="col-3">.col-3</div>
 </div>
 {{/example}}
 
-{{#example 'html'}}
+{{#example 'html' 'grid-example'}}
 <div class="grid left">
   <div class="col-2">.col-2</div>
   <div class="col-3">.col-3</div>
@@ -269,13 +269,46 @@ You can make any button take up the full width of its container by adding a `.bt
 
 ### Vertical Tabs
 
+By default, vertical tabs will display on the left and will take up the full width of the container you place them in.
+
 {{#example 'html'}}
-<ul class="tabs-vertical">
+<ul class="tabs vertical">
   <li class="active"><a href="#">Tab A</a></li>
   <li><a href="#">Tab B</a></li>
   <li><a href="#">Tab C</a></li>
   <li><a href="#">Tab D</a></li>
 </ul>
+{{/example}}
+
+You can also have vertical tabs displayed on the right by adding a `.right` class.
+
+{{#example 'html'}}
+<ul class="tabs vertical right">
+  <li class="active"><a href="#">Tab A</a></li>
+  <li><a href="#">Tab B</a></li>
+  <li><a href="#">Tab C</a></li>
+  <li><a href="#">Tab D</a></li>
+</ul>
+{{/example}}
+
+To take full advantage of tabs, you will probably want to place them in a grid in order to size them correctly.
+
+{{#example 'html'}}
+<div class="grid">
+  <div class="col-3">
+    <ul class="tabs vertical">
+      <li class="active"><a href="#">Tab A</a></li>
+      <li><a href="#">Tab B</a></li>
+      <li><a href="#">Tab C</a></li>
+      <li><a href="#">Tab D</a></li>
+    </ul>
+  </div>
+  <div class="col-9">
+    <div class="tab-panel">
+      -- tab content goes here --
+    </div>
+  </div>
+</div>
 {{/example}}
 
 ## Dropdowns

@@ -240,18 +240,10 @@ ul.colors {
 
 }
 
-.example .grid [class*=col-] {
+.grid-example .grid [class*=col-] {
   background-color: lighten($key-lime, 20%);
   border-left: $grid-gutter * .5 solid #fff;
   border-right: $grid-gutter * .5 solid #fff;
-}
-
-.box {
-  height: 2em;
-  background-color: $gray-100;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 2em;
 }
 
 footer {
