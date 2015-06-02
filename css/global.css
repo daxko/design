@@ -84,13 +84,15 @@ a:hover {
 }
 
 .container {
-  width: 84em;
+  width: 1200px;
   padding: 0 2em;
   margin: 0 auto;
 }
 
-@media (max-width: 84em) {
-  width: 100%;
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .grid {
@@ -306,7 +308,6 @@ fieldset + fieldset {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -534,7 +535,6 @@ fieldset + fieldset {
 }
 
 .navbar.fixed {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -549,7 +549,6 @@ fieldset + fieldset {
   display: inline-block;
   float: left;
   margin-right: 1em;
-  margin-left: 1em;
 }
 
 .navbar-header a {
@@ -617,14 +616,9 @@ fieldset + fieldset {
   width: 100%;
   display: block;
   border-bottom: 5px solid #a5dbd8;
-  -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-          transform: scaleY(0);
-  transition: -webkit-transform ease-in-out 0.15s;
+  transform: scaleY(0);
   transition: transform ease-in-out 0.15s;
-  -webkit-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  transform-origin: 0 100%;
 }
 
 .tabs .active a {
@@ -632,8 +626,7 @@ fieldset + fieldset {
 }
 
 .tabs .active a:before {
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
+  transform: scaleY(1);
 }
+
 /*# sourceMappingURL=global.css.map */

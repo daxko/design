@@ -152,14 +152,16 @@ A list where the order of the items *does* matter.
 
 {{#example 'html'}}
 <nav class="navbar" role="navigation">
-  <div class="navbar-header">
-    <a href="#">Association Name</a>
+  <div class="container">
+    <div class="navbar-header">
+      <a href="#">Association Name</a>
+    </div>
+    <ul class="nav">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
   </div>
-  <ul class="nav">
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>
 </nav>
 {{/example}}
 
