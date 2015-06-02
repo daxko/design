@@ -1,0 +1,15 @@
+$container-width: 84em !default; // 1120px
+$container-padding: 2em !default;
+
+// Layouts
+// ----------------------------------------------
+
+.container {
+  width: $container-width;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+}
+
+@media(max-width: $container-width) {
+  width: 100%;
+}

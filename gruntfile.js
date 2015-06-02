@@ -13,8 +13,8 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        style: 'compact',
-        sourcemap: true
+        outputStyle: 'expanded',
+        sourceMap: true
       },
       dist: {
         files: {
@@ -42,9 +42,9 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      // options: {
-      //   sourceMap: true
-      // },
+      options: {
+        sourceMap: true
+      },
       dist: {
         files: {
           '<%= config.css %>/global.min.css': ['<%= config.css %>/global.css']

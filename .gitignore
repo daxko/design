@@ -8,3 +8,6 @@ npm-debug.log
 # Docs
 docs/build
 docs/stage
+
+# Generated maps
+*.css.map

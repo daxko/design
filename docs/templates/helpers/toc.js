@@ -18,7 +18,7 @@ module.exports = function(context) {
     // Determine if there's any h3s that show up before the next h2
     var subsection = '';
     if(sections.eq(i + 1).is('h3')) {
-      var subElements = el.nextUntil('h2').filter('h3');
+      var subElements = el.nextUntil('h2[id]').filter('h3[id]');
 
       subsection += '<ul>';
       subElements.each(function() {

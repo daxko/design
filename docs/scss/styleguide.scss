@@ -8,28 +8,21 @@ $base-font-family: "Noto Sans", sans-serif;
 @import "_code";
 
 $leftColWidth: 16em;
-$gutterWidth: 2em;
 
-h2 {
+section > h2 {
   border-bottom: 1px solid $gray-100;
   padding-bottom: 5px;
   margin-bottom: 1em;
   margin-top: 1.5em;
 }
 
-h3 {
+section > h3 {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
 
 .contentainer * > :first-child {
   margin-top: 0;
-}
-
-.container {
-  max-width: 80 + ($gutterWidth * 2);
-  padding: 0 $gutterWidth;
-  margin: 0 auto;
 }
 
 .content {
@@ -47,7 +40,7 @@ h3 {
   }
 
   > aside + section {
-    margin-left: $leftColWidth + $gutterWidth;
+    margin-left: $leftColWidth + $container-padding;
   }
 
   aside ul {
@@ -60,8 +53,8 @@ h3 {
   font-size: 2em;
   padding: 2em;
   margin-top: -1em;
-  margin-left: $gutterWidth * -1;
-  margin-right:  $gutterWidth * -1;
+  margin-left: $container-padding * -1;
+  margin-right:  $container-padding * -1;
   margin-bottom: 1em;
   background-color: rgba(0, 0, 0, .05);
 

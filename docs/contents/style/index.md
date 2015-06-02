@@ -74,6 +74,95 @@ You can also left or right align columns by adding a `.left` or `.right` class r
 </div>
 {{/example}}
 
+## Typography
+
+### Headings
+
+{{#example 'html'}}
+<h1>h1. Heading</h1>
+<h2>h2. Heading</h2>
+<h3>h3. Heading</h3>
+<h4>h4. Heading</h4>
+<h5>h5. Heading</h5>
+<h6>h6. Heading</h6>
+{{/example}}
+
+### Styled Text
+
+You can style inline text elements.
+
+{{#example 'html'}}
+<p>This text is <s>striked</s></p>
+<p>This text is <mark>marked</mark></p>
+<p>This text is <strong>strong</strong></p>
+<p>This text is <em>emphasized</em></p>
+<p>This text is <u>underlined</u></p>
+<p>This text is <small>small</small></p>
+<p>This text is <sup>superscript</sup></p>
+<p>This text is <sub>subscript</sup></p>
+{{/example}}
+
+## Lists
+
+### Unordered
+
+A list where the order of the items doesn't matter.
+
+{{#example 'html'}}
+<ul>
+  <li>Bacon</li>
+  <li>Ham</li>
+  <li>Loin</li>
+  <li>Shoulder
+    <ul>
+      <li>Pork Belly</li>
+      <li>Spare Ribs</li>
+      <li>Baby Back Ribs</li>
+    </ul>
+  </li>
+  <li>Pork Chop</li>
+</ul>
+{{/example}}
+
+### Ordered
+
+A list where the order of the items *does* matter.
+
+{{#example 'html'}}
+<ol>
+  <li>Bacon</li>
+  <li>Ham</li>
+  <li>Loin</li>
+  <li>Shoulder
+    <ol>
+      <li>Pork Belly</li>
+      <li>Spare Ribs</li>
+      <li>Baby Back Ribs</li>
+    </ol>
+  </li>
+  <li>Pork Chop</li>
+</ol>
+{{/example}}
+
+## Navbar
+
+-- todo --
+
+### Basic Navigation
+
+{{#example 'html'}}
+<nav class="navbar" role="navigation">
+  <div class="navbar-header">
+    <a href="#">Association Name</a>
+  </div>
+  <ul class="nav">
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+</nav>
+{{/example}}
+
 ## Buttons
 
 Buttons are typically used for **actions**, while links are typically used for **destinations**.
@@ -175,6 +264,8 @@ You can make any button take up the full width of its container by adding a `.bt
   <li><a href="#">Tab D</a></li>
 </ul>
 {{/example}}
+
+### Vertical Tabs
 
 {{#example 'html'}}
 <ul class="tabs-vertical">
