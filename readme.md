@@ -11,11 +11,11 @@ npm install
 
 # Running the site
 
-This guide runs using [wintersmith](https://github.com/jnordberg/wintersmith), a static site generator built in node. However, we've wired up a few things via grunt so you can develop locally.
+This guide runs using [metalsmith](https://github.com/segmentio/metalsmith), a static site generator built in node. However, we've wired up a few things via grunt so you can develop locally.
 
 `grunt preview`
 
-Allows you to edit on the fly and access the static site via http://localhost:8080.
+Allows you to edit on the fly and access the static site via http://localhost:3000.
 
 `grunt watch`
 
@@ -24,10 +24,6 @@ Allows you to edit sass files for them to be automatically compiled.
 `grunt build`
 
 Compiles the site down to the static assets.
-
-## Skipping Builds
-
-If you're making some minor changes that don't need to trigger a build, you can simply include `[skip ci]` anywhere as part of your commit message.
 
 # Contributing
 
