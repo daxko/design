@@ -41,6 +41,15 @@ module.exports = function(grunt) {
       }
     },
 
+    // Because sass can't include normal css files
+    copy: {
+      dist: {
+        files: {
+          '<%= config.scss %>/_normalize.scss': ['node_modules/normalize.css/normalize.css']
+        }
+      }
+    },
+
     cssmin: {
       options: {
         sourceMap: true
@@ -91,7 +100,7 @@ module.exports = function(grunt) {
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
-  grunt.registerTask('assets', ['sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('assets', ['copy', 'sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('build', ['assets', 'shell:metalsmith']);
   grunt.registerTask('preview', ['assets', 'shell:metalsmith', 'concurrent:docs']);
 
