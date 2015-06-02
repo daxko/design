@@ -11,5 +11,7 @@ $container-padding: 2em !default;
 }
 
 @media(max-width: $container-width) {
-  width: 100%;
+  .container {
+    width: 100%;
+  }
 }
