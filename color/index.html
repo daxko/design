@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Color — Design @ Daxko</title>
 </head>
-<body>
+<body data-spy="scroll" data-target="aside">
   <header>
     <nav class="docs-nav" role="navigation">
       <div class="container">
@@ -26,10 +26,11 @@
     </div>
   </header>
   <main class="content container" role="main">
-    <h2 id="color-palette">Color palette</h2>
+    <section>
+<h2 id="color-palette">Color palette</h2>
 <p>This color palette is composed of primary colors to be used for accent and highlighting and gray scale colors to be used to shade text and to convey hierarchical information.</p>
 <h3 id="primary-colors">Primary Colors</h3>
-<p>The primary color palette consists of daxko&#39;s four primary brand colors.</p>
+<p>The primary color palette consists of daxko’s four primary brand colors.</p>
 <ul class="colors">
   <li class="swatch">
     <div class="details red-velvet">
@@ -134,7 +135,7 @@
 </div>
 
 <h3 id="variables">Variables</h3>
-<p>Every color is available as a variable as part of our <a href="https://github.com/daxko/design/blob/master/scss/colors.scss">sass mixins</a>.</p>
+<p>Every color is available as a variable as part of our <a href="https://github.com/daxko/design/blob/master/scss/_colors.scss">sass mixins</a>.</p>
 <pre><code class="lang-scss"><span class="comment">// Primary Colors</span>
 <span class="variable">$red-velvet</span><span class="value">:     <span class="hexcolor">#ee264e</span>;</span>
 <span class="variable">$banana-pudding</span><span class="value">: <span class="hexcolor">#efad1c</span>;</span>
@@ -150,14 +151,14 @@
 <span class="variable">$gray-900</span><span class="value">: <span class="function">lighten</span>(<span class="hexcolor">#000</span>, <span class="number">17.5%</span>);</span> <span class="comment">// #2d2d2d</span>
 </code></pre>
 <h2 id="primary-secondary-colors">Primary &amp; Secondary Colors</h2>
-<p>Try not to have more than 2 primary colors on the screen - we don&#39;t want to overwhelm the user. It&#39;s okay to have one color for primary elements, and a secondary color for accents.</p>
+<p>Try not to have more than 2 primary colors on the screen - we don’t want to overwhelm the user. It’s okay to have one color for primary elements, and a secondary color for accents.</p>
 <h2 id="color-blindness">Color Blindness</h2>
 <p>Approximately 8% of males and 0.5% of females have some sort of color blindness. Most people with color blindness have issues differentiating between red-green colors. Here are some tips on how you should take color blindness into consideration when using colors.</p>
-<h3 id="don-t-use-color-alone-for-feedback">Don&#39;t use color alone for feedback</h3>
+<h3 id="don-t-use-color-alone-for-feedback">Don’t use color alone for feedback</h3>
 <div class="section">
   <div class="col">
-    <p>It&#39;s okay to use colors to indicate feedback (such as in success or error messages). However, without any additional information a color blind person may not be able to determine what the feedback is for.</p>
-    <p><em>This is also a very important rule for blind people, since they can&#39;t see any color!</em></p>
+    <p>It’s okay to use colors to indicate feedback (such as in success or error messages). However, without any additional information a color blind person may not be able to determine what the feedback is for.</p>
+    <p><em>This is also a very important rule for blind people, since they can’t see any color!</em></p>
   </div>
   <div class="col">
     <div style="float: left; width: 50%; text-align: center;">
@@ -172,14 +173,17 @@
 </div>
 
 <h3 id="use-contrasting-colors-for-comparisons">Use contrasting colors for comparisons</h3>
-<p>If you pair 2 or more colors together, be sure to use contrasting colors that aren&#39;t common in color blindness. It&#39;s okay to use different shades of the same color.</p>
-<p>Try to avoid red-green color combinations when possible. If you can&#39;t, always provide context as to what the different colors mean.</p>
+<p>If you pair 2 or more colors together, be sure to use contrasting colors that aren’t common in color blindness. It’s okay to use different shades of the same color.</p>
+<p>Try to avoid red-green color combinations when possible. If you can’t, always provide context as to what the different colors mean.</p>
 
+</section>
     <footer>
       Created and maintained by the design team at Daxko. <strong>v0.0.4</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/design/css/styleguide.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/design/js/scrollspy.js"></script>
 </body>
 </html>
