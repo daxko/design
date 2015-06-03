@@ -132,6 +132,10 @@ $btn-focus-color: $cotton-candy !default;
     display: inline-block;
   }
 
+  .btn-mini {
+    font-size: $btn-mini-font-size;
+  }
+
   .btn + .btn,
   .btn-group + .btn-group,
   .btn + .btn-group,

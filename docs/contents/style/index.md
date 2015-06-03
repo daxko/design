@@ -8,7 +8,7 @@ template: toc.hbs
 
 ### Container
 
-Center some page content with a `.container` class.
+Center page content with a `.container` class. This container will automatically take up the full width of the screen up to 1200px. The default width can be overwritten by the `$container-width` sass variable.
 
 ```html
 <div class="container">
@@ -20,7 +20,7 @@ Center some page content with a `.container` class.
 
 The grid is a pretty standard 12 column responsive grid -- you create a wrapper `.grid` with individual columns. Columns are placed using `inline-block` instead of floats which allows for a little bit cleaner markup and an easier way to handle certain layouts at smaller viewports.
 
-Since we're using `box-sizing`, the grid sizes can include the gutters as part of the column instead of trying to complex margin calculations. The size of the gutters can be adjusted by changing the `$grid-gutters` sass variable.
+Since we're using `box-sizing`, the grid sizes can include the gutters as part of the column instead of trying to perform complex margin calculations. The size of the gutters can be adjusted by changing the `$grid-gutters` sass variable.
 
 {{#example 'html' 'grid-example'}}
 <div class="grid">
@@ -37,17 +37,7 @@ Since we're using `box-sizing`, the grid sizes can include the gutters as part o
 </div>
 {{/example}}
 
-### Basic 3 Column Layout
-
-{{#example 'html' 'grid-example'}}
-<div class="grid">
-  <div class="col-4">.col-4</div>
-  <div class="col-4">.col-4</div>
-  <div class="col-4">.col-4</div>
-</div>
-{{/example}}
-
-### Column alignment
+### Column Alignment
 
 Columns can be centered by adding a `.center` class to the column.
 
@@ -87,24 +77,7 @@ You can also left or right align columns by adding a `.left` or `.right` class r
 <h6>h6. Heading</h6>
 {{/example}}
 
-### Styled Text
-
-You can style inline text elements.
-
-{{#example 'html'}}
-<p>This text is <s>striked</s></p>
-<p>This text is <mark>marked</mark></p>
-<p>This text is <strong>strong</strong></p>
-<p>This text is <em>emphasized</em></p>
-<p>This text is <u>underlined</u></p>
-<p>This text is <small>small</small></p>
-<p>This text is <sup>superscript</sup></p>
-<p>This text is <sub>subscript</sup></p>
-{{/example}}
-
-## Lists
-
-### Unordered
+### Unordered Lists
 
 A list where the order of the items doesn't matter.
 
@@ -124,7 +97,7 @@ A list where the order of the items doesn't matter.
 </ul>
 {{/example}}
 
-### Ordered
+### Ordered Lists
 
 A list where the order of the items *does* matter.
 
@@ -142,6 +115,21 @@ A list where the order of the items *does* matter.
   </li>
   <li>Pork Chop</li>
 </ol>
+{{/example}}
+
+### Styled Text
+
+You can style inline text elements.
+
+{{#example 'html'}}
+<p>This text is <s>striked</s></p>
+<p>This text is <mark>marked</mark></p>
+<p>This text is <strong>strong</strong></p>
+<p>This text is <em>emphasized</em></p>
+<p>This text is <u>underlined</u></p>
+<p>This text is <small>small</small></p>
+<p>This text is <sup>superscript</sup></p>
+<p>This text is <sub>subscript</sub></p>
 {{/example}}
 
 ## Navbar
@@ -254,6 +242,10 @@ You can make any button take up the full width of its container by adding a `.bt
 <button class="btn btn-mini btn-block">Mini Button</button>
 {{/example}}
 
+## Tables
+
+-- TODO --
+
 ## Tabs
 
 ### Horizontal Tabs
@@ -272,7 +264,7 @@ You can make any button take up the full width of its container by adding a `.bt
 By default, vertical tabs will display on the left and will take up the full width of the container you place them in.
 
 {{#example 'html'}}
-<ul class="tabs vertical">
+<ul class="tabs tabs-vertical">
   <li class="active"><a href="#">Tab A</a></li>
   <li><a href="#">Tab B</a></li>
   <li><a href="#">Tab C</a></li>
@@ -283,7 +275,7 @@ By default, vertical tabs will display on the left and will take up the full wid
 You can also have vertical tabs displayed on the right by adding a `.right` class.
 
 {{#example 'html'}}
-<ul class="tabs vertical right">
+<ul class="tabs tabs-vertical right">
   <li class="active"><a href="#">Tab A</a></li>
   <li><a href="#">Tab B</a></li>
   <li><a href="#">Tab C</a></li>
@@ -291,12 +283,29 @@ You can also have vertical tabs displayed on the right by adding a `.right` clas
 </ul>
 {{/example}}
 
-To take full advantage of tabs, you will probably want to place them in a grid in order to size them correctly.
+Vertical tabs can also have sub navigation items.
+
+{{#example 'html'}}
+<ul class="tabs tabs-vertical right">
+  <li class="active"><a href="#">Tab A</a></li>
+  <li><a href="#">Tab B</a>
+    <ul>
+      <li><a href="#">Sub-Tab A</a></li>
+      <li><a href="#">Sub-Tab B</a></li>
+      <li><a href="#">Sub-Tab C</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Tab C</a></li>
+  <li><a href="#">Tab D</a></li>
+</ul>
+{{/example}}
+
+Since tabs don't have a implicit width, you may want to consider placing them in a grid to
 
 {{#example 'html'}}
 <div class="grid">
   <div class="col-3">
-    <ul class="tabs vertical">
+    <ul class="tabs tabs-vertical">
       <li class="active"><a href="#">Tab A</a></li>
       <li><a href="#">Tab B</a></li>
       <li><a href="#">Tab C</a></li>

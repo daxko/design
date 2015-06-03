@@ -46,9 +46,10 @@ metalsmith = metalsmith(__dirname)
   .use(includePackageMetadata)
   .use(parsemd)
   .use(markdown({
+    smartypants: true,
     highlight: function(code, lang, fn) {
       if(!lang) {
-        return hljs.highlight(lang).value;
+        return hljs.highlightAuto(code).value;
       } else {
         return hljs.highlight(lang, code).value;
       }
@@ -57,7 +58,8 @@ metalsmith = metalsmith(__dirname)
   .use(templates({
     engine: 'handlebars',
     directory: 'templates',
-    def: 'page.hbs'
+    default: 'page.hbs',
+    pattern: '**/*.html'
   }))
   .use(layouts({
     engine: 'handlebars',

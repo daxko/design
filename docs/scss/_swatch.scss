@@ -1,0 +1,73 @@
+ul.colors {
+  @include grid();
+}
+
+.swatch {
+  @include col(1/4);
+  color: #fff;
+  font-weight: 100;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+
+  .details {
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  dl {
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+  dl.hex {
+    float: left;
+  }
+
+  dl.rgb {
+    float: right;
+  }
+
+  dt {
+    opacity: .6;
+    font-size: .8em;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+}
+
+.swatch-list {
+  list-style-type: none;
+
+  li {
+    padding: .5em 1em;
+  }
+
+  em {
+    font-style: normal;
+    opacity: .6;
+    font-size: .8em;
+  }
+
+  .gray-500,
+  .gray-700,
+  .gray-900 {
+    color: #fff;
+  }
+
+}
+
+@media (max-width: 73em) {
+  .swatch {
+    width: 100%;
+    display: block;
+    float: none;
+    height: 10em;
+  }
+}

@@ -4,25 +4,36 @@ $base-font-family: "Noto Sans", sans-serif;
 
 // These are styleguide specific styles
 
-@import "_nav";
-@import "_code";
+@import "nav";
+@import "code";
+@import "swatch";
 
 $leftColWidth: 16em;
 
+body {
+  position: relative;
+}
+
 section > h2 {
   border-bottom: 1px solid $gray-100;
-  padding-bottom: 5px;
   margin-bottom: 1em;
-  margin-top: 1.5em;
+  margin-top: 1em;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 section > h3 {
-  margin-top: 1.5em;
+  margin-top: 1em;
   margin-bottom: 1em;
+  padding-top: 10px;
 }
 
-.contentainer * > :first-child {
-  margin-top: 0;
+.section-nav ul {
+  display: none;
+}
+
+.section-nav .active ul {
+  display: block;
 }
 
 .content {
@@ -40,11 +51,7 @@ section > h3 {
   }
 
   > aside + section {
-    margin-left: $leftColWidth + $container-padding;
-  }
-
-  aside ul {
-    padding-left: 1.5em;
+    padding-left: $leftColWidth + $container-padding;
   }
 
 }
@@ -167,79 +174,6 @@ section > :first-child {
   }
 }
 
-ul.colors {
-  @include grid();
-}
-
-.swatch {
-  @include col(1/4);
-  color: #fff;
-  font-weight: 100;
-
-  h3 {
-    margin-top: 0;
-    font-size: 1.5em;
-  }
-
-  .details {
-    padding: 1em;
-    position: relative;
-    overflow: hidden;
-  }
-
-  dl {
-    margin-top: 1em;
-    margin-bottom: 0;
-  }
-
-  dl.hex {
-    float: left;
-  }
-
-  dl.rgb {
-    float: right;
-  }
-
-  dt {
-    opacity: .6;
-    font-size: .8em;
-  }
-
-  dd {
-    margin-left: 0;
-  }
-
-}
-
-.pull-right {
-  float: right;
-}
-
-.pull-left {
-  float: left;
-}
-
-.swatch-list {
-  list-style-type: none;
-
-  li {
-    padding: .5em 1em;
-  }
-
-  em {
-    font-style: normal;
-    opacity: .6;
-    font-size: .8em;
-  }
-
-  .gray-500,
-  .gray-700,
-  .gray-900 {
-    color: #fff;
-  }
-
-}
-
 .grid-example .grid [class*=col-] {
   background-color: lighten($key-lime, 20%);
   border-left: $grid-gutter * .5 solid #fff;
@@ -253,14 +187,5 @@ footer {
   color: $gray-500;
   strong {
     color: #000;
-  }
-}
-
-@media (max-width: 73em) {
-  .swatch {
-    width: 100%;
-    display: block;
-    float: none;
-    height: 10em;
   }
 }

@@ -117,7 +117,7 @@ The primary color palette consists of daxko's four primary brand colors.
 
 ### Variables
 
-Every color is available as a variable as part of our [sass mixins](https://github.com/daxko/design/blob/master/scss/colors.scss).
+Every color is available as a variable as part of our [sass mixins](https://github.com/daxko/design/blob/master/scss/_colors.scss).
 
 ```scss
 {{readfile "/scss/_colors.scss"}}

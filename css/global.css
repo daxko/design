@@ -706,9 +706,16 @@ fieldset + fieldset {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }
 
 .btn {
@@ -828,6 +835,10 @@ fieldset + fieldset {
   display: inline-block;
 }
 
+.btn-group .btn-mini {
+  font-size: 12px;
+}
+
 .btn-group .btn + .btn,
 .btn-group .btn-group + .btn-group,
 .btn-group .btn + .btn-group,
@@ -934,7 +945,6 @@ fieldset + fieldset {
 }
 
 .navbar.fixed {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -1013,56 +1023,54 @@ fieldset + fieldset {
   width: 100%;
   display: block;
   border-bottom: 4px solid #a5dbd8;
-  -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-          transform: scaleY(0);
-  transition: -webkit-transform ease-in-out 0.15s;
+  transform: scaleY(0);
   transition: transform ease-in-out 0.15s;
-  -webkit-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  transform-origin: 0 100%;
 }
 
-.tabs .active a {
+.tabs .active > a {
   color: #2d2d2d;
 }
 
-.tabs .active a:before {
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
+.tabs .active > a:before {
+  transform: scaleY(1);
 }
 
-.tabs.vertical {
+.tabs-vertical {
   margin: 0;
   min-width: 160px;
   border-bottom: none;
 }
 
-.tabs.vertical,
-.tabs.vertical.left {
+.tabs-vertical,
+.tabs-vertical.left {
   border-right: 1px solid #e6e6e6;
 }
 
-.tabs.vertical a:before,
-.tabs.vertical.left a:before {
+.tabs-vertical a:before,
+.tabs-vertical.left a:before {
   right: 0;
   top: 0;
   left: auto;
   border-right: 5px solid #a5dbd8;
 }
 
-.tabs.vertical a,
-.tabs.vertical.left a {
-  padding-right: 1em;
+.tabs-vertical ul,
+.tabs-vertical.left ul {
+  padding-left: 15px;
 }
 
-.tabs.vertical.right {
+.tabs-vertical a,
+.tabs-vertical.left a {
+  padding-right: 15px;
+}
+
+.tabs-vertical.right {
   border-right: none;
   border-left: 1px solid #e6e6e6;
 }
 
-.tabs.vertical.right a:before {
+.tabs-vertical.right a:before {
   left: 0;
   top: 0;
   right: 0;
@@ -1070,26 +1078,36 @@ fieldset + fieldset {
   border-left: 5px solid #a5dbd8;
 }
 
-.tabs.vertical.right a {
-  padding-left: 1em;
+.tabs-vertical.right ul {
+  padding-left: 0;
 }
 
-.tabs.vertical li,
-.tabs.vertical a {
+.tabs-vertical.right a {
+  padding-left: 15px;
+}
+
+.tabs-vertical.right ul a {
+  padding-left: 30px;
+}
+
+.tabs-vertical li,
+.tabs-vertical a {
   display: block;
 }
 
-.tabs.vertical a:before {
+.tabs-vertical a:before {
   border-bottom: none;
   border-right: 5px solid #a5dbd8;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
+  transform-origin: right top;
 }
 
-.tabs.vertical .active a:before {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
+.tabs-vertical.right a:before {
+  transform-origin: left top;
 }
+
+.tabs-vertical .active > a:before {
+  transform: scaleX(1);
+}
+
 /*# sourceMappingURL=global.css.map */

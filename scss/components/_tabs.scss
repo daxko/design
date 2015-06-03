@@ -41,18 +41,18 @@ $tab-accent-color: $cotton-candy !default;
     transform-origin: 0 100%;
   }
 
-  .active a {
+  .active > a {
     color: $gray-900;
   }
 
-  .active a:before {
+  .active > a:before {
     transform: scaleY(1);
   }
 
 }
 
 // Vertical Tabs
-.tabs.vertical {
+.tabs-vertical {
 
   margin: 0;
   min-width: 160px;
@@ -61,6 +61,7 @@ $tab-accent-color: $cotton-candy !default;
   &,
   &.left {
     border-right: 1px solid $tab-border-color;
+
     a:before {
       right: 0;
       top: 0;
@@ -68,14 +69,19 @@ $tab-accent-color: $cotton-candy !default;
       border-right: 5px solid $tab-accent-color;
     }
 
+    ul {
+      padding-left: 15px;
+    }
+
     a {
-      padding-right: 1em;
+      padding-right: 15px;
     }
   }
 
   &.right {
     border-right: none;
     border-left: 1px solid $tab-border-color;
+
     a:before {
       left: 0;
       top: 0;
@@ -84,8 +90,16 @@ $tab-accent-color: $cotton-candy !default;
       border-left: 5px solid $tab-accent-color;
     }
 
+    ul {
+      padding-left: 0;
+    }
+
     a {
-      padding-left: 1em;
+      padding-left: 15px;
+    }
+
+    ul a {
+      padding-left: 30px;
     }
   }
 
@@ -98,9 +112,14 @@ $tab-accent-color: $cotton-candy !default;
     border-bottom: none;
     border-right: 5px solid $tab-accent-color;
     transform: scaleX(0);
+    transform-origin: right top;
   }
 
-  .active a:before {
+  &.right a:before {
+    transform-origin: left top;
+  }
+
+  .active > a:before {
     transform: scaleX(1);
   }
 

@@ -1,5 +1,4 @@
 .docs-nav {
-
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, .15);
@@ -34,34 +33,9 @@
 }
 
 .section-nav {
-
   position: sticky;
   top: 10px;
-
-  li {
-    margin-bottom: .3em;
-    list-style-type: none;
-  }
-
   ul {
-    margin-top: .3em;
+    font-size: $base-font-size - 1px;
   }
-
-  li li {
-    font-size: .9em;
-  }
-
-  a {
-    text-decoration: none;
-    color: darken($cotton-candy, 40%);
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-}
-
-ul.section-nav {
-  padding-left: 0;
 }

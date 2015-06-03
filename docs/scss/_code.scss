@@ -13,6 +13,8 @@ code {
   padding: 1em;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  position: relative;
+  overflow: hidden;
 }
 
 .example + pre {

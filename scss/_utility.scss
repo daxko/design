@@ -7,3 +7,14 @@
   position: sticky;
   top: 0;
 }
+
+// Heads up! By using float classes you will need to be sure it's in a container
+// with the .clearfix class to clear content after the floated elements
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}

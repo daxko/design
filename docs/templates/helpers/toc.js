@@ -31,5 +31,5 @@ module.exports = function(context) {
     content += '<li><a href="#' + el.attr('id') + '">' + el.text() + '</a>' + subsection + '</li>';
   });
 
-  return '<ul class="section-nav">' + content + '</ul>';
+  return '<ul class="nav section-nav tabs tabs-vertical">' + content + '</ul>';
 };
