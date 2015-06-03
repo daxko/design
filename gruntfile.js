@@ -69,7 +69,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['<%= config.scss %>/{,*/}*.{scss,sass}', '<%= config.docs %>/scss/{,*/}*.{scss,sass}'],
-        tasks: ['sass', 'cssmin']
+        tasks: ['sass', 'autoprefixer', 'cssmin']
       },
       docs: {
         files: ['<%= config.contents %>/{,*/}*', '<%= config.docs %>/templates/{,*/}*.{hbs,js}'],
