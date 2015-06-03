@@ -706,6 +706,7 @@ fieldset + fieldset {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -945,6 +946,7 @@ fieldset + fieldset {
 }
 
 .navbar.fixed {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -1023,9 +1025,14 @@ fieldset + fieldset {
   width: 100%;
   display: block;
   border-bottom: 4px solid #a5dbd8;
-  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  transition: -webkit-transform ease-in-out 0.15s;
   transition: transform ease-in-out 0.15s;
-  transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 .tabs .active > a {
@@ -1033,7 +1040,9 @@ fieldset + fieldset {
 }
 
 .tabs .active > a:before {
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .tabs-vertical {
@@ -1098,16 +1107,23 @@ fieldset + fieldset {
 .tabs-vertical a:before {
   border-bottom: none;
   border-right: 5px solid #a5dbd8;
-  transform: scaleX(0);
-  transform-origin: right top;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right top;
+      -ms-transform-origin: right top;
+          transform-origin: right top;
 }
 
 .tabs-vertical.right a:before {
-  transform-origin: left top;
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
 }
 
 .tabs-vertical .active > a:before {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
 }
-
 /*# sourceMappingURL=global.css.map */
