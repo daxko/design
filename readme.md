@@ -1,17 +1,45 @@
-# Getting Started
+# Usage
 
-You'll need to install [nodejs](http://nodejs.org/) if it isn't already installed.
+## Npm
 
-From there, you'll need to install [grunt](http://gruntjs.com/) globally as well as the npm dependencies.
+You will need to have [node](http://nodejs.org) installed first in order to include these assets.
+
+```bash
+$ npm install daxko/design
+```
+
+Once installed, you can simply `@import` the global scss file:
+
+```scss
+// Import everything
+@import "node_modules/daxko.design/scss/global";
+```
+
+Or, individual files as you need them:
+
+```scss
+// Import only individual files
+@import "node_modules/daxko.design/scss/colors";
+@import "node_modules/daxko.design/scss/typography";
+@import "node_modules/daxko.design/scss/layout";
+@import "node_modules/daxko.design/scss/components/buttons";
+```
+
+If you're using `node-sass`, you can set the `[includePaths](https://github.com/sass/node-sass#data)` to include `node_modules` as an import directory. This will allow you to import our assets, as well as anything else installed under `node_modules`
+
+```scss
+// Import under node_modules
+@import "daxko.design/scss/global";
+```
+
+# Running locally
+
+The documentation runs using [metalsmith](https://github.com/segmentio/metalsmith), a static site generator built in node and is dependent upon having [node](http://nodejs.org/) and [grunt](http://gruntjs.com/) installed. However, we've wired up a few things via grunt so you can develop locally. But you'll need to run a few commands first to get started:
 
 ```bash
 npm install -g grunt-cli
 npm install
 ```
-
-# Running the site
-
-This guide runs using [metalsmith](https://github.com/segmentio/metalsmith), a static site generator built in node. However, we've wired up a few things via grunt so you can develop locally.
 
 `grunt preview`
 
