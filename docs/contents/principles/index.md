@@ -5,7 +5,7 @@ theme: "red-velvet"
 
 <header class="heading">
 A foundation for good design.
-<p>At daxko, we believe these principles help provide a framework towards good design. They should act as a guideline whenever we are working on a design.</p>
+<p>At Daxko, we believe these principles help provide a framework towards good design. They should act as a guideline whenever we are working on a design.</p>
 </header>
 
 ## Users First
