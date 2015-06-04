@@ -25,7 +25,7 @@ Or, individual files as you need them:
 @import "node_modules/daxko.design/scss/components/buttons";
 ```
 
-If you're using `node-sass`, you can set the `[includePaths](https://github.com/sass/node-sass#data)` to include `node_modules` as an import directory. This will allow you to import our assets, as well as anything else installed under `node_modules`
+If you're using `node-sass`, you can set the [`includePaths`](https://github.com/sass/node-sass#data) to include `node_modules` as an import directory. This will allow you to import our assets, as well as anything else installed under `node_modules`
 
 ```scss
 // Import under node_modules
