@@ -1,5 +1,5 @@
 ---
-title: "Design Principals"
+title: "Design Principles"
 theme: "red-velvet"
 ---
 
