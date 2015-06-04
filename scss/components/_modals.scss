@@ -1,0 +1,43 @@
+$modal-border-color: $gray-100;
+$modal-backdrop-color: rgba($gray-500, .6);
+
+// Modals
+// ----------------------------------------------
+
+.modal {
+  border-radius: 3px;
+  padding: 1em;
+  border: 1px solid $modal-border-color;
+  background-color: #fff;
+  position: relative;
+  z-index: z-index('modal');
+}
+
+.close {
+  content: "×";
+  font-size: $base-font-size + 2px;
+  float: right;
+}
+
+.modal-header {
+  margin-top: -1rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  margin-bottom: 1rem;
+  padding: .5em 1rem;
+  border-bottom: 1px solid $modal-border-color;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+// Modal backdrop
+.modal-backdrop {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: z-index('modal-backdrop');
+  background-color: $modal-backdrop-color;
+}

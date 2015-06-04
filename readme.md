@@ -40,4 +40,4 @@ Follow the [semver](http://semver.org/) guidelines when making a version bump:
 
 * **x**.0.0 for major releases with breaking changes.
 * 0.**x**.0 for minor releases with backwards-compatible changes.
-* 0.0.**x** for patch releases with for backwards-compatible bug fixes.
+* 0.0.**x** for patch releases with backwards-compatible bug fixes.

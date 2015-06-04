@@ -14,7 +14,8 @@ code {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   position: relative;
-  overflow: hidden;
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
 .example + pre {

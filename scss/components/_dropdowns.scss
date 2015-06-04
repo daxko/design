@@ -13,8 +13,8 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   margin-left: 2px;
   vertical-align: middle;
   border-top: 4px solid $gray-900;
-  border-right: 3px solid transparent;
-  border-left: 3px solid transparent;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
 }
 
 .open > .dropdown-menu {

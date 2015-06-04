@@ -4,6 +4,55 @@ theme: "banana-pudding"
 template: toc.hbs
 ---
 
+## Base
+
+Everything is built on top of [normalize.css](http://necolas.github.io/normalize.css/) to help render elements consistently across browsers.
+
+### HTML5 doctype
+
+We use HTML elements and CSS properties that **require** an HTML5 doctype -- so be sure to include it as part of your core layout.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<!-- site content here -->
+</html>
+```
+
+### Viewport
+
+Your base layout should also include a viewport meta element.
+
+```html
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+```
+
+### Box Sizing
+
+We also use `border-box` as the default box-sizing, which all elements inherit by default.
+
+```css
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+```
+
+This method allows us to [inherit the box sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) on all elements, while still allowing us to override it for components that were originally built with the `context-box` in mind.
+
+```css
+.component {
+  /* We can override the default setting here  */
+  /* which will cascade down to child elements */
+  box-sizing: content-box;
+}
+```
+
 ## Layouts
 
 ### Container
@@ -20,7 +69,7 @@ Center page content with a `.container` class. This container will automatically
 
 The grid is a pretty standard 12 column responsive grid -- you create a wrapper `.grid` with individual columns. Columns are placed using `inline-block` instead of floats which allows for a little bit cleaner markup and an easier way to handle certain layouts at smaller viewports.
 
-Since we're using `box-sizing`, the grid sizes can include the gutters as part of the column instead of trying to perform complex margin calculations. The size of the gutters can be adjusted by changing the `$grid-gutters` sass variable.
+Since we're setting the box sizing to `border-box`, the grid sizes can include the gutters as part of the column instead of trying to perform complex margin calculations. The size of the gutters can be adjusted by changing the `$grid-gutters` sass variable.
 
 {{#example 'html' 'grid-example'}}
 <div class="grid">
@@ -196,7 +245,6 @@ Welcome to the **danger zone**. Danger buttons are red, indicating that the foll
 ### Disabled
 
 `<button>` elements can be disabled with the `disabled` attribute, and `<a>` elements with the `.disabled` class.
-<button type="button" class="btn" disabled>Disabled Button</button> <a href="#" class="btn disabled">Disabled Link</a>
 
 {{#example 'html'}}
 <button type="button" class="btn" disabled>Disabled Button</button>
@@ -300,7 +348,7 @@ Vertical tabs can also have sub navigation items.
 </ul>
 {{/example}}
 
-Since tabs don't have a implicit width, you may want to consider placing them in a grid to
+Since tabs don't have a implicit width, you may want to consider placing them in a grid to align along side your content.
 
 {{#example 'html'}}
 <div class="grid">
@@ -331,4 +379,17 @@ Since tabs don't have a implicit width, you may want to consider placing them in
     <li><a href="#">Sausage</a></li>
   </ul>
 </div>
+{{/example}}
+
+## Modals
+
+{{#example 'html'}}
+<div class="modal">
+  <div class="modal-header">
+    Modal Title
+    <span class="close"></span>
+  </div>
+  This is a modal
+</div>
+<div class="modal-backdrop"></div>
 {{/example}}
