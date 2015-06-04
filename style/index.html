@@ -27,9 +27,41 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navbar">Navbar</a><ul><li><a href="#basic-navigation">Basic Navigation</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navbar">Navbar</a><ul><li><a href="#basic-navigation">Basic Navigation</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li></ul>
 </aside>
 <section>
+<h2 id="base">Base</h2>
+<p>Everything is built on top of <a href="http://necolas.github.io/normalize.css/">normalize.css</a> to help render elements consistently across browsers.</p>
+<h3 id="html5-doctype">HTML5 doctype</h3>
+<p>We use HTML elements and CSS properties that <strong>require</strong> an HTML5 doctype — so be sure to include it as part of your core layout.</p>
+<pre><code class="lang-html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="comment">&lt;!-- site content here --&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+<h3 id="viewport">Viewport</h3>
+<p>Your base layout should also include a viewport meta element.</p>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width,initial-scale=1"</span>/&gt;</span>
+</code></pre>
+<h3 id="box-sizing">Box Sizing</h3>
+<p>We also use <code>border-box</code> as the default box-sizing, which all elements inherit by default.</p>
+<pre><code class="lang-css"><span class="tag">html</span> <span class="rules">{
+  <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;
+}</span>
+
+*,
+*<span class="pseudo">:before</span>,
+*<span class="pseudo">:after</span> <span class="rules">{
+  <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> inherit</span></span>;
+}</span>
+</code></pre>
+<p>This method allows us to <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">inherit the box sizing</a> on all elements, while still allowing us to override it for components that were originally built with the <code>context-box</code> in mind.</p>
+<pre><code class="lang-css"><span class="class">.component</span> <span class="rules">{
+  <span class="comment">/* We can override the default setting here  */</span>
+  <span class="comment">/* which will cascade down to child elements */</span>
+  <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> content-box</span></span>;
+}</span>
+</code></pre>
 <h2 id="layouts">Layouts</h2>
 <h3 id="container">Container</h3>
 <p>Center page content with a <code>.container</code> class. This container will automatically take up the full width of the screen up to 1200px. The default width can be overwritten by the <code>$container-width</code> sass variable.</p>
@@ -39,7 +71,7 @@
 </code></pre>
 <h3 id="grid">Grid</h3>
 <p>The grid is a pretty standard 12 column responsive grid — you create a wrapper <code>.grid</code> with individual columns. Columns are placed using <code>inline-block</code> instead of floats which allows for a little bit cleaner markup and an easier way to handle certain layouts at smaller viewports.</p>
-<p>Since we’re using <code>box-sizing</code>, the grid sizes can include the gutters as part of the column instead of trying to perform complex margin calculations. The size of the gutters can be adjusted by changing the <code>$grid-gutters</code> sass variable.</p>
+<p>Since we’re setting the box sizing to <code>border-box</code>, the grid sizes can include the gutters as part of the column instead of trying to perform complex margin calculations. The size of the gutters can be adjusted by changing the <code>$grid-gutters</code> sass variable.</p>
 <div class='example grid-example'><div class="grid">
   <div class="col-4">.col-4</div>
   <div class="col-8">.col-8</div>
@@ -273,7 +305,6 @@
 </code></pre>
 <h3 id="disabled">Disabled</h3>
 <p><code>&lt;button&gt;</code> elements can be disabled with the <code>disabled</code> attribute, and <code>&lt;a&gt;</code> elements with the <code>.disabled</code> class.</p>
-<p><button type="button" class="btn" disabled>Disabled Button</button> <a href="#" class="btn disabled">Disabled Link</a></p>
 <div class='example '><button type="button" class="btn" disabled>Disabled Button</button>
 <a href="#" class="btn disabled" role="button">Disabled Link</a>
 </div>
@@ -412,7 +443,7 @@
   <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
 </code></pre>
-<p>Since tabs don’t have a implicit width, you may want to consider placing them in a grid to</p>
+<p>Since tabs don’t have a implicit width, you may want to consider placing them in a grid to align along side your content.</p>
 <div class='example '><div class="grid">
   <div class="col-3">
     <ul class="tabs tabs-vertical">
@@ -466,10 +497,30 @@
   <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
+<h2 id="modals">Modals</h2>
+<div class='example '><div class="modal">
+  <div class="modal-header">
+    Modal Title
+    <span class="close"></span>
+  </div>
+  This is a modal
+</div>
+<div class="modal-backdrop"></div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal-header"</span>&gt;</span>
+    Modal Title
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"close"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  This is a modal
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal-backdrop"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
 
 </section>
     <footer>
-      Created and maintained by the design team at Daxko. <strong>v0.0.6</strong>
+      Created and maintained by the design team at Daxko. <strong>v0.0.7</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
