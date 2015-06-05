@@ -6,16 +6,21 @@ $modal-backdrop-color: rgba($gray-500, .6);
 
 .modal {
   border-radius: 3px;
+  background-clip: padding-box;
   padding: 1em;
   border: 1px solid $modal-border-color;
   background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
   position: relative;
   z-index: z-index('modal');
+  margin: 0 auto;
+
 }
 
-.close {
+.close:before {
   content: "×";
-  font-size: $base-font-size + 2px;
+  font-size: $base-font-size + 8px;
+  line-height: 1em;
   float: right;
 }
 
@@ -33,7 +38,7 @@ $modal-backdrop-color: rgba($gray-500, .6);
 // Modal backdrop
 .modal-backdrop {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

@@ -35,5 +35,8 @@
     "metalsmith-templates": "^0.7.0",
     "normalize.css": "^3.0.3",
     "time-grunt": "^1.2.1"
+  },
+  "optionalDependencies": {
+    "faker": "^2.1.4"
   }
 }

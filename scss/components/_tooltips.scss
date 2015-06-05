@@ -1,0 +1,134 @@
+$tooltip-background-color: rgba($gray-900, .9) !default;
+$tooltip-text-color: #fff !default;
+$tooltip-tail-size: 5px;
+
+// Tooltips
+// ----------------------------------------------
+
+.tooltip {
+  position: relative;
+}
+
+// Tooltip tail
+.tooltip:before {
+  // display: none;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+}
+
+// Tooltip container
+.tooltip:after {
+  // display: none;
+  position: absolute;
+  color: $tooltip-text-color;
+  content: attr(aria-label);
+  background-color: $tooltip-background-color;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: $base-line-height;
+  font-family: $base-font-family;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: none;
+  white-space: pre;
+  padding: 3px 10px;
+  z-index: z-index('tooltip');
+}
+
+.tooltip:hover,
+.tooltip:focus {
+  &:before,
+  &:after {
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+// Positioning
+.tooltip,
+.tooltip-n,
+.tooltip-s {
+  &:after,
+  &:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// Tooltip on top
+.tooltip,
+.tooltip-n,
+.tooltip-s {
+  &:after {
+    bottom: 100%;
+    margin-bottom: 10px;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-top: 5px solid $tooltip-background-color;
+  }
+}
+
+// Tooltip on bottom
+.tooltip-s {
+  &:after {
+    bottom: auto;
+    top: 100%;
+    margin-top: 10px;
+  }
+
+  &:before {
+    top: 100%;
+    bottom: auto;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid $tooltip-background-color;
+  }
+}
+
+// Positioning
+.tooltip-e,
+.tooltip-w {
+  &:after,
+  &:before {
+    top: 50%;
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    border-top: 5px solid transparent;
+  }
+}
+
+// Tooltip on left
+.tooltip-w {
+  &:after {
+    right: 100%;
+    margin-right: 15px;
+  }
+
+  &:before {
+    right: 100%;
+    margin-right: 5px;
+    border-left: 5px solid $tooltip-background-color;
+  }
+}
+
+// Tooltip on right
+.tooltip-e {
+  &:after {
+    left: 100%;
+    margin-left: 15px;
+  }
+
+  &:before {
+    left: 100%;
+    margin-left: 5px;
+    border-right: 5px solid $tooltip-background-color;
+  }
+}

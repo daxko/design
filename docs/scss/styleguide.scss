@@ -180,6 +180,14 @@ section > :first-child {
   border-right: $grid-gutter * .5 solid #fff;
 }
 
+.navbar-example {
+  overflow: hidden;
+}
+
+.example .modal-backdrop {
+  position: absolute;
+}
+
 footer {
   margin-top: 4em;
   border-top: 1px solid $gray-100;
