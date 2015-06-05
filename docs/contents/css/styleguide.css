@@ -900,6 +900,7 @@ fieldset + fieldset {
 }
 
 .tooltip:before {
+  display: none;
   position: absolute;
   content: "";
   width: 0;
@@ -908,6 +909,7 @@ fieldset + fieldset {
 }
 
 .tooltip:after {
+  display: none;
   position: absolute;
   color: #fff;
   content: attr(aria-label);

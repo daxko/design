@@ -11,7 +11,7 @@ $tooltip-tail-size: 5px;
 
 // Tooltip tail
 .tooltip:before {
-  // display: none;
+  display: none;
   position: absolute;
   content: "";
   width: 0;
@@ -21,7 +21,7 @@ $tooltip-tail-size: 5px;
 
 // Tooltip container
 .tooltip:after {
-  // display: none;
+  display: none;
   position: absolute;
   color: $tooltip-text-color;
   content: attr(aria-label);
