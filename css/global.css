@@ -724,6 +724,18 @@ fieldset + fieldset {
   float: right;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .btn {
   position: relative;
   overflow: visible;

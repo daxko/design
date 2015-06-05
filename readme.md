@@ -37,8 +37,8 @@ If you're using `node-sass`, you can set the [`includePaths`](https://github.com
 The documentation runs using [metalsmith](https://github.com/segmentio/metalsmith), a static site generator built in node and is dependent upon having [node](http://nodejs.org/) and [grunt](http://gruntjs.com/) installed. However, we've wired up a few things via grunt so you can develop locally. But you'll need to run a few commands first to get started:
 
 ```bash
-npm install -g grunt-cli
-npm install
+$ npm install -g grunt-cli
+$ npm install
 ```
 
 `grunt preview`

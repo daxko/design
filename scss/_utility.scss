@@ -8,13 +8,25 @@
   top: 0;
 }
 
-// Heads up! By using float classes you will need to be sure it's in a container
+// Heads up! By using these float classes you will need to be sure it's in a container
 // with the .clearfix class to clear content after the floated elements
-
 .pull-left {
   float: left;
 }
 
 .pull-right {
   float: right;
+}
+
+// Text utility classes
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
