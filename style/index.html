@@ -27,7 +27,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navbar">Navbar</a><ul><li><a href="#basic-navigation">Basic Navigation</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navbar">Navbar</a><ul><li><a href="#basic-navigation">Basic Navigation</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
 </aside>
 <section>
 <h2 id="base">Base</h2>
@@ -238,7 +238,7 @@
 <h2 id="navbar">Navbar</h2>
 <p>— todo —</p>
 <h3 id="basic-navigation">Basic Navigation</h3>
-<div class='example '><nav class="navbar" role="navigation">
+<div class='example navbar-example'><nav class="navbar" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <a href="#">Association Name</a>
@@ -484,6 +484,8 @@
     <li><a href="#">Bacon</a></li>
     <li><a href="#">Ham</a></li>
     <li><a href="#">Sausage</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Bacon &amp; Eggs</a></li>
   </ul>
 </div>
 </div>
@@ -494,6 +496,8 @@
     <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Bacon<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
     <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Ham<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
     <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Sausage<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Bacon &amp;amp; Eggs<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
@@ -516,6 +520,36 @@
   This is a modal
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal-backdrop"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h2 id="tooltips">Tooltips</h2>
+<p>Add tooltips to almost any element. Just add a <code>.tooltip</code> class along with an <code>aria-label</code> attribute containing the tooltip text.</p>
+<blockquote>
+<p>Tooltips can not be added to elements that have <code>:before</code> or <code>:after</code> psuedo elements. If you need a tooltip on an element with psuedo-elements, you will need to add the tooltip to the parent instead.</p>
+</blockquote>
+<div class='example '><button class="btn tooltip" aria-label="This is a tooltip for the button">Button with Tooltip</button>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn tooltip"</span> <span class="attribute">aria-label</span>=<span class="value">"This is a tooltip for the button"</span>&gt;</span>Button with Tooltip<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+</code></pre>
+<p>You can also specify the direction of the tooltip:</p>
+<ul>
+<li><code>tooltip-n</code> — tooltip on top</li>
+<li><code>tooltip-e</code> — tooltip on right</li>
+<li><code>tooltip-s</code> — tooltip on bottom</li>
+<li><code>tooltip-w</code> — tooltip on left</li>
+</ul>
+<p></p>
+
+<div class='example '><p><span class="tooltip tooltip-n" aria-label="I'm on the top!">Tooltip on top</span></p>
+<p><span class="tooltip tooltip-e" aria-label="I'm on the right!">Tooltip on right</span></p>
+<p><span class="tooltip tooltip-s" aria-label="I'm on the bottom!">Tooltip on bottom</span></p>
+<p><span class="tooltip tooltip-w" aria-label="I'm on the left!">Tooltip on left</span></p>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-n"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the top!"</span>&gt;</span>Tooltip on top<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-e"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the right!"</span>&gt;</span>Tooltip on right<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-s"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the bottom!"</span>&gt;</span>Tooltip on bottom<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-w"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the left!"</span>&gt;</span>Tooltip on left<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 </code></pre>
 
 </section>
