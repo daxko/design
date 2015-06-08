@@ -8,7 +8,8 @@ module.exports = function(grunt) {
       docs: 'docs',
       contents: '<%= config.docs %>/contents',
       css: 'css',
-      scss: 'scss'
+      scss: 'scss',
+      fonts: 'fonts'
     },
 
     sass: {
@@ -47,6 +48,17 @@ module.exports = function(grunt) {
         files: {
           '<%= config.scss %>/_normalize.scss': ['node_modules/normalize.css/normalize.css']
         }
+      },
+      icons: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.fonts %>',
+            src: ['*.*'],
+            dest: '<%= config.docs%>/contents/css/fonts/',
+            filter: 'isFile'
+          }
+        ]
       }
     },
 
