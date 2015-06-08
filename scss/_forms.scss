@@ -60,7 +60,7 @@ fieldset legend {
 
   label {
     text-align: right;
-    width: 12em;
+    width: 9em;
     margin-right: 1em;
     float: left;
     padding: 5px 0;
@@ -69,7 +69,7 @@ fieldset legend {
   }
 
   .controls {
-    margin-left: 13em;
+    margin-left: 10em;
   }
 
   .btn-group {
@@ -79,6 +79,7 @@ fieldset legend {
 
   + .control-group {
     margin-top: 1em;
+    clear: left;
   }
 
 }
