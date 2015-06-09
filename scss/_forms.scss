@@ -5,7 +5,8 @@ $form-horizontal-breakpoint: 600px !default;
 // ----------------------------------------------
 
 input,
-select {
+select,
+textarea {
   border: 1px solid $gray-100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .05) inset;
   border-radius: .2em;
@@ -14,6 +15,7 @@ select {
   line-height: $base-line-height;
   vertical-align: middle;
   outline: 0;
+  width: auto;
 }
 
 input.input-large {
@@ -24,8 +26,14 @@ input.input-mini {
   padding: 3px 6px 2px;
 }
 
+input.input-block {
+  display: block;
+  width: 100%;
+}
+
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
   border-color: darken($input-focus-color, 10%);
   box-shadow: 0 0 4px $input-focus-color;
   z-index: z-index('input-focus');
@@ -42,12 +50,12 @@ fieldset {
 }
 
 fieldset + fieldset {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 fieldset legend {
   border-bottom: 1px solid $gray-100;
-  color: $gray-500;
+  color: $gray-900;
   font-weight: 100;
   display: block;
   width: 100%;
@@ -55,10 +63,14 @@ fieldset legend {
   margin-bottom: 1em;
 }
 
+input::placeholder {
+  color: $gray-300;
+}
+
 // Form layouts
 .form-horizontal .control-group {
 
-  label {
+  > label {
     text-align: right;
     width: 9em;
     margin-right: 1em;
@@ -70,6 +82,12 @@ fieldset legend {
 
   .controls {
     margin-left: 10em;
+  }
+
+  .controls label {
+    display: block;
+    vertical-align: middle;
+    padding: 5px 0;
   }
 
   .btn-group {
@@ -85,7 +103,67 @@ fieldset legend {
 }
 
 .form-actions {
+  margin-top: 2em;
   text-align: right;
+}
+
+// Input group + add-ons
+.input-group {
+
+  display: table;
+  border-collapse: separate;
+  position: relative;
+
+  input {
+    display: table-cell;
+    float: left;
+  }
+
+  .add-on {
+    color: $gray-500;
+    text-shadow: -1px 0 #fff;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px 10px;
+    background-color: $gray-50;
+    border: 1px solid $gray-100;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .add-on:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+
+  .add-on + input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  input:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  input:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+
+  input + .add-on {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+  }
+
+  + .input-group {
+    margin-left: .5em;
+  }
+
 }
 
 @media (max-width: $form-horizontal-breakpoint) {
@@ -102,6 +180,10 @@ fieldset legend {
 
     .controls {
       margin-left: 0;
+    }
+
+    input {
+      width: 100%;
     }
 
   }

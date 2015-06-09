@@ -118,13 +118,21 @@ You can also left or right align columns by adding a `.left` or `.right` class r
 ### Headings
 
 {{#example 'html'}}
-<h1>h1. Heading</h1>
-<h2>h2. Heading</h2>
-<h3>h3. Heading</h3>
-<h4>h4. Heading</h4>
-<h5>h5. Heading</h5>
-<h6>h6. Heading</h6>
+<h1>h1. Heading</h1> <!-- 35px -->
+<h2>h2. Heading</h2> <!-- 28px -->
+<h3>h3. Heading</h3> <!-- 23px -->
+<h4>h4. Heading</h4> <!-- 20px -->
+<h5>h5. Heading</h5> <!-- 18px -->
+<h6>h6. Heading</h6> <!-- 14px -->
 {{/example}}
+
+For headings, we're using [sass placeholders](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_) to set the appropriate font size for our headings. If you need to match a heading size with a particular element, you can do so by using `@extend` along with the placeholder name.
+
+```scss
+.my-element {
+  @extend %h3;
+}
+```
 
 ### Unordered Lists
 
@@ -181,11 +189,11 @@ You can style inline text elements.
 <p>This text is <sub>subscript</sub></p>
 {{/example}}
 
-## Navbar
+## Navs
 
 -- todo --
 
-### Basic Navigation
+### Navbar
 
 {{#example 'html' 'navbar-example'}}
 <nav class="navbar" role="navigation">
@@ -370,6 +378,8 @@ Since tabs don't have a implicit width, you may want to consider placing them in
 
 ## Dropdowns
 
+-- todo --
+
 {{#example 'html'}}
 <div class="dropdown">
   <button type="button" class="btn" data-trigger="dropdown">Dropdown <span class="caret"></span></button>
@@ -384,6 +394,8 @@ Since tabs don't have a implicit width, you may want to consider placing them in
 {{/example}}
 
 ## Modals
+
+-- todo --
 
 {{#example 'html'}}
 <div class="modal">
