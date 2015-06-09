@@ -27,7 +27,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navbar">Navbar</a><ul><li><a href="#basic-navigation">Basic Navigation</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
 </aside>
 <section>
 <h2 id="base">Base</h2>
@@ -137,20 +137,25 @@
 </code></pre>
 <h2 id="typography">Typography</h2>
 <h3 id="headings">Headings</h3>
-<div class='example '><h1>h1. Heading</h1>
-<h2>h2. Heading</h2>
-<h3>h3. Heading</h3>
-<h4>h4. Heading</h4>
-<h5>h5. Heading</h5>
-<h6>h6. Heading</h6>
+<div class='example '><h1>h1. Heading</h1> <!-- 35px -->
+<h2>h2. Heading</h2> <!-- 28px -->
+<h3>h3. Heading</h3> <!-- 23px -->
+<h4>h4. Heading</h4> <!-- 20px -->
+<h5>h5. Heading</h5> <!-- 18px -->
+<h6>h6. Heading</h6> <!-- 14px -->
 </div>
 
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>h1. Heading<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h2</span>&gt;</span>h2. Heading<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h3</span>&gt;</span>h3. Heading<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h4</span>&gt;</span>h4. Heading<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h5</span>&gt;</span>h5. Heading<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h6</span>&gt;</span>h6. Heading<span class="tag">&lt;/<span class="title">h6</span>&gt;</span>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>h1. Heading<span class="tag">&lt;/<span class="title">h1</span>&gt;</span> <span class="comment">&lt;!-- 35px --&gt;</span>
+<span class="tag">&lt;<span class="title">h2</span>&gt;</span>h2. Heading<span class="tag">&lt;/<span class="title">h2</span>&gt;</span> <span class="comment">&lt;!-- 28px --&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span>&gt;</span>h3. Heading<span class="tag">&lt;/<span class="title">h3</span>&gt;</span> <span class="comment">&lt;!-- 23px --&gt;</span>
+<span class="tag">&lt;<span class="title">h4</span>&gt;</span>h4. Heading<span class="tag">&lt;/<span class="title">h4</span>&gt;</span> <span class="comment">&lt;!-- 20px --&gt;</span>
+<span class="tag">&lt;<span class="title">h5</span>&gt;</span>h5. Heading<span class="tag">&lt;/<span class="title">h5</span>&gt;</span> <span class="comment">&lt;!-- 18px --&gt;</span>
+<span class="tag">&lt;<span class="title">h6</span>&gt;</span>h6. Heading<span class="tag">&lt;/<span class="title">h6</span>&gt;</span> <span class="comment">&lt;!-- 14px --&gt;</span>
+</code></pre>
+<p>For headings, we’re using <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_">sass placeholders</a> to set the appropriate font size for our headings. If you need to match a heading size with a particular element, you can do so by using <code>@extend</code> along with the placeholder name.</p>
+<pre><code class="lang-scss"><span class="class">.my-element</span> {
+  <span class="at_rule">@<span class="keyword">extend</span> %h3;</span>
+}
 </code></pre>
 <h3 id="unordered-lists">Unordered Lists</h3>
 <p>A list where the order of the items doesn’t matter.</p>
@@ -235,9 +240,9 @@
 <span class="tag">&lt;<span class="title">p</span>&gt;</span>This text is <span class="tag">&lt;<span class="title">sup</span>&gt;</span>superscript<span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;<span class="title">p</span>&gt;</span>This text is <span class="tag">&lt;<span class="title">sub</span>&gt;</span>subscript<span class="tag">&lt;/<span class="title">sub</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 </code></pre>
-<h2 id="navbar">Navbar</h2>
+<h2 id="navs">Navs</h2>
 <p>— todo —</p>
-<h3 id="basic-navigation">Basic Navigation</h3>
+<h3 id="navbar">Navbar</h3>
 <div class='example navbar-example'><nav class="navbar" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -478,6 +483,7 @@
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
 <h2 id="dropdowns">Dropdowns</h2>
+<p>— todo —</p>
 <div class='example '><div class="dropdown">
   <button type="button" class="btn" data-trigger="dropdown">Dropdown <span class="caret"></span></button>
   <ul class="dropdown-menu">
@@ -502,6 +508,7 @@
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
 <h2 id="modals">Modals</h2>
+<p>— todo —</p>
 <div class='example '><div class="modal">
   <div class="modal-header">
     Modal Title
