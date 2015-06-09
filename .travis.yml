@@ -6,7 +6,7 @@ before_script:
 branches:
   only:
   - master
-script:
+after_success:
 - npm run deploy
 cache:
   directories:
