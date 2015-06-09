@@ -6,8 +6,8 @@ before_script:
 branches:
   only:
   - master
-script:
-- npm run deploy
+after_success:
+- if [ $TRAVIS_BRANCH = 'master' ]; npm run deploy;
 cache:
   directories:
   - node_modules
