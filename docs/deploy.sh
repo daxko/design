@@ -1,5 +1,7 @@
 #!/bin/bash
 
+if [ "$TRAVIS_BRANCH" == "master" ]; then
+
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "travis-ci"
 BASE_PATH=design
@@ -15,3 +17,5 @@ find . -name '*.html' -type f -exec sed -i -E "s/((href|src)=\"?\/)([^\/])/\1$BA
 git add --all .
 git commit -m "Deploying ${TRAVIS_COMMIT} to gh-pages"
 git push origin gh-pages --quiet > /dev/null
+
+fi
