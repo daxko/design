@@ -27,7 +27,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li><li><a href="#utilities">Utilities</a><ul><li><a href="#floats">Floats</a><li><a href="#hiding-elements">Hiding elements</a><li><a href="#sticky">Sticky</a><li><a href="#text-alignment">Text Alignment</a></ul></li></ul>
 </aside>
 <section>
 <h2 id="base">Base</h2>
@@ -558,10 +558,60 @@
 <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-s"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the bottom!"</span>&gt;</span>Tooltip on bottom<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-w"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the left!"</span>&gt;</span>Tooltip on left<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 </code></pre>
+<h2 id="utilities">Utilities</h2>
+<p>There’s a handful of utility classes available for quick alignment, display, and more.</p>
+<h3 id="floats">Floats</h3>
+<p>Float an item left or right with <code>.pull-left</code> or <code>.pull-right</code>. You can also optionally wrap them with a <code>.cf</code>, depending on your layout.</p>
+<div class='example '><div class="cf">
+  <code class="pull-left">.pull-left</code>
+  <code class="pull-right">.pull-right</code>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"cf"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">class</span>=<span class="value">"pull-left"</span>&gt;</span>.pull-left<span class="tag">&lt;/<span class="title">code</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">code</span> <span class="attribute">class</span>=<span class="value">"pull-right"</span>&gt;</span>.pull-right<span class="tag">&lt;/<span class="title">code</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h3 id="hiding-elements">Hiding elements</h3>
+<p>Elements can be hidden with a <code>.hide</code> class. This will hide the element for both visual and screen readers.</p>
+<div class='example '><p class="hide">You can’t see me!</p>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"hide"</span>&gt;</span>You can't see me!<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+</code></pre>
+<p>If you need to hide an element for visual, but not for screen readers you can use <code>.sr-only</code> instead.</p>
+<div class='example '><p class="sr-only">Only screen readers can see me!</p>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"sr-only"</span>&gt;</span>Only screen readers can see me!<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+</code></pre>
+<h3 id="sticky">Sticky</h3>
+<p>You can make any element <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning">sticky</a>, with a <code>.sticky</code> class. The element will remain stuck to the viewport until the positioning specified exceeds its closest relative container.</p>
+<div class='example '><div class="sticky-container">
+  <span class="sticky">Sticky Element</span>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"sticky-container"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"sticky"</span>&gt;</span>Sticky Element<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h3 id="text-alignment">Text Alignment</h3>
+<p>Change the way text is aligned in an element with its respective class.</p>
+<div class='example '><p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"text-left"</span>&gt;</span>Left aligned text.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"text-center"</span>&gt;</span>Center aligned text.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"text-right"</span>&gt;</span>Right aligned text.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+</code></pre>
 
 </section>
     <footer>
-      Created and maintained by the design team at Daxko. <strong>v0.0.10</strong>
+      Created and maintained by the design team at Daxko. <strong>v0.0.11</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
