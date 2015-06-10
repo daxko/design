@@ -1458,6 +1458,17 @@ input::placeholder {
   visibility: hidden !important;
 }
 
+.sr-only {
+  border: 0 none;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -1465,11 +1476,11 @@ input::placeholder {
 }
 
 .pull-left {
-  float: left;
+  float: left !important;
 }
 
 .pull-right {
-  float: right;
+  float: right !important;
 }
 
 .text-left {

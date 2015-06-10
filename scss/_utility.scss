@@ -3,19 +3,31 @@
   visibility: hidden !important;
 }
 
+// Hide elements visually, only show them to screen readers
+.sr-only {
+  border: 0 none;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .sticky {
   position: sticky;
   top: 0;
 }
 
 // Heads up! By using these float classes you will need to be sure it's in a container
-// with the .clearfix class to clear content after the floated elements
+// with the .cf class to clear content after the floated elements
 .pull-left {
-  float: left;
+  float: left !important;
 }
 
 .pull-right {
-  float: right;
+  float: right !important;
 }
 
 // Text utility classes
