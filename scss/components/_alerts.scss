@@ -1,0 +1,28 @@
+// Alerts
+// ----------------------------------------------
+
+.alert {
+  padding: .6em .8em;
+}
+
+.alert + .alert {
+  margin-top: 5px;
+}
+
+.alert.alert-success {
+  background-color: lighten($key-lime, 35%);
+  color: darken($key-lime, 20%);
+  border-left: 5px solid lighten($key-lime, 27.5%);
+}
+
+.alert.alert-error {
+  background-color: lighten($red-velvet, 37.5%);
+  color: darken($red-velvet, 10%);
+  border-left: 5px solid lighten($red-velvet, 30%);
+}
+
+.alert.alert-info {
+  background-color: lighten($cotton-candy, 15%);
+  color: darken($cotton-candy, 40%);
+  border-left: 5px solid lighten($cotton-candy, 7.5%);
+}
