@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$TRAVIS_BRANCH" == "master" ]; then
+if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
 
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "travis-ci"
