@@ -823,6 +823,46 @@ input::placeholder {
   }
 }
 
+.table {
+  width: 100%;
+  max-width: 100%;
+}
+
+.table.table-bordered {
+  border: 1px solid #e6e6e6;
+}
+
+.table td,
+.table th {
+  text-align: left;
+}
+
+.table > thead > tr td,
+.table > thead > tr th {
+  background-color: #f6f6f6;
+  padding: 0.5em 1em;
+  vertical-align: bottom;
+}
+
+.table > tbody > tr td,
+.table > tbody > tr th {
+  border-top: 1px solid #e6e6e6;
+  padding: 0.5em 1em;
+  vertical-align: top;
+}
+
+.table.table-hover > tbody > tr:hover td,
+.table.table-hover > tbody > tr:hover th {
+  background-color: #f6f6f6;
+}
+
+.table.table-condensed > tbody > tr td,
+.table.table-condensed > tbody > tr th,
+.table.table-condensed > thead > tr td,
+.table.table-condensed > thead > tr th {
+  padding: 0.25em 0.5em;
+}
+
 @font-face {
   font-family: 'daxicons';
   src: url("fonts/daxicons.eot?v1");
