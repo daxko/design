@@ -23,6 +23,12 @@
 
 .alert.alert-info {
   background-color: lighten($cotton-candy, 15%);
-  color: darken($cotton-candy, 40%);
+  color: darken($cotton-candy, 35%);
   border-left: 5px solid lighten($cotton-candy, 7.5%);
+}
+
+.alert.alert-warning {
+  background-color: lighten($banana-pudding, 37.5%);
+  color: darken($banana-pudding, 25%);
+  border-left: 5px solid lighten($banana-pudding, 30%);
 }

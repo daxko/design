@@ -1517,8 +1517,14 @@ input::placeholder {
 
 .alert.alert-info {
   background-color: #dcf1f0;
-  color: #33817c;
+  color: #3b938e;
   border-left: 5px solid #c0e6e4;
+}
+
+.alert.alert-warning {
+  background-color: #fceecf;
+  color: #825c09;
+  border-left: 5px solid #f9e1ab;
 }
 
 .btn {
