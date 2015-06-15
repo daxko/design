@@ -124,6 +124,7 @@ module.exports = function(grunt) {
     out.push('`v' + pkg.version + '` - *generated on ' + grunt.template.today('mmm dd yyyy') + '*');
     out.push('### Stats');
 
+    out.push('#### ' + dir + '/global.min.css');
     out.push('|Stat|Metric|');
     out.push('|---|---|');
 
