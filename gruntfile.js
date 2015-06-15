@@ -109,10 +109,44 @@ module.exports = function(grunt) {
 
   });
 
+  // Generate Parker Stats for CSS
+  grunt.registerTask('parker', function() {
+    var Parker = require('parker/lib/Parker')
+      , metrics = require('parker/metrics/All')
+      , dir = grunt.config.data.config.css;
+
+    var file = grunt.file.read(dir + '/global.min.css');
+    var pkg = grunt.file.readJSON(process.cwd() + '/package.json');
+    var stats = new Parker(metrics).run(file);
+    var out = [];
+
+    out.push('## Design');
+    out.push('`v' + pkg.version + '` - *generated on ' + grunt.template.today('mmm dd yyyy') + '*');
+    out.push('### Stats');
+
+    out.push('#### ' + dir + '/global.min.css');
+    out.push('|Stat|Metric|');
+    out.push('|---|---|');
+
+    metrics.forEach(function(m) {
+      if(stats[m.id]) {
+        var stat = stats[m.id];
+
+        if(Array.isArray(stat)) {
+          stat = stat.join('<br/>');
+        }
+
+        out.push('|' + m.name + '|' + stat + '|');
+      }
+    });
+
+    grunt.file.write(dir + '/.stats.md', out.join('\n'));
+  });
+
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
-  grunt.registerTask('assets', ['copy', 'sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('assets', ['copy', 'sass', 'autoprefixer', 'cssmin', 'parker']);
   grunt.registerTask('build', ['assets', 'shell:metalsmith']);
   grunt.registerTask('preview', ['assets', 'shell:metalsmith', 'concurrent:docs']);
 
