@@ -662,7 +662,7 @@ input.input-large {
 }
 
 input.input-mini {
-  height: 22px;
+  height: 24px;
   font-size: 12px;
   padding: 2px 6px 2px;
 }
@@ -1665,8 +1665,8 @@ input::placeholder {
 
 .btn-mini {
   font-size: 12px;
-  height: 22px;
-  padding: 1px 6px 2px;
+  height: 24px;
+  padding: 2px 6px 2px;
 }
 
 .btn-block {
