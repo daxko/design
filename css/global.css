@@ -651,6 +651,7 @@ textarea {
   padding: 5px 10px;
   font-size: 13px;
   line-height: 1.5;
+  height: 32px;
   vertical-align: middle;
   outline: 0;
   width: auto;
@@ -661,7 +662,9 @@ input.input-large {
 }
 
 input.input-mini {
-  padding: 3px 6px 2px;
+  height: 22px;
+  font-size: 12px;
+  padding: 2px 6px 2px;
 }
 
 input.input-block {
@@ -1506,6 +1509,7 @@ input::placeholder {
   font-weight: 600;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  height: 32px;
   color: #2d2d2d;
   text-decoration: none;
   text-align: center;
@@ -1661,7 +1665,8 @@ input::placeholder {
 
 .btn-mini {
   font-size: 12px;
-  padding: 3px 6px 2px;
+  height: 22px;
+  padding: 1px 6px 2px;
 }
 
 .btn-block {
