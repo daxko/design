@@ -1,4 +1,7 @@
 $input-focus-color: $cotton-candy !default;
+$input-large-font-size: 18px !default;
+$input-font-size: 13px !default;
+$input-mini-font-size: 12px !default;
 $form-horizontal-breakpoint: 600px !default;
 
 // Forms
@@ -11,19 +14,22 @@ textarea {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .05) inset;
   border-radius: .2em;
   padding: 5px 10px;
-  font-size: 13px;
+  font-size: $input-font-size;
   line-height: $base-line-height;
+  height: 32px;
   vertical-align: middle;
   outline: 0;
   width: auto;
 }
 
 input.input-large {
-  font-size: 18px;
+  font-size: $input-large-font-size;
 }
 
 input.input-mini {
-  padding: 3px 6px 2px;
+  height: 24px;
+  font-size: $input-mini-font-size;
+  padding: 2px 6px 2px;
 }
 
 input.input-block {
@@ -123,7 +129,7 @@ input::placeholder {
     color: $gray-500;
     text-shadow: -1px 0 #fff;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: $input-font-size;
     padding: 5px 10px;
     background-color: $gray-50;
     border: 1px solid $gray-100;
