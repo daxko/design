@@ -1503,28 +1503,36 @@ input::placeholder {
   margin-top: 5px;
 }
 
+.alert p:first-child {
+  margin-top: 0;
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
 .alert.alert-success {
-  background-color: #edefd8;
-  color: #757b33;
+  background-color: #eef0db;
+  color: #707531;
   border-left: 5px solid #e1e3bd;
 }
 
 .alert.alert-error {
-  background-color: #fcd7df;
-  color: #d11037;
-  border-left: 5px solid #f9b4c2;
+  background-color: #fbcfd8;
+  color: #9a0c28;
+  border-left: 5px solid #f8a8b8;
 }
 
 .alert.alert-info {
-  background-color: #dcf1f0;
-  color: #3b938e;
-  border-left: 5px solid #c0e6e4;
+  background-color: #ebf7f6;
+  color: #42a59f;
+  border-left: 5px solid #dbf1ef;
 }
 
 .alert.alert-warning {
-  background-color: #fceecf;
-  color: #825c09;
-  border-left: 5px solid #f9e1ab;
+  background-color: #fbedcd;
+  color: #966a0b;
+  border-left: 5px solid #f9dea4;
 }
 
 .btn {

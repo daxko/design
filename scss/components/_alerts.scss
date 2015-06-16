@@ -1,3 +1,8 @@
+$alert-success-color: $key-lime !default;
+$alert-error-color: $red-velvet !default;
+$alert-info-color: $cotton-candy !default;
+$alert-warning-color: $banana-pudding !default;
+
 // Alerts
 // ----------------------------------------------
 
@@ -9,26 +14,32 @@
   margin-top: 5px;
 }
 
+.alert p:first-child {
+  margin-top: 0;
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
+@mixin alert($color) {
+  background-color: scale-color($color, $lightness: 78%);
+  color: scale-color($color, $lightness: -40%);
+  border-left: 5px solid scale-color($color, $lightness: 60%);
+}
+
 .alert.alert-success {
-  background-color: lighten($key-lime, 35%);
-  color: darken($key-lime, 20%);
-  border-left: 5px solid lighten($key-lime, 27.5%);
+  @include alert($alert-success-color);
 }
 
 .alert.alert-error {
-  background-color: lighten($red-velvet, 37.5%);
-  color: darken($red-velvet, 10%);
-  border-left: 5px solid lighten($red-velvet, 30%);
+  @include alert($alert-error-color);
 }
 
 .alert.alert-info {
-  background-color: lighten($cotton-candy, 15%);
-  color: darken($cotton-candy, 35%);
-  border-left: 5px solid lighten($cotton-candy, 7.5%);
+  @include alert($alert-info-color);
 }
 
 .alert.alert-warning {
-  background-color: lighten($banana-pudding, 37.5%);
-  color: darken($banana-pudding, 25%);
-  border-left: 5px solid lighten($banana-pudding, 30%);
+  @include alert($alert-warning-color);
 }
