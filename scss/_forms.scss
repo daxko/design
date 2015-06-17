@@ -7,7 +7,17 @@ $form-horizontal-breakpoint: 600px !default;
 // Forms
 // ----------------------------------------------
 
-input,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=url],
+input[type=date],
+input[type=search],
+input[type=datetime],
+input[type=time],
+input[type=date],
 select,
 textarea {
   border: 1px solid $gray-100;
@@ -216,7 +226,7 @@ input::placeholder {
 
   .form-horizontal .control-group {
 
-    label {
+    > label {
       display: block;
       float: none;
       width: auto;
