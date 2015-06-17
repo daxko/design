@@ -22,14 +22,54 @@ textarea {
   width: auto;
 }
 
-input.input-large {
+// Standardize select appearance
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 25px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUAQMAAACHy55vAAAABlBMVEUAAAAtLS3wB2rmAAAAAXRSTlMAQObYZgAAAC5JREFUCNdjYGZgYG9g4D/AIP+Awf4DQ/0Phv9/GDAAUBAoBVQAVAZUDNQC1AgAn5gN8xIbpEwAAAAASUVORK5CYII=);
+  background-size: 7px 10px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-color: $gray-50;
+  // Hide IE selector in IE10+
+  &::-ms-expand {
+    display: none;
+    opacity: 0;
+  }
+}
+
+input.input-large,
+select.input-large {
   font-size: $input-large-font-size;
 }
 
-input.input-mini {
+input.input-mini,
+select.input-mini {
   height: 24px;
   font-size: $input-mini-font-size;
   padding: 2px 6px 2px;
+}
+
+select.input-mini {
+  padding-right: 25px
+}
+
+// IE9 specific hack to hide our selector and show the native selector
+// since there's no way to hide the native selector in IE9
+@media all and (min-width:0\0) and (min-resolution: .001dpcm)
+{
+  select,
+  select.input-mini,
+  select.input-large {
+    background-image: none;
+    padding-right: 10px;
+  }
+
+  select.input-mini {
+    padding-right: 6px;
+  }
 }
 
 input.input-block {
