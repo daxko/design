@@ -32,6 +32,10 @@ textarea {
   width: auto;
 }
 
+textarea {
+  height: auto;
+}
+
 // Standardize select appearance
 select {
   -webkit-appearance: none;
@@ -42,7 +46,6 @@ select {
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-color: $gray-50;
   // Hide IE selector in IE10+
   &::-ms-expand {
     display: none;
@@ -93,6 +96,7 @@ textarea:focus {
   border-color: darken($input-focus-color, 10%);
   box-shadow: 0 0 4px $input-focus-color;
   z-index: z-index('input-focus');
+  position: relative;
 }
 
 form label {
@@ -124,6 +128,30 @@ input::placeholder {
 }
 
 // Form layouts
+.grid {
+
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=tel],
+  input[type=url],
+  input[type=date],
+  input[type=search],
+  input[type=datetime],
+  input[type=time],
+  input[type=date],
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+  }
+
+}
+
 .form-horizontal .control-group {
 
   > label {
@@ -156,6 +184,22 @@ input::placeholder {
     clear: left;
   }
 
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=tel],
+  input[type=url],
+  input[type=date],
+  input[type=search],
+  input[type=datetime],
+  input[type=time],
+  input[type=date],
+  select,
+  textarea {
+    width: auto;
+  }
+
 }
 
 .form-actions {
@@ -175,6 +219,15 @@ input::placeholder {
     float: left;
   }
 
+  .add-on,
+  .add-on-btn {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+  }
+
   .add-on {
     color: $gray-500;
     text-shadow: -1px 0 #fff;
@@ -183,11 +236,6 @@ input::placeholder {
     padding: 5px 10px;
     background-color: $gray-50;
     border: 1px solid $gray-100;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: 1%;
   }
 
   .add-on:first-child {
@@ -206,14 +254,21 @@ input::placeholder {
     border-bottom-right-radius: 0;
   }
 
-  input:not(:first-child):not(:last-child) {
-    border-radius: 0;
-  }
-
-  input + .add-on {
+  .add-on:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-left: none;
+    border-left: 0;
+  }
+
+  input:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    margin-left: -1px;
+  }
+
+  .add-on-btn:last-child .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
   }
 
   + .input-group {
