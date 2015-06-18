@@ -11,9 +11,10 @@
 @import "utility";
 
 // Components
+@import "components/alerts";
 @import "components/buttons";
-@import "components/tooltips";
 @import "components/dropdowns";
 @import "components/modals";
 @import "components/nav";
 @import "components/tabs";
+@import "components/tooltips";

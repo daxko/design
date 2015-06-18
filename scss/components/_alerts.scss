@@ -1,0 +1,45 @@
+$alert-success-color: $key-lime !default;
+$alert-error-color: $red-velvet !default;
+$alert-info-color: $cotton-candy !default;
+$alert-warning-color: $banana-pudding !default;
+
+// Alerts
+// ----------------------------------------------
+
+.alert {
+  padding: .6em .8em;
+}
+
+.alert + .alert {
+  margin-top: 5px;
+}
+
+.alert p:first-child {
+  margin-top: 0;
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
+@mixin alert($color) {
+  background-color: scale-color($color, $lightness: 78%);
+  color: scale-color($color, $lightness: -40%);
+  border-left: 5px solid scale-color($color, $lightness: 60%);
+}
+
+.alert.alert-success {
+  @include alert($alert-success-color);
+}
+
+.alert.alert-error {
+  @include alert($alert-error-color);
+}
+
+.alert.alert-info {
+  @include alert($alert-info-color);
+}
+
+.alert.alert-warning {
+  @include alert($alert-warning-color);
+}
