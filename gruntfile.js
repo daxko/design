@@ -29,10 +29,12 @@ module.exports = function(grunt) {
       }
     },
 
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 3 versions', 'ie >= 9'],
-        map: true
+        map: true,
+        processors: [
+          require('autoprefixer-core')({ browsers: ['last 3 versions', 'ie >= 9'] })
+        ]
       },
       dist: {
         src: '<%= config.css %>/*.css'
@@ -81,7 +83,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['<%= config.scss %>/{,*/}*.{scss,sass}', '<%= config.docs %>/scss/{,*/}*.{scss,sass}'],
-        tasks: ['sass', 'autoprefixer', 'cssmin']
+        tasks: ['sass', 'postcss', 'cssmin']
       },
       docs: {
         files: ['<%= config.contents %>/{,*/}*', '<%= config.docs %>/templates/{,*/}*.{hbs,js}'],
@@ -146,7 +148,7 @@ module.exports = function(grunt) {
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
-  grunt.registerTask('assets', ['copy', 'sass', 'autoprefixer', 'cssmin', 'parker']);
+  grunt.registerTask('assets', ['copy', 'sass', 'postcss', 'cssmin', 'parker']);
   grunt.registerTask('build', ['assets', 'shell:metalsmith']);
   grunt.registerTask('preview', ['assets', 'shell:metalsmith', 'concurrent:docs']);
 
