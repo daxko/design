@@ -319,6 +319,7 @@ Since so many different components use tables for layout, we don't want to overr
       <td>#ee264e</td>
       <td>x0715</td>
     </tr>
+    <!-- ... -->
     <tr>
       <td>Banana Pudding</td>
       <td>#efad1c</td>
@@ -334,6 +335,7 @@ Since so many different components use tables for layout, we don't want to overr
       <td>#a5dbd8</td>
       <td>x0714</td>
     </tr>
+    <!-- /... -->
   </tbody>
 </table>
 {{/example}}
@@ -357,6 +359,7 @@ Need some borders around your table? Add `.table-bordered`.
       <td>#ee264e</td>
       <td>x0715</td>
     </tr>
+    <!-- ... -->
     <tr>
       <td>Banana Pudding</td>
       <td>#efad1c</td>
@@ -372,6 +375,7 @@ Need some borders around your table? Add `.table-bordered`.
       <td>#a5dbd8</td>
       <td>x0714</td>
     </tr>
+    <!-- /... -->
   </tbody>
 </table>
 {{/example}}
@@ -395,6 +399,7 @@ You can also enable hover state on table rows with a `.table-hover` class.
       <td>#ee264e</td>
       <td>x0715</td>
     </tr>
+    <!-- ... -->
     <tr>
       <td>Banana Pudding</td>
       <td>#efad1c</td>
@@ -410,6 +415,7 @@ You can also enable hover state on table rows with a `.table-hover` class.
       <td>#a5dbd8</td>
       <td>x0714</td>
     </tr>
+    <!-- /... -->
   </tbody>
 </table>
 {{/example}}
@@ -433,6 +439,7 @@ Need to save some space? You can make tables more compact by adding `.table-cond
       <td>#ee264e</td>
       <td>x0715</td>
     </tr>
+    <!-- ... -->
     <tr>
       <td>Banana Pudding</td>
       <td>#efad1c</td>
@@ -448,6 +455,7 @@ Need to save some space? You can make tables more compact by adding `.table-cond
       <td>#a5dbd8</td>
       <td>x0714</td>
     </tr>
+    <!-- /... -->
   </tbody>
 </table>
 {{/example}}
