@@ -27,7 +27,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default">Default</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li><li><a href="#utilities">Utilities</a><ul><li><a href="#floats">Floats</a><li><a href="#hiding-elements">Hiding elements</a><li><a href="#sticky">Sticky</a><li><a href="#text-alignment">Text Alignment</a></ul></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default-buttons">Default Buttons</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a></li><li><a href="#forms">Forms</a><ul><li><a href="#example-form">Example Form</a><li><a href="#inputs">Inputs</a><li><a href="#input-sizing">Input Sizing</a><li><a href="#input-grouping">Input Grouping</a><li><a href="#horizontal-forms">Horizontal Forms</a><li><a href="#grid-layout">Grid Layout</a></ul></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li><li><a href="#utilities">Utilities</a><ul><li><a href="#floats">Floats</a><li><a href="#hiding-elements">Hiding elements</a><li><a href="#sticky">Sticky</a><li><a href="#text-alignment">Text Alignment</a></ul></li></ul>
 </aside>
 <section>
 <h2 id="base">Base</h2>
@@ -272,7 +272,7 @@
 </code></pre>
 <h2 id="buttons">Buttons</h2>
 <p>Buttons are typically used for <strong>actions</strong>, while links are typically used for <strong>destinations</strong>.</p>
-<h3 id="default">Default</h3>
+<h3 id="default-buttons">Default Buttons</h3>
 <p>Standard buttons are easy — just use a <code>.btn</code> class! You can apply this class to both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements and they will both appear exactly the same.</p>
 <p>When using a <code>&lt;button&gt;</code> element, always specify the type. When using a <code>&lt;a&gt;</code> element, always include <code>role=&quot;button&quot;</code> for accessibility.</p>
 <div class='example '><button type="button" class="btn">Button Button</button>
@@ -370,6 +370,362 @@
 </code></pre>
 <h2 id="tables">Tables</h2>
 <p>— TODO —</p>
+<h2 id="forms">Forms</h2>
+<h3 id="example-form">Example Form</h3>
+<p>By default, forms don’t have a standard layout. You will need to use one of the <a href="#horizontal-forms">below</a> layout patterns to organize your forms.</p>
+<div class='example '><form>
+  <label>
+    Name
+    <input type="text"/>
+  </label>
+  <label>
+    Phone Number
+    <input type="tel"/>
+  </label>
+  <button type="submit" class="btn">Submit</button>
+</form>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">form</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+    Name
+    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span>/&gt;</span>
+  <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+    Phone Number
+    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"tel"</span>/&gt;</span>
+  <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+</code></pre>
+<h3 id="inputs">Inputs</h3>
+<p>We style the most common text-based input fields, including <code>text</code>, <code>password</code>, <code>email</code>, <code>number</code>, <code>tel</code>, <code>url</code>, <code>date</code>, <code>search</code>, <code>datetime</code>, <code>time</code>, and <code>date</code>.</p>
+<blockquote>
+<p>Inputs will only be styled with valid <code>type</code> attributes. You <strong>must</strong> include this!</p>
+</blockquote>
+<div class='example '><input type="text" placeholder="text input" />
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">"text input"</span> /&gt;</span>
+</code></pre>
+<h4 id="selects">Selects</h4>
+<p>Selects also have have some of their basic styles overwritten to match the style of inputs.</p>
+<blockquote>
+<p>Note: We can’t style the select caret in IE9, so the native implementation will appear there.</p>
+</blockquote>
+<div class='example '><select>
+  <option>Apple</option>
+  <option>Banana</option>
+  <!-- ... -->
+  <option>Orange</option>
+  <option>Peach</option>
+  <option>Pear</option>
+  <!-- /... -->
+</select>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">select</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">option</span>&gt;</span>Apple<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">option</span>&gt;</span>Banana<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+</code></pre>
+<h3 id="input-sizing">Input Sizing</h3>
+<p>Like <a href="#button-default">buttons</a>, there are two sizes of inputs. Just add <code>.input-mini</code> to use the smaller variation.</p>
+<div class='example '><input type="text" placeholder="text input"/>
+<input type="text" placeholder=".input-mini" class="input-mini" />
+<select>
+  <option>Apple</option>
+  <option>Banana</option>
+  <!-- ... -->
+  <option>Orange</option>
+  <option>Peach</option>
+  <option>Pear</option>
+  <!-- /... -->
+</select>
+<select class="input-mini">
+  <option>Apple</option>
+  <option>Banana</option>
+  <!-- ... -->
+  <option>Orange</option>
+  <option>Peach</option>
+  <option>Pear</option>
+  <!-- /... -->
+</select>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">"text input"</span>/&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">".input-mini"</span> <span class="attribute">class</span>=<span class="value">"input-mini"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">select</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">option</span>&gt;</span>Apple<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">option</span>&gt;</span>Banana<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+<span class="tag">&lt;<span class="title">select</span> <span class="attribute">class</span>=<span class="value">"input-mini"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">option</span>&gt;</span>Apple<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">option</span>&gt;</span>Banana<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+</code></pre>
+<p>You can also make form elements take up the full width of its container element with <code>.input-block</code>.</p>
+<div class='example '><input type="text" class="input-block"/>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"input-block"</span>/&gt;</span>
+</code></pre>
+<h3 id="input-grouping">Input Grouping</h3>
+<p>You can group inputs with text add-ons with <code>.add-on</code>, or buttons with <code>.add-on-btn</code>.</p>
+<div class='example '><div class="grid">
+  <div class="col-4">
+    <div class="input-group">
+      <span class="add-on">@</span>
+      <input type="text" placeholder="username" />
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="input-group">
+      <input type="text" />
+      <span class="add-on">.00</span>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="input-group">
+      <input type="text"/>
+      <span class="add-on-btn">
+        <button type="button" class="btn">Go!</button>
+      </span>
+    </div>
+  </div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"input-group"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"add-on"</span>&gt;</span>@<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">placeholder</span>=<span class="value">"username"</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"input-group"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"add-on"</span>&gt;</span>.00<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"input-group"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span>/&gt;</span>
+      <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"add-on-btn"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Go!<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h3 id="horizontal-forms">Horizontal Forms</h3>
+<p>Layout your forms horizontally with <code>.form-horizontal</code>. You can group form labels and controls with <code>.control-group</code> and contain checkboxes or radio buttons with a <code>.controls</code> element.</p>
+<div class='example '><form class="form-horizontal">
+  <fieldset>
+    <legend>You Must Answer These Questions Three</legend>
+    <div class="control-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" />
+    </div>
+    <!-- ... -->
+    <div class="control-group">
+      <label for="quest">Quest</label>
+      <input id="quest" type="text" />
+    </div>
+    <!-- /... -->
+    <div class="control-group">
+      <label>Favorite Color</label>
+      <div class="controls">
+        <label>
+          <input type="radio" name="color" /> Blue
+        </label>
+        <!-- ... -->
+        <label>
+          <input type="radio" name="color" /> Green
+        </label>
+        <label>
+          <input type="radio" name="color" /> AUUUUUUUUGGGH!
+        </label>
+        <!-- /... -->
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"form-horizontal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">fieldset</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">legend</span>&gt;</span>You Must Answer These Questions Three<span class="tag">&lt;/<span class="title">legend</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"control-group"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"name"</span>&gt;</span>Name<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"name"</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    ...
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"control-group"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">label</span>&gt;</span>Favorite Color<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"controls"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"color"</span> /&gt;</span> Blue
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+        ...
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+</code></pre>
+<h3 id="grid-layout">Grid Layout</h3>
+<p>For more complex layouts, we recommend you use the <a href="#grid">grid</a>. Input widths will automatically take up the full width of the grid column.</p>
+<div class='example '><form>
+  <fieldset>
+    <legend>Address</legend>
+    <div class="grid">
+      <div class="col-4">
+        <label>
+          Address 1
+          <input type="text" />
+        </label>
+      </div>
+      <div class="col-4">
+        <label>
+          Address 2
+          <input type="text" />
+        </label>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-3">
+        <label>
+          City
+          <input type="text" />
+        </label>
+      </div>
+      <div class="col-2">
+        <label>
+          State
+          <select>
+            <!-- ... -->
+            <option>Alabama</option>
+            <option>Alaska</option>
+            <option>Arizona</option>
+            <option>Arkansas</option>
+            <option>California</option>
+            <option>Colorado</option>
+            <option>Connecticut</option>
+            <option>Delaware</option>
+            <option>Dist of Columbia</option>
+            <option>Florida</option>
+            <option>Georgia</option>
+            <option>Hawaii</option>
+            <option>Idaho</option>
+            <option>Illinois</option>
+            <option>Indiana</option>
+            <option>Iowa</option>
+            <option>Kansas</option>
+            <option>Kentucky</option>
+            <option>Louisiana</option>
+            <option>Maine</option>
+            <option>Maryland</option>
+            <option>Massachusetts</option>
+            <option>Michigan</option>
+            <option>Minnesota</option>
+            <option>Mississippi</option>
+            <option>Missouri</option>
+            <option>Montana</option>
+            <option>Nebraska</option>
+            <option>Nevada</option>
+            <option>New Hampshire</option>
+            <option>New Jersey</option>
+            <option>New Mexico</option>
+            <option>New York</option>
+            <option>North Carolina</option>
+            <option>North Dakota</option>
+            <option>Ohio</option>
+            <option>Oklahoma</option>
+            <option>Oregon</option>
+            <option>Pennsylvania</option>
+            <option>Rhode Island</option>
+            <option>South Carolina</option>
+            <option>South Dakota</option>
+            <option>Tennessee</option>
+            <option>Texas</option>
+            <option>Utah</option>
+            <option>Vermont</option>
+            <option>Virginia</option>
+            <option>Washington</option>
+            <option>West Virginia</option>
+            <option>Wisconsin</option>
+            <option>Wyoming</option>
+            <!-- /... -->
+          </select>
+        </label>
+      </div>
+      <div class="col-1">
+        <label>
+          Zip
+          <input type="text"/>
+        </label>
+      </div>
+      <div class="col-6">
+        <label>
+          <input type="checkbox"/> Default Address
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">form</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">fieldset</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">legend</span>&gt;</span>Address<span class="tag">&lt;/<span class="title">legend</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          Address 1
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-4"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          Address 2
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          City
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-2"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          State
+          <span class="tag">&lt;<span class="title">select</span>&gt;</span>
+            ...
+          <span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-1"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          Zip
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span>/&gt;</span>
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">label</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>/&gt;</span> Default Address
+        <span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+</code></pre>
 <h2 id="tabs">Tabs</h2>
 <h3 id="horizontal-tabs">Horizontal Tabs</h3>
 <div class='example '><ul class="tabs">
