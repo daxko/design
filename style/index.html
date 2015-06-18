@@ -15,6 +15,7 @@
           <li><a href="/design/language">language</a></li>
           <li><a href="/design/color">color</a></li>
           <li><a href="/design/style">style</a></li>
+          <li><a href="/design/components">components</a></li>
           <li><a href="/design/resources">resources</a></li>
         </ul>
       </div>
@@ -27,7 +28,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default-buttons">Default Buttons</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a><ul><li><a href="#basic-table">Basic Table</a><li><a href="#bordered">Bordered</a><li><a href="#hover-rows">Hover Rows</a><li><a href="#condensed">Condensed</a></ul></li><li><a href="#forms">Forms</a><ul><li><a href="#example-form">Example Form</a><li><a href="#inputs">Inputs</a><li><a href="#input-sizing">Input Sizing</a><li><a href="#input-grouping">Input Grouping</a><li><a href="#horizontal-forms">Horizontal Forms</a><li><a href="#grid-layout">Grid Layout</a></ul></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#alerts">Alerts</a><ul><li><a href="#info">Info</a><li><a href="#success">Success</a><li><a href="#error">Error</a><li><a href="#warning">Warning</a></ul></li><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#modals">Modals</a></li><li><a href="#tooltips">Tooltips</a></li><li><a href="#utilities">Utilities</a><ul><li><a href="#floats">Floats</a><li><a href="#hiding-elements">Hiding elements</a><li><a href="#sticky">Sticky</a><li><a href="#text-alignment">Text Alignment</a></ul></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#base">Base</a><ul><li><a href="#html5-doctype">HTML5 doctype</a><li><a href="#viewport">Viewport</a><li><a href="#box-sizing">Box Sizing</a></ul></li><li><a href="#layouts">Layouts</a><ul><li><a href="#container">Container</a><li><a href="#grid">Grid</a><li><a href="#column-alignment">Column Alignment</a></ul></li><li><a href="#typography">Typography</a><ul><li><a href="#headings">Headings</a><li><a href="#unordered-lists">Unordered Lists</a><li><a href="#ordered-lists">Ordered Lists</a><li><a href="#styled-text">Styled Text</a></ul></li><li><a href="#buttons">Buttons</a><ul><li><a href="#default-buttons">Default Buttons</a><li><a href="#primary">Primary</a><li><a href="#danger">Danger</a><li><a href="#disabled">Disabled</a><li><a href="#button-groups">Button Groups</a><li><a href="#block-buttons">Block Buttons</a></ul></li><li><a href="#tables">Tables</a><ul><li><a href="#basic-table">Basic Table</a><li><a href="#bordered">Bordered</a><li><a href="#hover-rows">Hover Rows</a><li><a href="#condensed">Condensed</a></ul></li><li><a href="#forms">Forms</a><ul><li><a href="#example-form">Example Form</a><li><a href="#inputs">Inputs</a><li><a href="#input-sizing">Input Sizing</a><li><a href="#input-grouping">Input Grouping</a><li><a href="#horizontal-forms">Horizontal Forms</a><li><a href="#grid-layout">Grid Layout</a></ul></li><li><a href="#utilities">Utilities</a><ul><li><a href="#floats">Floats</a><li><a href="#hiding-elements">Hiding elements</a><li><a href="#sticky">Sticky</a><li><a href="#text-alignment">Text Alignment</a></ul></li></ul>
 </aside>
 <section>
 <h2 id="base">Base</h2>
@@ -239,36 +240,6 @@
 <span class="tag">&lt;<span class="title">p</span>&gt;</span>This text is <span class="tag">&lt;<span class="title">small</span>&gt;</span>small<span class="tag">&lt;/<span class="title">small</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;<span class="title">p</span>&gt;</span>This text is <span class="tag">&lt;<span class="title">sup</span>&gt;</span>superscript<span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
 <span class="tag">&lt;<span class="title">p</span>&gt;</span>This text is <span class="tag">&lt;<span class="title">sub</span>&gt;</span>subscript<span class="tag">&lt;/<span class="title">sub</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-</code></pre>
-<h2 id="navs">Navs</h2>
-<p>— todo —</p>
-<h3 id="navbar">Navbar</h3>
-<div class='example navbar-example'><nav class="navbar" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <a href="#">Association Name</a>
-    </div>
-    <ul class="nav">
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"navbar"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Association Name<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Link<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
 </code></pre>
 <h2 id="buttons">Buttons</h2>
 <p>Buttons are typically used for <strong>actions</strong>, while links are typically used for <strong>destinations</strong>.</p>
@@ -945,220 +916,6 @@
   <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">form</span>&gt;</span>
 </code></pre>
-<h2 id="tabs">Tabs</h2>
-<h3 id="horizontal-tabs">Horizontal Tabs</h3>
-<div class='example '><ul class="tabs">
-  <li class="active"><a href="#">Tab A</a></li>
-  <li><a href="#">Tab B</a></li>
-  <li><a href="#">Tab C</a></li>
-  <li><a href="#">Tab D</a></li>
-</ul>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-</code></pre>
-<h3 id="vertical-tabs">Vertical Tabs</h3>
-<p>By default, vertical tabs will display on the left and will take up the full width of the container you place them in.</p>
-<div class='example '><ul class="tabs tabs-vertical">
-  <li class="active"><a href="#">Tab A</a></li>
-  <li><a href="#">Tab B</a></li>
-  <li><a href="#">Tab C</a></li>
-  <li><a href="#">Tab D</a></li>
-</ul>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs tabs-vertical"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-</code></pre>
-<p>You can also have vertical tabs displayed on the right by adding a <code>.right</code> class.</p>
-<div class='example '><ul class="tabs tabs-vertical right">
-  <li class="active"><a href="#">Tab A</a></li>
-  <li><a href="#">Tab B</a></li>
-  <li><a href="#">Tab C</a></li>
-  <li><a href="#">Tab D</a></li>
-</ul>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs tabs-vertical right"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-</code></pre>
-<p>Vertical tabs can also have sub navigation items.</p>
-<div class='example '><ul class="tabs tabs-vertical right">
-  <li class="active"><a href="#">Tab A</a></li>
-  <li><a href="#">Tab B</a>
-    <ul>
-      <li><a href="#">Sub-Tab A</a></li>
-      <li><a href="#">Sub-Tab B</a></li>
-      <li><a href="#">Sub-Tab C</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Tab C</a></li>
-  <li><a href="#">Tab D</a></li>
-</ul>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs tabs-vertical right"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Sub-Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Sub-Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Sub-Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-</code></pre>
-<p>Since tabs don’t have a implicit width, you may want to consider placing them in a grid to align along side your content.</p>
-<div class='example '><div class="grid">
-  <div class="col-3">
-    <ul class="tabs tabs-vertical">
-      <li class="active"><a href="#">Tab A</a></li>
-      <li><a href="#">Tab B</a></li>
-      <li><a href="#">Tab C</a></li>
-      <li><a href="#">Tab D</a></li>
-    </ul>
-  </div>
-  <div class="col-9">
-    <div class="tab-panel">
-      — tab content goes here —
-    </div>
-  </div>
-</div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs tabs-vertical"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab A<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab B<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab C<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab D<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-9"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tab-panel"</span>&gt;</span>
-      -- tab content goes here --
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h2 id="alerts">Alerts</h2>
-<p>Show alerts to a user informing them of successful or pending actions, or state. These should be used sparingly and very rarely more than one at once.</p>
-<h3 id="info">Info</h3>
-<div class='example '><div class="alert alert-info"><strong>FYI.</strong> This person doesn’t have any notes.</div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"alert alert-info"</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>FYI.<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> This person doesn't have any notes.<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h3 id="success">Success</h3>
-<div class='example '><div class="alert alert-success"><strong>Good Job!</strong> You are all done with this member.</div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"alert alert-success"</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>Good Job!<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> You are all done with this member.<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h3 id="error">Error</h3>
-<div class='example '><div class="alert alert-error"><strong>Oops!</strong> Something went terribly wrong.</div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"alert alert-error"</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>Oops!<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> Something went terribly wrong.<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h3 id="warning">Warning</h3>
-<div class='example '><div class="alert alert-warning"><strong>Heads Up!</strong> Your membership is about to expire pretty soon.</div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"alert alert-warning"</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>Heads Up!<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> Your membership is about to expire pretty soon.<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h2 id="dropdowns">Dropdowns</h2>
-<p>— todo —</p>
-<div class='example '><div class="dropdown">
-  <button type="button" class="btn" data-trigger="dropdown">Dropdown <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Bacon</a></li>
-    <li><a href="#">Ham</a></li>
-    <li><a href="#">Sausage</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Bacon &amp; Eggs</a></li>
-  </ul>
-</div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dropdown"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"btn"</span> <span class="attribute">data-trigger</span>=<span class="value">"dropdown"</span>&gt;</span>Dropdown <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"caret"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"dropdown-menu"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Bacon<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Ham<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Sausage<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Bacon &amp;amp; Eggs<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h2 id="modals">Modals</h2>
-<p>— todo —</p>
-<div class='example '><div class="modal">
-  <div class="modal-header">
-    Modal Title
-    <span class="close"></span>
-  </div>
-  This is a modal
-</div>
-<div class="modal-backdrop"></div>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal-header"</span>&gt;</span>
-    Modal Title
-    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"close"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  This is a modal
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal-backdrop"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre>
-<h2 id="tooltips">Tooltips</h2>
-<p>Add tooltips to almost any element. Just add a <code>.tooltip</code> class along with an <code>aria-label</code> attribute containing the tooltip text.</p>
-<blockquote>
-<p>Tooltips can not be added to elements that have <code>:before</code> or <code>:after</code> psuedo elements. If you need a tooltip on an element with psuedo-elements, you will need to add the tooltip to the parent instead.</p>
-</blockquote>
-<div class='example '><button class="btn tooltip" aria-label="This is a tooltip for the button">Button with Tooltip</button>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn tooltip"</span> <span class="attribute">aria-label</span>=<span class="value">"This is a tooltip for the button"</span>&gt;</span>Button with Tooltip<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
-</code></pre>
-<p>You can also specify the direction of the tooltip:</p>
-<ul>
-<li><code>tooltip-n</code> — tooltip on top</li>
-<li><code>tooltip-e</code> — tooltip on right</li>
-<li><code>tooltip-s</code> — tooltip on bottom</li>
-<li><code>tooltip-w</code> — tooltip on left</li>
-</ul>
-<p></p>
-
-<div class='example '><p><span class="tooltip tooltip-n" aria-label="I'm on the top!">Tooltip on top</span></p>
-<p><span class="tooltip tooltip-e" aria-label="I'm on the right!">Tooltip on right</span></p>
-<p><span class="tooltip tooltip-s" aria-label="I'm on the bottom!">Tooltip on bottom</span></p>
-<p><span class="tooltip tooltip-w" aria-label="I'm on the left!">Tooltip on left</span></p>
-</div>
-
-<pre><code class="lang-html"><span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-n"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the top!"</span>&gt;</span>Tooltip on top<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-e"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the right!"</span>&gt;</span>Tooltip on right<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-s"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the bottom!"</span>&gt;</span>Tooltip on bottom<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-<span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"tooltip tooltip-w"</span> <span class="attribute">aria-label</span>=<span class="value">"I'm on the left!"</span>&gt;</span>Tooltip on left<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-</code></pre>
 <h2 id="utilities">Utilities</h2>
 <p>There’s a handful of utility classes available for quick alignment, display, and more.</p>
 <h3 id="floats">Floats</h3>
@@ -1212,7 +969,7 @@
 
 </section>
     <footer>
-      Created and maintained by the design team at Daxko. <strong>v0.0.11</strong>
+      Created and maintained by the design team at Daxko. <strong>v0.0.12</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
