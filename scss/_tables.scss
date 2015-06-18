@@ -1,0 +1,56 @@
+$table-border-color: $gray-100 !default;
+$table-background-color: $gray-50 !default;
+
+// Tables
+// ----------------------------------------------
+
+.table {
+  width: 100%;
+  max-width: 100%;
+}
+
+.table.table-bordered {
+  border: 1px solid $table-border-color;
+}
+
+.table td,
+.table th {
+  text-align: left;
+}
+
+.table {
+
+  > thead > tr {
+    td,
+    th {
+      background-color: $table-background-color;
+      padding: .5em 1em;
+      vertical-align: bottom;
+    }
+  }
+
+  > tbody > tr {
+    td,
+    th {
+      border-top: 1px solid $table-border-color;
+      padding: .5em 1em;
+      vertical-align: top;
+    }
+  }
+
+  &.table-hover > tbody > tr:hover {
+    td,
+    th {
+      background-color: $table-background-color;
+    }
+  }
+
+  &.table-condensed > tbody > tr,
+  &.table-condensed > thead > tr {
+    td,
+    th {
+      padding: .25em .5em;
+    }
+  }
+
+}
