@@ -47,6 +47,7 @@ select {
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
+  background-color: #fff;
   // Hide IE selector in IE10+
   &::-ms-expand {
     display: none;
