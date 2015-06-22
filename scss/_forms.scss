@@ -30,6 +30,7 @@ textarea {
   vertical-align: middle;
   outline: 0;
   width: auto;
+  position: relative;
 }
 
 textarea {
@@ -96,7 +97,6 @@ textarea:focus {
   border-color: darken($input-focus-color, 10%);
   box-shadow: 0 0 4px $input-focus-color;
   z-index: z-index('input-focus');
-  position: relative;
 }
 
 form label {

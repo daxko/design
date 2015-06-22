@@ -5,12 +5,13 @@
 // If you need to add new z-indexes, they should be defined here and not anywhere else
 
 $z-indexes: (
-  tooltip:        150,
-  modal:          140,
-  modal-backdrop: 130,
-  dropdown-menu:  120,
-  backdrop:       110,
-  navbar:         100,
+  tooltip:        160,
+  modal:          150,
+  modal-backdrop: 140,
+  dropdown-menu:  130,
+  backdrop:       120,
+  navbar:         110,
+  sticky:         100,
   input-focus:    10,
   btn-focus:      10,
 );
