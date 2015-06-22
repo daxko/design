@@ -15,6 +15,7 @@ $navbar-link-color: $cotton-candy !default;
 
 .navbar.fixed {
   position: sticky;
+  z-index: z-index('navbar');
 }
 
 .navbar a {

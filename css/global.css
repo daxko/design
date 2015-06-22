@@ -665,6 +665,7 @@ textarea {
   vertical-align: middle;
   outline: 0;
   width: auto;
+  position: relative;
 }
 
 textarea {
@@ -680,6 +681,7 @@ select {
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
+  background-color: #fff;
 }
 
 select::-ms-expand {
@@ -726,7 +728,6 @@ textarea:focus {
   border-color: #81ccc8;
   box-shadow: 0 0 4px #a5dbd8;
   z-index: 10;
-  position: relative;
 }
 
 form label {
@@ -1612,6 +1613,7 @@ input::placeholder {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .pull-left {
@@ -1909,7 +1911,7 @@ input::placeholder {
   float: left;
   padding: 5px 0;
   font-size: 13px;
-  z-index: 120;
+  z-index: 130;
 }
 
 .dropdown-menu a {
@@ -1939,7 +1941,7 @@ input::placeholder {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 110;
+  z-index: 120;
 }
 
 .modal {
@@ -1950,7 +1952,7 @@ input::placeholder {
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   position: relative;
-  z-index: 140;
+  z-index: 150;
   margin: 0 auto;
 }
 
@@ -1979,7 +1981,7 @@ input::placeholder {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 130;
+  z-index: 140;
   background-color: rgba(109, 109, 109, 0.6);
 }
 
@@ -1994,6 +1996,7 @@ input::placeholder {
 .navbar.fixed {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 110;
 }
 
 .navbar a {
@@ -2201,7 +2204,7 @@ input::placeholder {
   text-shadow: none;
   white-space: pre;
   padding: 3px 10px;
-  z-index: 150;
+  z-index: 160;
 }
 
 .tooltip:hover:before,

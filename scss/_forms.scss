@@ -30,6 +30,7 @@ textarea {
   vertical-align: middle;
   outline: 0;
   width: auto;
+  position: relative;
 }
 
 textarea {
@@ -46,6 +47,7 @@ select {
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
+  background-color: #fff;
   // Hide IE selector in IE10+
   &::-ms-expand {
     display: none;
@@ -96,7 +98,6 @@ textarea:focus {
   border-color: darken($input-focus-color, 10%);
   box-shadow: 0 0 4px $input-focus-color;
   z-index: z-index('input-focus');
-  position: relative;
 }
 
 form label {
