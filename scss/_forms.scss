@@ -29,7 +29,6 @@ textarea {
   height: 32px;
   vertical-align: middle;
   outline: 0;
-  width: auto;
   position: relative;
 }
 
@@ -183,22 +182,6 @@ input::placeholder {
   + .control-group {
     margin-top: 1em;
     clear: left;
-  }
-
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=number],
-  input[type=tel],
-  input[type=url],
-  input[type=date],
-  input[type=search],
-  input[type=datetime],
-  input[type=time],
-  input[type=date],
-  select,
-  textarea {
-    width: auto;
   }
 
 }

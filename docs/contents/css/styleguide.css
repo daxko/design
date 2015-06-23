@@ -664,7 +664,6 @@ textarea {
   height: 32px;
   vertical-align: middle;
   outline: 0;
-  width: auto;
   position: relative;
 }
 
@@ -817,22 +816,6 @@ input::placeholder {
 .form-horizontal .control-group + .control-group {
   margin-top: 1em;
   clear: left;
-}
-
-.form-horizontal .control-group input[type=text],
-.form-horizontal .control-group input[type=password],
-.form-horizontal .control-group input[type=email],
-.form-horizontal .control-group input[type=number],
-.form-horizontal .control-group input[type=tel],
-.form-horizontal .control-group input[type=url],
-.form-horizontal .control-group input[type=date],
-.form-horizontal .control-group input[type=search],
-.form-horizontal .control-group input[type=datetime],
-.form-horizontal .control-group input[type=time],
-.form-horizontal .control-group input[type=date],
-.form-horizontal .control-group select,
-.form-horizontal .control-group textarea {
-  width: auto;
 }
 
 .form-actions {
