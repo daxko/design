@@ -803,7 +803,7 @@ input::placeholder {
   margin-left: 10em;
 }
 
-.form-horizontal .control-group .controls label {
+.form-horizontal .control-group .controls > label {
   display: block;
   vertical-align: middle;
   padding: 5px 0;
