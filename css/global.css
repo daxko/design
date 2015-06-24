@@ -796,6 +796,7 @@ input::placeholder {
   padding: 5px 0;
   vertical-align: middle;
   display: inline-block;
+  position: absolute;
 }
 
 .form-horizontal .control-group .controls {
@@ -893,6 +894,7 @@ input::placeholder {
 @media (max-width: 600px) {
   .form-horizontal .control-group > label {
     display: block;
+    position: relative;
     float: none;
     width: auto;
     padding-bottom: 2px;
