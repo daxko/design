@@ -18,7 +18,7 @@ $grid-columns: 12 !default;
   width: percentage($width);
   padding: 0 (.5 * $grid-gutter);
   margin-bottom: $grid-gutter;
-  vertical-align: top;
+  vertical-align: middle;
   text-align: left;
 }
 
