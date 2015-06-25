@@ -559,12 +559,16 @@ Layout your forms horizontally with `.form-horizontal`. You can group form label
     <legend>You Must Answer These Questions Three</legend>
     <div class="control-group">
       <label for="name">Name</label>
-      <input id="name" type="text" />
+      <div class="controls">
+        <input id="name" type="text" />
+      </div>
     </div>
     <!-- ... -->
     <div class="control-group">
       <label for="quest">Quest</label>
-      <input id="quest" type="text" />
+      <div class="controls">
+        <input id="quest" type="text" />
+      </div>
     </div>
     <!-- /... -->
     <div class="control-group">

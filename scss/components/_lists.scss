@@ -1,0 +1,65 @@
+// Lists
+// ----------------------------------------------
+
+.list {
+
+  list-style-type: none;
+  overflow: visible;
+  margin-top: 1em;
+
+  small {
+    color: $gray-300;
+  }
+
+  .list-item {
+    display: block;
+    padding: .75em 1em;
+    border-bottom: 1px solid $gray-100;
+    @extend .cf;
+  }
+
+  a.list-item {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+  }
+
+  a.list-item:hover {
+    background-color: $gray-50;
+  }
+
+  .list-icons {
+    color: $gray-300;
+    &:hover {
+      color: $gray-900;
+    }
+  }
+
+  a:hover .list-icons {
+    color: $gray-900;
+  }
+
+}
+
+.list-header {
+  margin-top: 1em;
+  padding: .75em 1em;
+  border: 1px solid $gray-100;
+  background-color: $gray-50;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.list-header + .list {
+  margin-top: 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-bordered {
+  border-radius: 3px;
+  border-top: 1px solid $gray-100;
+  border-left: 1px solid $gray-100;
+  border-right: 1px solid $gray-100;
+}
