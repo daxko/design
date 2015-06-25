@@ -782,10 +782,6 @@ input::placeholder {
   color: #a6a6a6;
 }
 
-.grid {
-  vertical-align: bottom;
-}
-
 .grid input[type=text],
 .grid input[type=password],
 .grid input[type=email],
@@ -804,6 +800,10 @@ input::placeholder {
 
 .grid label {
   display: block;
+}
+
+form .grid {
+  vertical-align: bottom;
 }
 
 .form-horizontal .control-group > label {
