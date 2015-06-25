@@ -499,12 +499,25 @@ a:hover {
   }
 }
 
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
 .grid {
   display: block;
   padding: 0;
   margin: 0 -5px;
   margin-bottom: -5px;
   font-size: 0;
+  vertical-align: top;
 }
 
 .grid .grid [class*=col-] {
@@ -517,7 +530,7 @@ a:hover {
   width: 8.3333333333%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -527,7 +540,7 @@ a:hover {
   width: 16.6666666667%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -537,7 +550,7 @@ a:hover {
   width: 25%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -547,7 +560,7 @@ a:hover {
   width: 33.3333333333%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -557,7 +570,7 @@ a:hover {
   width: 41.6666666667%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -567,7 +580,7 @@ a:hover {
   width: 50%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -577,7 +590,7 @@ a:hover {
   width: 58.3333333333%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -587,7 +600,7 @@ a:hover {
   width: 66.6666666667%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -597,7 +610,7 @@ a:hover {
   width: 75%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -607,7 +620,7 @@ a:hover {
   width: 83.3333333333%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -617,7 +630,7 @@ a:hover {
   width: 91.6666666667%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -627,7 +640,7 @@ a:hover {
   width: 100%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
 }
 
@@ -769,6 +782,10 @@ input::placeholder {
   color: #a6a6a6;
 }
 
+.grid {
+  vertical-align: bottom;
+}
+
 .grid input[type=text],
 .grid input[type=password],
 .grid input[type=email],
@@ -802,6 +819,10 @@ input::placeholder {
 
 .form-horizontal .control-group .controls {
   margin-left: 10em;
+}
+
+.form-horizontal .control-group .controls > .grid {
+  vertical-align: middle;
 }
 
 .form-horizontal .control-group .controls > label {
@@ -2479,6 +2500,7 @@ ul.colors {
   margin: 0 -5px;
   margin-bottom: -5px;
   font-size: 0;
+  vertical-align: top;
 }
 
 .swatch {
@@ -2487,7 +2509,7 @@ ul.colors {
   width: 25%;
   padding: 0 5px;
   margin-bottom: 10px;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
   color: #fff;
   font-weight: 100;

@@ -130,6 +130,8 @@ input::placeholder {
 // Form layouts
 .grid {
 
+  vertical-align: bottom;
+
   input[type=text],
   input[type=password],
   input[type=email],
@@ -167,6 +169,10 @@ input::placeholder {
 
   .controls {
     margin-left: 10em;
+  }
+
+  .controls > .grid {
+    vertical-align: middle;
   }
 
   .controls > label {

@@ -10,6 +10,7 @@ $grid-columns: 12 !default;
   margin: 0 (-.5 * $grid-gutter);
   margin-bottom: -.5 * $grid-gutter;
   font-size: 0; // remove whitespace between elements
+  vertical-align: top;
 }
 
 @mixin col($width: 1) {
@@ -18,8 +19,20 @@ $grid-columns: 12 !default;
   width: percentage($width);
   padding: 0 (.5 * $grid-gutter);
   margin-bottom: $grid-gutter;
-  vertical-align: middle;
+  vertical-align: inherit;
   text-align: left;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
 }
 
 .grid {
@@ -46,4 +59,6 @@ $grid-columns: 12 !default;
   &.right {
     text-align: right;
   }
+
 }
+
