@@ -401,6 +401,16 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-weight: 300;
+}
+
+body {
+  font-weight: normal;
+}
+
+b,
+strong {
+  font-weight: 700;
 }
 
 h1 {
@@ -447,15 +457,6 @@ body {
   margin: 0;
   line-height: 1.5;
   font-family: "Noto Sans", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 100;
 }
 
 ul {
@@ -760,7 +761,7 @@ fieldset + fieldset {
 fieldset legend {
   border-bottom: 1px solid #e6e6e6;
   color: #2d2d2d;
-  font-weight: 100;
+  font-weight: normal;
   display: block;
   width: 100%;
   margin-bottom: 1em;
@@ -1632,15 +1633,15 @@ form .grid {
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .alert {
@@ -2267,7 +2268,7 @@ form .grid {
   font-size: 11px;
   line-height: 1.5;
   font-family: "Noto Sans", sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   text-decoration: none;
   text-shadow: none;
   white-space: pre;

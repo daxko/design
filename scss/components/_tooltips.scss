@@ -30,7 +30,7 @@ $tooltip-tail-size: 5px;
   font-size: 11px;
   line-height: $base-line-height;
   font-family: $base-font-family;
-  font-weight: 500;
+  font-weight: $base-font-weight;
   text-decoration: none;
   text-shadow: none;
   white-space: pre;
