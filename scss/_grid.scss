@@ -8,7 +8,6 @@ $grid-columns: 12 !default;
   display: block;
   padding: 0;
   margin: 0 (-.5 * $grid-gutter);
-  margin-bottom: -.5 * $grid-gutter;
   font-size: 0; // remove whitespace between elements
   vertical-align: top;
 }
@@ -18,7 +17,6 @@ $grid-columns: 12 !default;
   display: inline-block;
   width: percentage($width);
   padding: 0 (.5 * $grid-gutter);
-  margin-bottom: $grid-gutter;
   vertical-align: inherit;
   text-align: left;
 }
