@@ -136,6 +136,18 @@
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-3"</span>&gt;</span>.col-3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
+<p>You can also adjust the vertical alignment of grid columns with <code>.top</code>, <code>.middle</code>, or <code>.bottom</code>. By default grid columns will be aligned across the top of the grid rows.</p>
+<div class='example grid-example'><div class="grid middle">
+  <div class="col-6"><h1>Big column</h1></div>
+  <div class="col-6"><small>Small column</small></div>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid middle"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Big column<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-6"</span>&gt;</span><span class="tag">&lt;<span class="title">small</span>&gt;</span>Small column<span class="tag">&lt;/<span class="title">small</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
 <h2 id="typography">Typography</h2>
 <h3 id="headings">Headings</h3>
 <div class='example '><h1>h1. Heading</h1> <!-- 35px -->
@@ -975,7 +987,7 @@
 
 </section>
     <footer>
-      Created and maintained by the design team at Daxko. <strong>v0.1.10</strong>
+      Created and maintained by the design team at Daxko. <strong>v0.1.11</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">

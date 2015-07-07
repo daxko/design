@@ -500,18 +500,6 @@ a:hover {
   }
 }
 
-.align-top {
-  vertical-align: top;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-bottom {
-  vertical-align: bottom;
-}
-
 .grid {
   display: block;
   padding: 0;
@@ -642,6 +630,18 @@ a:hover {
 
 .grid.right {
   text-align: right;
+}
+
+.grid.top {
+  vertical-align: top;
+}
+
+.grid.middle {
+  vertical-align: middle;
+}
+
+.grid.bottom {
+  vertical-align: bottom;
 }
 
 input[type=text],
