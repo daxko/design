@@ -113,6 +113,15 @@ You can also left or right align columns by adding a `.left` or `.right` class r
 </div>
 {{/example}}
 
+You can also adjust the vertical alignment of grid columns with `.top`, `.middle`, or `.bottom`. By default grid columns will be aligned across the top of the grid rows.
+
+{{#example 'html' 'grid-example'}}
+<div class="grid middle">
+  <div class="col-6"><h1>Big column</h1></div>
+  <div class="col-6"><small>Small column</small></div>
+</div>
+{{/example}}
+
 ## Typography
 
 ### Headings

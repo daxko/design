@@ -21,18 +21,6 @@ $grid-columns: 12 !default;
   text-align: left;
 }
 
-.align-top {
-  vertical-align: top;
-}
-
-.align-middle {
-  vertical-align: middle;
-}
-
-.align-bottom {
-  vertical-align: bottom;
-}
-
 .grid {
   @include grid();
 
@@ -58,5 +46,16 @@ $grid-columns: 12 !default;
     text-align: right;
   }
 
-}
+  &.top {
+    vertical-align: top;
+  }
 
+  &.middle {
+    vertical-align: middle;
+  }
+
+  &.bottom {
+    vertical-align: bottom;
+  }
+
+}
