@@ -61,7 +61,7 @@ select.input-large {
 
 input.input-mini,
 select.input-mini {
-  height: 24px;
+  height: 26px;
   font-size: $input-mini-font-size;
   padding: 2px 6px 2px;
 }
@@ -154,6 +154,11 @@ input::placeholder {
 
 form .grid {
   vertical-align: bottom;
+
+  [class*=col-] {
+    margin-bottom: 1em
+  }
+
 }
 
 .form-horizontal .control-group {
