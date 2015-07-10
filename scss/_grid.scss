@@ -1,5 +1,8 @@
 $grid-gutter: 10px !default;
 $grid-columns: 12 !default;
+$grid-sm-width: 800px !default;
+$grid-md-width: 1000px !default;
+$grid-lg-width: 1200px !default;
 
 // Grids
 // ----------------------------------------------
@@ -24,13 +27,13 @@ $grid-columns: 12 !default;
 .grid {
   @include grid();
 
-  .grid [class*=col-] {
-    margin-bottom: 0;
+  [class*=col-] {
+    @include col();
   }
 
   @for $i from 1 through $grid-columns {
     .col-#{$i} {
-      @include col($i/$grid-columns);
+      width: percentage($i/$grid-columns);
     }
   }
 
@@ -58,4 +61,31 @@ $grid-columns: 12 !default;
     vertical-align: bottom;
   }
 
+}
+
+// Grid layouts for small devices (800px and up)
+@media (min-width: $grid-sm-width) {
+  @for $i from 1 through $grid-columns {
+    .grid .col-sm-#{$i} {
+      width: percentage($i/$grid-columns);
+    }
+  }
+}
+
+// Grid layouts for medium devices (1000px and up)
+@media (min-width: $grid-sm-width) {
+  @for $i from 1 through $grid-columns {
+    .grid .col-md-#{$i} {
+      width: percentage($i/$grid-columns);
+    }
+  }
+}
+
+// Grid layouts for large devices (1200px and up)
+@media (min-width: $grid-lg-width) {
+  @for $i from 1 through $grid-columns {
+    .grid .col-lg-#{$i} {
+      width: percentage($i/$grid-columns);
+    }
+  }
 }

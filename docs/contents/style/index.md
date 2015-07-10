@@ -122,6 +122,43 @@ You can also adjust the vertical alignment of grid columns with `.top`, `.middle
 </div>
 {{/example}}
 
+### Responsive Grids
+
+Grids are built with a mobile first mindset allowing you to size the grid columns different based on your device context.
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>All devices <div><small>(including phone)</small></div></th>
+      <th>Small devices <div><small>(≥ 800px)</small></div></th>
+      <th>Medium devices <div><small>(≥ 1000px)</small></div></th>
+      <th>Large devices <div><small>(≥ 1200px)</small></div></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Class Prefix</th>
+      <td>`.col-`</td>
+      <td>`.col-sm-`</td>
+      <td>`.col-md-`</td>
+      <td>`.col-lg-`</td>
+    </tr>
+  </tbody>
+</table>
+
+The columns below will stack for devices less than 800px, while turning into a 3-column layout for anything 800px and up.
+
+{{#example 'html' 'grid-example'}}
+<div class="grid">
+  <div class="col-12 col-sm-4">col 1</div>
+  <div class="col-12 col-sm-4">col 2</div>
+  <div class="col-12 col-sm-4">col 3</div>
+</div>
+{{/example}}
+
+Ideally you should be creating your responsive breakpoints based of the content that is being created, however the sass variables `$grid-sm-width`, `$grid-md-width` and `$grid-lg-width` are available for more semantic layouts.
+
 ## Typography
 
 ### Headings
