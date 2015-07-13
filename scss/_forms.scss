@@ -130,22 +130,6 @@ input::placeholder {
 // Form layouts
 .grid {
 
-  input[type=text],
-  input[type=password],
-  input[type=email],
-  input[type=number],
-  input[type=tel],
-  input[type=url],
-  input[type=date],
-  input[type=search],
-  input[type=datetime],
-  input[type=time],
-  input[type=date],
-  select,
-  textarea {
-    width: 100%;
-  }
-
   label {
     display: block;
   }
@@ -157,6 +141,17 @@ form .grid {
 
   [class*=col-] {
     margin-bottom: 1em
+  }
+
+  [class*=col-] > {
+    input:not([type=checkbox]):not([type=radio]),
+    select,
+    textarea,
+    label input:not([type=checkbox]):not([type=radio]),
+    label select,
+    label textarea {
+      width: 100%;
+    }
   }
 
 }
@@ -185,7 +180,14 @@ form .grid {
   .controls > label {
     display: block;
     vertical-align: middle;
-    padding: 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .controls > label.toggle-switch {
+    display: inline-block;
+    padding-top: inherit;
+    padding-bottom: inherit;
   }
 
   .btn-group {
@@ -215,6 +217,7 @@ form .grid {
   input {
     display: table-cell;
     float: left;
+    width: 100%;
   }
 
   .add-on,

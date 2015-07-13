@@ -832,22 +832,6 @@ input::placeholder {
   color: #a6a6a6;
 }
 
-.grid input[type=text],
-.grid input[type=password],
-.grid input[type=email],
-.grid input[type=number],
-.grid input[type=tel],
-.grid input[type=url],
-.grid input[type=date],
-.grid input[type=search],
-.grid input[type=datetime],
-.grid input[type=time],
-.grid input[type=date],
-.grid select,
-.grid textarea {
-  width: 100%;
-}
-
 .grid label {
   display: block;
 }
@@ -858,6 +842,15 @@ form .grid {
 
 form .grid [class*=col-] {
   margin-bottom: 1em;
+}
+
+form .grid [class*=col-] > input:not([type=checkbox]):not([type=radio]),
+form .grid [class*=col-] > select,
+form .grid [class*=col-] > textarea,
+form .grid [class*=col-] > label input:not([type=checkbox]):not([type=radio]),
+form .grid [class*=col-] > label select,
+form .grid [class*=col-] > label textarea {
+  width: 100%;
 }
 
 .form-horizontal .control-group > label {
@@ -882,7 +875,14 @@ form .grid [class*=col-] {
 .form-horizontal .control-group .controls > label {
   display: block;
   vertical-align: middle;
-  padding: 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.form-horizontal .control-group .controls > label.toggle-switch {
+  display: inline-block;
+  padding-top: inherit;
+  padding-bottom: inherit;
 }
 
 .form-horizontal .control-group .btn-group {
@@ -909,6 +909,7 @@ form .grid [class*=col-] {
 .input-group input {
   display: table-cell;
   float: left;
+  width: 100%;
 }
 
 .input-group .add-on,
