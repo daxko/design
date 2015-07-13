@@ -28,7 +28,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#alerts">Alerts</a><ul><li><a href="#info">Info</a><li><a href="#success">Success</a><li><a href="#error">Error</a><li><a href="#warning">Warning</a></ul></li><li><a href="#modals">Modals</a></li><li><a href="#lists">Lists</a><ul><li><a href="#bordered-lists">Bordered Lists</a><li><a href="#list-header">List Header</a></ul></li><li><a href="#tooltips">Tooltips</a></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#dropdowns">Dropdowns</a></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#alerts">Alerts</a><ul><li><a href="#info">Info</a><li><a href="#success">Success</a><li><a href="#error">Error</a><li><a href="#warning">Warning</a></ul></li><li><a href="#modals">Modals</a></li><li><a href="#lists">Lists</a><ul><li><a href="#bordered-lists">Bordered Lists</a><li><a href="#list-header">List Header</a></ul></li><li><a href="#toggle-switches">Toggle Switches</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
 </aside>
 <section>
 <h2 id="dropdowns">Dropdowns</h2>
@@ -330,6 +330,49 @@
   ...
 <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
 </code></pre>
+<h2 id="toggle-switches">Toggle Switches</h2>
+<p>Toggle switches are used in place of regular checkboxes to indicate the on/off state of a checkbox. They also provide a larger hit area for mobile devices and are the preferred way to display single checkboxes.</p>
+<div class='example '><label class="toggle-switch">
+  <input type="checkbox" />
+  <span class="switch"></span>
+  <span data-on="Yes" data-off="No"></span>
+</label>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"toggle-switch"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"switch"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-on</span>=<span class="value">"Yes"</span> <span class="attribute">data-off</span>=<span class="value">"No"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>
+<p>To display a toggle switch as active, just set the <code>checked</code> property on the checkbox.</p>
+<div class='example '><label class="toggle-switch">
+  <input type="checkbox" checked />
+  <span class="switch"></span>
+  <span data-on="Yes" data-off="No"></span>
+</label>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"toggle-switch"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">checked</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"switch"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-on</span>=<span class="value">"Yes"</span> <span class="attribute">data-off</span>=<span class="value">"No"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>
+<p>You can also customize the display of the on/off states by changing the <code>data-on</code> and <code>data-off</code> properties.</p>
+<div class='example '><label class="toggle-switch">
+  <input type="checkbox" />
+  <span class="switch"></span>
+  <span data-on="Go" data-off="Stop"></span>
+</label>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"toggle-switch"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"switch"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-on</span>=<span class="value">"Go"</span> <span class="attribute">data-off</span>=<span class="value">"Stop"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+</code></pre>
 <h2 id="tooltips">Tooltips</h2>
 <p>Add tooltips to almost any element. Just add a <code>.tooltip</code> class along with an <code>aria-label</code> attribute containing the tooltip text.</p>
 <blockquote>
@@ -363,7 +406,7 @@
 
 </section>
     <footer>
-      Created and maintained by the design team at Daxko. <strong>v0.1.14</strong>
+      Created and maintained by the design team at Daxko. <strong>v0.1.15</strong>
     </footer>
   </main>
   <link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
