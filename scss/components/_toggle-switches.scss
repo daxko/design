@@ -1,0 +1,109 @@
+$on-switch-color: #4EBF5A !default;
+$on-switch-text-color: #fff !default;
+$off-switch-color: $gray-100 !default;
+$off-switch-text-color: $gray-700 !default;
+$toggle-switch-height: $btn-height !default;
+
+$switch-height: $toggle-switch-height - 2px;
+
+// Toggle Switches
+// ----------------------------------------------
+.toggle-switch {
+
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  padding: 0 6px;
+  display: inline-block;
+  margin: 0;
+  height: $toggle-switch-height;
+  line-height: $toggle-switch-height;
+  vertical-align: middle;
+
+  input[type=checkbox] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input[type=checkbox]:focus {
+    outline: 0;
+  }
+
+  input[type=checkbox]:focus ~ .switch {
+    border: 1px solid darken($btn-focus-color, 10%);
+    box-shadow: 0 0 4px $btn-focus-color;
+  }
+
+  span[data-on]:before,
+  span[data-on]:after {
+    color: $off-switch-text-color;
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    padding: 0 4px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity ease-in .2s;
+    font-family: $btn-font-family;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    min-width: $switch-height;
+    z-index: z-index('btn-focus');
+  }
+
+  span[data-on]:before {
+    text-shadow: -1px 0 #fff;
+    content: attr(data-off);
+  }
+
+  span[data-on]:after {
+    color: $on-switch-text-color;
+    content: attr(data-on);
+    text-shadow: none;
+  }
+
+  input:not(:checked) ~ span[data-on]:before,
+  input:checked ~ span[data-on]:after {
+    opacity: 1;
+  }
+
+  // Off State
+  .switch {
+    position: absolute;
+    height: $toggle-switch-height;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    background-color: $off-switch-color;
+    border: 1px solid darken($off-switch-color, 5%);
+    transition: background-color linear .2s;
+    z-index: z-index('btn-focus');
+  }
+
+  input ~ .switch:after {
+    content: "";
+    border-radius: 3px;
+    position: absolute;
+    height: $switch-height;
+    width: $switch-height;
+    background-color: #fff;
+    right: 0;
+    top: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out .2s;
+    transition-property: right margin-right;
+  }
+
+  // On State
+  input:checked ~ .switch {
+    background-color: $on-switch-color;
+    border: 1px solid darken($on-switch-color, 5%);
+  }
+
+  input:checked ~ .switch:after {
+    margin-right: -($switch-height);
+    right: 100%;
+  }
+
+}

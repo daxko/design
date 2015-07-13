@@ -8,6 +8,9 @@ $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
 $btn-focus-color: $cotton-candy !default;
 
+$btn-font-weight: 600;
+$btn-height: 32px;
+
 // Buttons
 // ----------------------------------------------
 
@@ -20,10 +23,10 @@ $btn-focus-color: $cotton-candy !default;
   border: 1px solid darken($btn-color, 10%);
   border-radius: .2em;
   font-size: $btn-font-size;
-  font-weight: 600;
+  font-weight: $btn-font-weight;
   font-family: $btn-font-family;
   line-height: 20px;
-  height: 32px;
+  height: $btn-height;
   color: $btn-text-color;
   text-decoration: none;
   text-align: center;
