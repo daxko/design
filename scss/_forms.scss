@@ -213,11 +213,11 @@ form .grid {
   display: table;
   border-collapse: separate;
   position: relative;
+  width: 1%;
 
   input {
     display: table-cell;
     float: left;
-    width: 100%;
   }
 
   .add-on,

@@ -904,12 +904,12 @@ form .grid [class*=col-] > label textarea {
   display: table;
   border-collapse: separate;
   position: relative;
+  width: 1%;
 }
 
 .input-group input {
   display: table-cell;
   float: left;
-  width: 100%;
 }
 
 .input-group .add-on,
