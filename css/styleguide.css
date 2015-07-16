@@ -980,7 +980,8 @@ form .grid [class*=col-] > label textarea {
   .form-horizontal .control-group .controls {
     margin-left: 0;
   }
-  .form-horizontal .control-group input {
+  .form-horizontal .control-group input,
+  .form-horizontal .control-group .input-group {
     width: 100%;
   }
 }
