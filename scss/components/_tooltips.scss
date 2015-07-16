@@ -44,6 +44,7 @@ $tooltip-tail-size: 5px;
   &:after {
     text-decoration: none;
     display: inline-block;
+    pointer-events: none;
   }
 }
 

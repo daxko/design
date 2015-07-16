@@ -2447,6 +2447,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip:focus:after {
   text-decoration: none;
   display: inline-block;
+  pointer-events: none;
 }
 
 .tooltip:after,
