@@ -2061,6 +2061,11 @@ form .grid [class*=col-] > label textarea {
   border-top-right-radius: 3px;
 }
 
+.list-header:first-child,
+.list:first-child {
+  margin-top: 0;
+}
+
 .list-header + .list {
   margin-top: 0;
   border-top: none;
