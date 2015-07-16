@@ -437,6 +437,11 @@ h6 {
   font-size: 14px;
 }
 
+.secondary {
+  color: #a6a6a6;
+  font-weight: 300;
+}
+
 html {
   box-sizing: border-box;
 }
