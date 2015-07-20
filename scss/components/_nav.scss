@@ -46,12 +46,20 @@ $navbar-link-color: $cotton-candy !default;
     border-top-color: $gray-300;
   }
 
-  li {
+  ul {
+    overflow: visible;
+  }
+
+  a:hover .caret {
+    border-top-color: #fff;
+  }
+
+  > li {
     display: inline-block;
     float: left;
   }
 
-  li a {
+  > li > a {
     color: $gray-300;
     display: block;
     height: 40px;
@@ -60,7 +68,7 @@ $navbar-link-color: $cotton-candy !default;
     font-size: $base-font-size;
   }
 
-  li a:hover {
+  > li > a:hover {
     color: #fff;
   }
 

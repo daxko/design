@@ -17,6 +17,10 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   border-left: 4px solid transparent;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .open > .dropdown-menu {
   display: block;
 }
@@ -24,6 +28,7 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
 .dropdown-menu {
   display: none;
   position: absolute;
+  top: 100%;
   border-radius: 4px;
   border: 1px solid $gray-100;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
@@ -55,6 +60,10 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
     background-color: $gray-100;
     height: 1px;
     margin: 5px 0;
+  }
+
+  &.right {
+    right: 0;
   }
 }
 
