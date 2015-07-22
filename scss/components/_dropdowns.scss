@@ -17,8 +17,15 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   border-left: 4px solid transparent;
 }
 
-.dropdown {
+.dropdown,
+.dropup {
   position: relative;
+  display: inline-block;
+}
+
+.dropup .caret {
+  border-top-width: 0;
+  border-bottom: 4px solid $gray-900;
 }
 
 .open > .dropdown-menu {
@@ -38,6 +45,7 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   margin-top: 1px;
   float: left;
   padding: 5px 0;
+  list-style-type: none;
   font-size: $dropdown-font-size;
   z-index: z-index('dropdown-menu');
 
@@ -51,7 +59,8 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
     white-space: nowrap;
   }
 
-  a:hover {
+  a:hover,
+  a:focus {
     background-color: $dropdown-hover-color;
     color: $dropdown-font-hover-color;
   }
@@ -67,7 +76,13 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   }
 }
 
-.backdrop {
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+
+.dropdown-backdrop {
   position: fixed;
   top: 0;
   right: 0;

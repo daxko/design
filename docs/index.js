@@ -1,3 +1,5 @@
+'use strict';
+
 var glob = require('glob')
   , path = require('path')
   , fs = require('fs')
@@ -33,7 +35,7 @@ function includePackageMetadata(files, metalsmith, done) {
   var metadata = metalsmith.metadata()
     , pkg = fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8');
 
-  metadata['pkg'] = JSON.parse(pkg);
+  metadata.pkg = JSON.parse(pkg);
 
   done();
 }
@@ -47,7 +49,7 @@ metalsmith = metalsmith(__dirname)
   .use(parsemd)
   .use(markdown({
     smartypants: true,
-    highlight: function(code, lang, fn) {
+    highlight: function(code, lang) {
       if(!lang) {
         return hljs.highlightAuto(code).value;
       } else {
@@ -68,5 +70,7 @@ metalsmith = metalsmith(__dirname)
     pattern: '**/*.html'
   }))
   .build(function(err) {
-    if(err) throw err;
+    if(err) {
+      throw err;
+    }
   });

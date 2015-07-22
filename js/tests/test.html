@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Javascript Unit Tests</title>
+  <style>
+    #fixture {
+      position: absolute;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="mocha"></div>
+  <div id="fixture"></div>
+
+  <!-- mocha/chai -->
+  <script src="vendor/jquery.min.js"></script>
+  <script src="../../node_modules/mocha/mocha.js"></script>
+  <link rel="stylesheet" media="all" href="../../node_modules/mocha/mocha.css">
+  <script src="../../node_modules/chai/chai.js"></script>
+
+  <script>
+    var $fixture = $('#fixture');
+  </script>
+
+  <script>
+    mocha.setup('bdd');
+    var assert = chai.assert;
+  </script>
+
+  <!-- sources -->
+  <link rel="stylesheet" href="../../css/global.css"/>
+  <script src="../../js/dropdown.js"></script>
+
+  <!-- tests -->
+  <script src="unit/test-dropdown.js"></script>
+
+  <script>
+    if(navigator.userAgent.indexOf('PhantomJS') < 0) {
+      mocha.run();
+    }
+  </script>
+
+</body>
+</html>

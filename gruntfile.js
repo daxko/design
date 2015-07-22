@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
@@ -8,6 +10,7 @@ module.exports = function(grunt) {
       docs: 'docs',
       contents: '<%= config.docs %>/contents',
       css: 'css',
+      js: 'js',
       scss: 'scss',
       fonts: 'fonts'
     },
@@ -29,6 +32,16 @@ module.exports = function(grunt) {
       }
     },
 
+    mocha: {
+      options: {
+        run: true,
+        reporter: 'Spec'
+      },
+      test: {
+        src: ['js/tests/*.html']
+      }
+    },
+
     postcss: {
       options: {
         map: true,
@@ -44,11 +57,20 @@ module.exports = function(grunt) {
       }
     },
 
-    // Because sass can't include normal css files
     copy: {
-      dist: {
+      js: {
+        files: [{
+          expand: true,
+          src: ['*.js'],
+          cwd: '<%= config.js %>/',
+          dest: '<%= config.contents %>/js',
+          filter: 'isFile'
+        }]
+      },
+      normalize: {
         files: {
-          '<%= config.scss %>/_normalize.scss': ['node_modules/normalize.css/normalize.css']
+          // Because sass can't include normal css files
+          '<%= config.scss %>/_normalize.scss': ['node_modules/normalize.css/normalize.css'],
         }
       },
       icons: {
@@ -80,10 +102,25 @@ module.exports = function(grunt) {
       }
     },
 
+    jshint: {
+      options: {
+        jshintrc: true
+      },
+      files: [
+        'gruntfile.js',
+        '<%= config.js %>/*.js',
+        '<%= config.docs %>/index.js',
+      ]
+    },
+
     watch: {
       sass: {
         files: ['<%= config.scss %>/{,*/}*.{scss,sass}', '<%= config.docs %>/scss/{,*/}*.{scss,sass}'],
         tasks: ['sass', 'postcss', 'cssmin']
+      },
+      js: {
+        files: ['<%= config.js %>/*.js'],
+        tasks: ['copy:js']
       },
       docs: {
         files: ['<%= config.contents %>/{,*/}*', '<%= config.docs %>/templates/{,*/}*.{hbs,js}'],
@@ -148,8 +185,9 @@ module.exports = function(grunt) {
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
+  grunt.registerTask('test', ['jshint', 'mocha']);
   grunt.registerTask('assets', ['copy', 'sass', 'postcss', 'cssmin', 'parker']);
-  grunt.registerTask('build', ['assets', 'shell:metalsmith']);
-  grunt.registerTask('preview', ['assets', 'shell:metalsmith', 'concurrent:docs']);
+  grunt.registerTask('build', ['assets', 'jshint', 'mocha', 'shell:metalsmith']);
+  grunt.registerTask('preview', ['assets', 'copy', 'shell:metalsmith', 'concurrent:docs']);
 
 };

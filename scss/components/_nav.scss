@@ -73,3 +73,16 @@ $navbar-link-color: $cotton-candy !default;
   }
 
 }
+
+// Navbar dropdowns
+.navbar .nav > li.dropdown.open {
+  background-color: rgba(0, 0, 0, .3);
+
+  > a {
+    color: #fff;
+  }
+
+  .caret {
+    border-top-color: #fff;
+  }
+}

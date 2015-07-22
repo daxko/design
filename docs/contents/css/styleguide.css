@@ -1968,8 +1968,15 @@ form .grid [class*=col-] > label textarea {
   border-left: 4px solid transparent;
 }
 
-.dropdown {
+.dropdown,
+.dropup {
   position: relative;
+  display: inline-block;
+}
+
+.dropup .caret {
+  border-top-width: 0;
+  border-bottom: 4px solid #2d2d2d;
 }
 
 .open > .dropdown-menu {
@@ -1989,6 +1996,7 @@ form .grid [class*=col-] > label textarea {
   margin-top: 1px;
   float: left;
   padding: 5px 0;
+  list-style-type: none;
   font-size: 13px;
   z-index: 130;
 }
@@ -2003,7 +2011,8 @@ form .grid [class*=col-] > label textarea {
   white-space: nowrap;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
   background-color: #dcf1f0;
   color: #000;
 }
@@ -2018,7 +2027,13 @@ form .grid [class*=col-] > label textarea {
   right: 0;
 }
 
-.backdrop {
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+
+.dropdown-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -2198,6 +2213,18 @@ form .grid [class*=col-] > label textarea {
 
 .navbar .nav > li > a:hover {
   color: #fff;
+}
+
+.navbar .nav > li.dropdown.open {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar .nav > li.dropdown.open > a {
+  color: #fff;
+}
+
+.navbar .nav > li.dropdown.open .caret {
+  border-top-color: #fff;
 }
 
 .tabs {
