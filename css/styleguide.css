@@ -439,6 +439,11 @@ h6 {
 
 .secondary {
   color: #a6a6a6;
+}
+
+h1 .secondary,
+h2 .secondary,
+h3 .secondary {
   font-weight: 300;
 }
 
@@ -1989,6 +1994,7 @@ form .grid [class*=col-] > label textarea {
   top: 100%;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
+  color: #545454;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   background-clip: padding-box;
@@ -1997,7 +2003,7 @@ form .grid [class*=col-] > label textarea {
   float: left;
   padding: 5px 0;
   list-style-type: none;
-  font-size: 13px;
+  font-size: 12px;
   z-index: 130;
 }
 
@@ -2005,7 +2011,7 @@ form .grid [class*=col-] > label textarea {
   display: block;
   overflow: hidden;
   padding: 0.3em 10px;
-  color: #2d2d2d;
+  color: #545454;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2031,6 +2037,56 @@ form .grid [class*=col-] > label textarea {
   top: auto;
   bottom: 100%;
   margin-bottom: 1px;
+}
+
+.dropdown-caret {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 100%;
+  margin-top: 1px;
+  z-index: 131;
+}
+
+.open .dropdown-caret {
+  display: block;
+}
+
+.dropdown-caret:before,
+.dropdown-caret:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+.dropdown-caret:before {
+  border-bottom: 8px solid #e6e6e6;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.dropdown-caret:after {
+  border-bottom: 7px solid #fff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  left: 1px;
+  bottom: -1px;
+}
+
+.dropup .dropdown-caret {
+  top: 6px;
+}
+
+.dropup .dropdown-caret:before {
+  border-bottom: none;
+  border-top: 8px solid #e6e6e6;
+  bottom: 0;
+}
+
+.dropup .dropdown-caret:after {
+  border-bottom: none;
+  border-top: 7px solid #fff;
+  bottom: 2px;
 }
 
 .dropdown-backdrop {
