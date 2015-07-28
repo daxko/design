@@ -1,6 +1,5 @@
 {
-  "extends": "../.jshintrc",
-  "curly": false,
+  "extends": "../../.jshintrc",
   "mocha": true,
   "globals": {
     "$fixture": true,

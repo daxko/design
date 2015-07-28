@@ -45,5 +45,10 @@ h6 { @extend %h6; }
 // Secondary
 .secondary {
   color: $gray-300;
+}
+
+h1 .secondary,
+h2 .secondary,
+h3 .secondary {
   font-weight: 300;
 }

@@ -1,2 +1,4 @@
 * text=auto
 *.map binary
+*.min.css binary
+*.min.js binary

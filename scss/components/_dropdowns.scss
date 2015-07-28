@@ -1,5 +1,5 @@
-$dropdown-font-size: 13px !default;
-$dropdown-font-color: $gray-900 !default;
+$dropdown-font-size: 12px !default;
+$dropdown-font-color: $gray-700 !default;
 $dropdown-font-hover-color: #000 !default;
 $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
 
@@ -38,6 +38,7 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   top: 100%;
   border-radius: 4px;
   border: 1px solid $gray-100;
+  color: $dropdown-font-color;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
   background-color: #fff;
   background-clip: padding-box;
@@ -82,6 +83,58 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   margin-bottom: 1px;
 }
 
+// Dropdown caret
+.dropdown-caret {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 100%;
+  margin-top: 1px;
+  z-index: (z-index('dropdown-menu') + 1);
+}
+
+.open .dropdown-caret {
+  display: block;
+}
+
+.dropdown-caret:before,
+.dropdown-caret:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+.dropdown-caret:before {
+  border-bottom: 8px solid $gray-100;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.dropdown-caret:after {
+  border-bottom: 7px solid #fff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  left: 1px;
+  bottom: -1px;
+}
+
+.dropup .dropdown-caret {
+  top: 6px;
+
+  &:before {
+    border-bottom: none;
+    border-top: 8px solid $gray-100;
+    bottom: 0;
+  }
+
+  &:after {
+    border-bottom: none;
+    border-top: 7px solid #fff;
+    bottom: 2px;
+  }
+}
+
+// Backdrop
 .dropdown-backdrop {
   position: fixed;
   top: 0;
