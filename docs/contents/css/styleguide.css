@@ -845,6 +845,10 @@ input::placeholder {
   display: block;
 }
 
+.grid .toggle-switch {
+  display: inline-block;
+}
+
 form .grid {
   vertical-align: bottom;
 }
