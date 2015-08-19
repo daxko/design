@@ -5,7 +5,7 @@ theme: "key-lime"
 
 ## Color palette
 
-This color palette is composed of primary colors to be used for accent and highlighting and gray scale colors to be used to shade text and to convey hierarchical information.
+This color palette is composed of primary colors to be used for accent, highlighting and gray scale colors to be used to shade text and to convey hierarchical information.
 
 ### Primary Colors
 
