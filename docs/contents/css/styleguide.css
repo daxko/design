@@ -472,6 +472,7 @@ body {
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 img {
@@ -2875,6 +2876,11 @@ section > h4 {
 
 .section-nav .active ul {
   display: block;
+}
+
+.section ul {
+  list-style-type: disc;
+  margin-left: 1.5em;
 }
 
 .content {
