@@ -28,7 +28,7 @@
   </header>
   <main class="content container" role="main">
     <aside class="sticky">
-  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#dropdowns">Dropdowns</a><ul><li><a href="#alignment">Alignment</a><li><a href="#divider">Divider</a></ul></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#alerts">Alerts</a><ul><li><a href="#info">Info</a><li><a href="#success">Success</a><li><a href="#error">Error</a><li><a href="#warning">Warning</a></ul></li><li><a href="#modals">Modals</a></li><li><a href="#lists">Lists</a><ul><li><a href="#bordered-lists">Bordered Lists</a><li><a href="#list-header">List Header</a></ul></li><li><a href="#toggle-switches">Toggle Switches</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
+  <ul class="nav section-nav tabs tabs-vertical"><li><a href="#dropdowns">Dropdowns</a><ul><li><a href="#alignment">Alignment</a><li><a href="#divider">Divider</a></ul></li><li><a href="#tabs">Tabs</a><ul><li><a href="#horizontal-tabs">Horizontal Tabs</a><li><a href="#vertical-tabs">Vertical Tabs</a></ul></li><li><a href="#navs">Navs</a><ul><li><a href="#navbar">Navbar</a></ul></li><li><a href="#alerts">Alerts</a><ul><li><a href="#info">Info</a><li><a href="#success">Success</a><li><a href="#error">Error</a><li><a href="#warning">Warning</a></ul></li><li><a href="#modals">Modals</a></li><li><a href="#lists">Lists</a><ul><li><a href="#bordered-lists">Bordered Lists</a><li><a href="#list-header">List Header</a></ul></li><li><a href="#button-groups">Button Groups</a><ul><li><a href="#checkbox-group">Checkbox Group</a><li><a href="#radio-group">Radio Group</a></ul></li><li><a href="#toggle-switches">Toggle Switches</a></li><li><a href="#tooltips">Tooltips</a></li></ul>
 </aside>
 <section>
 <h2 id="dropdowns">Dropdowns</h2>
@@ -384,6 +384,62 @@
   <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"list-item"</span>&gt;</span>List Item<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
   ...
 <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+</code></pre>
+<h2 id="button-groups">Button Groups</h2>
+<p>You can create button groups driven by checkboxes and radio buttons — no javascript needed!</p>
+<p>To select a button, just add a <code>checked</code> attribute to the checkbox or radio button you want to be selected.</p>
+<h3 id="checkbox-group">Checkbox Group</h3>
+<p>Use checkboxes when you need a button group where multiple items can be selected at a time.</p>
+<div class='example '><div class="btn-group">
+  <input id="sunday" type="checkbox" />
+  <label for="sunday" class="btn">Sunday</label>
+  <input id="monday" type="checkbox" />
+  <label for="monday" class="btn">Monday</label>
+  <!-- ... -->
+  <input id="tuesday" type="checkbox" />
+  <label for="tuesday" class="btn">Tuesday</label>
+  <input id="wednesday" type="checkbox" />
+  <label for="wednesday" class="btn">Wednesday</label>
+  <input id="thursday" type="checkbox" />
+  <label for="thursday" class="btn">Thursday</label>
+  <input id="friday" type="checkbox" />
+  <label for="friday" class="btn">Friday</label>
+  <!-- /... -->
+  <input id="saturday" type="checkbox" />
+  <label for="saturday" class="btn">Saturday</label>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"btn-group"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"sunday"</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"sunday"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Sunday<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"monday"</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"monday"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Monday<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  ...
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"saturday"</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"saturday"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Saturday<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h3 id="radio-group">Radio Group</h3>
+<p>Use radio buttons when you need a button group where only one item can be selected at a time.</p>
+<div class='example '><div class="btn-group">
+  <input id="level-anyone" type="radio" name="level" checked />
+  <label for="level-anyone" class="btn">Anyone</label>
+  <input id="level-intermediate" type="radio" name="level" />
+  <label for="level-intermediate" class="btn">Intermediate</label>
+  <input id="level-advanced" type="radio" name="level" />
+  <label for="level-advanced" class="btn">Advanced</label>
+</div>
+</div>
+
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"btn-group"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"level-anyone"</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"level"</span> <span class="attribute">checked</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"level-anyone"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Anyone<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"level-intermediate"</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"level"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"level-intermediate"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Intermediate<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"level-advanced"</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"level"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"level-advanced"</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span>Advanced<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre>
 <h2 id="toggle-switches">Toggle Switches</h2>
 <p>Toggle switches are used in place of regular checkboxes to indicate the on/off state of a checkbox. They also provide a larger hit area for mobile devices and are the preferred way to display single checkboxes.</p>
