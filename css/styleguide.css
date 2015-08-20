@@ -2975,6 +2975,15 @@ blockquote {
   margin-bottom: 0;
 }
 
+.sticky {
+  top: 1em;
+}
+
+.fixedsticky-on {
+  position: fixed;
+  width: 16em;
+}
+
 section > :first-child {
   margin-top: 0;
   padding-top: 0;
