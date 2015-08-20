@@ -34,28 +34,7 @@ If you're using `node-sass`, you can set the [`includePaths`](https://github.com
 
 # Updating the Documentation
 
-The documentation runs using [metalsmith](https://github.com/segmentio/metalsmith), a static site generator built in node and is dependent upon having [node](http://nodejs.org/) and [grunt](http://gruntjs.com/) installed. If you don't know what any of that means, that's okay. All of the documentation is available under [docs/contents](docs/contents) in [markdown](https://help.github.com/articles/markdown-basics/). Any changes made here will be automatically updated on [daxko.github.io/design](http://daxko.github.io/design).
-
-## Running the Documentation Locally
-
-If you want explore the documentation on your own, we've wired up a few things via grunt so you can develop locally. But you'll need to run a few commands first to get started:
-
-```bash
-$ npm install -g grunt-cli
-$ npm install
-```
-
-`grunt preview`
-
-Allows you to edit on the fly and access the static site via http://localhost:3000.
-
-`grunt watch`
-
-Allows you to edit sass files for them to be automatically compiled.
-
-`grunt build`
-
-Compiles the site down to the static assets.
+The documentation runs using [metalsmith](https://github.com/segmentio/metalsmith), a static site generator built in node and is dependent upon having [node](http://nodejs.org/) and [grunt](http://gruntjs.com/) installed. If you don't know what any of that means, that's okay. All of the documentation is available under [docs/contents](docs/contents) in [markdown](http://daringfireball.net/projects/markdown/). Any changes made here will be automatically updated on [daxko.github.io/design](http://daxko.github.io/design).
 
 # Contributing
 

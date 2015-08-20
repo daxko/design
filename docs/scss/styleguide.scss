@@ -139,6 +139,15 @@ blockquote {
 
 }
 
+.sticky {
+  top: 1em;
+}
+
+.fixedsticky-on {
+  position: fixed;
+  width: $leftColWidth;
+}
+
 section > :first-child {
   margin-top: 0;
   padding-top: 0;

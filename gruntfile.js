@@ -79,7 +79,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: '<%= config.fonts %>',
             src: ['*.*'],
-            dest: '<%= config.docs%>/contents/css/fonts/',
+            dest: '<%= config.docs %>/contents/css/fonts/',
             filter: 'isFile'
           }
         ]
@@ -99,6 +99,23 @@ module.exports = function(grunt) {
         files: {
           '<%= config.contents %>/css/styleguide.min.css': ['<%= config.contents %>/css/styleguide.css']
         }
+      }
+    },
+
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.docs %>',
+            src: ['**/*.html'],
+            dest: '<%= config.docs %>'
+          }
+        ]
       }
     },
 
@@ -187,7 +204,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['assets']);
   grunt.registerTask('test', ['jshint', 'mocha']);
   grunt.registerTask('assets', ['copy', 'sass', 'postcss', 'cssmin', 'parker']);
-  grunt.registerTask('build', ['assets', 'jshint', 'mocha', 'shell:metalsmith']);
+  grunt.registerTask('build', ['assets', 'jshint', 'mocha', 'shell:metalsmith', 'htmlmin']);
   grunt.registerTask('preview', ['assets', 'copy', 'shell:metalsmith', 'concurrent:docs']);
 
 };

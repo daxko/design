@@ -9,6 +9,7 @@ var glob = require('glob')
   , markdown = require('metalsmith-markdown')
   , templates = require('metalsmith-templates')
   , layouts = require('metalsmith-layouts')
+  , ignore = require('metalsmith-ignore')
   , _ = require('lodash');
 
 glob('templates/helpers/**.js', function(err, files) {
@@ -18,6 +19,43 @@ glob('templates/helpers/**.js', function(err, files) {
     handlebars.registerHelper(helperName, require(filepath));
   });
 });
+
+function includePackageMetadata(files, metalsmith, done) {
+  var metadata = metalsmith.metadata()
+    , pkg = fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8');
+
+  metadata.pkg = JSON.parse(pkg);
+
+  done();
+}
+
+function concatFiles(files, metalsmith, done) {
+  setImmediate(done);
+
+  var regex = /((.*)\d{2}-)[^\/]+.md$/i
+    , concatinatedFiles = [];
+
+  concatinatedFiles = _.chain(files)
+    .pick(function(file, name) {
+      return regex.test(name);
+    })
+    .groupBy(function(file, name) {
+      file._name = name;
+      return regex.exec(name)[2];
+    })
+    .map(function(group) {
+      group = group.sort(function(a, b) { return a._name.toLowerCase() > b._name.toLowerCase(); });
+      return _.reduce(group, function(accumulator, file) {
+        accumulator.contents = new Buffer([accumulator.contents.toString(), file.contents.toString()].join('\n\n'));
+        return accumulator;
+      });
+    })
+    .value();
+
+  concatinatedFiles.forEach(function(file) {
+    files[file._name.replace(/\d{2}-/, '')] = file;
+  });
+}
 
 function parsemd(files, metalsmith, done) {
   _.map(files, function(file, name) {
@@ -31,21 +69,14 @@ function parsemd(files, metalsmith, done) {
   done();
 }
 
-function includePackageMetadata(files, metalsmith, done) {
-  var metadata = metalsmith.metadata()
-    , pkg = fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8');
-
-  metadata.pkg = JSON.parse(pkg);
-
-  done();
-}
-
 // No prefixed highlight classes
 hljs.configure({ classPrefix: '' });
 
 metalsmith = metalsmith(__dirname)
   .source('contents')
   .use(includePackageMetadata)
+  .use(concatFiles)
+  .use(ignore('**/[0-9][0-9]-*.md'))
   .use(parsemd)
   .use(markdown({
     smartypants: true,
