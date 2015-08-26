@@ -146,6 +146,7 @@
 
   $(document)
     .on('click.dropdown', backdrop, closeMenus)
+    .on('click.dropdown', '.dropdown-menu', closeMenus)
     .on('click.dropdown', toggle, Dropdown.prototype.toggle)
     .on('keydown.dropdown', toggle, Dropdown.prototype.keydown)
     .on('keydown.dropdown', '.dropdown-menu', Dropdown.prototype.keydown)
