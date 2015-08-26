@@ -109,6 +109,12 @@
       assert.isFalse($('.dropdown').hasClass('open'), 'dropdown menu was closed');
     });
 
+    it('should close menu when menu item is clicked', function() {
+      $('.dropdown').addClass('open').find('[data-toggle=dropdown]');
+      $('.dropdown-menu li:first').trigger('click');
+      assert.isFalse($('.dropdown').hasClass('open'), 'dropdown menu was closed');
+    });
+
     it('should fire show event', function(done) {
       $('.dropdown').on('show', function() {
         assert.isFalse($('.dropdown').hasClass('open'), 'fired show event');
