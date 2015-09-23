@@ -2437,9 +2437,10 @@ form .grid [class*=col-] > label textarea {
 .toggle-switch input[type=checkbox] {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
