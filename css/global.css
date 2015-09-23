@@ -2430,6 +2430,7 @@ form .grid [class*=col-] > label textarea {
   margin: 0;
   height: 32px;
   line-height: 32px;
+  min-width: 64px;
   vertical-align: middle;
 }
 
@@ -2450,8 +2451,8 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 0 4px #a5dbd8;
 }
 
-.toggle-switch span[data-on]:before,
-.toggle-switch span[data-on]:after {
+.toggle-switch [data-on]:before,
+.toggle-switch [data-on]:after {
   color: #545454;
   position: relative;
   top: -1px;
@@ -2467,19 +2468,19 @@ form .grid [class*=col-] > label textarea {
   z-index: 10;
 }
 
-.toggle-switch span[data-on]:before {
+.toggle-switch [data-on]:before {
   text-shadow: -1px 0 #fff;
   content: attr(data-off);
 }
 
-.toggle-switch span[data-on]:after {
+.toggle-switch [data-on]:after {
   color: #fff;
   content: attr(data-on);
   text-shadow: none;
 }
 
-.toggle-switch input:not(:checked) ~ span[data-on]:before,
-.toggle-switch input:checked ~ span[data-on]:after {
+.toggle-switch input:not(:checked) ~ [data-on]:before,
+.toggle-switch input:checked ~ [data-on]:after {
   opacity: 1;
 }
 
@@ -2495,7 +2496,7 @@ form .grid [class*=col-] > label textarea {
   z-index: 10;
 }
 
-.toggle-switch input ~ .switch:after {
+.toggle-switch .switch:after {
   content: "";
   border-radius: 3px;
   position: absolute;
@@ -2503,10 +2504,8 @@ form .grid [class*=col-] > label textarea {
   width: 30px;
   background-color: #fff;
   right: 0;
-  top: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  transition: all ease-in-out 0.2s;
-  transition-property: right margin-right;
+  transition: all ease-out 0.2s;
 }
 
 .toggle-switch input:checked ~ .switch {
@@ -2515,7 +2514,9 @@ form .grid [class*=col-] > label textarea {
 }
 
 .toggle-switch input:checked ~ .switch:after {
-  margin-right: -30px;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+          transform: translateX(30px);
   right: 100%;
 }
 

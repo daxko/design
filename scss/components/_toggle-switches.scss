@@ -18,6 +18,7 @@ $switch-height: $toggle-switch-height - 2px;
   margin: 0;
   height: $toggle-switch-height;
   line-height: $toggle-switch-height;
+  min-width: $toggle-switch-height * 2;
   vertical-align: middle;
 
   input[type=checkbox] {
@@ -35,8 +36,8 @@ $switch-height: $toggle-switch-height - 2px;
     box-shadow: 0 0 4px $btn-focus-color;
   }
 
-  span[data-on]:before,
-  span[data-on]:after {
+  [data-on]:before,
+  [data-on]:after {
     color: $off-switch-text-color;
     position: relative;
     top: -1px;
@@ -52,19 +53,19 @@ $switch-height: $toggle-switch-height - 2px;
     z-index: z-index('btn-focus');
   }
 
-  span[data-on]:before {
+  [data-on]:before {
     text-shadow: -1px 0 #fff;
     content: attr(data-off);
   }
 
-  span[data-on]:after {
+  [data-on]:after {
     color: $on-switch-text-color;
     content: attr(data-on);
     text-shadow: none;
   }
 
-  input:not(:checked) ~ span[data-on]:before,
-  input:checked ~ span[data-on]:after {
+  input:not(:checked) ~ [data-on]:before,
+  input:checked ~ [data-on]:after {
     opacity: 1;
   }
 
@@ -81,7 +82,7 @@ $switch-height: $toggle-switch-height - 2px;
     z-index: z-index('btn-focus');
   }
 
-  input ~ .switch:after {
+  .switch:after {
     content: "";
     border-radius: 3px;
     position: absolute;
@@ -89,10 +90,8 @@ $switch-height: $toggle-switch-height - 2px;
     width: $switch-height;
     background-color: #fff;
     right: 0;
-    top: 0;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    transition: all ease-in-out .2s;
-    transition-property: right margin-right;
+    transition: all ease-out .2s;
   }
 
   // On State
@@ -102,7 +101,7 @@ $switch-height: $toggle-switch-height - 2px;
   }
 
   input:checked ~ .switch:after {
-    margin-right: -($switch-height);
+    transform: translateX($switch-height);
     right: 100%;
   }
 
