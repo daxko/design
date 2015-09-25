@@ -20,6 +20,7 @@ $switch-height: $toggle-switch-height - 2px;
   line-height: $toggle-switch-height;
   min-width: $toggle-switch-height * 2;
   vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
 
   input[type=checkbox] {
     position: absolute;
@@ -102,7 +103,7 @@ $switch-height: $toggle-switch-height - 2px;
   }
 
   input:checked ~ .switch:after {
-    transform: translateX($switch-height);
+    margin-right: -$switch-height;
     right: 100%;
   }
 

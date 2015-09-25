@@ -2432,6 +2432,7 @@ form .grid [class*=col-] > label textarea {
   line-height: 32px;
   min-width: 64px;
   vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .toggle-switch input[type=checkbox] {
@@ -2515,9 +2516,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .toggle-switch input:checked ~ .switch:after {
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-          transform: translateX(30px);
+  margin-right: -30px;
   right: 100%;
 }
 
