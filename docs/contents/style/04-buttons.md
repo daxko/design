@@ -38,6 +38,15 @@ Welcome to the **danger zone**. Danger buttons are red, indicating that the foll
 <button type="button" class="btn btn-mini btn-danger">Small Danger Button</button>
 {{/example}}
 
+### Button Links
+
+Button links allow you to place buttons that de-emphasize its button appearance, and look more like a link while still maintaining the same vertical text alignment with other buttons.
+
+{{#example 'html'}}
+<a href="#" class="btn btn-link">Button Link</a>
+<button type="button" class="btn">Normal Button</button>
+{{/example}}
+
 ### Disabled
 
 `<button>` elements can be disabled with the `disabled` attribute, and `<a>` elements with the `.disabled` class.

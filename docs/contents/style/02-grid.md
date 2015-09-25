@@ -31,6 +31,10 @@ Since we're setting the box sizing to `border-box`, the grid sizes can include t
 </div>
 {{/example}}
 
+<div class="alert alert-warning">
+  <strong>Heads Up!</strong> To collapse white space between grid columns, the font-size for grids is set to 0, then reset back to `1rem` for each individual columns. Font sizes will not inherit from parents outside of the grid, and will need to be adjusted for components inside each grid cell.
+</div>
+
 ### Column Alignment
 
 Columns can be centered by adding a `.center` class to the column.
@@ -69,16 +73,20 @@ You can also adjust the vertical alignment of grid columns with `.top`, `.middle
 
 ### Responsive Grids
 
-Grids are built with a mobile first mindset allowing you to size the grid columns different based on your device context.
+<div class="alert alert-info">
+  <strong>Heads Up!</strong> You responsive layouts should ideally be based on the context of your content, and not the device. The classes provided below are simply helpers to quickly iterate. You can use the sass variables `$grid-sm-width`, `$grid-md-width` and `$grid-lg-width` to better customize your content breakpoints.
+</div>
+
+Grids are built from the bottom up, starting out from small widths to larger widths -- allowing you to size the grid columns differently based on your content.
 
 <table class="table table-bordered">
   <thead>
     <tr>
       <th></th>
-      <th>All devices <div><small>(including phone)</small></div></th>
-      <th>Small devices <div><small>(≥ 800px)</small></div></th>
-      <th>Medium devices <div><small>(≥ 1000px)</small></div></th>
-      <th>Large devices <div><small>(≥ 1200px)</small></div></th>
+      <th>All sizes</th>
+      <th>Small size <div><small>(≥ 800px)</small></div></th>
+      <th>Medium size <div><small>(≥ 1000px)</small></div></th>
+      <th>Large size <div><small>(≥ 1200px)</small></div></th>
     </tr>
   </thead>
   <tbody>
@@ -92,7 +100,7 @@ Grids are built with a mobile first mindset allowing you to size the grid column
   </tbody>
 </table>
 
-The columns below will stack for devices less than 800px, while turning into a 3-column layout for anything 800px and up.
+The columns below will stack for sizes less than 800px, while turning into a 3-column layout for anything 800px and up.
 
 {{#example 'html' 'grid-example'}}
 <div class="grid">
@@ -101,5 +109,3 @@ The columns below will stack for devices less than 800px, while turning into a 3
   <div class="col-12 col-sm-4">col 3</div>
 </div>
 {{/example}}
-
-Ideally you should be creating your responsive breakpoints based of the content that is being created, however the sass variables `$grid-sm-width`, `$grid-md-width` and `$grid-lg-width` are available for more semantic layouts.
