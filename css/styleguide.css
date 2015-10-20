@@ -2049,7 +2049,8 @@ form .grid [class*=col-] > label textarea {
   z-index: 130;
 }
 
-.dropdown-menu a {
+.dropdown-menu a,
+.dropdown-menu .dropdown-menu-item {
   display: block;
   overflow: hidden;
   padding: 0.3em 10px;
@@ -2060,7 +2061,9 @@ form .grid [class*=col-] > label textarea {
 }
 
 .dropdown-menu a:hover,
-.dropdown-menu a:focus {
+.dropdown-menu a:focus,
+.dropdown-menu .dropdown-menu-item:hover,
+.dropdown-menu .dropdown-menu-item:focus {
   background-color: #dcf1f0;
   color: #000;
 }
