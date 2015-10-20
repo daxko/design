@@ -50,7 +50,8 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   font-size: $dropdown-font-size;
   z-index: z-index('dropdown-menu');
 
-  a {
+  a,
+  .dropdown-menu-item {
     display: block;
     overflow: hidden;
     padding: .3em 10px;
@@ -61,7 +62,9 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   }
 
   a:hover,
-  a:focus {
+  a:focus,
+  .dropdown-menu-item:hover,
+  .dropdown-menu-item:focus {
     background-color: $dropdown-hover-color;
     color: $dropdown-font-hover-color;
   }
