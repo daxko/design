@@ -113,7 +113,7 @@
       $parent.find(toggle).trigger('click').trigger('focus');
     }
 
-    var $items = $parent.find('.dropdown-menu li:not(.disabled):visible a')
+    var $items = $parent.find('.dropdown-menu li:not(.disabled):visible').find('a,.dropdown-menu-item')
       , index = $items.index(e.target);
 
     if(!$items.length) return;
