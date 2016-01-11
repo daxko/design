@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git://github.com/daxko/design.git"
   },
+  "files": [
+    "fonts",
+    "js",
+    "scss"
+  ],
   "devDependencies": {
     "chai": "^3.2.0",
     "grunt-concurrent": "^2.0.2",
