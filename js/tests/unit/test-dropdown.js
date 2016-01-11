@@ -7,11 +7,11 @@
         '<div class="dropdown">'
       + '<a href="#" data-toggle="dropdown" aria-expanded="false">Dropdown</a>'
       + '<ul class="dropdown-menu">'
-      + '<li><a class="dropdown-menu-item" href="#">A Link</li>'
-      + '<li><a class="dropdown-menu-item" href="#">Another Link</li>'
-      + '<li><a class="dropdown-menu-item" href="#">A Link to the Past</li>'
+      + '<li><a class="dropdown-menu-item" href="#">A Link</a></li>'
+      + '<li><a class="dropdown-menu-item" href="#">Another Link</a></li>'
+      + '<li><a class="dropdown-menu-item" href="#">A Link to the Past</a></li>'
       + '<li class="divider"></li>'
-      + '<li><a class="dropdown-menu-item" href="#">Yet another link</li>'
+      + '<li><a class="dropdown-menu-item" href="#">Yet another link</a></li>'
       + '</div>';
 
     beforeEach(function() {
@@ -105,6 +105,14 @@
     });
 
     it('should focus first menu item on up keypress', function(done) {
+      var dropdownHtml =
+          '<div class="dropdown">'
+        + '<a href="#" data-toggle="dropdown" aria-expanded="false">Dropdown</a>'
+        + '<ul class="dropdown-menu">'
+        + '<li><div class="dropdown-menu-item" tabIndex="0">A Link</div></li>'
+        + '</div>';
+      $fixture.html(dropdownHtml);
+
       $('.dropdown-menu .dropdown-menu-item:first').on('focus', function() {
         assert.ok('true', 'first item has focus');
         done();
