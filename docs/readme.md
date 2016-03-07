@@ -33,9 +33,9 @@ Who wants to write code twice? The example block allows you to write any code ex
 {{/example}}
 ```
 
-#### Snip Code Templates
+#### Collapse Code Templates
 
-Using the above example, you can trim longer code blocks to only show the actual relevant code while still retaining the display value of the component. Just use `<!-- ... -->` and `<!-- /... -->` to mark the areas you don't want to display for the example markup.
+Using the above example, you can trim longer code blocks to only show the actual relevant code while still retaining the display value of the component. Just use `<!-- ... -->` and `<!-- /... -->` to mark the areas you don't want to collapse for the example markup.
 
 ```handlebars
 {{#example 'html'}}
@@ -47,6 +47,17 @@ Using the above example, you can trim longer code blocks to only show the actual
   <!-- /... -->
 </ul>
 {{/example}}
+```
+
+#### Hide Code Templates
+
+You can also hide specific elements for display instead of just collapsing them if you need to include structure elements such as `<p>` or `<div>` to only show code revelant to the example you're using.
+
+```handlebars
+{{#example 'html'}}
+<!-- hide --><p><!-- /hide -->
+<span class="status-flag tooltip" aria-label="Inactive"></span> Inactive User
+<!-- hide --></p><!-- /hide -->
 ```
 
 #### Table of Content Headers
