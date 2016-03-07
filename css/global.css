@@ -2688,9 +2688,11 @@ form .grid [class*=col-] > label textarea {
   width: .8em;
   border-radius: 50%;
   background-color: #e6e6e6;
+  margin-right: .3em;
 }
 
 .status-flag--active {
   background-color: #4ebf5a;
+  box-shadow: 0 0 5px rgba(78, 191, 90, 0.65);
 }
 /*# sourceMappingURL=global.css.map */
