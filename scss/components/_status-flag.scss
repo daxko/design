@@ -1,0 +1,13 @@
+$active-status-color: #4ebf5a !default;
+
+.status-flag {
+  display: inline-block;
+  height: .8em;
+  width: .8em;
+  border-radius: 50%;
+  background-color: $gray-100;
+}
+
+.status-flag--active {
+  background-color: $active-status-color;
+}

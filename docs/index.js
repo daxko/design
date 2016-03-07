@@ -44,7 +44,7 @@ function concatFiles(files, metalsmith, done) {
       return regex.exec(name)[2];
     })
     .map(function(group) {
-      group = group.sort(function(a, b) { return a._name.toLowerCase() > b._name.toLowerCase(); });
+      group = group.sort(function(a, b) { return a._name.toLowerCase().localeCompare(b._name.toLowerCase()); });
       return _.reduce(group, function(accumulator, file) {
         accumulator.contents = new Buffer([accumulator.contents.toString(), file.contents.toString()].join('\n\n'));
         return accumulator;
