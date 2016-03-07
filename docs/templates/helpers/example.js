@@ -4,11 +4,20 @@ module.exports = function(type, className, options) {
     options = type;
     type = '';
   }
-  var example = options.fn(this);
-  var string =
-    "<div class='example " + (typeof className === 'string' ? className : '') + "'>" + example + "</div>\n\n" +
+  var string = options.fn(this)
+    , codeBlock
+    , exampleBlock;
+
+  codeBlock = '<div class="example ' + (typeof className === 'string' ? className : '') + '">' + string + "</div>\n\n";
+
+  // use ellipses to collapse code examples
+  exampleBlock =
     "```" + type + "\n" +
-    example.replace(/<!--\s+\.\.\.\s+-->[\s\S]*?<!--\s+\/\.\.\.\s+-->/g, '...') +
+    string.replace(/<!--\s+\.\.\.\s+-->[\s\S]*?<!--\s+\/\.\.\.\s+-->/g, '...') +
     "```";
-  return string;
+
+  // use hide to hide code examples
+  exampleBlock = exampleBlock.replace(/<!--\s+hide\s+-->[\s\S]*?<!--\s+\/hide\s+-->[\n\s]+/g, '');
+
+  return codeBlock + exampleBlock;
 };

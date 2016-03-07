@@ -18,8 +18,23 @@ You can also specify the direction of the tooltip:
 <p></p>
 
 {{#example 'html'}}
-<p><span class="tooltip tooltip-n" aria-label="I'm on the top!">Tooltip on top</span></p>
-<p><span class="tooltip tooltip-e" aria-label="I'm on the right!">Tooltip on right</span></p>
-<p><span class="tooltip tooltip-s" aria-label="I'm on the bottom!">Tooltip on bottom</span></p>
-<p><span class="tooltip tooltip-w" aria-label="I'm on the left!">Tooltip on left</span></p>
+<!-- hide -->
+<p>
+<!-- /hide -->
+<span class="tooltip tooltip-n" aria-label="I'm on the top!">Tooltip on top</span>
+<!-- hide -->
+</p><p>
+<!-- /hide -->
+<span class="tooltip tooltip-e" aria-label="I'm on the right!">Tooltip on right</span>
+<!-- hide -->
+</p><p>
+<!-- /hide -->
+<span class="tooltip tooltip-s" aria-label="I'm on the bottom!">Tooltip on bottom</span>
+<!-- hide -->
+</p><p>
+<!-- /hide -->
+<span class="tooltip tooltip-w" aria-label="I'm on the left!">Tooltip on left</span>
+<!-- hide -->
+</p><p>
+<!-- /hide -->
 {{/example}}
