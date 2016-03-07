@@ -2682,6 +2682,18 @@ form .grid [class*=col-] > label textarea {
   border-right: 5px solid rgba(45, 45, 45, 0.9);
 }
 
+.status-flag {
+  display: inline-block;
+  height: .8em;
+  width: .8em;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+}
+
+.status-flag--active {
+  background-color: #4ebf5a;
+}
+
 .docs-nav {
   position: absolute;
   width: 100%;
