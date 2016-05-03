@@ -1812,7 +1812,11 @@ form .grid [class*=col-] > label textarea {
 
 .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
 .btn-group > input[type=radio]:focus + label:active,
-.ben.active:focus {
+.btn.active:focus,
+.btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:focus + label.active,
+.btn-group > input[type=checkbox]:checked + label:focus,
+.btn-group > input[type=radio]:checked + label:focus {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #a5dbd8;
 }
 
