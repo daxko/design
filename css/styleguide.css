@@ -2228,11 +2228,19 @@ form .grid [class*=col-] > label textarea {
   margin: 0 auto;
 }
 
+.close {
+  cursor: pointer;
+  color: #6d6d6d;
+}
+
+.close:hover {
+  color: #2d2d2d;
+}
+
 .close:before {
   content: "×";
   font-size: 22px;
   line-height: 1em;
-  float: right;
 }
 
 .modal-header {
