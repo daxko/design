@@ -7,7 +7,7 @@ var cacheUrls = [
   '/js/scrollspy.js',
   '/js/dropdown.js',
   '/js/fixed-sticky.js'
-];
+].map(function(x) { return self.location.origin + x; });
 
 var cacheVersion = 'v1';
 
@@ -21,7 +21,6 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('activate', function(event) {
   caches.keys().then(function(keys) {
-    console.log(keys);
     return Promise.all(
       keys
         .filter(function(key) { return key !== cacheVersion; })
