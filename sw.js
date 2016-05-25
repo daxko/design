@@ -19,7 +19,7 @@ self.addEventListener('install', function(event) {
       return cache.addAll(cacheUrls);
     })
   );
-  fetch('http://thecatapi.com/api/images/get?format=src&type=gif', { mode: 'cors' }).then(function(response) {
+  fetch('https://thecatapi.com/api/images/get?format=src&type=gif', { mode: 'cors' }).then(function(response) {
     caches.open(cacheVersion).then(function(cache) {
       cache.put(basepath + 'images/offline.gif', response.clone());
     });
