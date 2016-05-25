@@ -12,6 +12,6 @@ theme: "gray-500"
   </div>
   <div class="col-8 text-center">
     <p>Everything you see here is available on Github.</p>
-    <a href="http://github.com/daxko/design" class="btn btn-large">View on Github</a>
+    <a href="https://github.com/daxko/design" class="btn btn-large">View on Github</a>
   </div>
 </div>
