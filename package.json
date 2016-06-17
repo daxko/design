@@ -30,7 +30,7 @@
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-mocha": "^1.0.2",
-    "grunt-postcss": "^0.5.1",
+    "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.0.0",
     "grunt-shell": "^1.1.2",
     "handlebars": "^3.0.3",
@@ -45,6 +45,7 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-templates": "^0.7.0",
     "mocha": "^2.5.3",
+    "mx-icons": "git+ssh://git@bitbucket.org/daxko/mx-icons.git",
     "normalize.css": "^3.0.3",
     "parker": "0.0.9",
     "time-grunt": "^1.2.1"
