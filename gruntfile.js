@@ -22,7 +22,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= config.css %>/global.css': '<%= config.scss %>/global.scss'
+          '<%= config.css %>/global.css': '<%= config.scss %>/global.scss',
+          '<%= config.css %>/mx.css': '<%= config.scss %>/mx.scss'
         }
       },
       docs: {
@@ -92,7 +93,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= config.css %>/global.min.css': ['<%= config.css %>/global.css']
+          '<%= config.css %>/global.min.css': ['<%= config.css %>/global.css'],
+          '<%= config.css %>/mx.min.css': ['<%= config.css %>/mx.css']
         }
       },
       docs: {
@@ -171,32 +173,34 @@ module.exports = function(grunt) {
       , metrics = require('parker/metrics/All')
       , dir = grunt.config.data.config.css;
 
-    var file = grunt.file.read(dir + '/global.min.css');
-    var pkg = grunt.file.readJSON(process.cwd() + '/package.json');
-    var stats = new Parker(metrics).run(file);
-    var out = [];
+    ['/global.min.css', '/mx.min.css'].forEach(cssFile => {
+      var file = grunt.file.read(dir + cssFile);
+      var pkg = grunt.file.readJSON(process.cwd() + '/package.json');
+      var stats = new Parker(metrics).run(file);
+      var out = [];
 
-    out.push('## Design');
-    out.push('`v' + pkg.version + '` - *generated on ' + grunt.template.today('mmm dd yyyy') + '*');
-    out.push('### Stats');
+      out.push('## Design');
+      out.push('`v' + pkg.version + '` - *generated on ' + grunt.template.today('mmm dd yyyy') + '*');
+      out.push('### Stats');
 
-    out.push('#### ' + dir + '/global.min.css');
-    out.push('|Stat|Metric|');
-    out.push('|---|---|');
+      out.push('#### ' + dir + cssFile);
+      out.push('|Stat|Metric|');
+      out.push('|---|---|');
 
-    metrics.forEach(function(m) {
-      if(stats[m.id]) {
-        var stat = stats[m.id];
+      metrics.forEach(function(m) {
+        if(stats[m.id]) {
+          var stat = stats[m.id];
 
-        if(Array.isArray(stat)) {
-          stat = stat.join('<br/>');
+          if(Array.isArray(stat)) {
+            stat = stat.join('<br/>');
+          }
+
+          out.push('|' + m.name + '|' + stat + '|');
         }
+      });
 
-        out.push('|' + m.name + '|' + stat + '|');
-      }
-    });
-
-    grunt.file.write(dir + '/.stats.md', out.join('\n'));
+      grunt.file.write(dir + '/.' + cssFile.match(/([a-z]+)\.min\.css/i)[1] + '-stats.md', out.join('\n'));
+    })
   });
 
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);

@@ -264,7 +264,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -487,9 +488,7 @@ a:hover {
   color: #163836;
 }
 
-.cf:before,
-.list .list-item:before,
-.cf:after, .list .list-item:after {
+.cf:before, .list .list-item:before, .cf:after, .list .list-item:after {
   content: " ";
   display: table;
 }
@@ -778,7 +777,7 @@ select.input-mini {
   padding-right: 25px;
 }
 
-@media all and (min-width: 0 \0) and (min-resolution: 0.001dpcm) {
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
   select,
   select.input-mini,
   select.input-large {
@@ -1021,14 +1020,14 @@ form .grid [class*=col-] > label textarea {
 .table > thead > tr td,
 .table > thead > tr th {
   background-color: #f6f6f6;
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   vertical-align: bottom;
 }
 
 .table > tbody > tr td,
 .table > tbody > tr th {
   border-top: 1px solid #e6e6e6;
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   vertical-align: top;
 }
 
@@ -1041,7 +1040,7 @@ form .grid [class*=col-] > label textarea {
 .table.table-condensed > tbody > tr th,
 .table.table-condensed > thead > tr td,
 .table.table-condensed > thead > tr th {
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
 }
 
 @font-face {
@@ -1718,7 +1717,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .alert {
-  padding: 0.6em 0.8em;
+  padding: .6em .8em;
 }
 
 .alert + .alert {
@@ -1781,7 +1780,7 @@ form .grid [class*=col-] > label textarea {
   background-image: linear-gradient(to bottom, white, #cccccc);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
   text-shadow: 0 1px #fff;
-  transition: ease-in-out 0.1s background-position;
+  transition: ease-in-out .1s background-position;
 }
 
 .btn:hover {
@@ -1789,11 +1788,11 @@ form .grid [class*=col-] > label textarea {
   color: #2d2d2d;
 }
 
-.btn:focus,
-.btn-group > input[type=checkbox]:focus + label,
+.btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label,
 .btn:active,
-.btn.active, .btn-group > input[type=checkbox]:checked + label,
+.btn.active,
+.btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label {
   border-color: #81ccc8;
   box-shadow: 0 0 4px #a5dbd8;
@@ -1802,7 +1801,8 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn:active,
-.btn.active, .btn-group > input[type=checkbox]:checked + label,
+.btn.active,
+.btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label {
   border-color: #a6a6a6;
   background-color: #d2d2d2;
@@ -1810,11 +1810,12 @@ form .grid [class*=col-] > label textarea {
   background-image: none;
 }
 
-.btn:active:focus,
-.btn-group > input[type=checkbox]:focus + label:active,
+.btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
 .btn-group > input[type=radio]:focus + label:active,
-.btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
-.btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
+.btn.active:focus,
+.btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:focus + label.active,
+.btn-group > input[type=checkbox]:checked + label:focus,
 .btn-group > input[type=radio]:checked + label:focus {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #a5dbd8;
 }
@@ -2059,7 +2060,7 @@ form .grid [class*=col-] > label textarea {
 .dropdown-menu .dropdown-menu-item {
   display: block;
   overflow: hidden;
-  padding: 0.3em 10px;
+  padding: .3em 10px;
   color: #545454;
   text-decoration: none;
   text-overflow: ellipsis;
@@ -2161,7 +2162,7 @@ form .grid [class*=col-] > label textarea {
 
 .list .list-item {
   display: block;
-  padding: 0.75em 1em;
+  padding: .75em 1em;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -2189,7 +2190,7 @@ form .grid [class*=col-] > label textarea {
 
 .list-header {
   margin-top: 1em;
-  padding: 0.75em 1em;
+  padding: .75em 1em;
   border: 1px solid #e6e6e6;
   background-color: #f6f6f6;
   border-top-left-radius: 3px;
@@ -2224,14 +2225,18 @@ form .grid [class*=col-] > label textarea {
   border: 1px solid #e6e6e6;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
+  position: fixed;
   z-index: 150;
   margin: 0 auto;
   width: 90%;
   max-width: 600px;
   max-height: 100%;
-  top: 25px;
-  transition: all ease-in-out 0.3s;
+  top: 50%;
+  left: 50%;
+  transition: all ease-in-out .3s;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
 }
@@ -2264,7 +2269,7 @@ form .grid [class*=col-] > label textarea {
 .modal-footer {
   background-color: #f6f6f6;
   border: 0 solid #e6e6e6;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -2414,7 +2419,7 @@ form .grid [class*=col-] > label textarea {
   line-height: 2;
   padding-left: .6em;
   padding-right: .6em;
-  transition: color ease-in-out 0.15s;
+  transition: color ease-in-out .15s;
 }
 
 .tabs a:hover {
@@ -2432,8 +2437,8 @@ form .grid [class*=col-] > label textarea {
   -webkit-transform: scaleY(0);
       -ms-transform: scaleY(0);
           transform: scaleY(0);
-  transition: -webkit-transform ease-in-out 0.15s;
-  transition: transform ease-in-out 0.15s;
+  transition: -webkit-transform ease-in-out .15s;
+  transition: transform ease-in-out .15s;
   -webkit-transform-origin: 0 100%;
       -ms-transform-origin: 0 100%;
           transform-origin: 0 100%;
@@ -2455,26 +2460,22 @@ form .grid [class*=col-] > label textarea {
   border-bottom: none;
 }
 
-.tabs-vertical,
-.tabs-vertical.left {
+.tabs-vertical, .tabs-vertical.left {
   border-right: 1px solid #e6e6e6;
 }
 
-.tabs-vertical a:before,
-.tabs-vertical.left a:before {
+.tabs-vertical a:before, .tabs-vertical.left a:before {
   right: 0;
   top: 0;
   left: auto;
   border-right: 5px solid #a5dbd8;
 }
 
-.tabs-vertical ul,
-.tabs-vertical.left ul {
+.tabs-vertical ul, .tabs-vertical.left ul {
   padding-left: 15px;
 }
 
-.tabs-vertical a,
-.tabs-vertical.left a {
+.tabs-vertical a, .tabs-vertical.left a {
   padding-right: 15px;
 }
 
@@ -2572,7 +2573,7 @@ form .grid [class*=col-] > label textarea {
   padding: 0 4px;
   text-align: center;
   opacity: 0;
-  transition: opacity ease-in 0.2s;
+  transition: opacity ease-in .2s;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -2604,7 +2605,7 @@ form .grid [class*=col-] > label textarea {
   border-radius: 4px;
   background-color: #e6e6e6;
   border: 1px solid #d9d9d9;
-  transition: background-color linear 0.2s;
+  transition: background-color linear .2s;
   z-index: 10;
 }
 
@@ -2617,7 +2618,7 @@ form .grid [class*=col-] > label textarea {
   background-color: #fff;
   right: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  transition: all ease-out 0.2s;
+  transition: all ease-out .2s;
 }
 
 .toggle-switch input:checked ~ .switch {
@@ -2661,8 +2662,7 @@ form .grid [class*=col-] > label textarea {
   z-index: 160;
 }
 
-.tooltip:hover:before,
-.tooltip:hover:after,
+.tooltip:hover:before, .tooltip:hover:after,
 .tooltip:focus:before,
 .tooltip:focus:after {
   text-decoration: none;
@@ -2670,8 +2670,7 @@ form .grid [class*=col-] > label textarea {
   pointer-events: none;
 }
 
-.tooltip:after,
-.tooltip:before,
+.tooltip:after, .tooltip:before,
 .tooltip-n:after,
 .tooltip-n:before,
 .tooltip-s:after,
@@ -2709,8 +2708,7 @@ form .grid [class*=col-] > label textarea {
   border-bottom: 5px solid rgba(45, 45, 45, 0.9);
 }
 
-.tooltip-e:after,
-.tooltip-e:before,
+.tooltip-e:after, .tooltip-e:before,
 .tooltip-w:after,
 .tooltip-w:before {
   top: 50%;
@@ -2952,7 +2950,7 @@ ul.colors {
 }
 
 .swatch-list li {
-  padding: 0.5em 1em;
+  padding: .5em 1em;
 }
 
 .swatch-list em {
