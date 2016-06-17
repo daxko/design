@@ -58,6 +58,7 @@ You can also hide specific elements for display instead of just collapsing them 
 <!-- hide --><p><!-- /hide -->
 <span class="status-flag tooltip" aria-label="Inactive"></span> Inactive User
 <!-- hide --></p><!-- /hide -->
+{{/example}}
 ```
 
 #### Table of Content Headers
