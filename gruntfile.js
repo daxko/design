@@ -26,9 +26,19 @@ module.exports = function(grunt) {
           '<%= config.css %>/mx.css': '<%= config.scss %>/mx.scss'
         }
       },
+      themes: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.scss %>/mx-themes',
+          dest: '<%= config.css %>/themes',
+          src: 'theme-*.scss',
+          ext: '.css'
+        }]
+      },
       docs: {
         files: {
-          '<%= config.contents %>/css/styleguide.css': '<%= config.docs %>/scss/styleguide.scss'
+          '<%= config.contents %>/css/styleguide.css': '<%= config.docs %>/scss/styleguide.scss',
+          '<%= config.contents %>/css/mx-styleguide.css': '<%= config.docs %>/scss/mx-styleguide.scss'
         }
       }
     },
@@ -74,6 +84,17 @@ module.exports = function(grunt) {
           '<%= config.scss %>/_normalize.scss': ['node_modules/normalize.css/normalize.css'],
         }
       },
+      themes: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.css %>/themes',
+            src: ['*.css', '!*.min.css'],
+            dest: '<%= config.docs %>/contents/css/themes/',
+            filter: 'isFile'
+          }
+        ]
+      },
       icons: {
         files: [
           {
@@ -84,6 +105,10 @@ module.exports = function(grunt) {
             filter: 'isFile'
           }
         ]
+      },
+      mxicons: {
+        src: 'node_modules/mx-icons/dist/icons.svg',
+        dest: '<%= config.docs %>/contents/images/icons.svg'
       }
     },
 
@@ -97,9 +122,22 @@ module.exports = function(grunt) {
           '<%= config.css %>/mx.min.css': ['<%= config.css %>/mx.css']
         }
       },
+      themes: {
+        options: {
+          keepBreaks: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.css %>/themes/',
+          dest: '<%= config.css %>/themes/',
+          ext: '.min.css',
+          src: ['*.css', '!*.min.css']
+        }]
+      },
       docs: {
         files: {
-          '<%= config.contents %>/css/styleguide.min.css': ['<%= config.contents %>/css/styleguide.css']
+          '<%= config.contents %>/css/styleguide.min.css': ['<%= config.contents %>/css/styleguide.css'],
+          '<%= config.contents %>/css/mx-styleguide.min.css': ['<%= config.contents %>/css/mx-styleguide.css']
         }
       }
     },
@@ -200,7 +238,7 @@ module.exports = function(grunt) {
       });
 
       grunt.file.write(dir + '/.' + cssFile.match(/([a-z]+)\.min\.css/i)[1] + '-stats.md', out.join('\n'));
-    })
+    });
   });
 
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);

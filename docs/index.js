@@ -69,6 +69,16 @@ function parsemd(files, metalsmith, done) {
   done();
 }
 
+function defaultStylesheet(files, metalsmith, done) {
+  _.map(files, function(file, name) {
+    if(!file.stylesheet) {
+      file.stylesheet = '/css/styleguide.css';
+    }
+    return file;
+  });
+  done();
+}
+
 // No prefixed highlight classes
 hljs.configure({ classPrefix: '' });
 
@@ -88,6 +98,7 @@ metalsmith = metalsmith(__dirname)
       }
     }
   }))
+  .use(defaultStylesheet)
   .use(templates({
     engine: 'handlebars',
     directory: 'templates',

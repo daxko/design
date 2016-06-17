@@ -1,0 +1,57 @@
+.card-list {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 -1px 5px rgba(0,0,0,.075);
+  position: relative;
+  transition: all ease-in-out .25s;
+  transition-property: transform, opacity, background-color;
+  transform-style: preserve-3d;
+}
+
+.card--title {
+  @extend %h4;
+  margin-top: -.25em;
+}
+
+.card--number {
+  color: $gray-900;
+  margin-top: -1em;
+  letter-spacing: .05em;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.card--title,
+.card--number {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--barcode {
+  height: 100px;
+  max-width: 100%;
+}
+
+.card:not(:last-child) {
+  background-color: $gray-50;
+  transform: scale(.95);
+}
+
+// I don't know why this works, but it's magic
+.card:not(:last-child):not(:first-child) {
+  margin-top: (-124 / 14) * 1em;
+}
+
+.card + .card:last-child {
+  margin-top: (-119 / 14) * 1em;
+}
