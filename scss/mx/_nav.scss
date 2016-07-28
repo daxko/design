@@ -1,0 +1,82 @@
+$nav-height: 40px;
+
+nav.nav {
+  background-color: #fff;
+  border-bottom: 1px solid $gray-100;
+  height: $nav-height;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: z-index('navbar');
+}
+
+nav.nav a {
+  display: inline-block;
+  text-decoration: none;
+  min-width: $nav-height;
+  height: $nav-height;
+  text-align: center;
+  vertical-align: top;
+}
+
+.nav-icon {
+  height: $nav-height / 2;
+  width: $nav-height;
+  stroke-width: 4px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: $gray-900;
+  position: relative;
+  top: -1px;
+}
+
+.nav--title {
+  @extend %h5;
+  line-height: $nav-height;
+  display: block;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav--right,
+.nav--left {
+  height: $nav-height;
+  line-height: $nav-height;
+  min-width: $nav-height;
+  font-size: $base-font-size;
+  color: $gray-700;
+  position: absolute;
+  top: 0;
+  border: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  z-index: z-index('nav-button');
+}
+
+.nav--right {
+  right: 0;
+}
+
+.nav--left {
+  left: 0;
+}
+
+.menu-open .nav .badge {
+  opacity: 0;
+}
+
+.nav .badge {
+  @extend .status-flag;
+  background-color: red;
+  box-shadow: none;
+  transform: translate3d(5px, -5px, 0);
+  position: absolute;
+  z-index: 1;
+  display: inherit;
+  transition: opacity ease-in .15s;
+}

@@ -1,0 +1,48 @@
+// Each theme should have have three of the following palettes
+//    1) Light Color
+//    2) Medium Color
+//    3) Dark Color
+
+$themes: (
+
+  "ymca-green": (
+    light: rgb(32, 189, 190),
+    medium: rgb(1, 164, 144),
+    dark: rgb(0, 107, 107)
+  ),
+
+  "ymca-blue": (
+    light: rgb(0, 174, 239),
+    medium: rgb(0, 137, 208),
+    dark: rgb(0, 96, 175)
+  ),
+
+  "ymca-purple": (
+    light: rgb(198, 22, 141),
+    medium: rgb(146, 39, 143),
+    dark: rgb(92, 46, 145)
+  ),
+
+  "ymca-red": (
+    light: rgb(241, 89, 43),
+    medium: rgb(237, 28, 36),
+    dark: rgb(169, 43, 49)
+  ),
+
+  "ymca-orange": (
+    light: rgb(252, 175, 23),
+    medium: rgb(244, 121, 32),
+    dark: rgb(221, 88, 40)
+  ),
+
+  "ywca-orange": (
+    light: lighten(rgb(253, 90, 30), 7.5%),
+    medium: rgb(253, 90, 30),
+    dark: darken(rgb(253, 90, 30), 10%)
+  )
+
+);
+
+@function theme-color($name, $type: "light") {
+  @return map-get(map-get($themes, $name), $type);
+}

@@ -1,0 +1,55 @@
+$page-padding: 15px;
+
+.fullscreen,
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page {
+  top: $nav-height;
+}
+
+// Account for status bar at top of page iOS 7+
+.ios .page {
+  top: $nav-height + 20px;
+}
+
+.ios .fullscreen {
+  padding-top: 20px;
+}
+
+.page {
+  padding: $page-padding;
+
+  > * {
+    margin-top: $page-padding;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+.page--dark {
+  background-color: $gray-100;
+}
+
+.page--small-padding {
+  padding: round($page-padding / 2);
+}
+
+.page--full-width {
+  padding: 0;
+}
+
+.page-backdrop {
+  z-index: 1;
+}

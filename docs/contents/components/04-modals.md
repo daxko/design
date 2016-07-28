@@ -70,6 +70,10 @@ Modals can be toggled by adding a `data-toggle="modal"` attribute along with a `
   .modal:not(#modal) {
     display: block;
     opacity: 1;
+    position: relative;
     top: 0;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
   }
 </style>
