@@ -58,7 +58,7 @@ function concatFiles(files, metalsmith, done) {
 }
 
 function parsemd(files, metalsmith, done) {
-  _.map(files, function(file) {
+  _.map(files, function(file, name) {
     if(name.match(/md$/)) {
       var string = file.contents.toString();
       var result = handlebars.compile(string)({});
