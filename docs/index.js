@@ -58,7 +58,7 @@ function concatFiles(files, metalsmith, done) {
 }
 
 function parsemd(files, metalsmith, done) {
-  _.map(files, function(file, name) {
+  _.map(files, function(file) {
     if(name.match(/md$/)) {
       var string = file.contents.toString();
       var result = handlebars.compile(string)({});
@@ -70,7 +70,7 @@ function parsemd(files, metalsmith, done) {
 }
 
 function defaultStylesheet(files, metalsmith, done) {
-  _.map(files, function(file, name) {
+  _.map(files, function(file) {
     if(!file.stylesheet) {
       file.stylesheet = '/css/styleguide.css';
     }
