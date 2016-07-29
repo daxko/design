@@ -1,0 +1,7 @@
+# Ignore Generated Asset Files
+contents/css/**
+contents/js/**
+
+# These files are static and not
+!contents/js/fixed-sticky.js
+!contents/js/scrollspy.js

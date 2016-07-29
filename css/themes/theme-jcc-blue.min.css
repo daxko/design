@@ -1,0 +1,30 @@
+a{color:#00adbb}
+a:hover{color:#0068a5}
+::-moz-selection{background:#6ff4ff}
+::selection{background:#6ff4ff}
+input:focus,select:focus,textarea:focus{border-color:#0068a5;box-shadow:0 0 4px #00adbb}
+.theme--primary-dark{color:#046}
+.theme--primary-med{color:#0068a5}
+.theme--primary-light{color:#00adbb}
+.theme--secondary-dark{color:#046}
+.theme--secondary-med{color:#0068a5}
+.theme--secondary-light{color:#00adbb}
+.dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#00adbb;color:#fff}
+.btn{border:1px solid #00adbb}
+.btn,.btn-link,.btn:hover,a.btn{color:#00adbb}
+.btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
+.btn-primary,.btn.active,.btn:active,.btn:focus{border:1px solid #00adbb}
+.btn:focus{box-shadow:0 0 6px #00adbb}
+.btn-primary{background-color:#00adbb;color:#fff}
+.btn-primary:hover,a.btn-primary,a.btn-primary:hover{color:#fff}
+.btn-primary.active,.btn-primary:active{border:1px solid #00adbb;background-color:#00adbb}
+.btn-primary:focus{background-color:#00adbb}
+.btn-primary:hover,.calendar-week--active{background-color:#0068a5}
+.btn-primary:hover{border:1px solid #0068a5}
+.btn-inverted:active,.btn-inverted:focus{border-color:#fff;box-shadow:0 0 6px #fff}
+.card--title{color:#0068a5}
+.dropdown-trigger{color:#046}
+.dropdown-trigger .caret{border-top-color:#046}
+.fullscreen-modal-backdrop{background-color:rgba(0,104,165,.9)}
+.has-backdrop-filter .fullscreen-modal-backdrop{background-color:rgba(0,104,165,.7)}
+/*# sourceMappingURL=theme-jcc-blue.min.css.map */
