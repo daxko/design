@@ -39,6 +39,12 @@ $themes: (
     light: lighten(rgb(253, 90, 30), 7.5%),
     medium: rgb(253, 90, 30),
     dark: darken(rgb(253, 90, 30), 10%)
+  ),
+
+  "jcc-blue": (
+    light: #00adbb,
+    medium: #0068a5,
+    dark: #004466
   )
 
 );
