@@ -28,7 +28,7 @@ MX is built on top of Daxko's common components, but adds specialized components
     var target = e.target;
     if(target.hasAttribute('data-toggle-theme')) {
       var theme = target.getAttribute('data-toggle-theme');
-      styleTag.setAttribute('href', ['/css/themes/', theme].join(''));
+      styleTag.setAttribute('href', ['../css/themes/', theme].join(''));
     }
   });
 </script>
