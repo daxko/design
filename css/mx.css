@@ -1400,6 +1400,7 @@ form .grid [class*=col-] > label textarea {
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .dropdown-menu a:hover,

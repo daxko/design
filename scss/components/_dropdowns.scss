@@ -59,6 +59,7 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   a:hover,
