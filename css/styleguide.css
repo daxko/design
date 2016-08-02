@@ -2065,6 +2065,7 @@ form .grid [class*=col-] > label textarea {
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .dropdown-menu a:hover,
@@ -3307,5 +3308,28 @@ footer strong {
   border: 1px solid #d2d2d2;
   height: 100%;
   background-image: linear-gradient(-45deg, #83a4d4 10%, #b6fbff 90%);
+}
+
+.toggle-theme {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 200;
+}
+
+.toggle-theme .btn {
+  border-radius: 50%;
+  padding: 0;
+  height: 3em;
+  width: 3em;
+  background-color: #fff;
+  vertical-align: text-top;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e6e6e6;
+  z-index: 121;
+}
+
+.toggle-theme .icon {
+  vertical-align: text-top;
 }
 /*# sourceMappingURL=styleguide.css.map */
