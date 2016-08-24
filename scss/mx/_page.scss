@@ -17,15 +17,6 @@ $page-padding: 15px;
   top: $nav-height;
 }
 
-// Account for status bar at top of page iOS 7+
-.ios .page {
-  top: $nav-height + 20px;
-}
-
-.ios .fullscreen {
-  padding-top: 20px;
-}
-
 .page {
   padding: $page-padding;
 
