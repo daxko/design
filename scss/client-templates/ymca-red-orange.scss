@@ -1,0 +1,15 @@
+@import '../mx-themes/theme-colors';
+@import '../colors';
+
+$color: theme-color('ymca-red', 'medium');
+$font: Verdana, Geneva, sans-serif;
+$logo: '/images/ymca-red-orange.svg';
+$logo-large-width: 93px;
+$logo-large-height: 71px;
+$logo-medium-width: 75px;
+$logo-medium-height: 57px;
+$logo-small-width: 65px;
+$logo-small-height: 50px;
+$footer-color: #4a4a4a;
+
+@import 'client-templates';

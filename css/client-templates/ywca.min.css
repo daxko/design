@@ -1,0 +1,15 @@
+.client-template-footer,.client-template-footer p,.client-template-header,.client-template-header .client-name{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.client-template-footer,.client-template-header{box-sizing:border-box;display:table;margin:0 auto;max-width:1000px;width:100%}
+.client-template-header{border-bottom:1px solid #e6e6e6;padding:25px 10px}
+.client-template-header .logo{display:table-cell;background:url(/images/ywca.svg) no-repeat;background-size:cover;width:130px;height:130px;vertical-align:middle}
+.client-template-header .client-name{display:table-cell;color:#f5591e;font-size:14px;font-weight:600;margin:0;vertical-align:middle;text-align:right;width:100%}
+.client-template-footer p{font-size:8px;padding:15px;text-align:center;color:#4a4a4a}
+@media only screen and (min-width:640px){.client-template-footer,.client-template-header{padding:40px 50px 10px}
+.client-template-header .logo{width:100px;height:100px}
+.client-name{font-size:24px}
+.client-template-footer{padding:20px 50px}
+.client-template-footer p{font-size:12px}
+}
+@media only screen and (max-width:360px){.client-template-header .logo{width:65px;height:65px}
+}
+/*# sourceMappingURL=ywca.min.css.map */

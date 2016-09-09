@@ -35,6 +35,15 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       },
+      templates: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.scss %>/client-templates',
+          dest: '<%= config.css %>/client-templates',
+          src: '*.scss',
+          ext: '.css'
+        }]
+      },
       docs: {
         files: {
           '<%= config.contents %>/css/styleguide.css': '<%= config.docs %>/scss/styleguide.scss',
@@ -95,6 +104,17 @@ module.exports = function(grunt) {
           }
         ]
       },
+      templates: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.css %>/client-templates',
+            src: ['*.css', '!*.min.css'],
+            dest: '<%= config.docs %>/contents/css/client-templates/',
+            filter: 'isFile'
+          }
+        ]
+      },
       icons: {
         files: [
           {
@@ -130,6 +150,18 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= config.css %>/themes/',
           dest: '<%= config.css %>/themes/',
+          ext: '.min.css',
+          src: ['*.css', '!*.min.css']
+        }]
+      },
+      templates: {
+        options: {
+          keepBreaks: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.css %>/client-templates/',
+          dest: '<%= config.css %>/client-templates/',
           ext: '.min.css',
           src: ['*.css', '!*.min.css']
         }]

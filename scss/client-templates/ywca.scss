@@ -1,0 +1,15 @@
+@import '../mx-themes/theme-colors';
+@import '../colors';
+
+$color: rgb(245, 89, 30);
+$font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$logo: '/images/ywca.svg';
+$logo-large-width: 100px;
+$logo-large-height: 100px;
+$logo-medium-width: 130px;
+$logo-medium-height: 130px;
+$logo-small-width: 65px;
+$logo-small-height: 65px;
+$footer-color: #4a4a4a;
+
+@import 'client-templates';

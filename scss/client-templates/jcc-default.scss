@@ -1,0 +1,15 @@
+@import '../mx-themes/theme-colors';
+@import '../colors';
+
+$color: rgb(112, 98, 89);
+$font: Verdana, Geneva, sans-serif;
+$logo: '/images/jcc.svg';
+$logo-large-width: 57px;
+$logo-large-height: 57px;
+$logo-medium-width: 71px;
+$logo-medium-height: 71px;
+$logo-small-width: 50px;
+$logo-small-height: 50px;
+$footer-color: #4a4a4a;
+
+@import 'client-templates';

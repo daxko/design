@@ -1,0 +1,81 @@
+.client-template-header,
+.client-template-footer {
+  font-family: "Verdana, Geneva, sans-serif";
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+  width: 100%;
+}
+
+.client-template-header {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 25px 10px;
+  text-align: justify;
+}
+
+.client-template-header:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.client-template-header .logo {
+  display: inline-block;
+  background: url("/images/ymca-orange-green.svg") no-repeat;
+  background-size: cover;
+  width: "57px";
+  height: "75px";
+  vertical-align: middle;
+}
+
+.client-template-header .client-name {
+  font-family: "Verdana, Geneva, sans-serif";
+  color: #f47920;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  vertical-align: middle;
+  text-align: right;
+  width: 100%;
+}
+
+.client-template-footer p {
+  font-family: "Verdana, Geneva, sans-serif";
+  font-size: 8px;
+  padding: 15px;
+  text-align: center;
+  color: "#4a4a4a";
+}
+
+@media only screen and (min-width: 640px) {
+  .client-template-header,
+  .client-template-footer {
+    padding: 40px 50px 10px;
+  }
+  .client-template-header
+.logo {
+    width: "71px";
+    height: "92px";
+  }
+  .client-name {
+    font-size: 24px;
+  }
+  .client-template-footer {
+    padding: 20px 50px;
+  }
+  .client-template-footer p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .client-template-header .logo {
+    width: "50px";
+    height: "65px";
+  }
+}
+
+/*# sourceMappingURL=jcc_default.css.map */

@@ -1,0 +1,15 @@
+@import '../mx-themes/theme-colors';
+@import '../colors';
+
+$color: rgb(99, 100, 102);
+$font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$logo: '';
+$logo-large-width: 0;
+$logo-large-height: 0;
+$logo-medium-width: 0;
+$logo-medium-height: 0;
+$logo-small-width: 0;
+$logo-small-height: 0;
+$footer-color: #4a4a4a;
+
+@import 'client-templates';
