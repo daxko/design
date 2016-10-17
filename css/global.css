@@ -402,10 +402,21 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h5 {
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 body {
+  line-height: 1.5;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
 }
 
@@ -415,27 +426,27 @@ strong {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 24px;
 }
 
-h2 {
-  font-size: 28px;
-}
-
-h3 {
-  font-size: 23px;
-}
-
-h4 {
+h2, fieldset legend {
   font-size: 20px;
 }
 
-h5, fieldset legend, .modal-header {
-  font-size: 18px;
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5, .modal-header {
+  font-size: 12px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .secondary {
@@ -466,8 +477,6 @@ body {
 body {
   padding: 0;
   margin: 0;
-  line-height: 1.5;
-  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 ul {
@@ -728,8 +737,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) inset;
+  border: 1px solid #E0E0E0;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: 13px;
@@ -742,6 +750,7 @@ textarea {
 
 textarea {
   height: auto;
+  min-width: 250px;
 }
 
 select {
@@ -803,7 +812,8 @@ textarea:focus {
 }
 
 form label {
-  color: #545454;
+  color: #424242;
+  font-weight: 500;
 }
 
 fieldset {
@@ -817,12 +827,11 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  border-bottom: 1px solid #e6e6e6;
   color: #2d2d2d;
-  font-weight: normal;
+  font-weight: 500;
   display: block;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 input::-webkit-input-placeholder {
@@ -843,6 +852,12 @@ input::placeholder {
 
 .grid label {
   display: block;
+}
+
+.grid input,
+.grid select,
+.grid textarea {
+  font-weight: normal;
 }
 
 .grid .toggle-switch {
@@ -890,6 +905,7 @@ form .grid [class*=col-] > label textarea {
   vertical-align: middle;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-weight: normal;
 }
 
 .form-horizontal .control-group .controls > label.toggle-switch {
@@ -1761,11 +1777,12 @@ form .grid [class*=col-] > label textarea {
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: .2em;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
   font-size: 13px;
-  font-weight: 600;
-  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 20px;
   height: 32px;
   color: #2d2d2d;
@@ -1774,60 +1791,42 @@ form .grid [class*=col-] > label textarea {
   vertical-align: middle;
   white-space: nowrap;
   outline: none;
-  padding: 5px 10px;
-  background-size: 100% 210%;
-  background-color: #f2f2f2;
-  background-image: linear-gradient(to bottom, white, #cccccc);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px #fff;
-  transition: ease-in-out .1s background-position;
-}
-
-.btn:hover {
-  background-position: 100% 50%;
-  color: #2d2d2d;
+  padding: 4px 10px 6px;
+  background-color: #F5F5F5;
+  transition: ease-in-out .1s background-color, ease-in-out .1s border;
 }
 
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
-.btn-group > input[type=radio]:focus + label,
-.btn:active,
-.btn.active,
-.btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label {
-  border-color: #81ccc8;
-  box-shadow: 0 0 4px #a5dbd8;
-  outline: none;
-  z-index: 10;
+.btn-group > input[type=radio]:focus + label {
+  outline: -webkit-focus-ring-color auto 3px;
+}
+
+.btn:hover {
+  border-color: #c2c2c2;
+  background-color: gainsboro;
 }
 
 .btn:active,
 .btn.active,
 .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label {
-  border-color: #a6a6a6;
-  background-color: #d2d2d2;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.4);
+  background-color: gainsboro;
+  box-shadow: none;
   background-image: none;
-}
-
-.btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
-.btn-group > input[type=radio]:focus + label:active,
-.btn.active:focus,
-.btn-group > input[type=checkbox]:focus + label.active,
-.btn-group > input[type=radio]:focus + label.active,
-.btn-group > input[type=checkbox]:checked + label:focus,
-.btn-group > input[type=radio]:checked + label:focus {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #a5dbd8;
+  line-height: 20px;
+  padding: 5px 10px;
 }
 
 .btn:disabled,
 .btn.disabled {
   cursor: default;
-  box-shadow: none;
+  box-shadow: none !important;
   background-image: none;
-  background-color: #f2f2f2;
+  background-color: #F5F5F5;
   text-shadow: none;
-  border-color: #e6e6e6;
+  border-color: #F5F5F5;
+  padding: 5px 10px !important;
   color: rgba(45, 45, 45, 0.3);
 }
 
@@ -1838,53 +1837,38 @@ form .grid [class*=col-] > label textarea {
 
 .btn-primary {
   color: #fff;
-  background-color: #8f963f;
-  border-color: #7e8437;
-  background-image: linear-gradient(to bottom, #afb651, #6d7230);
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
+  background-color: #0275d8;
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   color: #fff;
+  background-color: #025aa5;
+  border-color: #013e73;
 }
 
-.btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  border-color: #6d7230;
-  background-color: #7e8437;
+  background-color: #025aa5;
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled {
   color: #fff;
-  border-color: #6d7230;
-  background-color: #7e8437;
+  background-color: #43a7fd;
   opacity: .6;
 }
 
 .btn-danger {
-  color: #bd1b1f;
-}
-
-.btn-danger:active,
-.btn-danger.active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  background: #D9534F;
 }
 
 .btn-danger:active,
 .btn-danger.active,
-.btn-danger:focus,
 .btn-danger:hover {
   color: #fff;
-  background-color: #bd1b1f;
-  border-color: #7a1114;
-  background-image: linear-gradient(to bottom, #e12a2f, #901518);
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
-}
-
-.btn-danger:focus {
-  border-color: #a7181b;
+  background-color: #c9302c;
 }
 
 .btn-danger.disabled,
@@ -1892,18 +1876,13 @@ form .grid [class*=col-] > label textarea {
   cursor: default;
   box-shadow: none;
   background-image: none;
-  background-color: #f2f2f2;
-  text-shadow: none;
-  border-color: #e6e6e6;
-  color: rgba(45, 45, 45, 0.3);
+  background-color: #eba5a3;
+  opacity: .6;
+  color: #fff;
 }
 
-.btn-danger:disabled,
-.btn-danger.disabled {
-  box-shadow: none;
-}
-
-.btn-link {
+.btn-link,
+.btn-link:hover {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -1911,7 +1890,9 @@ form .grid [class*=col-] > label textarea {
   text-shadow: none;
   font-weight: normal;
   font-size: 14px;
-  color: #33817c;
+  color: #0275d8;
+  line-height: 20px;
+  padding: 5px 10px;
 }
 
 .btn-link.active,
@@ -1924,7 +1905,8 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-link:hover {
-  color: #163836;
+  color: #025aa5;
+  text-decoration: underline;
 }
 
 .btn-link:disabled,
@@ -1934,6 +1916,7 @@ form .grid [class*=col-] > label textarea {
   background-color: transparent;
   border-color: transparent;
   color: rgba(45, 45, 45, 0.3);
+  text-decoration: none;
 }
 
 .btn-link + .btn-link {
@@ -1979,6 +1962,14 @@ form .grid [class*=col-] > label textarea {
   margin-left: 5px;
 }
 
+.btn-group > .btn:hover,
+.btn-group > .btn:active,
+.btn-group > .btn:focus,
+.btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label {
+  z-index: 2;
+}
+
 .btn-group > input[type=checkbox],
 .btn-group > input[type=radio] {
   opacity: 0;
@@ -1992,14 +1983,15 @@ form .grid [class*=col-] > label textarea {
 
 .btn-group > input[type=checkbox]:checked:focus + label,
 .btn-group > input[type=radio]:checked:focus + label {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #a5dbd8;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #025AA5;
 }
 
 .btn-mini {
+  box-shadow: 0 -1px 0 #c2c2c2 inset;
   font-size: 12px;
   height: 26px;
-  line-height: 21px;
-  padding: 2px 6px 2px;
+  line-height: 19px;
+  padding: 1px 6px 3px;
 }
 
 .btn-block {
@@ -2617,8 +2609,8 @@ form .grid [class*=col-] > label textarea {
 }
 
 .toggle-switch input[type=checkbox]:focus ~ .switch {
-  border: 1px solid #81ccc8;
-  box-shadow: 0 0 4px #a5dbd8;
+  border: 1px solid #013f73;
+  box-shadow: 0 0 4px #025AA5;
 }
 
 .toggle-switch [data-on]:before,
@@ -2631,7 +2623,7 @@ form .grid [class*=col-] > label textarea {
   text-align: center;
   opacity: 0;
   transition: opacity ease-in .2s;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
   min-width: 30px;

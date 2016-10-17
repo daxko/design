@@ -20,8 +20,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid $gray-100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .05) inset;
+  border: 1px solid #E0E0E0;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: $input-font-size;
@@ -34,6 +33,7 @@ textarea {
 
 textarea {
   height: auto;
+  min-width: 250px;
 }
 
 // Standardize select appearance
@@ -100,7 +100,8 @@ textarea:focus {
 }
 
 form label {
-  color: $gray-700;
+  color: #424242;
+  font-weight: 500;
 }
 
 fieldset {
@@ -114,13 +115,12 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  border-bottom: 1px solid $gray-100;
   color: $gray-900;
-  font-weight: normal;
+  font-weight: 500;
   display: block;
   width: 100%;
-  @extend %h5;
-  margin-bottom: 1em;
+  @extend %h2;
+  margin-bottom: 1rem;
 }
 
 input::placeholder {
@@ -132,6 +132,12 @@ input::placeholder {
 
   label {
     display: block;
+  }
+
+  input,
+  select,
+  textarea {
+    font-weight: normal;
   }
 
   .toggle-switch {
@@ -186,6 +192,7 @@ form .grid {
     vertical-align: middle;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-weight: normal;
   }
 
   .controls > label.toggle-switch {

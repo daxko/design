@@ -1,12 +1,12 @@
-$btn-font-family: Helvetica, Arial, sans-serif !default;
-$btn-color: $gray-100 !default;
+$btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$btn-color: #F5F5F5 !default;
 $btn-text-color: $gray-900 !default;
-$btn-primary-color: darken($key-lime, 12.5%) !default;
+$btn-primary-color: #0275d8 !default;
 $btn-primary-text-color: #fff !default;
-$btn-danger-color: #bd1b1f !default;
+$btn-danger-color: #D9534F !default;
 $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
-$btn-focus-color: $cotton-candy !default;
+$btn-focus-color: #025AA5 !default;
 
 $btn-font-weight: 600;
 $btn-height: 32px;
@@ -20,10 +20,11 @@ $btn-height: 32px;
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid darken($btn-color, 10%);
+  border: 1px solid rgba(0,0,0,0.2);
   border-radius: .2em;
+  box-shadow: 0 -1px 0 rgba(0,0,0,0.2) inset;
   font-size: $btn-font-size;
-  font-weight: $btn-font-weight;
+  font-weight: 500;
   font-family: $btn-font-family;
   line-height: 20px;
   height: $btn-height;
@@ -33,50 +34,39 @@ $btn-height: 32px;
   vertical-align: middle;
   white-space: nowrap;
   outline: none;
-  padding: 5px 10px;
-  background-size: 100% 210%;
-  background-color: lighten($btn-color, 5%);
-  background-image: linear-gradient(to bottom, lighten($btn-color, 10%), darken($btn-color, 10%));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15);
-  text-shadow: 0 1px #fff;
-  transition: ease-in-out .1s background-position;
+  padding: 4px 10px 6px;
+  background-color: $btn-color;
+  transition: ease-in-out .1s background-color, ease-in-out .1s border;
+}
+
+.btn:focus {
+  outline: -webkit-focus-ring-color auto 3px;
 }
 
 .btn:hover {
-  background-position: 100% 50%;
-  color: $btn-text-color;
-}
-
-.btn:focus,
-.btn:active,
-.btn.active {
-  border-color: darken($btn-focus-color, 10%);
-  box-shadow: 0 0 4px $btn-focus-color;
-  outline: none;
-  z-index: z-index('btn-focus'); // show outline of focused elements above adjacent elements
+  border-color: darken($btn-color, 20%);
+  background-color: darken($btn-color, 10%);
 }
 
 .btn:active,
 .btn.active {
-  border-color: darken($btn-color, 25%);
-  background-color: darken($btn-color, 7.5%);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15);
+  border-color: rgba(0,0,0,0.4);
+  background-color: darken($btn-color, 10%);
+  box-shadow: none;
   background-image: none;
-}
-
-.btn:active:focus,
-.btn.active:focus {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 0 4px $btn-focus-color;
+  line-height: 20px;
+  padding: 5px 10px;
 }
 
 .btn:disabled,
 .btn.disabled {
   cursor: default;
-  box-shadow: none;
+  box-shadow: none !important;
   background-image: none;
-  background-color: lighten($btn-color, 5%);
+  background-color: $btn-color;
   text-shadow: none;
   border-color: $btn-color;
+  padding: 5px 10px !important;
   color: rgba($btn-text-color, .3);
 }
 
@@ -88,55 +78,40 @@ $btn-height: 32px;
 
 // Btn primary
 .btn-primary {
-  color: $btn-primary-text-color;
+  color: #fff;
   background-color: $btn-primary-color;
-  border-color: darken($btn-primary-color, 5%);
-  background-image: linear-gradient(to bottom, lighten($btn-primary-color, 10%), darken($btn-primary-color, 10%));
-  text-shadow: 0 -1px rgba(0, 0, 0, .15);
+  border-color: rgba(0,0,0,0.3);
 }
 
 .btn-primary:hover {
   color: #fff;
+  background-color: darken($btn-primary-color, 10%);
+  border-color: darken($btn-primary-color, 20%);
 }
 
-.btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  border-color: darken($btn-primary-color, 10%);
-  background-color: darken($btn-primary-color, 5%);
+  background-color: darken($btn-primary-color, 10%);
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled {
   color: #fff;
-  border-color: darken($btn-primary-color, 10%);
-  background-color: darken($btn-primary-color, 5%);
+  background-color: lighten($btn-primary-color, 20%);
   opacity: .6;
 }
 
 // Btn danger
 .btn-danger {
-  color: $btn-danger-color;
-}
-
-.btn-danger:active,
-.btn-danger.active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .35);
+  color: #fff;
+  background: $btn-danger-color;
 }
 
 .btn-danger:active,
 .btn-danger.active,
-.btn-danger:focus,
 .btn-danger:hover {
   color: #fff;
-  background-color: $btn-danger-color;
-  border-color: darken($btn-danger-color, 15%);
-  background-image: linear-gradient(to bottom, lighten($btn-danger-color, 10%), darken($btn-danger-color, 10%));
-  text-shadow: 0 -1px rgba(0, 0, 0, .15);
-}
-
-.btn-danger:focus {
-  border-color: darken($btn-danger-color, 5%);
+  background-color: darken($btn-danger-color, 10%);
 }
 
 .btn-danger.disabled,
@@ -144,19 +119,15 @@ $btn-height: 32px;
   cursor: default;
   box-shadow: none;
   background-image: none;
-  background-color: lighten($btn-color, 5%);
-  text-shadow: none;
-  border-color: $btn-color;
-  color: rgba($btn-text-color, .3);
+  background-color: lighten($btn-danger-color, 20%);
+  opacity: .6;
+  color: #fff;
 }
 
-.btn-danger:disabled,
-.btn-danger.disabled {
-  box-shadow: none;
-}
 
 // Btn Link
-.btn-link {
+.btn-link,
+.btn-link:hover {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -164,7 +135,9 @@ $btn-height: 32px;
   text-shadow: none;
   font-weight: normal;
   font-size: $base-font-size;
-  color: darken($cotton-candy, 40%);
+  color: $btn-primary-color;
+  line-height: 20px;
+  padding: 5px 10px;
 }
 
 .btn-link.active,
@@ -177,7 +150,8 @@ $btn-height: 32px;
 }
 
 .btn-link:hover {
-  color: darken($cotton-candy, 60%);
+  color: darken($btn-primary-color, 10%);
+  text-decoration: underline;
 }
 
 .btn-link:disabled,
@@ -187,6 +161,7 @@ $btn-height: 32px;
   background-color: transparent;
   border-color: transparent;
   color: rgba($btn-text-color, .3);
+  text-decoration: none;
 }
 
 .btn-link + .btn-link {
@@ -232,6 +207,12 @@ $btn-height: 32px;
     margin-left: 5px;
   }
 
+  > .btn:hover,
+  > .btn:active,
+  > .btn:focus {
+    z-index: 2;
+  }
+
 }
 
 // Button groups with input checkboxes and radio buttons
@@ -264,10 +245,11 @@ $btn-height: 32px;
 
 // Btn mini
 .btn-mini {
+  box-shadow: 0 -1px 0 #c2c2c2 inset;
   font-size: $btn-mini-font-size;
   height: 26px;
-  line-height: 21px;
-  padding: 2px 6px 2px;
+  line-height: 19px;
+  padding: 1px 6px 3px;
 }
 
 // Btn block
