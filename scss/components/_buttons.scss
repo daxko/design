@@ -1,5 +1,5 @@
 $btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$btn-color: #F5F5F5 !default;
+$btn-color: $gray-50 !default;
 $btn-text-color: $gray-900 !default;
 $btn-primary-color: #0275d8 !default;
 $btn-primary-text-color: #fff !default;
@@ -7,8 +7,7 @@ $btn-danger-color: #D9534F !default;
 $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
 $btn-focus-color: #025AA5 !default;
-
-$btn-font-weight: 600;
+$btn-font-weight: 500;
 $btn-height: 32px;
 
 // Buttons
@@ -20,11 +19,11 @@ $btn-height: 32px;
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid $gray-300;
   border-radius: .2em;
-  box-shadow: 0 -1px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 0 -1px 0 $gray-300 inset;
   font-size: $btn-font-size;
-  font-weight: 500;
+  font-weight: $btn-font-weight;
   font-family: $btn-font-family;
   line-height: 20px;
   height: $btn-height;
@@ -40,7 +39,7 @@ $btn-height: 32px;
 }
 
 .btn:focus {
-  outline: -webkit-focus-ring-color auto 3px;
+  // TBD
 }
 
 .btn:hover {
@@ -50,7 +49,7 @@ $btn-height: 32px;
 
 .btn:active,
 .btn.active {
-  border-color: rgba(0,0,0,0.4);
+  border-color: $gray-400;
   background-color: darken($btn-color, 10%);
   box-shadow: none;
   background-image: none;
@@ -59,13 +58,15 @@ $btn-height: 32px;
 }
 
 .btn:disabled,
-.btn.disabled {
-  cursor: default;
+.btn.disabled,
+.btn:disabled:hover,
+.btn.disabled:hover {
+  cursor: not-allowed;
   box-shadow: none !important;
   background-image: none;
   background-color: $btn-color;
   text-shadow: none;
-  border-color: $btn-color;
+  border-color: inherit;
   padding: 5px 10px !important;
   color: rgba($btn-text-color, .3);
 }
@@ -78,50 +79,59 @@ $btn-height: 32px;
 
 // Btn primary
 .btn-primary {
-  color: #fff;
+  color: $btn-primary-text-color;
   background-color: $btn-primary-color;
-  border-color: rgba(0,0,0,0.3);
+  border-color: darken($btn-primary-color, 10%);
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset;
 }
 
 .btn-primary:hover {
-  color: #fff;
   background-color: darken($btn-primary-color, 10%);
   border-color: darken($btn-primary-color, 20%);
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 20%) inset;
 }
 
 .btn-primary:active,
 .btn-primary.active {
   background-color: darken($btn-primary-color, 10%);
+  box-shadow: none;
 }
 
 .btn-primary:disabled,
-.btn-primary.disabled {
-  color: #fff;
-  background-color: lighten($btn-primary-color, 20%);
-  opacity: .6;
+.btn-primary.disabled,
+.btn-primary:disabled:hover,
+.btn-primary.disabled:hover {
+  color: $btn-primary-text-color;
+  border-color: lighten($btn-primary-color, 30%);
+  background-color: lighten($btn-primary-color, 30%);
 }
 
 // Btn danger
 .btn-danger {
-  color: #fff;
+  color: $btn-primary-text-color;
   background: $btn-danger-color;
+  border-color: darken($btn-danger-color, 10%);
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
+}
+
+.btn-danger:hover {
+  background-color: darken($btn-danger-color, 10%);
+  border-color: darken($btn-danger-color, 20%);
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
 }
 
 .btn-danger:active,
-.btn-danger.active,
-.btn-danger:hover {
-  color: #fff;
+.btn-danger.active {
   background-color: darken($btn-danger-color, 10%);
 }
 
 .btn-danger.disabled,
-.btn-danger:disabled {
-  cursor: default;
-  box-shadow: none;
-  background-image: none;
-  background-color: lighten($btn-danger-color, 20%);
-  opacity: .6;
-  color: #fff;
+.btn-danger:disabled,
+.btn-danger.disabled:hover,
+.btn-danger:disabled:hover {
+  color: $btn-primary-text-color;
+  border-color: lighten($btn-danger-color, 30%);
+  background-color: lighten($btn-danger-color, 30%);
 }
 
 
@@ -237,7 +247,7 @@ $btn-height: 32px;
     }
 
     &:checked:focus + label {
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 0 4px $btn-focus-color;
+      box-shadow: inset 0 2px 4px $gray-200, 0 0 4px $btn-focus-color;
     }
   }
 
@@ -245,11 +255,15 @@ $btn-height: 32px;
 
 // Btn mini
 .btn-mini {
-  box-shadow: 0 -1px 0 #c2c2c2 inset;
   font-size: $btn-mini-font-size;
   height: 26px;
   line-height: 19px;
   padding: 1px 6px 3px;
+}
+
+.btn-mini:active,
+.btn-mini.active {
+  padding: 2px 6px;
 }
 
 // Btn block

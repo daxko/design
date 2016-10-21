@@ -20,7 +20,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid #E0E0E0;
+  border: 1px solid $gray-100;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: $input-font-size;
@@ -100,7 +100,7 @@ textarea:focus {
 }
 
 form label {
-  color: #424242;
+  color: $gray-700;
   font-weight: 500;
 }
 

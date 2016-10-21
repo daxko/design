@@ -479,6 +479,8 @@ body {
 body {
   padding: 0;
   margin: 0;
+  line-height: 1.5;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 ul {
@@ -739,7 +741,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: 13px;
@@ -958,8 +960,8 @@ form .grid [class*=col-] > label textarea {
   border-radius: 3px;
   font-size: 13px;
   padding: 5px 10px;
-  background-color: #f6f6f6;
-  border: 1px solid #e6e6e6;
+  background-color: whitesmoke;
+  border: 1px solid #e0e0e0;
 }
 
 .input-group .add-on:first-child {
@@ -1023,7 +1025,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .table.table-bordered {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e0e0e0;
 }
 
 .table.table-fixed {
@@ -1037,21 +1039,21 @@ form .grid [class*=col-] > label textarea {
 
 .table > thead > tr td,
 .table > thead > tr th {
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
   padding: .5em 1em;
   vertical-align: bottom;
 }
 
 .table > tbody > tr td,
 .table > tbody > tr th {
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #e0e0e0;
   padding: .5em 1em;
   vertical-align: top;
 }
 
 .table.table-hover > tbody > tr:hover td,
 .table.table-hover > tbody > tr:hover th {
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
 }
 
 .table.table-condensed > tbody > tr td,
@@ -1109,9 +1111,9 @@ form .grid [class*=col-] > label textarea {
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #a6a6a6;
   border-radius: .2em;
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 -1px 0 #a6a6a6 inset;
   font-size: 13px;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1124,26 +1126,21 @@ form .grid [class*=col-] > label textarea {
   white-space: nowrap;
   outline: none;
   padding: 4px 10px 6px;
-  background-color: #F5F5F5;
+  background-color: whitesmoke;
   transition: ease-in-out .1s background-color, ease-in-out .1s border;
-}
-
-.btn:focus, .btn-group > input[type=checkbox]:focus + label,
-.btn-group > input[type=radio]:focus + label {
-  outline: -webkit-focus-ring-color auto 3px;
 }
 
 .btn:hover {
   border-color: #c2c2c2;
-  background-color: gainsboro;
+  background-color: #dbdbdb;
 }
 
 .btn:active,
 .btn.active,
 .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label {
-  border-color: rgba(0, 0, 0, 0.4);
-  background-color: gainsboro;
+  border-color: #999999;
+  background-color: #dbdbdb;
   box-shadow: none;
   background-image: none;
   line-height: 20px;
@@ -1154,13 +1151,17 @@ form .grid [class*=col-] > label textarea {
 .btn-primary.disabled,
 .btn-primary:disabled:hover,
 .btn-primary.disabled:hover,
-.btn.disabled {
-  cursor: default;
+.btn.disabled,
+.btn:disabled:hover,
+.btn-primary:hover:disabled,
+.btn-primary.disabled:hover,
+.btn.disabled:hover {
+  cursor: not-allowed;
   box-shadow: none !important;
   background-image: none;
-  background-color: #F5F5F5;
+  background-color: whitesmoke;
   text-shadow: none;
-  border-color: #F5F5F5;
+  border-color: inherit;
   padding: 5px 10px !important;
   color: rgba(45, 45, 45, 0.3);
 }
@@ -1173,47 +1174,56 @@ form .grid [class*=col-] > label textarea {
 .btn-primary {
   color: #fff;
   background-color: #0275d8;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: #025aa5;
+  box-shadow: 0 -1px 0 #025aa5 inset;
 }
 
 .btn-primary:hover {
-  color: #fff;
   background-color: #025aa5;
   border-color: #013e73;
+  box-shadow: 0 -1px 0 #013e73 inset;
 }
 
 .btn-primary:active,
 .btn-primary.active {
   background-color: #025aa5;
+  box-shadow: none;
 }
 
 .btn-primary:disabled,
-.btn-primary.disabled {
+.btn-primary.disabled,
+.btn-primary:disabled:hover,
+.btn-primary.disabled:hover {
   color: #fff;
-  background-color: #43a7fd;
-  opacity: .6;
+  border-color: #75bffe;
+  background-color: #75bffe;
 }
 
 .btn-danger {
   color: #fff;
   background: #D9534F;
+  border-color: #c9302c;
+  box-shadow: 0 -1px 0 #c9302c inset;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+  border-color: #a02622;
+  box-shadow: 0 -1px 0 #a02622 inset;
 }
 
 .btn-danger:active,
-.btn-danger.active,
-.btn-danger:hover {
-  color: #fff;
+.btn-danger.active {
   background-color: #c9302c;
 }
 
 .btn-danger.disabled,
-.btn-danger:disabled {
-  cursor: default;
-  box-shadow: none;
-  background-image: none;
-  background-color: #eba5a3;
-  opacity: .6;
+.btn-danger:disabled,
+.btn-danger.disabled:hover,
+.btn-danger:disabled:hover {
   color: #fff;
+  border-color: #f4cecd;
+  background-color: #f4cecd;
 }
 
 .btn-link,
@@ -1318,15 +1328,19 @@ form .grid [class*=col-] > label textarea {
 
 .btn-group > input[type=checkbox]:checked:focus + label,
 .btn-group > input[type=radio]:checked:focus + label {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #025AA5;
+  box-shadow: inset 0 2px 4px #cccccc, 0 0 4px #025AA5;
 }
 
 .btn-mini {
-  box-shadow: 0 -1px 0 #c2c2c2 inset;
   font-size: 12px;
   height: 26px;
   line-height: 19px;
   padding: 1px 6px 3px;
+}
+
+.btn-mini:active,
+.btn-mini.active {
+  padding: 2px 6px;
 }
 
 .btn-block {
@@ -1369,8 +1383,8 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 100%;
   border-radius: 4px;
-  border: 1px solid #e6e6e6;
-  color: #545454;
+  border: 1px solid #e0e0e0;
+  color: #424242;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   background-clip: padding-box;
@@ -1388,7 +1402,7 @@ form .grid [class*=col-] > label textarea {
   display: block;
   overflow: hidden;
   padding: .3em 10px;
-  color: #545454;
+  color: #424242;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1404,7 +1418,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .dropdown-menu .divider {
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   height: 1px;
   margin: 5px 0;
 }
@@ -1440,7 +1454,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .dropdown-caret:before {
-  border-bottom: 8px solid #e6e6e6;
+  border-bottom: 8px solid #e0e0e0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
 }
@@ -1459,7 +1473,7 @@ form .grid [class*=col-] > label textarea {
 
 .dropup .dropdown-caret:before {
   border-bottom: none;
-  border-top: 8px solid #e6e6e6;
+  border-top: 8px solid #e0e0e0;
   bottom: 0;
 }
 
@@ -1491,7 +1505,7 @@ form .grid [class*=col-] > label textarea {
 .list .list-item {
   display: block;
   padding: .75em 1em;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .list a.list-item {
@@ -1501,7 +1515,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list a.list-item:hover {
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
 }
 
 .list .list-icons {
@@ -1519,8 +1533,8 @@ form .grid [class*=col-] > label textarea {
 .list-header {
   margin-top: 1em;
   padding: .75em 1em;
-  border: 1px solid #e6e6e6;
-  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  background-color: whitesmoke;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -1539,9 +1553,9 @@ form .grid [class*=col-] > label textarea {
 
 .list-bordered {
   border-radius: 3px;
-  border-top: 1px solid #e6e6e6;
-  border-left: 1px solid #e6e6e6;
-  border-right: 1px solid #e6e6e6;
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
 }
 
 .loader {
@@ -1606,7 +1620,7 @@ form .grid [class*=col-] > label textarea {
   border-radius: 3px;
   background-clip: padding-box;
   padding: 1rem;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e0e0e0;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   position: fixed;
@@ -1651,8 +1665,8 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header,
 .modal-footer {
-  background-color: #f6f6f6;
-  border: 0 solid #e6e6e6;
+  background-color: whitesmoke;
+  border: 0 solid #e0e0e0;
   padding: .5rem 1rem;
   margin-right: -1rem;
   margin-left: -1rem;
@@ -1674,7 +1688,7 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header .close:hover {
   color: #2d2d2d;
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
 }
 
 .modal-header {
@@ -1743,7 +1757,7 @@ form .grid [class*=col-] > label textarea {
 
 .toggle-switch [data-on]:before,
 .toggle-switch [data-on]:after {
-  color: #545454;
+  color: #424242;
   position: relative;
   top: -1px;
   display: inline-block;
@@ -1753,7 +1767,7 @@ form .grid [class*=col-] > label textarea {
   transition: opacity ease-in .2s;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   min-width: 30px;
   z-index: 10;
 }
@@ -1780,8 +1794,8 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   right: 0;
   border-radius: 4px;
-  background-color: #e6e6e6;
-  border: 1px solid #d9d9d9;
+  background-color: #e0e0e0;
+  border: 1px solid lightgray;
   transition: background-color linear .2s;
   z-index: 10;
 }
@@ -1928,7 +1942,7 @@ form .grid [class*=col-] > label textarea {
   height: .8em;
   width: .8em;
   border-radius: 50%;
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   margin-right: .3em;
 }
 
@@ -1956,7 +1970,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn:hover {
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
 }
 
 .btn.active, .btn-group > input[type=checkbox]:checked + label,
@@ -2021,7 +2035,7 @@ form .grid [class*=col-] > label textarea {
 
 nav.nav {
   background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e0e0e0;
   height: 40px;
   position: relative;
   position: -webkit-sticky;
@@ -2068,7 +2082,7 @@ nav.nav a {
   line-height: 40px;
   min-width: 40px;
   font-size: 14px;
-  color: #545454;
+  color: #424242;
   position: absolute;
   top: 0;
   border: 0;
@@ -2130,7 +2144,7 @@ nav.nav a {
 }
 
 .page--dark {
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
 }
 
 .page--small-padding {
@@ -2148,7 +2162,7 @@ nav.nav a {
 .tile {
   display: block;
   background-color: #fff;
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid whitesmoke;
   padding: .5em 1em;
   position: relative;
   overflow: hidden;
@@ -2276,7 +2290,7 @@ a.tile {
 }
 
 .card:not(:last-child) {
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
   -webkit-transform: scale(0.95);
       -ms-transform: scale(0.95);
           transform: scale(0.95);
