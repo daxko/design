@@ -6,7 +6,7 @@ $btn-primary-text-color: #fff !default;
 $btn-danger-color: #D9534F !default;
 $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
-$btn-focus-color: #025AA5 !default;
+$btn-focus-color: $focus-color !default;
 $btn-font-weight: 500;
 $btn-height: 32px;
 
@@ -39,7 +39,7 @@ $btn-height: 32px;
 }
 
 .btn:focus {
-  // TBD
+  box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 3px $btn-focus-color;
 }
 
 .btn:hover {
@@ -97,6 +97,10 @@ $btn-height: 32px;
   box-shadow: none;
 }
 
+.btn-primary:focus {
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 3px $btn-focus-color;
+}
+
 .btn-primary:disabled,
 .btn-primary.disabled,
 .btn-primary:disabled:hover,
@@ -123,6 +127,10 @@ $btn-height: 32px;
 .btn-danger:active,
 .btn-danger.active {
   background-color: darken($btn-danger-color, 10%);
+}
+
+.btn-danger:focus {
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 3px $btn-focus-color;
 }
 
 .btn-danger.disabled,

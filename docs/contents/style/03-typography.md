@@ -65,13 +65,11 @@ You can style inline text elements.
 
 {{#example 'html'}}
 <p>This text is <s>striked</s></p>
-<p>This text is <mark>marked</mark></p>
 <p>This text is <strong>strong</strong></p>
 <p>This text is <em>emphasized</em></p>
 <p>This text is <u>underlined</u></p>
 <p>This text is <small>small</small></p>
-<p>This text is <sup>superscript</sup></p>
-<p>This text is <sub>subscript</sub></p>
+<p>This text is <a href="#">hyperlink</a></p>
 {{/example}}
 
 test
