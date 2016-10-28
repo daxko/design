@@ -7,9 +7,9 @@ theme: "key-lime"
 
 This color palette is composed of primary colors to be used for accent, highlighting and gray scale colors to be used to shade text and to convey hierarchical information.
 
-### Primary Colors
+### Brand Colors
 
-The primary color palette consists of daxko's four primary brand colors.
+This color palette consists of daxko's four primary brand colors.
 
 <ul class="colors">
   <li class="swatch">

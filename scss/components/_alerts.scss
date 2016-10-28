@@ -1,7 +1,26 @@
-$alert-success-color: $key-lime !default;
-$alert-error-color: $red-velvet !default;
-$alert-info-color: $cotton-candy !default;
-$alert-warning-color: $banana-pudding !default;
+$alert-success: (
+  body: #f0f2de,
+  text: #707531,
+  border: #d9ddad
+);
+
+$alert-error: (
+  body: #fcd4dc,
+  text: #9a0c28,
+  border: #f793a7
+);
+
+$alert-info: (
+  body: #edf8f8,
+  text: #42a59f,
+  border: #d2edec
+);
+
+$alert-warning: (
+  body: #fcefd2,
+  text: #966a0b,
+  border: #f7d68e
+);
 
 // Alerts
 // ----------------------------------------------
@@ -22,24 +41,24 @@ $alert-warning-color: $banana-pudding !default;
   margin-bottom: 0;
 }
 
-@mixin alert($color) {
-  background-color: scale-color($color, $lightness: 78%);
-  color: scale-color($color, $lightness: -40%);
-  border-left: 5px solid scale-color($color, $lightness: 60%);
+@mixin alert($type) {
+  background-color: map-get($type, 'body');
+  color: map-get($type, 'text');
+  border-left: 5px solid map-get($type, 'border');
 }
 
 .alert.alert-success {
-  @include alert($alert-success-color);
+  @include alert($alert-success);
 }
 
 .alert.alert-error {
-  @include alert($alert-error-color);
+  @include alert($alert-error);
 }
 
 .alert.alert-info {
-  @include alert($alert-info-color);
+  @include alert($alert-info);
 }
 
 .alert.alert-warning {
-  @include alert($alert-warning-color);
+  @include alert($alert-warning);
 }
