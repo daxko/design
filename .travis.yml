@@ -3,7 +3,7 @@ node_js:
 - '5'
 script:
 - npm run test
-- grunt jshint
+- grunt eslint
 sudo: false
 branches:
   only:
