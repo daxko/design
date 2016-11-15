@@ -30,11 +30,15 @@
         , $parent = getParent($this)
         , relatedTarget = { relatedTarget: this };
 
-      if(!$parent.hasClass('open')) return;
+      if(!$parent.hasClass('open')) {
+        return;
+      }
 
       $parent.trigger(e = $.Event('hide', relatedTarget));
 
-      if(e.isDefaultPrevented()) return;
+      if(e.isDefaultPrevented()) {
+        return;
+      }
 
       $this.attr('aria-expanded', 'false');
       $parent
@@ -57,7 +61,9 @@
       , $parent
       , active;
 
-    if($this.is(':disabled,.disabled')) return;
+    if($this.is(':disabled,.disabled')) {
+      return;
+    }
 
     $parent = getParent($this);
     active = $parent.hasClass('open');
@@ -71,7 +77,9 @@
 
       $parent.trigger(e = $.Event('show', relatedTarget));
 
-      if(e.isDefaultPrevented()) return;
+      if(e.isDefaultPrevented()) {
+        return;
+      }
 
       $('body')
         .addClass('dropdown-active')
@@ -99,12 +107,16 @@
       32, // space
     ].indexOf(e.which);
 
-    if(keycode === -1) return;
+    if(keycode === -1) {
+      return;
+    }
 
     e.preventDefault();
     e.stopPropagation();
 
-    if($this.is('.disabled,:disabled')) return;
+    if($this.is('.disabled,:disabled')) {
+      return;
+    }
 
     $parent = getParent($this);
     active = $parent.hasClass('open');
@@ -116,8 +128,11 @@
     var $items = $parent.find('.dropdown-menu li:not(.disabled):visible').find('a,.dropdown-menu-item')
       , index = $items.index(e.target);
 
-    if(!$items.length) return;
+    if(!$items.length) {
+      return;
+    }
 
+    /* eslint curly: off */
     if(e.which === 38 && index > 0)                 index--; // up
     if(e.which === 40 && index < $items.length - 1) index++; // down
     if(index === -1)                                index = 0;
@@ -133,8 +148,13 @@
       var $this = $(this)
         , data = $this.data('dropdown');
 
-      if(!data) $this.data('dropdown', (data = new Dropdown(this)));
-      if(typeof option === 'string') data[option].call($this);
+      if(!data) {
+        $this.data('dropdown', (data = new Dropdown(this)));
+      }
+
+      if(typeof option === 'string') {
+        data[option].call($this);
+      }
     });
   }
 
