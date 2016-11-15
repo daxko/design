@@ -160,9 +160,6 @@ module.exports = function(grunt) {
     },
 
     eslint: {
-      options: {
-        jshintrc: true
-      },
       files: [
         'gruntfile.js',
         '<%= config.js %>/*.js',
