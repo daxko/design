@@ -54,12 +54,13 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   .dropdown-menu-item {
     display: block;
     overflow: hidden;
-    padding: .3em 10px;
+    padding: .3em .8em;
     color: $dropdown-font-color;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
+    width: 100%;
   }
 
   a:hover,
