@@ -1516,12 +1516,13 @@ form .grid [class*=col-] > label textarea {
 .dropdown-menu .dropdown-menu-item {
   display: block;
   overflow: hidden;
-  padding: .3em 10px;
+  padding: .3em .8em;
   color: #545454;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
+  width: 100%;
 }
 
 .dropdown-menu a:hover,
