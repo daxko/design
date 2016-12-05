@@ -81,34 +81,16 @@ The primary color palette consists of daxko's four primary brand colors.
           <em>Hex</em> #f5f5f5
         </span>
       </li>
-      <li class="gray-75">
-        75
-        <span class="pull-right">
-          <em>Hex</em> #eeeeee
-        </span>
-      </li>
       <li class="gray-100">
         100
         <span class="pull-right">
           <em>Hex</em> #e0e0e0
         </span>
       </li>
-      <li class="gray-200">
-        200
-        <span class="pull-right">
-          <em>Hex</em> #bdbdbd
-        </span>
-      </li>
       <li class="gray-300">
         300
         <span class="pull-right">
           <em>Hex</em> #9e9e9e
-        </span>
-      </li>
-      <li class="gray-400">
-        400
-        <span class="pull-right">
-          <em>Hex</em> #757575
         </span>
       </li>
       <li class="gray-500">

@@ -843,18 +843,6 @@ fieldset legend {
   margin-bottom: 1rem;
 }
 
-input::-webkit-input-placeholder {
-  color: #9e9e9e;
-}
-
-input::-moz-placeholder {
-  color: #9e9e9e;
-}
-
-input:-ms-input-placeholder {
-  color: #9e9e9e;
-}
-
 input::placeholder {
   color: #9e9e9e;
 }
@@ -1085,7 +1073,6 @@ form .grid [class*=col-] > label textarea {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -1346,7 +1333,7 @@ form .grid [class*=col-] > label textarea {
 
 .btn-group > input[type=checkbox]:checked:focus + label,
 .btn-group > input[type=radio]:checked:focus + label {
-  box-shadow: inset 0 2px 4px #bdbdbd, 0 0 4px #89baeb;
+  box-shadow: inset 0 2px 4px #bcbcbc, 0 0 4px #89baeb;
 }
 
 .btn-mini {
@@ -1586,29 +1573,7 @@ form .grid [class*=col-] > label textarea {
   background-repeat: no-repeat;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em;
   animation-mode: forwards;
-  -webkit-animation: loader 1s infinite;
-          animation: loader 1s infinite;
-}
-
-@-webkit-keyframes loader {
-  10% {
-    background-position: 0 0.2em, 0.75em 0, 1.5em 0;
-  }
-  20% {
-    background-position: 0 0.4em, 0.75em 0.2em, 1.5em 0;
-  }
-  30% {
-    background-position: 0 0.2em, 0.75em 0.4em, 1.5em 0.2em;
-  }
-  40% {
-    background-position: 0 0, 0.75em 0.2em, 1.5em 0.4em;
-  }
-  50% {
-    background-position: 0 0, 0.75em 0, 1.5em 0.2em;
-  }
-  60% {
-    background-position: 0 0, 0.75em 0, 1.5em 0;
-  }
+  animation: loader 1s infinite;
 }
 
 @keyframes loader {
@@ -1650,10 +1615,7 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: 50%;
   transition: all ease-in-out .3s;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  transition-property: opacity, -webkit-transform;
+  transform: translateX(-50%) translateY(-50%);
   transition-property: opacity, transform;
 }
 
@@ -1759,9 +1721,7 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
@@ -1885,9 +1845,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-s:after,
 .tooltip-s:before {
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .tooltip:after,
@@ -1923,9 +1881,7 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: auto;
   bottom: auto;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .tooltip-e:before,
@@ -2056,7 +2012,6 @@ nav.nav {
   border-bottom: 1px solid #e0e0e0;
   height: 40px;
   position: relative;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 110;
@@ -2123,8 +2078,7 @@ nav.nav a {
 .nav .badge {
   background-color: red;
   box-shadow: none;
-  -webkit-transform: translate3d(5px, -5px, 0);
-          transform: translate3d(5px, -5px, 0);
+  transform: translate3d(5px, -5px, 0);
   position: absolute;
   z-index: 1;
   display: inherit;
@@ -2140,8 +2094,7 @@ nav.nav a {
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -2208,9 +2161,7 @@ a.tile {
 .tile--next {
   position: absolute;
   right: .5em;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   color: #9e9e9e;
 }
 
@@ -2262,10 +2213,8 @@ a.tile {
 
 .card-list {
   position: relative;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .card {
@@ -2277,10 +2226,8 @@ a.tile {
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.075);
   position: relative;
   transition: all ease-in-out .25s;
-  transition-property: -webkit-transform, opacity, background-color;
   transition-property: transform, opacity, background-color;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .card--title {
@@ -2309,9 +2256,7 @@ a.tile {
 
 .card:not(:last-child) {
   background-color: #f5f5f5;
-  -webkit-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .card:not(:last-child):not(:first-child) {
@@ -2321,4 +2266,5 @@ a.tile {
 .card + .card:last-child {
   margin-top: -8.5em;
 }
+
 /*# sourceMappingURL=mx.css.map */
