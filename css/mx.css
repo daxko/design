@@ -450,7 +450,7 @@ h6 {
 }
 
 .secondary, .tile--description {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 h1 .secondary, h1 .tile--description,
@@ -494,11 +494,17 @@ img {
 }
 
 a {
-  color: #33817c;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #163836;
+  text-decoration: underline;
+}
+
+a:focus {
+  box-shadow: 0 0 0 3px #89baeb;
+  outline: none;
 }
 
 .cf:before, .list .list-item:before, .cf:after, .list .list-item:after {
@@ -810,8 +816,7 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #81ccc8;
-  box-shadow: 0 0 4px #a5dbd8;
+  box-shadow: 0 0 0 3px #89baeb;
   z-index: 10;
 }
 
@@ -831,7 +836,7 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  color: #2d2d2d;
+  color: #212121;
   font-weight: 500;
   display: block;
   width: 100%;
@@ -839,19 +844,19 @@ fieldset legend {
 }
 
 input::-webkit-input-placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 input::-moz-placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 input:-ms-input-placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 input::placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .grid label {
@@ -955,12 +960,12 @@ form .grid [class*=col-] > label textarea {
 }
 
 .input-group .add-on {
-  color: #6d6d6d;
+  color: #616161;
   text-shadow: -1px 0 #fff;
   border-radius: 3px;
   font-size: 13px;
   padding: 5px 10px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border: 1px solid #e0e0e0;
 }
 
@@ -1039,7 +1044,7 @@ form .grid [class*=col-] > label textarea {
 
 .table > thead > tr td,
 .table > thead > tr th {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   padding: .5em 1em;
   vertical-align: bottom;
 }
@@ -1053,7 +1058,7 @@ form .grid [class*=col-] > label textarea {
 
 .table.table-hover > tbody > tr:hover td,
 .table.table-hover > tbody > tr:hover th {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 .table.table-condensed > tbody > tr td,
@@ -1111,36 +1116,42 @@ form .grid [class*=col-] > label textarea {
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #a6a6a6;
+  border: 1px solid #9e9e9e;
   border-radius: .2em;
-  box-shadow: 0 -1px 0 #a6a6a6 inset;
+  box-shadow: 0 -1px 0 #9e9e9e inset;
   font-size: 13px;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 20px;
   height: 32px;
-  color: #2d2d2d;
+  color: #212121;
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
   outline: none;
   padding: 4px 10px 6px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   transition: ease-in-out .1s background-color, ease-in-out .1s border;
+}
+
+.btn:focus, .btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label {
+  box-shadow: 0 -1px 0 #9e9e9e inset, 0 0 0 3px #89baeb;
 }
 
 .btn:hover {
   border-color: #c2c2c2;
-  background-color: #dbdbdb;
+  background-color: gainsboro;
+  text-decoration: none;
 }
 
 .btn:active,
 .btn.active,
 .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label {
-  border-color: #999999;
-  background-color: #dbdbdb;
+  border-color: #757575;
+  background-color: gainsboro;
   box-shadow: none;
   background-image: none;
   line-height: 20px;
@@ -1159,11 +1170,11 @@ form .grid [class*=col-] > label textarea {
   cursor: not-allowed;
   box-shadow: none !important;
   background-image: none;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   text-shadow: none;
   border-color: inherit;
   padding: 5px 10px !important;
-  color: rgba(45, 45, 45, 0.3);
+  color: rgba(33, 33, 33, 0.3);
 }
 
 .btn::-moz-focus-inner {
@@ -1188,6 +1199,10 @@ form .grid [class*=col-] > label textarea {
 .btn-primary.active {
   background-color: #025aa5;
   box-shadow: none;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 -1px 0 #025aa5 inset, 0 0 0 3px #89baeb;
 }
 
 .btn-primary:disabled,
@@ -1217,6 +1232,10 @@ form .grid [class*=col-] > label textarea {
   background-color: #c9302c;
 }
 
+.btn-danger:focus {
+  box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 3px #89baeb;
+}
+
 .btn-danger.disabled,
 .btn-danger:disabled,
 .btn-danger.disabled:hover,
@@ -1237,7 +1256,7 @@ form .grid [class*=col-] > label textarea {
   font-size: 14px;
   color: #0275d8;
   line-height: 20px;
-  padding: 5px 10px;
+  padding: 4px 10px 6px;
 }
 
 .btn-link.active,
@@ -1260,7 +1279,7 @@ form .grid [class*=col-] > label textarea {
 .btn-link.disabled:hover {
   background-color: transparent;
   border-color: transparent;
-  color: rgba(45, 45, 45, 0.3);
+  color: rgba(33, 33, 33, 0.3);
   text-decoration: none;
 }
 
@@ -1328,7 +1347,7 @@ form .grid [class*=col-] > label textarea {
 
 .btn-group > input[type=checkbox]:checked:focus + label,
 .btn-group > input[type=radio]:checked:focus + label {
-  box-shadow: inset 0 2px 4px #cccccc, 0 0 4px #025AA5;
+  box-shadow: inset 0 2px 4px #bcbcbc, 0 0 4px #89baeb;
 }
 
 .btn-mini {
@@ -1358,7 +1377,7 @@ form .grid [class*=col-] > label textarea {
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px solid #2d2d2d;
+  border-top: 4px solid #212121;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -1371,7 +1390,7 @@ form .grid [class*=col-] > label textarea {
 
 .dropup .caret {
   border-top-width: 0;
-  border-bottom: 4px solid #2d2d2d;
+  border-bottom: 4px solid #212121;
 }
 
 .open > .dropdown-menu {
@@ -1499,7 +1518,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list small {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .list .list-item {
@@ -1515,26 +1534,26 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list a.list-item:hover {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
 }
 
 .list .list-icons {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .list .list-icons:hover {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .list a:hover .list-icons {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .list-header {
   margin-top: 1em;
   padding: .75em 1em;
   border: 1px solid #e0e0e0;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -1559,7 +1578,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .loader {
-  color: #a6a6a6;
+  color: #9e9e9e;
   width: 2em;
   height: 1em;
   font-size: 20px;
@@ -1568,7 +1587,29 @@ form .grid [class*=col-] > label textarea {
   background-repeat: no-repeat;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em;
   animation-mode: forwards;
-  animation: loader 1s infinite;
+  -webkit-animation: loader 1s infinite;
+          animation: loader 1s infinite;
+}
+
+@-webkit-keyframes loader {
+  10% {
+    background-position: 0 0.2em, 0.75em 0, 1.5em 0;
+  }
+  20% {
+    background-position: 0 0.4em, 0.75em 0.2em, 1.5em 0;
+  }
+  30% {
+    background-position: 0 0.2em, 0.75em 0.4em, 1.5em 0.2em;
+  }
+  40% {
+    background-position: 0 0, 0.75em 0.2em, 1.5em 0.4em;
+  }
+  50% {
+    background-position: 0 0, 0.75em 0, 1.5em 0.2em;
+  }
+  60% {
+    background-position: 0 0, 0.75em 0, 1.5em 0;
+  }
 }
 
 @keyframes loader {
@@ -1610,8 +1651,10 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: 50%;
   transition: all ease-in-out .3s;
-  -ms-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
 }
 
@@ -1626,11 +1669,11 @@ form .grid [class*=col-] > label textarea {
 
 .close {
   cursor: pointer;
-  color: #6d6d6d;
+  color: #616161;
 }
 
 .close:hover {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .close:before {
@@ -1641,7 +1684,7 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header,
 .modal-footer {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border: 0 solid #e0e0e0;
   padding: .5rem 1rem;
   margin-right: -1rem;
@@ -1659,11 +1702,11 @@ form .grid [class*=col-] > label textarea {
   padding: 0;
   border: none;
   background: none;
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .modal-header .close:hover {
-  color: #2d2d2d;
+  color: #212121;
   background-color: #e0e0e0;
 }
 
@@ -1696,7 +1739,7 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   right: 0;
   z-index: 140;
-  background-color: rgba(109, 109, 109, 0.6);
+  background-color: rgba(97, 97, 97, 0.6);
 }
 
 .toggle-switch {
@@ -1717,8 +1760,9 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translateY(-50%) translateX(-50%);
-      transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
@@ -1726,8 +1770,8 @@ form .grid [class*=col-] > label textarea {
 }
 
 .toggle-switch input[type=checkbox]:focus ~ .switch {
-  border: 1px solid #013f73;
-  box-shadow: 0 0 4px #025AA5;
+  border: 1px solid #5da1e4;
+  box-shadow: 0 0 4px #89baeb;
 }
 
 .toggle-switch [data-on]:before,
@@ -1815,7 +1859,7 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   color: #fff;
   content: attr(aria-label);
-  background-color: rgba(45, 45, 45, 0.9);
+  background-color: rgba(33, 33, 33, 0.9);
   border-radius: 3px;
   font-size: 11px;
   line-height: 1.5;
@@ -1842,8 +1886,9 @@ form .grid [class*=col-] > label textarea {
 .tooltip-s:after,
 .tooltip-s:before {
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .tooltip:after,
@@ -1857,7 +1902,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-n:before,
 .tooltip-s:before {
   bottom: 100%;
-  border-top: 5px solid rgba(45, 45, 45, 0.9);
+  border-top: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .tooltip-s:after {
@@ -1870,7 +1915,7 @@ form .grid [class*=col-] > label textarea {
   top: 100%;
   bottom: auto;
   border-top: 5px solid transparent;
-  border-bottom: 5px solid rgba(45, 45, 45, 0.9);
+  border-bottom: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .tooltip-e:after, .tooltip-e:before,
@@ -1879,8 +1924,9 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: auto;
   bottom: auto;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .tooltip-e:before,
@@ -1896,7 +1942,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-w:before {
   right: 100%;
   margin-right: 5px;
-  border-left: 5px solid rgba(45, 45, 45, 0.9);
+  border-left: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .tooltip-e:after {
@@ -1907,7 +1953,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-e:before {
   left: 100%;
   margin-left: 5px;
-  border-right: 5px solid rgba(45, 45, 45, 0.9);
+  border-right: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .status-flag, .nav .badge {
@@ -1963,16 +2009,16 @@ form .grid [class*=col-] > label textarea {
 .btn-primary:disabled:hover,
 .btn-primary.disabled:hover,
 .btn.disabled {
-  border-color: #a6a6a6;
+  border-color: #9e9e9e;
   background-color: #fff;
-  color: #a6a6a6 !important;
+  color: #9e9e9e !important;
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled,
 .btn-primary:disabled:hover,
 .btn-primary.disabled:hover {
-  background-color: #a6a6a6;
+  background-color: #9e9e9e;
   color: #fff !important;
   box-shadow: none !important;
 }
@@ -2032,7 +2078,7 @@ nav.nav a {
   stroke-width: 4px;
   text-decoration: none;
   vertical-align: middle;
-  color: #2d2d2d;
+  color: #212121;
   position: relative;
   top: -1px;
 }
@@ -2078,7 +2124,8 @@ nav.nav a {
 .nav .badge {
   background-color: red;
   box-shadow: none;
-  transform: translate3d(5px, -5px, 0);
+  -webkit-transform: translate3d(5px, -5px, 0);
+          transform: translate3d(5px, -5px, 0);
   position: absolute;
   z-index: 1;
   display: inherit;
@@ -2094,7 +2141,8 @@ nav.nav a {
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -2133,16 +2181,16 @@ nav.nav a {
 .tile {
   display: block;
   background-color: #fff;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid #f5f5f5;
   padding: .5em 1em;
   position: relative;
   overflow: hidden;
-  color: #2d2d2d;
+  color: #212121;
   outline: 6px solid transparent;
 }
 
 a.tile {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .tile:last-child {
@@ -2150,7 +2198,7 @@ a.tile {
 }
 
 .tile--header {
-  color: #6d6d6d;
+  color: #616161;
   margin: 1em 0 .25em;
 }
 
@@ -2161,9 +2209,10 @@ a.tile {
 .tile--next {
   position: absolute;
   right: .5em;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-  color: #a6a6a6;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #9e9e9e;
 }
 
 .tile--description {
@@ -2214,8 +2263,10 @@ a.tile {
 
 .card-list {
   position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .card {
@@ -2227,8 +2278,10 @@ a.tile {
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.075);
   position: relative;
   transition: all ease-in-out .25s;
+  transition-property: -webkit-transform, opacity, background-color;
   transition-property: transform, opacity, background-color;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .card--title {
@@ -2236,7 +2289,7 @@ a.tile {
 }
 
 .card--number {
-  color: #2d2d2d;
+  color: #212121;
   margin-top: -1em;
   letter-spacing: .05em;
   font-family: monospace;
@@ -2256,9 +2309,10 @@ a.tile {
 }
 
 .card:not(:last-child) {
-  background-color: whitesmoke;
-  -ms-transform: scale(0.95);
-      transform: scale(0.95);
+  background-color: #f5f5f5;
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .card:not(:last-child):not(:first-child) {

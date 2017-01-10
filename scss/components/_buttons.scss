@@ -6,7 +6,7 @@ $btn-primary-text-color: #fff !default;
 $btn-danger-color: #D9534F !default;
 $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
-$btn-focus-color: #025AA5 !default;
+$btn-focus-color: $focus-color !default;
 $btn-font-weight: 500;
 $btn-height: 32px;
 
@@ -39,17 +39,18 @@ $btn-height: 32px;
 }
 
 .btn:focus {
-  // TBD
+  box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 3px $btn-focus-color;
 }
 
 .btn:hover {
   border-color: darken($btn-color, 20%);
   background-color: darken($btn-color, 10%);
+  text-decoration: none;
 }
 
 .btn:active,
 .btn.active {
-  border-color: $gray-400;
+  border-color: darken($gray-300, 16%);
   background-color: darken($btn-color, 10%);
   box-shadow: none;
   background-image: none;
@@ -97,6 +98,10 @@ $btn-height: 32px;
   box-shadow: none;
 }
 
+.btn-primary:focus {
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 3px $btn-focus-color;
+}
+
 .btn-primary:disabled,
 .btn-primary.disabled,
 .btn-primary:disabled:hover,
@@ -125,6 +130,10 @@ $btn-height: 32px;
   background-color: darken($btn-danger-color, 10%);
 }
 
+.btn-danger:focus {
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 3px $btn-focus-color;
+}
+
 .btn-danger.disabled,
 .btn-danger:disabled,
 .btn-danger.disabled:hover,
@@ -147,7 +156,7 @@ $btn-height: 32px;
   font-size: $base-font-size;
   color: $btn-primary-color;
   line-height: 20px;
-  padding: 5px 10px;
+  padding: 4px 10px 6px;
 }
 
 .btn-link.active,
@@ -247,7 +256,7 @@ $btn-height: 32px;
     }
 
     &:checked:focus + label {
-      box-shadow: inset 0 2px 4px $gray-200, 0 0 4px $btn-focus-color;
+      box-shadow: inset 0 2px 4px darken($gray-100, 14%), 0 0 4px $btn-focus-color;
     }
   }
 

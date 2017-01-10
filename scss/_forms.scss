@@ -1,4 +1,4 @@
-$input-focus-color: $cotton-candy !default;
+$input-focus-color: $focus-color !default;
 $input-large-font-size: 18px !default;
 $input-font-size: 13px !default;
 $input-mini-font-size: 12px !default;
@@ -94,8 +94,7 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: darken($input-focus-color, 10%);
-  box-shadow: 0 0 4px $input-focus-color;
+  box-shadow: 0 0 0 3px $input-focus-color;
   z-index: z-index('input-focus');
 }
 

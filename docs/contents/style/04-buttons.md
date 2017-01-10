@@ -11,8 +11,6 @@ When using a `<button>` element, always specify the type. When using an `<a>` el
 {{#example 'html'}}
 <button type="button" class="btn">Button Button</button>
 <a class="btn" href="#" role="button">Link Button</a>
-<a class="btn" href="#" role="button">Link Button</a>
-<a class="btn" href="#" role="button">Link Button</a>
 {{/example}}
 
 Buttons come in two sizes, big and small. Just add a `.btn-mini` to use the smaller variation.
