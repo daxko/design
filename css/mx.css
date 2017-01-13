@@ -507,6 +507,11 @@ a:focus {
   outline: none;
 }
 
+a:active, a.active, a:active:focus, a.active:focus {
+  box-shadow: none;
+  outline: none;
+}
+
 .cf:before, .list .list-item:before, .cf:after, .list .list-item:after {
   content: " ";
   display: table;
@@ -816,7 +821,6 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px #89baeb;
   z-index: 10;
 }
 
@@ -1141,7 +1145,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn:hover {
-  border-color: #c2c2c2;
+  border-color: #757575;
   background-color: gainsboro;
   text-decoration: none;
 }
@@ -1149,8 +1153,16 @@ form .grid [class*=col-] > label textarea {
 .btn:active,
 .btn.active,
 .btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label {
-  border-color: #757575;
+.btn-group > input[type=radio]:checked + label,
+.btn:active:focus,
+.btn-group > input[type=checkbox]:focus + label:active,
+.btn-group > input[type=radio]:focus + label:active,
+.btn.active:focus,
+.btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:focus + label.active,
+.btn-group > input[type=checkbox]:checked + label:focus,
+.btn-group > input[type=radio]:checked + label:focus {
+  border-color: #c2c2c2;
   background-color: gainsboro;
   box-shadow: none;
   background-image: none;
@@ -1196,8 +1208,11 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary.active:focus {
   background-color: #025aa5;
+  border-color: #013e73;
   box-shadow: none;
 }
 
@@ -1228,8 +1243,12 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-danger:active,
-.btn-danger.active {
+.btn-danger.active,
+.btn-danger:active:focus,
+.btn-danger.active:focus {
   background-color: #c9302c;
+  border-color: #a02622;
+  box-shadow: none;
 }
 
 .btn-danger:focus {
@@ -1266,6 +1285,13 @@ form .grid [class*=col-] > label textarea {
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
+}
+
+.btn-link:focus,
+.btn-link:focus {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 3px #89baeb;
 }
 
 .btn-link:hover {
@@ -1358,7 +1384,9 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-mini:active,
-.btn-mini.active {
+.btn-mini.active,
+.btn-mini:active:focus,
+.btn-mini.active:focus {
   padding: 2px 6px;
 }
 

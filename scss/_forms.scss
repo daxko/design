@@ -94,7 +94,6 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px $input-focus-color;
   z-index: z-index('input-focus');
 }
 

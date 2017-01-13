@@ -40,6 +40,13 @@ a {
     box-shadow: 0 0 0 3px $focus-color;
     outline: none;
   }
+  &:active,
+  &.active,
+  &:active:focus,
+  &.active:focus {
+    box-shadow: none;
+    outline: none;
+  }
 }
 
 .cf {

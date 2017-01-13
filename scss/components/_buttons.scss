@@ -43,14 +43,16 @@ $btn-height: 32px;
 }
 
 .btn:hover {
-  border-color: darken($btn-color, 20%);
+  border-color: darken($gray-300, 16%);
   background-color: darken($btn-color, 10%);
   text-decoration: none;
 }
 
 .btn:active,
-.btn.active {
-  border-color: darken($gray-300, 16%);
+.btn.active,
+.btn:active:focus,
+.btn.active:focus {
+  border-color: darken($btn-color, 20%);
   background-color: darken($btn-color, 10%);
   box-shadow: none;
   background-image: none;
@@ -93,8 +95,11 @@ $btn-height: 32px;
 }
 
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary.active:focus {
   background-color: darken($btn-primary-color, 10%);
+  border-color: darken($btn-primary-color, 20%);
   box-shadow: none;
 }
 
@@ -126,8 +131,12 @@ $btn-height: 32px;
 }
 
 .btn-danger:active,
-.btn-danger.active {
+.btn-danger.active,
+.btn-danger:active:focus,
+.btn-danger.active:focus {
   background-color: darken($btn-danger-color, 10%);
+  border-color: darken($btn-danger-color, 20%);
+  box-shadow: none;
 }
 
 .btn-danger:focus {
@@ -166,6 +175,13 @@ $btn-height: 32px;
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
+}
+
+.btn-link:focus,
+.btn-link:focus {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 3px $focus-color;
 }
 
 .btn-link:hover {
@@ -271,7 +287,9 @@ $btn-height: 32px;
 }
 
 .btn-mini:active,
-.btn-mini.active {
+.btn-mini.active,
+.btn-mini:active:focus,
+.btn-mini.active:focus {
   padding: 2px 6px;
 }
 
