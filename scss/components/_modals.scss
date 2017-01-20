@@ -53,9 +53,8 @@ $modal-backdrop-color: rgba($gray-500, .6);
 
 .modal-header,
 .modal-footer {
-  background-color: $modal-background-color;
   border: 0 solid $modal-border-color;
-  padding: .5rem 1rem;
+  padding: .67rem 1rem;
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -74,19 +73,19 @@ $modal-backdrop-color: rgba($gray-500, .6);
   color: $gray-300;
   &:hover {
     color: $gray-900;
-    background-color: $gray-100;
   }
 }
 
 .modal-header {
   border-bottom-width: 1px;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: -1rem;
   padding-right: 4rem;
-  @extend %h5;
+  @extend %h3;
 }
 
 .modal-footer {
+  background-color: $modal-background-color;
   border-top-width: 1px;
   margin-bottom: -1rem;
   text-align: right;

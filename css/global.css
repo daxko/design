@@ -433,7 +433,7 @@ h2, fieldset legend {
   font-size: 20px;
 }
 
-h3 {
+h3, .modal-header {
   font-size: 16px;
 }
 
@@ -441,7 +441,7 @@ h4 {
   font-size: 14px;
 }
 
-h5, .modal-header {
+h5 {
   font-size: 12px;
 }
 
@@ -2375,9 +2375,8 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header,
 .modal-footer {
-  background-color: #f5f5f5;
   border: 0 solid #e0e0e0;
-  padding: .5rem 1rem;
+  padding: .67rem 1rem;
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -2398,17 +2397,17 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header .close:hover {
   color: #212121;
-  background-color: #e0e0e0;
 }
 
 .modal-header {
   border-bottom-width: 1px;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: -1rem;
   padding-right: 4rem;
 }
 
 .modal-footer {
+  background-color: #f5f5f5;
   border-top-width: 1px;
   margin-bottom: -1rem;
   text-align: right;
