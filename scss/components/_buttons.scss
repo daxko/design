@@ -1,5 +1,6 @@
 $btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $btn-color: $gray-50 !default;
+$btn-border-color: $gray-300 !default;
 $btn-text-color: $gray-900 !default;
 $btn-primary-color: #0275d8 !default;
 $btn-primary-text-color: #fff !default;
@@ -19,9 +20,9 @@ $btn-height: 32px;
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid $gray-300;
+  border: 1px solid $btn-border-color;
   border-radius: .2em;
-  box-shadow: 0 -1px 0 $gray-300 inset;
+  box-shadow: 0 -1px 0 $btn-border-color inset;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
@@ -43,7 +44,7 @@ $btn-height: 32px;
 }
 
 .btn:hover {
-  border-color: darken($gray-300, 16%);
+  border-color: darken($btn-border-color, 20%);
   background-color: darken($btn-color, 10%);
   text-decoration: none;
 }
