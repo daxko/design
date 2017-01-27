@@ -1,6 +1,6 @@
 ---
 title: "Component Library"
-theme: "key-lime"
+theme: "red-velvet"
 template: toc.hbs
 ---
 

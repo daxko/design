@@ -1,13 +1,13 @@
 ---
 title: "Member Experience (MX)"
-theme: "cotton-candy"
+theme: "key-lime"
 template: toc.hbs
 stylesheet: "/css/mx-styleguide.css"
 ---
 
 MX is built on top of Daxko's common components, but adds specialized components and colors made specifically to serve members and to match the client's branding.
 
-<link id="theme" rel="stylesheet" href="/css/themes/theme-ymca-green-blue.css">
+<link id="theme" rel="stylesheet" href="/css/themes/theme-ymca-red-orange.css">
 
 <div class="dropdown toggle-theme tooltip tooltip-w" id="toggle-theme" aria-label="Change Theme">
   <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
