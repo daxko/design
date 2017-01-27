@@ -15,6 +15,17 @@ For simple text components, you can use a <code>.theme--_**level**_-_**shade**_<
 <h5 class="theme--secondary-dark">Theme Secondary Color (Dark)</h5>
 <h5 class="theme--secondary-med">Theme Secondary Color (Medium)</h5>
 <h5 class="theme--secondary-light">Theme Secondary Color (Light)</h5>
+
+<div class="dropdown">
+  <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
+    Dropdown <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#" class="dropdown-menu-item">Bacon</a></li>
+    <li><a href="#" class="dropdown-menu-item">Ham</a></li>
+    <li><a href="#" class="dropdown-menu-item">Sausage</a></li>
+  </ul>
+</div>
 {{/example}}
 
 ### Advanced Theming
