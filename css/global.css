@@ -2609,7 +2609,7 @@ form .grid [class*=col-] > label textarea {
 .toggle-switch {
   cursor: pointer;
   position: relative;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 0 6px;
   display: inline-block;
   margin: 0;
@@ -2675,7 +2675,7 @@ form .grid [class*=col-] > label textarea {
   height: 32px;
   left: 0;
   right: 0;
-  border-radius: 4px;
+  border-radius: 16px;
   background-color: #e0e0e0;
   border: 1px solid lightgray;
   transition: background-color linear .2s;
@@ -2684,12 +2684,11 @@ form .grid [class*=col-] > label textarea {
 
 .toggle-switch .switch:after {
   content: "";
-  border-radius: 3px;
+  border-radius: 16px;
   position: absolute;
   height: 30px;
   width: 30px;
   background-color: #fff;
-  right: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   transition: all ease-out .2s;
 }
@@ -2700,8 +2699,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .toggle-switch input:checked ~ .switch:after {
-  margin-right: -30px;
-  right: 100%;
+  right: 0;
 }
 
 .tooltip {
