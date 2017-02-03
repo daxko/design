@@ -3,13 +3,20 @@ $active-status-color: #4ebf5a !default;
 .status-flag {
   display: inline-block;
   height: .8em;
-  width: .8em;
+  width: .85em;
   border-radius: 50%;
   background-color: $gray-100;
   margin-right: .3em;
 }
 
 .status-flag--active {
-  background-color: $active-status-color;
-  box-shadow: 0 0 5px rgba($active-status-color, .65);
+  background-color: $active-status-color;  
+}
+
+.status-flag--on-hold {
+  background-color: $banana-pudding;  
+}
+
+.status-flag--prospect {
+  background-color: $primary-color;
 }

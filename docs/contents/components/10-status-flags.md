@@ -6,12 +6,23 @@ Status flags are used to indicate *active* or *inactive* status for anything tha
 <!-- hide -->
 <p>
 <!-- /hide -->
-  <span class="status-flag tooltip" aria-label="Inactive"></span> Inactive User
+  <span class="status-flag tooltip" aria-label="Inactive"></span> Inactive
 <!-- hide -->
 </p>
 <p>
 <!-- /hide -->
-  <span class="status-flag status-flag--active tooltip" aria-label="Active"></span> Active User
+  <span class="status-flag status-flag--active tooltip" aria-label="Active"></span> Active
+<!-- hide -->
+</p>
+<!-- /hide -->
+<p>
+<!-- /hide -->
+  <span class="status-flag status-flag--on-hold tooltip" aria-label="On Hold"></span> On Hold
+<!-- hide -->
+</p>
+<p>
+<!-- /hide -->
+  <span class="status-flag status-flag--prospect tooltip" aria-label="Prospect"></span> Prospect
 <!-- hide -->
 </p>
 <!-- /hide -->

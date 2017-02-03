@@ -1095,7 +1095,6 @@ form .grid [class*=col-] > label textarea {
 
 [class^="icon-"].flip,
 [class*=" icon-"].flip {
-  -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
       transform: scaleX(-1);
   -webkit-filter: FlipH;
@@ -2278,29 +2277,7 @@ form .grid [class*=col-] > label textarea {
   background-repeat: no-repeat;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em;
   animation-mode: forwards;
-  -webkit-animation: loader 1s infinite;
-          animation: loader 1s infinite;
-}
-
-@-webkit-keyframes loader {
-  10% {
-    background-position: 0 0.2em, 0.75em 0, 1.5em 0;
-  }
-  20% {
-    background-position: 0 0.4em, 0.75em 0.2em, 1.5em 0;
-  }
-  30% {
-    background-position: 0 0.2em, 0.75em 0.4em, 1.5em 0.2em;
-  }
-  40% {
-    background-position: 0 0, 0.75em 0.2em, 1.5em 0.4em;
-  }
-  50% {
-    background-position: 0 0, 0.75em 0, 1.5em 0.2em;
-  }
-  60% {
-    background-position: 0 0, 0.75em 0, 1.5em 0;
-  }
+  animation: loader 1s infinite;
 }
 
 @keyframes loader {
@@ -2342,10 +2319,8 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: 50%;
   transition: all ease-in-out .3s;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  transition-property: opacity, -webkit-transform;
+  -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
   transition-property: opacity, transform;
 }
 
@@ -2541,14 +2516,11 @@ form .grid [class*=col-] > label textarea {
   width: 100%;
   display: block;
   border-bottom: 4px solid #a5dbd8;
-  -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-          transform: scaleY(0);
-  transition: -webkit-transform ease-in-out .15s;
+  -ms-transform: scaleY(0);
+      transform: scaleY(0);
   transition: transform ease-in-out .15s;
-  -webkit-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+      transform-origin: 0 100%;
 }
 
 .tabs .active > a {
@@ -2556,9 +2528,8 @@ form .grid [class*=col-] > label textarea {
 }
 
 .tabs .active > a:before {
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
+  -ms-transform: scaleY(1);
+      transform: scaleY(1);
 }
 
 .tabs-vertical {
@@ -2619,24 +2590,20 @@ form .grid [class*=col-] > label textarea {
 .tabs-vertical a:before {
   border-bottom: none;
   border-right: 5px solid #a5dbd8;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: right top;
-      -ms-transform-origin: right top;
-          transform-origin: right top;
+  -ms-transform: scaleX(0);
+      transform: scaleX(0);
+  -ms-transform-origin: right top;
+      transform-origin: right top;
 }
 
 .tabs-vertical.right a:before {
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
+  -ms-transform-origin: left top;
+      transform-origin: left top;
 }
 
 .tabs-vertical .active > a:before {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
+  -ms-transform: scaleX(1);
+      transform: scaleX(1);
 }
 
 .toggle-switch {
@@ -2657,9 +2624,8 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
@@ -2783,9 +2749,8 @@ form .grid [class*=col-] > label textarea {
 .tooltip-s:after,
 .tooltip-s:before {
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
 }
 
 .tooltip:after,
@@ -2821,9 +2786,8 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: auto;
   bottom: auto;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
 }
 
 .tooltip-e:before,
@@ -2856,7 +2820,7 @@ form .grid [class*=col-] > label textarea {
 .status-flag {
   display: inline-block;
   height: .8em;
-  width: .8em;
+  width: .85em;
   border-radius: 50%;
   background-color: #e0e0e0;
   margin-right: .3em;
@@ -2864,6 +2828,13 @@ form .grid [class*=col-] > label textarea {
 
 .status-flag--active {
   background-color: #4ebf5a;
-  box-shadow: 0 0 5px rgba(78, 191, 90, 0.65);
+}
+
+.status-flag--on-hold {
+  background-color: #efad1c;
+}
+
+.status-flag--prospect {
+  background-color: #0275d8;
 }
 /*# sourceMappingURL=global.css.map */
