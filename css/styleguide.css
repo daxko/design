@@ -994,6 +994,7 @@ form .grid [class*=col-] > label textarea {
     margin-left: 0;
   }
   .form-horizontal .control-group input,
+  .form-horizontal .control-group select,
   .form-horizontal .control-group .input-group {
     width: 100%;
   }
