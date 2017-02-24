@@ -2498,9 +2498,9 @@ form .grid [class*=col-] > label textarea {
   display: inline-block;
   text-decoration: none;
   color: #9e9e9e;
-  line-height: 2;
-  padding-left: .6em;
-  padding-right: .6em;
+  line-height: 2.5;
+  padding-left: 1em;
+  padding-right: 1em;
   transition: color ease-in-out .15s;
 }
 
@@ -2515,7 +2515,7 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   width: 100%;
   display: block;
-  border-bottom: 4px solid #a5dbd8;
+  border-bottom: 3px solid #a5dbd8;
   -ms-transform: scaleY(0);
       transform: scaleY(0);
   transition: transform ease-in-out .15s;
@@ -2567,7 +2567,7 @@ form .grid [class*=col-] > label textarea {
   top: 0;
   right: 0;
   border-right: none;
-  border-left: 5px solid #a5dbd8;
+  border-left: 3px solid #a5dbd8;
 }
 
 .tabs-vertical.right ul {
@@ -2589,7 +2589,7 @@ form .grid [class*=col-] > label textarea {
 
 .tabs-vertical a:before {
   border-bottom: none;
-  border-right: 5px solid #a5dbd8;
+  border-right: 3px solid #a5dbd8;
   -ms-transform: scaleX(0);
       transform: scaleX(0);
   -ms-transform-origin: right top;
