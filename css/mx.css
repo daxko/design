@@ -820,7 +820,7 @@ input.input-block {
 
 input:focus,
 select:focus,
-textarea:focus {
+textarea:_but {
   z-index: 10;
 }
 
@@ -1773,7 +1773,7 @@ form .grid [class*=col-] > label textarea {
 
 .toggle-switch input[type=checkbox]:focus ~ .switch {
   border: 1px solid #5da1e4;
-  box-shadow: 0 0 4px #89baeb;
+  box-shadow: 0 0 0 3px #89baeb;
 }
 
 .toggle-switch [data-on]:before,

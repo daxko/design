@@ -93,7 +93,7 @@ input.input-block {
 
 input:focus,
 select:focus,
-textarea:focus {
+textarea:_but {
   z-index: z-index('input-focus');
 }
 
