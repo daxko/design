@@ -31,6 +31,13 @@ textarea {
   position: relative;
 }
 
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 3px 8px;
+}
+
 textarea {
   height: auto;
   min-width: 250px;
@@ -93,7 +100,8 @@ input.input-block {
 
 input:focus,
 select:focus,
-textarea:_but {
+textarea:focus {
+  border: 1px solid $input-focus-color;
   z-index: z-index('input-focus');
 }
 
