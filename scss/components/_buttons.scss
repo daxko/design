@@ -40,7 +40,7 @@ $btn-height: 32px;
 }
 
 .btn:focus {
-  box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 3px $btn-focus-color;
+  box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 2px $btn-focus-color;
 }
 
 .btn:hover {
@@ -105,7 +105,7 @@ $btn-height: 32px;
 }
 
 .btn-primary:focus {
-  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 3px $btn-focus-color;
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 2px $btn-focus-color;
 }
 
 .btn-primary:disabled,
@@ -141,7 +141,7 @@ $btn-height: 32px;
 }
 
 .btn-danger:focus {
-  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 3px $btn-focus-color;
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
 }
 
 .btn-danger.disabled,
@@ -182,7 +182,7 @@ $btn-height: 32px;
 .btn-link:focus {
   border-color: transparent;
   background-color: transparent;
-  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 3px $focus-color;
+  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 2px $focus-color;
 }
 
 .btn-link:hover {
