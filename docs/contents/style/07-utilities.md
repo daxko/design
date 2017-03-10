@@ -27,6 +27,52 @@ If you need to hide an element for visual, but not for screen readers you can us
 <p class="sr-only">Only screen readers can see me!</p>
 {{/example}}
 
+### Responsive Display Utilities
+
+You can also hide and display elements responsively by using `.hide-*` or `.display-*` utility classes.
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>All sizes</th>
+      <th>Small size <div><small>(≥ 800px)</small></div></th>
+      <th>Medium size <div><small>(≥ 1000px)</small></div></th>
+      <th>Large size <div><small>(≥ 1200px)</small></div></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-right">Hide</th>
+      <td>`.hide`</td>
+      <td>`.hide-sm`</td>
+      <td>`.hide-md`</td>
+      <td>`.hide-lg`</td>
+    </tr>
+    <tr>
+      <th class="text-right">Display Inline</th>
+      <td>`.display-inline`</td>
+      <td>`.display-sm-inline`</td>
+      <td>`.display-md-inline`</td>
+      <td>`.display-lg-inline`</td>
+    </tr>
+    <tr>
+      <th class="text-right">Display Block</th>
+      <td>`.display-block`</td>
+      <td>`.display-sm-block`</td>
+      <td>`.display-md-block`</td>
+      <td>`.display-lg-block`</td>
+    </tr>
+    <tr>
+      <th class="text-right">Display Inline-Block</th>
+      <td>`.display-inline-block`</td>
+      <td>`.display-sm-inline-block`</td>
+      <td>`.display-md-inline-block`</td>
+      <td>`.display-lg-inline-block`</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Sticky
 
 You can make any element [sticky](https://developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning), with a `.sticky` class. The element will remain stuck to the viewport until the positioning specified exceeds its closest relative container.
