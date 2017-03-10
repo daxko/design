@@ -11,7 +11,7 @@
       <a href="#">Association Name</a>
     </div>
     <ul class="nav">
-      <li><a href="#">Link</a></li>
+      <li><a class="nav--active" href="#">Active Link</a></li>
       <li><a href="#">Link</a></li>
       <li><a href="#">Link</a></li>
     </ul>

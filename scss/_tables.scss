@@ -1,4 +1,5 @@
 $table-border-color: $gray-100 !default;
+$table-header-color: $gray-100 !default;
 $table-background-color: $gray-50 !default;
 
 // Tables
@@ -11,6 +12,7 @@ $table-background-color: $gray-50 !default;
 
 .table.table-bordered {
   border: 1px solid $table-border-color;
+  border-radius: 3px;
 }
 
 .table.table-fixed {
@@ -27,7 +29,7 @@ $table-background-color: $gray-50 !default;
   > thead > tr {
     td,
     th {
-      background-color: $table-background-color;
+      background-color: $table-header-color;
       padding: .5em 1em;
       vertical-align: bottom;
     }

@@ -26,6 +26,7 @@ $navbar-link-color: $cotton-candy !default;
   height: 40px;
   line-height: 40px;
   font-size: 20px;
+  font-weight: 200;
   display: inline-block;
   float: left;
   margin-right: 1em;
@@ -54,6 +55,10 @@ $navbar-link-color: $cotton-candy !default;
     border-top-color: #fff;
   }
 
+  .nav--active {
+    color: #fff;
+  }
+
   > li {
     display: inline-block;
     float: left;
@@ -64,7 +69,7 @@ $navbar-link-color: $cotton-candy !default;
     display: block;
     height: 40px;
     line-height: 40px;
-    padding: 0 1em;
+    padding: 3px 1em 0;
     font-size: $base-font-size;
   }
 
