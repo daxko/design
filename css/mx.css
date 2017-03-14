@@ -1042,8 +1042,10 @@ form .grid [class*=col-] > label textarea {
 }
 
 .table.table-bordered {
-  border: 1px solid #e0e0e0;
   border-radius: 3px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e0e0e0;
 }
 
 .table.table-fixed {
@@ -1058,14 +1060,14 @@ form .grid [class*=col-] > label textarea {
 .table > thead > tr td,
 .table > thead > tr th {
   background-color: #e0e0e0;
-  padding: .5em 1em;
+  padding: 0.8em 1em;
   vertical-align: bottom;
 }
 
 .table > tbody > tr td,
 .table > tbody > tr th {
   border-top: 1px solid #e0e0e0;
-  padding: .5em 1em;
+  padding: 0.75em 1em;
   vertical-align: top;
 }
 
