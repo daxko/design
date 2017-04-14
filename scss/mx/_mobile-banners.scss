@@ -1,14 +1,14 @@
-.promotion {
+.mobile-banner {
   position: relative;
 }
 
-.promotion--tagline {
+.mobile-banner--tagline {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
 
-.promotion--color-block {
+.mobile-banner--color-block {
   top: 50%;
   bottom: auto;
   text-align: center;
@@ -16,7 +16,7 @@
   color: transparent;
 }
 
-.promotion--tagline:before {
+.mobile-banner--tagline:before {
   content: "";
   position: absolute;
   top: 0;
@@ -28,21 +28,21 @@
   opacity: .8;
 }
 
-.promotion--image {
+.mobile-banner--image {
   display: block;
-  width: 100%;
+  width: 100%
 }
 
-.promotion--text {
+.mobile-banner--text {
   padding: .5em;
   position: relative;
   z-index: 2;
   color: #fff;
 }
 
-.promotion--pending {
+.mobile-banner--pending {
   display: block;
   width: 100%;
   padding: 0;
-  padding-bottom: (2/3) * 100%; // match the same aspect ratio of the promotional images
+  padding-bottom: (2/3) * 100%; // match the same aspect ratio of the mobile banner images
 }

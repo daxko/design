@@ -2346,17 +2346,17 @@ a.tile {
   margin-top: -8.5em;
 }
 
-.promotion {
+.mobile-banner {
   position: relative;
 }
 
-.promotion--tagline {
+.mobile-banner--tagline {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
 
-.promotion--color-block {
+.mobile-banner--color-block {
   top: 50%;
   bottom: auto;
   text-align: center;
@@ -2365,7 +2365,7 @@ a.tile {
   color: transparent;
 }
 
-.promotion--tagline:before {
+.mobile-banner--tagline:before {
   content: "";
   position: absolute;
   top: 0;
@@ -2377,19 +2377,19 @@ a.tile {
   opacity: .8;
 }
 
-.promotion--image {
+.mobile-banner--image {
   display: block;
   width: 100%;
 }
 
-.promotion--text {
+.mobile-banner--text {
   padding: .5em;
   position: relative;
   z-index: 2;
   color: #fff;
 }
 
-.promotion--pending {
+.mobile-banner--pending {
   display: block;
   width: 100%;
   padding: 0;
