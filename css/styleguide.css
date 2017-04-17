@@ -1071,8 +1071,7 @@ form .grid [class*=col-] > label textarea {
 [class*=" icon-"].flip {
   -ms-transform: scaleX(-1);
       transform: scaleX(-1);
-  -webkit-filter: FlipH;
-          filter: FlipH;
+  filter: FlipH;
   image-rendering: -moz-crisp-edges;
   display: inline-block;
 }

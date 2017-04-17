@@ -2517,6 +2517,19 @@ a.tile {
   padding-bottom: 66.6666666667%;
 }
 
+.promotion--progress-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a6a6a6;
+  display: inline-block;
+  margin: 5px;
+}
+
+.promotion--progress-circle--current {
+  background-color: #545454;
+}
+
 .docs-nav {
   position: absolute;
   width: 100%;
