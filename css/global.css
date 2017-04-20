@@ -429,11 +429,11 @@ h1 {
   font-size: 24px;
 }
 
-h2, fieldset legend {
+h2 {
   font-size: 20px;
 }
 
-h3, .modal-header {
+h3, fieldset legend, .modal-header {
   font-size: 16px;
 }
 
@@ -2047,7 +2047,7 @@ form .grid [class*=col-] > label textarea {
 
 .btn-group > input[type=checkbox]:checked:focus + label,
 .btn-group > input[type=radio]:checked:focus + label {
-  box-shadow: inset 0 2px 4px #bcbcbc, 0 0 4px #89baeb;
+  box-shadow: 0 -1px 0 #bcbcbc inset, 0 0 0 2px #89baeb;
 }
 
 .btn-mini {

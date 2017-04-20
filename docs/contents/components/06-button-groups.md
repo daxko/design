@@ -1,8 +1,25 @@
 ## Button Groups
 
-You can create button groups driven by checkboxes and radio buttons -- no javascript needed!
+Buttons can also be combined into button groups. Wrap them with a `.btn-group` class and your buttons will automatically be displayed with the correct spacing.
 
+{{#example 'html'}}
+<div class="btn-group">
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-mini">Mini Button</button>
+  <button class="btn btn-mini">Mini Button</button>
+  <button class="btn btn-mini">Mini Button</button>
+</div>
+{{/example}}
+
+
+You can create button groups driven by checkboxes and radio buttons -- no javascript needed!
 To select a button, just add a `checked` attribute to the checkbox or radio button you want to be selected.
+
 
 ### Checkbox Group
 
@@ -28,6 +45,7 @@ Use checkboxes when you need a button group where multiple items can be selected
   <label for="saturday" class="btn">Saturday</label>
 </div>
 {{/example}}
+
 
 ### Radio Group
 

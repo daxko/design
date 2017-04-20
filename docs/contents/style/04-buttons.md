@@ -66,24 +66,6 @@ Disabled styling is also applied to primary and danger buttons:
 <button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
 {{/example}}
 
-### Button Groups
-
-Buttons can also be combined into button groups. Wrap them with a `.btn-group` class and your buttons will automatically be displayed with the correct spacing.
-
-{{#example 'html'}}
-<div class="btn-group">
-  <button class="btn">Button</button>
-  <button class="btn">Button</button>
-  <button class="btn">Button</button>
-</div>
-
-<div class="btn-group">
-  <button class="btn btn-mini">Mini Button</button>
-  <button class="btn btn-mini">Mini Button</button>
-  <button class="btn btn-mini">Mini Button</button>
-</div>
-{{/example}}
-
 ### Block Buttons
 
 You can make any button take up the full width of its container by adding a `.btn-block` class.
@@ -92,3 +74,4 @@ You can make any button take up the full width of its container by adding a `.bt
 <button class="btn btn-block">Button</button>
 <button class="btn btn-mini btn-block">Mini Button</button>
 {{/example}}
+
