@@ -1645,7 +1645,29 @@ form .grid [class*=col-] > label textarea {
   background-repeat: no-repeat;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em;
   animation-mode: forwards;
-  animation: loader 1s infinite;
+  -webkit-animation: loader 1s infinite;
+          animation: loader 1s infinite;
+}
+
+@-webkit-keyframes loader {
+  10% {
+    background-position: 0 0.2em, 0.75em 0, 1.5em 0;
+  }
+  20% {
+    background-position: 0 0.4em, 0.75em 0.2em, 1.5em 0;
+  }
+  30% {
+    background-position: 0 0.2em, 0.75em 0.4em, 1.5em 0.2em;
+  }
+  40% {
+    background-position: 0 0, 0.75em 0.2em, 1.5em 0.4em;
+  }
+  50% {
+    background-position: 0 0, 0.75em 0, 1.5em 0.2em;
+  }
+  60% {
+    background-position: 0 0, 0.75em 0, 1.5em 0;
+  }
 }
 
 @keyframes loader {
@@ -1687,8 +1709,10 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: 50%;
   transition: all ease-in-out .3s;
-  -ms-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
 }
 
@@ -1794,8 +1818,9 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translateY(-50%) translateX(-50%);
-      transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
@@ -1919,8 +1944,9 @@ form .grid [class*=col-] > label textarea {
 .tooltip-s:after,
 .tooltip-s:before {
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .tooltip:after,
@@ -1956,8 +1982,9 @@ form .grid [class*=col-] > label textarea {
   top: 50%;
   left: auto;
   bottom: auto;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .tooltip-e:before,
@@ -2155,7 +2182,8 @@ nav.nav a {
 .nav .badge {
   background-color: red;
   box-shadow: none;
-  transform: translate3d(5px, -5px, 0);
+  -webkit-transform: translate3d(5px, -5px, 0);
+          transform: translate3d(5px, -5px, 0);
   position: absolute;
   z-index: 1;
   display: inherit;
@@ -2171,7 +2199,8 @@ nav.nav a {
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -2238,8 +2267,9 @@ a.tile {
 .tile--next {
   position: absolute;
   right: .5em;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #a6a6a6;
 }
 
@@ -2291,8 +2321,10 @@ a.tile {
 
 .card-list {
   position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .card {
@@ -2304,8 +2336,10 @@ a.tile {
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.075);
   position: relative;
   transition: all ease-in-out .25s;
+  transition-property: -webkit-transform, opacity, background-color;
   transition-property: transform, opacity, background-color;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .card--title {
@@ -2334,8 +2368,9 @@ a.tile {
 
 .card:not(:last-child) {
   background-color: #f6f6f6;
-  -ms-transform: scale(0.95);
-      transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .card:not(:last-child):not(:first-child) {
@@ -2346,26 +2381,27 @@ a.tile {
   margin-top: -8.5em;
 }
 
-.promotion {
+.mobile-banner {
   position: relative;
 }
 
-.promotion--tagline {
+.mobile-banner--tagline {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
 
-.promotion--color-block {
+.mobile-banner--color-block {
   top: 50%;
   bottom: auto;
   text-align: center;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: transparent;
 }
 
-.promotion--tagline:before {
+.mobile-banner--tagline:before {
   content: "";
   position: absolute;
   top: 0;
@@ -2377,22 +2413,62 @@ a.tile {
   opacity: .8;
 }
 
-.promotion--image {
+.mobile-banner--image {
   display: block;
   width: 100%;
 }
 
-.promotion--text {
+.mobile-banner--text {
   padding: .5em;
   position: relative;
   z-index: 2;
   color: #fff;
 }
 
-.promotion--pending {
+.mobile-banner--pending {
   display: block;
   width: 100%;
   padding: 0;
   padding-bottom: 66.6666666667%;
+}
+
+.mobile-banner--text {
+  padding: .5em .5em 1em;
+}
+
+.mobile-banner--progress {
+  position: relative;
+  margin-top: -21px;
+  z-index: 2;
+}
+
+.mobile-banner--progress-circle {
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  background-color: transparent;
+  display: inline-block;
+  margin: 4px 6px;
+}
+
+.mobile-banner--progress-circle--current {
+  background-color: #FFF;
+  border: 1px solid #FFF;
+}
+
+.mobile-banner--progress-circle {
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  background-color: transparent;
+  display: inline-block;
+  margin: 4px 6px;
+}
+
+.mobile-banner--progress-circle--current {
+  background-color: #FFF;
+  border: 1px solid #FFF;
 }
 /*# sourceMappingURL=mx.css.map */
