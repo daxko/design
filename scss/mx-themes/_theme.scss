@@ -72,6 +72,7 @@ a.btn,
 .btn-link,
 .btn:hover {
   color: theme-color($theme-color-primary, 'light');
+  border: 1px solid theme-color($theme-color-primary, 'light');
 }
 
 .btn-inverted,
@@ -117,6 +118,17 @@ a.btn-primary:hover,
 .btn-primary:hover {
   border: 1px solid theme-color($theme-color-primary, 'medium');
   background-color: theme-color($theme-color-primary, 'medium');
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled,
+.btn-primary:disabled:hover,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary:disabled:focus,
+.btn-primary:disabled.focus {
+  border: 1px solid lighten(theme-color($theme-color-primary, 'light'), 30%);
+  background-color: lighten(theme-color($theme-color-primary, 'light'), 30%);
 }
 
 .btn-inverted:active,

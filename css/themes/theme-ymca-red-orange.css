@@ -60,6 +60,7 @@ a.btn,
 .btn-link,
 .btn:hover {
   color: #f1592b;
+  border: 1px solid #f1592b;
 }
 
 .btn-inverted,
@@ -105,6 +106,17 @@ a.btn-primary:hover,
 .btn-primary:hover {
   border: 1px solid #ed1c24;
   background-color: #ed1c24;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled,
+.btn-primary:disabled:hover,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary:disabled:focus,
+.btn-primary:disabled.focus {
+  border: 1px solid #fac9bb;
+  background-color: #fac9bb;
 }
 
 .btn-inverted:active,

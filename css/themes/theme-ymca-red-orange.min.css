@@ -10,8 +10,7 @@ input:focus,select:focus,textarea:focus{border-color:#ed1c24;box-shadow:0 0 4px 
 .theme--secondary-med{color:#f47920}
 .theme--secondary-light{color:#fcaf17}
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#f1592b;color:#fff}
-.btn{border:1px solid #f1592b}
-.btn,.btn-link,.btn:hover,a.btn{color:#f1592b}
+.btn,.btn-link,.btn:hover,a.btn{color:#f1592b;border:1px solid #f1592b}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
 .btn-primary,.btn.active,.btn:active,.btn:focus{border:1px solid #f1592b}
 .btn:focus{box-shadow:0 0 6px #f1592b}
@@ -20,6 +19,7 @@ input:focus,select:focus,textarea:focus{border-color:#ed1c24;box-shadow:0 0 4px 
 .btn-primary.active,.btn-primary:active{border:1px solid #f1592b;background-color:#f1592b}
 .btn-primary:focus{background-color:#f1592b}
 .btn-primary:hover{border:1px solid #ed1c24;background-color:#ed1c24}
+.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary:disabled,.btn-primary:disabled.focus,.btn-primary:disabled:focus,.btn-primary:disabled:hover{border:1px solid #fac9bb;background-color:#fac9bb}
 .btn-inverted:active,.btn-inverted:focus{border-color:#fff;box-shadow:0 0 6px #fff}
 .card--title{color:#f47920}
 .calendar-week--active{background-color:#f47920}

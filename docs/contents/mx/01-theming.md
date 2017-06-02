@@ -9,12 +9,12 @@ When styling components, a good rule of thumb to follow is that _actions_ should
 For simple text components, you can use a <code>.theme--_**level**_-_**shade**_</code> class to add accent colors to specific elements. There's 2 levels of color, `primary` and `secondary` along with 3 shades of color, `light`, `medium`, and `dark`.
 
 {{#example 'html' 'page--dark'}}
-<h5 class="theme--primary-dark">Theme Primary Color (Dark)</h5>
-<h5 class="theme--primary-med">Theme Primary Color (Medium)</h5>
-<h5 class="theme--primary-light">Theme Primary Color (Light)</h5>
-<h5 class="theme--secondary-dark">Theme Secondary Color (Dark)</h5>
-<h5 class="theme--secondary-med">Theme Secondary Color (Medium)</h5>
-<h5 class="theme--secondary-light">Theme Secondary Color (Light)</h5>
+<h3 class="theme--primary-dark">Theme Primary Color (Dark)</h3>
+<h3 class="theme--primary-med">Theme Primary Color (Medium)</h3>
+<h3 class="theme--primary-light">Theme Primary Color (Light)</h3>
+<h3 class="theme--secondary-dark">Theme Secondary Color (Dark)</h3>
+<h3 class="theme--secondary-med">Theme Secondary Color (Medium)</h3>
+<h3 class="theme--secondary-light">Theme Secondary Color (Light)</h3>
 {{/example}}
 
 ### Advanced Theming
