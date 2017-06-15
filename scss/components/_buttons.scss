@@ -49,9 +49,10 @@ $btn-height: 32px;
   text-decoration: none;
 }
 
-.btn:focus,
 .btn:active,
-.btn.active {
+.btn.active,
+.btn:active:focus,
+.btn.active:focus {
   border-color: darken($btn-color, 20%);
   background-color: darken($btn-color, 10%);
   box-shadow: none;
@@ -88,22 +89,23 @@ $btn-height: 32px;
   box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset;
 }
 
-.btn-primary:focus {
-  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 2px $btn-focus-color;
-}
-
 .btn-primary:hover {
   background-color: darken($btn-primary-color, 10%);
   border-color: darken($btn-primary-color, 20%);
   box-shadow: 0 -1px 0 darken($btn-primary-color, 20%) inset;
 }
 
-.btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary.active:focus {
   background-color: darken($btn-primary-color, 10%);
   border-color: darken($btn-primary-color, 20%);
   box-shadow: none;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 2px $btn-focus-color;
 }
 
 .btn-primary:disabled,
@@ -123,22 +125,23 @@ $btn-height: 32px;
   box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
 }
 
-.btn-danger:focus {
-  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
-}
-
 .btn-danger:hover {
   background-color: darken($btn-danger-color, 10%);
   border-color: darken($btn-danger-color, 20%);
   box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
 }
 
-.btn-danger:focus,
 .btn-danger:active,
-.btn-danger.active {
+.btn-danger.active,
+.btn-danger:active:focus,
+.btn-danger.active:focus {
   background-color: darken($btn-danger-color, 10%);
   border-color: darken($btn-danger-color, 20%);
   box-shadow: none;
+}
+
+.btn-danger:focus {
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
 }
 
 .btn-danger.disabled,
@@ -166,6 +169,16 @@ $btn-height: 32px;
   padding: 4px 10px 6px;
 }
 
+.btn-link.active,
+.btn-link:active,
+.btn-link.active:focus,
+.btn-link:active:focus {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn-link:focus,
 .btn-link:focus {
   border-color: transparent;
   background-color: transparent;
@@ -175,14 +188,6 @@ $btn-height: 32px;
 .btn-link:hover {
   color: darken($btn-primary-color, 10%);
   text-decoration: underline;
-}
-
-.btn-link:focus,
-.btn-link:active,
-.btn-link.active {
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: none;
 }
 
 .btn-link:disabled,
@@ -282,9 +287,10 @@ $btn-height: 32px;
   padding: 1px 6px 3px;
 }
 
-.btn-mini:focus,
 .btn-mini:active,
-.btn-mini.active {
+.btn-mini.active,
+.btn-mini:active:focus,
+.btn-mini.active:focus {
   padding: 2px 6px;
 }
 
