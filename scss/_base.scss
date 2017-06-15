@@ -33,17 +33,16 @@ img {
 a {
   color: $primary-color;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
   &:focus {
     box-shadow: 0 0 0 3px $focus-color;
     outline: none;
   }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus,
   &:active,
-  &.active,
-  &:active:focus,
-  &.active:focus {
+  &.active {
     box-shadow: none;
     outline: none;
   }
