@@ -82,7 +82,7 @@ function defaultStylesheet(files, metalsmith, done) {
 // No prefixed highlight classes
 hljs.configure({ classPrefix: '' });
 
-metalsmith = metalsmith(__dirname)
+metalsmith(__dirname)
   .source('contents')
   .use(includePackageMetadata)
   .use(concatFiles)

@@ -33,7 +33,9 @@
         , e;
 
       $modal.trigger(e = $.Event('show', { relatedTarget: relatedTarget }));
-      if(that.isShown || e.isDefaultPrevented()) return;
+      if(that.isShown || e.isDefaultPrevented()) {
+        return;
+      }
 
       that.isShown = true;
 
@@ -61,7 +63,9 @@
       }
 
       that.$modal.trigger(e = $.Event('hide'));
-      if(!that.isShown || e.isDefaultPrevented()) return;
+      if(!that.isShown || e.isDefaultPrevented()) {
+        return;
+      }
 
       that.isShown = false;
 
@@ -96,8 +100,13 @@
       var $this = $(this)
         , data = $this.data('modal');
 
-      if(!data) $this.data('modal', (data = new Modal(this)));
-      if(typeof option === 'string') data[option](relatedTarget);
+      if(!data) {
+        $this.data('modal', (data = new Modal(this)));
+      }
+
+      if(typeof option === 'string') {
+        data[option](relatedTarget);
+      }
     });
   }
 

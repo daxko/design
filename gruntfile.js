@@ -159,10 +159,7 @@ module.exports = function(grunt) {
       }
     },
 
-    jshint: {
-      options: {
-        jshintrc: true
-      },
+    eslint: {
       files: [
         'gruntfile.js',
         '<%= config.js %>/*.js',
@@ -244,9 +241,9 @@ module.exports = function(grunt) {
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
-  grunt.registerTask('test', ['jshint', 'mocha']);
+  grunt.registerTask('test', ['eslint', 'mocha']);
   grunt.registerTask('assets', ['copy', 'sass', 'postcss', 'cssmin', 'parker']);
-  grunt.registerTask('build', ['assets', 'jshint', 'mocha', 'shell:metalsmith', 'htmlmin']);
+  grunt.registerTask('build', ['assets', 'eslint', 'mocha', 'shell:metalsmith', 'htmlmin']);
   grunt.registerTask('preview', ['assets', 'copy', 'shell:metalsmith', 'concurrent:docs']);
 
 };

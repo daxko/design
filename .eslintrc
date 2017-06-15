@@ -1,0 +1,7 @@
+{
+  extends: ["daxko"],
+  env: {
+    node: true,
+    browser: true
+  }
+}

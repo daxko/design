@@ -74,8 +74,14 @@ You can also adjust the vertical alignment of grid columns with `.top`, `.middle
 ### Responsive Grids
 
 <div class="alert alert-info">
-  <strong>Heads Up!</strong> You responsive layouts should ideally be based on the context of your content, and not the device. The classes provided below are simply helpers to quickly iterate. You can use the sass variables `$grid-sm-width`, `$grid-md-width` and `$grid-lg-width` to better customize your content breakpoints.
+  <strong>Heads Up!</strong> You responsive layouts should ideally be based on the context of your content, and not the device. The classes provided below are simply helpers to quickly iterate.
 </div>
+
+Out of the box, responsive breakpoints are determined from the `$responsive-breakpoints` sass map.
+
+```scss
+{{readfile "/scss/_breakpoints.scss"}}
+```
 
 Grids are built from the bottom up, starting out from small widths to larger widths -- allowing you to size the grid columns differently based on your content.
 

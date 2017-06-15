@@ -450,7 +450,7 @@ h6 {
 }
 
 .secondary {
-  color: #9e9e9e;
+  color: #616161;
 }
 
 h1 .secondary,
@@ -659,7 +659,7 @@ a:active, a.active, a:active:focus, a.active:focus {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .grid .col-md-1 {
     width: 8.3333333333%;
   }
@@ -1029,6 +1029,7 @@ form .grid [class*=col-] > label textarea {
     margin-left: 0;
   }
   .form-horizontal .control-group input,
+  .form-horizontal .control-group select,
   .form-horizontal .control-group .input-group {
     width: 100%;
   }
@@ -1716,6 +1717,87 @@ form .grid [class*=col-] > label textarea {
   visibility: hidden !important;
 }
 
+.display-inline,
+.display-block,
+.display-inline-block {
+  visibility: visible !important;
+}
+
+.display-inline {
+  display: inline !important;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.display-inline-block {
+  display: inline-block !important;
+}
+
+@media (min-width: 800px) {
+  .hide-sm {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .display-sm-inline,
+  .display-sm-block,
+  .display-sm-inline-block {
+    visibility: visible !important;
+  }
+  .display-sm-inline {
+    display: inline !important;
+  }
+  .display-sm-block {
+    display: block !important;
+  }
+  .display-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hide-md {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .display-md-inline,
+  .display-md-block,
+  .display-md-inline-block {
+    visibility: visible !important;
+  }
+  .display-md-inline {
+    display: inline !important;
+  }
+  .display-md-block {
+    display: block !important;
+  }
+  .display-md-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hide-lg {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .display-lg-inline,
+  .display-lg-block,
+  .display-lg-inline-block {
+    visibility: visible !important;
+  }
+  .display-lg-inline {
+    display: inline !important;
+  }
+  .display-lg-block {
+    display: block !important;
+  }
+  .display-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+
 .sr-only {
   border: 0 none;
   clip: rect(0, 0, 0, 0);
@@ -2122,12 +2204,13 @@ form .grid [class*=col-] > label textarea {
 .dropdown-menu .dropdown-menu-item, .tt-menu.tt-open .dropdown-menu-item {
   display: block;
   overflow: hidden;
-  padding: .3em 10px;
+  padding: .3em .8em;
   color: #424242;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
+  width: 100%;
 }
 
 .dropdown-menu a:hover, .tt-menu.tt-open a:hover,

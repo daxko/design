@@ -1,0 +1,63 @@
+.mobile-banner {
+  position: relative;
+}
+
+.mobile-banner--tagline {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.mobile-banner--color-block {
+  top: 50%;
+  bottom: auto;
+  text-align: center;
+  transform: translateY(-50%);
+  color: transparent;
+}
+
+.mobile-banner--tagline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: currentColor;
+  opacity: .8;
+}
+
+.mobile-banner--image {
+  display: block;
+  width: 100%;
+}
+
+.mobile-banner--text {
+  padding: .5em;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.mobile-banner--pending {
+  display: block;
+  width: 100%;
+  padding: 0;
+  padding-bottom: (2/3) * 100%; // match the same aspect ratio of the mobile-banneral images
+}
+
+.mobile-banner--progress-circle {
+  width: 6px;
+  height: 6px;
+  border: 1px solid transparentize(#FFF, 0.6);
+  border-radius: 100%;
+  background-color: transparent;
+  display:inline-block;
+  margin: 4px 6px;
+}
+
+.mobile-banner--progress-circle--current {
+  background-color: #FFF;
+  border: 1px solid #FFF;
+}

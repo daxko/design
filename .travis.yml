@@ -3,7 +3,7 @@ node_js:
 - '5'
 script:
 - npm run test
-- grunt jshint
+- grunt eslint
 sudo: false
 branches:
   only:
@@ -15,7 +15,7 @@ cache:
   - node_modules
 env:
   global:
-  - secure: moZ+HIGrWb3Qi6OGD7J/uPsZdaTL7qwjDUkOy7mULbxCqY1Wf1ICWp+wf/mPmy5lmAeJOv3WYBUYebwB7Ypxr/4eAH/hwBfke0Wge/T0TWRiQEKx/xiMCDAKA8ErbqtgQ6i7hxiSXsE0O/Ax1KTa2JU/3sASzkPEDgDAr3zwc4Q=
+  - secure: e19W21p8kMLplqVSaTYkRfJ4M4+zF2mU0g+/MuCn4+R7NlYV4VVAUDAzMTX2pipdfezO1hEbX44T2GWY2XyeZ3qf37YAqA9qZsegS4lt4fgPO8ltEUSx2JDgAG8zIPMZy+gEl0mrY/xg/nlb+U1OtwdDWF0ljIjVzaTe2AuTduc=
 notifications:
   hipchat:
     rooms:
