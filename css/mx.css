@@ -2172,6 +2172,10 @@ form .grid [class*=col-] > label textarea {
   background-color: transparent !important;
 }
 
+.btn-mini {
+  padding: 2px 6px 2px;
+}
+
 nav.nav {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
