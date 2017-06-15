@@ -1283,23 +1283,22 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 -1px 0 #025aa5 inset;
 }
 
+.btn-primary:focus {
+  box-shadow: 0 -1px 0 #025aa5 inset, 0 0 0 2px #89baeb;
+}
+
 .btn-primary:hover {
   background-color: #025aa5;
   border-color: #013e73;
   box-shadow: 0 -1px 0 #013e73 inset;
 }
 
+.btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active,
-.btn-primary:active:focus,
-.btn-primary.active:focus {
+.btn-primary.active {
   background-color: #025aa5;
   border-color: #013e73;
   box-shadow: none;
-}
-
-.btn-primary:focus {
-  box-shadow: 0 -1px 0 #025aa5 inset, 0 0 0 2px #89baeb;
 }
 
 .btn-primary:disabled,
@@ -1322,23 +1321,22 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 -1px 0 #c9302c inset;
 }
 
+.btn-danger:focus {
+  box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 2px #89baeb;
+}
+
 .btn-danger:hover {
   background-color: #c9302c;
   border-color: #a02622;
   box-shadow: 0 -1px 0 #a02622 inset;
 }
 
+.btn-danger:focus,
 .btn-danger:active,
-.btn-danger.active,
-.btn-danger:active:focus,
-.btn-danger.active:focus {
+.btn-danger.active {
   background-color: #c9302c;
   border-color: #a02622;
   box-shadow: none;
-}
-
-.btn-danger:focus {
-  box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 2px #89baeb;
 }
 
 .btn-danger.disabled,
@@ -1364,16 +1362,6 @@ form .grid [class*=col-] > label textarea {
   padding: 4px 10px 6px;
 }
 
-.btn-link.active,
-.btn-link:active,
-.btn-link.active:focus,
-.btn-link:active:focus {
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.btn-link:focus,
 .btn-link:focus {
   border-color: transparent;
   background-color: transparent;
@@ -1383,6 +1371,14 @@ form .grid [class*=col-] > label textarea {
 .btn-link:hover {
   color: #025aa5;
   text-decoration: underline;
+}
+
+.btn-link:focus,
+.btn-link:active,
+.btn-link.active {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .btn-link:disabled,
@@ -1469,10 +1465,9 @@ form .grid [class*=col-] > label textarea {
   padding: 1px 6px 3px;
 }
 
+.btn-mini:focus,
 .btn-mini:active,
-.btn-mini.active,
-.btn-mini:active:focus,
-.btn-mini.active:focus {
+.btn-mini.active {
   padding: 2px 6px;
 }
 
