@@ -2176,6 +2176,15 @@ form .grid [class*=col-] > label textarea {
   padding: 2px 6px 2px;
 }
 
+.btn-mini.btn-link {
+  font-size: 12px;
+  padding: 2px 6px 2px;
+}
+
+.btn-mini.btn-link:hover {
+  text-decoration: none;
+}
+
 nav.nav {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
