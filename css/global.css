@@ -1911,18 +1911,12 @@ form .grid [class*=col-] > label textarea {
   text-decoration: none;
 }
 
+.btn:focus, .btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label,
 .btn:active,
 .btn.active,
 .btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label,
-.btn:active:focus,
-.btn-group > input[type=checkbox]:focus + label:active,
-.btn-group > input[type=radio]:focus + label:active,
-.btn.active:focus,
-.btn-group > input[type=checkbox]:focus + label.active,
-.btn-group > input[type=radio]:focus + label.active,
-.btn-group > input[type=checkbox]:checked + label:focus,
-.btn-group > input[type=radio]:checked + label:focus {
+.btn-group > input[type=radio]:checked + label {
   border-color: #c2c2c2;
   background-color: gainsboro;
   box-shadow: none;

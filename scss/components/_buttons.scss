@@ -49,10 +49,9 @@ $btn-height: 32px;
   text-decoration: none;
 }
 
+.btn:focus,
 .btn:active,
-.btn.active,
-.btn:active:focus,
-.btn.active:focus {
+.btn.active {
   border-color: darken($btn-color, 20%);
   background-color: darken($btn-color, 10%);
   box-shadow: none;
