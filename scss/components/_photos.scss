@@ -1,0 +1,26 @@
+// Photos
+// ----------------------------------------------
+
+.photo {
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #bdbdbd;
+  height: 120px;
+  width: 90px;
+}
+.photo.large {
+  height: 160px;
+  width: 120px;
+}
+.photo.med {
+  height: 120px;
+  width: 90px;
+}
+.photo.small {
+  height: 80px;
+  width: 60px;
+}
+.photo.thumb {
+  height: 60px;
+  width: 45px;
+}
