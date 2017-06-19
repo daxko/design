@@ -23,8 +23,7 @@ a:hover {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: theme-color($theme-color-primary, 'medium');
-  box-shadow: 0 0 4px theme-color($theme-color-primary, 'light');
+  border-color: theme-color($theme-color-primary, 'light');
 }
 
 // Static Theme Colors
@@ -84,13 +83,15 @@ a.btn,
 }
 
 .btn:active,
-.btn.active {
+.btn.active,
+.btn:active:focus,
+.btn.active:focus {
   border: 1px solid theme-color($theme-color-primary, 'light');
 }
 
 .btn:focus {
   border: 1px solid theme-color($theme-color-primary, 'light');
-  box-shadow: 0 0 6px theme-color($theme-color-primary, 'light');
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -106,12 +107,10 @@ a.btn-primary:hover,
 }
 
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary.active:focus {
   border: 1px solid theme-color($theme-color-primary, 'light');
-  background-color: theme-color($theme-color-primary, 'light');
-}
-
-.btn-primary:focus {
   background-color: theme-color($theme-color-primary, 'light');
 }
 

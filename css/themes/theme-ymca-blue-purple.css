@@ -17,8 +17,7 @@ a:hover {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #0089d0;
-  box-shadow: 0 0 4px #00aeef;
+  border-color: #00aeef;
 }
 
 .theme--primary-dark {
@@ -72,13 +71,15 @@ a.btn,
 }
 
 .btn:active,
-.btn.active {
+.btn.active,
+.btn:active:focus,
+.btn.active:focus {
   border: 1px solid #00aeef;
 }
 
 .btn:focus {
   border: 1px solid #00aeef;
-  box-shadow: 0 0 6px #00aeef;
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -94,12 +95,10 @@ a.btn-primary:hover,
 }
 
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary.active:focus {
   border: 1px solid #00aeef;
-  background-color: #00aeef;
-}
-
-.btn-primary:focus {
   background-color: #00aeef;
 }
 

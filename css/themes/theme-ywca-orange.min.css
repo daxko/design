@@ -2,7 +2,7 @@ a{color:#fd7644}
 a:hover{color:#fd5a1e}
 ::-moz-selection{background:#fff8f5}
 ::selection{background:#fff8f5}
-input:focus,select:focus,textarea:focus{border-color:#fd5a1e;box-shadow:0 0 4px #fd7644}
+input:focus,select:focus,textarea:focus{border-color:#fd7644}
 .theme--primary-dark{color:#e63f02}
 .theme--primary-med{color:#fd5a1e}
 .theme--primary-light{color:#fd7644}
@@ -12,12 +12,11 @@ input:focus,select:focus,textarea:focus{border-color:#fd5a1e;box-shadow:0 0 4px 
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#fd7644;color:#fff}
 .btn,.btn-link,.btn:hover,a.btn{color:#fd7644;border:1px solid #fd7644}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
-.btn-primary,.btn.active,.btn:active,.btn:focus{border:1px solid #fd7644}
-.btn:focus{box-shadow:0 0 6px #fd7644}
+.btn-primary,.btn.active,.btn.active:focus,.btn:active,.btn:active:focus,.btn:focus{border:1px solid #fd7644}
+.btn:focus{box-shadow:none}
 .btn-primary{background-color:#fd7644;color:#fff}
 .btn-primary:hover,a.btn-primary,a.btn-primary:hover{color:#fff}
-.btn-primary.active,.btn-primary:active{border:1px solid #fd7644;background-color:#fd7644}
-.btn-primary:focus{background-color:#fd7644}
+.btn-primary.active,.btn-primary.active:focus,.btn-primary:active,.btn-primary:active:focus{border:1px solid #fd7644;background-color:#fd7644}
 .btn-primary:hover{border:1px solid #fd5a1e;background-color:#fd5a1e}
 .btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary:disabled,.btn-primary:disabled.focus,.btn-primary:disabled:focus,.btn-primary:disabled:hover{border:1px solid #ffe5dc;background-color:#ffe5dc}
 .btn-inverted:active,.btn-inverted:focus{border-color:#fff;box-shadow:0 0 6px #fff}
