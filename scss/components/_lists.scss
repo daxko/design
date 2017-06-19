@@ -28,6 +28,10 @@
     background-color: $gray-50;
   }
 
+  a.list-item:focus {
+    box-shadow: none;
+  }
+
   .list-icons {
     color: $gray-300;
     &:hover {

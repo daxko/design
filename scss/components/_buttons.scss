@@ -31,7 +31,7 @@ $btn-height: 32px;
   color: $btn-text-color;
   text-decoration: none;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: baseline;
   white-space: nowrap;
   outline: none;
   padding: 4px 10px 6px;
@@ -270,11 +270,13 @@ $btn-height: 32px;
 
     &:checked + label {
       @extend .btn.active;
+      line-height: 19px;
     }
+  }
 
-    &:checked:focus + label {
-      box-shadow: inset 0 2px 4px darken($gray-100, 14%), 0 0 4px $btn-focus-color;
-    }
+  > input[type=checkbox] + label:active,
+  > input[type=radio] + label:active {
+    line-height: 19px;
   }
 
 }
