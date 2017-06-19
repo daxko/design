@@ -57,7 +57,7 @@ $btn-height: 32px;
   background-color: darken($btn-color, 10%);
   box-shadow: none;
   background-image: none;
-  line-height: 20px;
+  line-height: 19px;
   padding: 5px 10px;
 }
 
@@ -270,7 +270,6 @@ $btn-height: 32px;
 
     &:checked + label {
       @extend .btn.active;
-      line-height: 19px;
     }
   }
 

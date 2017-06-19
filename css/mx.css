@@ -1249,7 +1249,7 @@ form .grid [class*=col-] > label textarea {
   background-color: gainsboro;
   box-shadow: none;
   background-image: none;
-  line-height: 20px;
+  line-height: 19px;
   padding: 5px 10px;
 }
 
@@ -1451,11 +1451,6 @@ form .grid [class*=col-] > label textarea {
   width: 0;
   height: 0;
   position: absolute;
-}
-
-.btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label {
-  line-height: 19px;
 }
 
 .btn-group > input[type=checkbox] + label:active,
