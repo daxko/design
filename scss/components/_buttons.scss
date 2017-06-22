@@ -37,12 +37,12 @@ $btn-height: 32px;
   padding: 4px 10px 6px;
   background-color: $btn-color;
   transition: ease-in-out .1s background-color, ease-in-out .1s border;
-  
+
   &:focus,
   &.focus {
     box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 2px $btn-focus-color;
   }
-  
+
   &:hover {
     border-color: darken($btn-border-color, 20%);
     background-color: darken($btn-color, 10%);
@@ -50,7 +50,9 @@ $btn-height: 32px;
   }
 
   &.active,
-  &:active {
+  &:active,
+  &.active:focus,
+  &:active:focus {
     border-color: darken($btn-color, 20%);
     background-color: darken($btn-color, 10%);
     box-shadow: none;
@@ -123,29 +125,29 @@ $btn-height: 32px;
   border-color: darken($btn-danger-color, 10%);
   box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
 
-  .btn-danger:hover {
+  &:hover {
     background-color: darken($btn-danger-color, 10%);
     border-color: darken($btn-danger-color, 20%);
     box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
   }
 
-  .btn-danger:active,
-  .btn-danger.active,
-  .btn-danger:active:focus,
-  .btn-danger.active:focus {
+  &:active,
+  &.active,
+  &:active:focus,
+  &.active:focus {
     background-color: darken($btn-danger-color, 10%);
     border-color: darken($btn-danger-color, 20%);
     box-shadow: none;
   }
 
-  .btn-danger:focus {
+  &:focus {
     box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
   }
 
-  .btn-danger.disabled,
-  .btn-danger:disabled,
-  .btn-danger.disabled:hover,
-  .btn-danger:disabled:hover {
+  &.disabled,
+  &:disabled,
+  &.disabled:hover,
+  &:disabled:hover {
     color: $btn-primary-text-color;
     border-color: lighten($btn-danger-color, 30%);
     background-color: lighten($btn-danger-color, 30%);
@@ -264,17 +266,12 @@ $btn-height: 32px;
     position: absolute;
 
     &:focus + label {
-      @extend .btn:hover;
+      @extend .btn:focus;
     }
 
     &:checked + label {
       @extend .btn.active;
     }
-  }
-
-  > input[type=checkbox] + label:active,
-  > input[type=radio] + label:active {
-    line-height: 19px;
   }
 
 }
@@ -285,13 +282,6 @@ $btn-height: 32px;
   height: 26px;
   line-height: 19px;
   padding: 1px 6px 3px;
-}
-
-.btn-mini:active,
-.btn-mini.active,
-.btn-mini:active:focus,
-.btn-mini.active:focus {
-  padding: 2px 6px;
 }
 
 // Btn block

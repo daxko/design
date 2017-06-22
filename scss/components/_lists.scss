@@ -24,9 +24,11 @@
     text-decoration: none;
   }
 
-  a.list-item:hover,
-  a.list-item:focus {
+  a.list-item:hover {
     background-color: $gray-50;
+  }
+
+  a.list-item:focus {
     box-shadow: none;
     outline: none;
   }
