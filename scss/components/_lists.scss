@@ -24,12 +24,11 @@
     text-decoration: none;
   }
 
-  a.list-item:hover {
-    background-color: $gray-50;
-  }
-
+  a.list-item:hover,
   a.list-item:focus {
+    background-color: $gray-50;
     box-shadow: none;
+    outline: none;
   }
 
   .list-icons {

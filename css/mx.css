@@ -1222,29 +1222,19 @@ form .grid [class*=col-] > label textarea {
   transition: ease-in-out .1s background-color, ease-in-out .1s border;
 }
 
-.btn:focus, .btn-group > input[type=checkbox]:focus + label,
-.btn-group > input[type=radio]:focus + label {
+.btn:focus, .btn.focus {
   box-shadow: 0 -1px 0 #9e9e9e inset, 0 0 0 2px #89baeb;
 }
 
-.btn:hover {
+.btn:hover, .btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label {
   border-color: #6b6b6b;
   background-color: gainsboro;
   text-decoration: none;
 }
 
-.btn:active,
-.btn.active,
-.btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label,
-.btn:active:focus,
-.btn-group > input[type=checkbox]:focus + label:active,
-.btn-group > input[type=radio]:focus + label:active,
-.btn.active:focus,
-.btn-group > input[type=checkbox]:focus + label.active,
-.btn-group > input[type=radio]:focus + label.active,
-.btn-group > input[type=checkbox]:checked + label:focus,
-.btn-group > input[type=radio]:checked + label:focus {
+.btn.active, .btn-group > input[type=checkbox]:checked + label,
+.btn-group > input[type=radio]:checked + label, .btn:active {
   border-color: #c2c2c2;
   background-color: gainsboro;
   box-shadow: none;
@@ -1253,10 +1243,9 @@ form .grid [class*=col-] > label textarea {
   padding: 5px 10px;
 }
 
-.btn:disabled,
-.btn.disabled,
-.btn:disabled:hover,
-.btn.disabled:hover {
+.btn:disabled, .btn.disabled, .btn:disabled:hover, .btn-group > input[type=checkbox]:focus + label:disabled,
+.btn-group > input[type=radio]:focus + label:disabled, .btn.disabled:hover, .btn-group > input[type=checkbox]:focus + label.disabled,
+.btn-group > input[type=radio]:focus + label.disabled {
   cursor: not-allowed;
   box-shadow: none !important;
   background-image: none;
@@ -1285,10 +1274,7 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 -1px 0 #013e73 inset;
 }
 
-.btn-primary:active,
-.btn-primary.active,
-.btn-primary:active:focus,
-.btn-primary.active:focus {
+.btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary.active:focus {
   background-color: #025aa5;
   border-color: #013e73;
   box-shadow: none;
@@ -1301,11 +1287,8 @@ form .grid [class*=col-] > label textarea {
 .btn-primary:disabled,
 .btn-primary.disabled,
 .btn-primary:disabled:hover,
-.btn-primary.disabled:hover,
-.btn-primary.disabled,
-.btn-primary:hover:disabled,
-.btn-primary.disabled:hover,
-.btn-primary.disabled:hover {
+.btn-primary.disabled:hover, .btn-primary.disabled, .btn-primary:hover:disabled,
+.btn-primary.disabled:hover, .btn-primary.disabled:hover {
   color: #fff;
   border-color: #75bffe;
   background-color: #75bffe;
@@ -1324,10 +1307,7 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 -1px 0 #a02622 inset;
 }
 
-.btn-danger:active,
-.btn-danger.active,
-.btn-danger:active:focus,
-.btn-danger.active:focus {
+.btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger.active:focus {
   background-color: #c9302c;
   border-color: #a02622;
   box-shadow: none;
@@ -1337,10 +1317,7 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 2px #89baeb;
 }
 
-.btn-danger.disabled,
-.btn-danger:disabled,
-.btn-danger.disabled:hover,
-.btn-danger:disabled:hover {
+.btn-danger.disabled, .btn-danger:disabled, .btn-danger.disabled:hover, .btn-danger:disabled:hover {
   color: #fff;
   border-color: #f4cecd;
   background-color: #f4cecd;
@@ -1434,11 +1411,9 @@ form .grid [class*=col-] > label textarea {
   margin-left: 5px;
 }
 
-.btn-group > .btn:hover,
+.btn-group > .btn:hover, .btn-group > input[type=checkbox]:focus + label, .btn-group > input[type=radio]:focus + label,
 .btn-group > .btn:active,
-.btn-group > .btn:focus,
-.btn-group > input[type=checkbox]:focus + label,
-.btn-group > input[type=radio]:focus + label {
+.btn-group > .btn:focus {
   z-index: 2;
 }
 
@@ -1644,12 +1619,11 @@ form .grid [class*=col-] > label textarea {
   text-decoration: none;
 }
 
-.list a.list-item:hover {
-  background-color: #f5f5f5;
-}
-
+.list a.list-item:hover,
 .list a.list-item:focus {
+  background-color: #f5f5f5;
   box-shadow: none;
+  outline: none;
 }
 
 .list .list-icons {
@@ -2098,7 +2072,8 @@ form .grid [class*=col-] > label textarea {
   transition: background-color ease-in-out .1s;
 }
 
-.btn:hover {
+.btn:hover, .btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label {
   background-color: #e0e0e0;
 }
 
