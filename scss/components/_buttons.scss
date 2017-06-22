@@ -123,29 +123,29 @@ $btn-height: 32px;
   border-color: darken($btn-danger-color, 10%);
   box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
 
-  &:hover {
+  .btn-danger:hover {
     background-color: darken($btn-danger-color, 10%);
     border-color: darken($btn-danger-color, 20%);
     box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
   }
 
-  &:active,
-  &.active,
-  &:active:focus,
-  &.active:focus {
+  .btn-danger:active,
+  .btn-danger.active,
+  .btn-danger:active:focus,
+  .btn-danger.active:focus {
     background-color: darken($btn-danger-color, 10%);
     border-color: darken($btn-danger-color, 20%);
     box-shadow: none;
   }
 
-  &:focus {
+  .btn-danger:focus {
     box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
   }
 
-  &.disabled,
-  &:disabled,
-  &.disabled:hover,
-  &:disabled:hover {
+  .btn-danger.disabled,
+  .btn-danger:disabled,
+  .btn-danger.disabled:hover,
+  .btn-danger:disabled:hover {
     color: $btn-primary-text-color;
     border-color: lighten($btn-danger-color, 30%);
     background-color: lighten($btn-danger-color, 30%);

@@ -1965,23 +1965,29 @@ form .grid [class*=col-] > label textarea {
   box-shadow: 0 -1px 0 #c9302c inset;
 }
 
-.btn-danger:hover {
+.btn-danger .btn-danger:hover {
   background-color: #c9302c;
   border-color: #a02622;
   box-shadow: 0 -1px 0 #a02622 inset;
 }
 
-.btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger.active:focus {
+.btn-danger .btn-danger:active,
+.btn-danger .btn-danger.active,
+.btn-danger .btn-danger:active:focus,
+.btn-danger .btn-danger.active:focus {
   background-color: #c9302c;
   border-color: #a02622;
   box-shadow: none;
 }
 
-.btn-danger:focus {
+.btn-danger .btn-danger:focus {
   box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 2px #89baeb;
 }
 
-.btn-danger.disabled, .btn-danger:disabled, .btn-danger.disabled:hover, .btn-danger:disabled:hover {
+.btn-danger .btn-danger.disabled,
+.btn-danger .btn-danger:disabled,
+.btn-danger .btn-danger.disabled:hover,
+.btn-danger .btn-danger:disabled:hover {
   color: #fff;
   border-color: #f4cecd;
   background-color: #f4cecd;
@@ -2182,7 +2188,7 @@ form .grid [class*=col-] > label textarea {
 .dropdown-menu a:focus, .tt-menu.tt-open a:focus,
 .dropdown-menu .dropdown-menu-item:hover, .tt-menu.tt-open .dropdown-menu-item:hover,
 .dropdown-menu .dropdown-menu-item:focus, .tt-menu.tt-open .dropdown-menu-item:focus {
-  background-color: #cae0f6;
+  background-color: #dcf1f0;
   color: #000;
 }
 
@@ -2724,9 +2730,6 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
@@ -2789,8 +2792,9 @@ form .grid [class*=col-] > label textarea {
 }
 
 .toggle-switch input:checked ~ .switch:after {
-  margin-left: -30px;
-  left: 100%;
+  -webkit-transform: translateX(32px);
+      -ms-transform: translateX(32px);
+          transform: translateX(32px);
 }
 
 .tooltip {
@@ -2963,7 +2967,7 @@ form .grid [class*=col-] > label textarea {
 
 .tt-suggestion:hover,
 .tt-suggestion.selected {
-  background-color: #cae0f6;
+  background-color: #dcf1f0;
   cursor: pointer;
 }
 
