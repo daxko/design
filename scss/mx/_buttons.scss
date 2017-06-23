@@ -43,22 +43,22 @@
   box-shadow: none !important;
 }
 
-.btn-inverted {
+.btn-inverted,
+.btn-inverted:hover,
+.btn-inverted:active,
+.btn-inverted:focus {
+  background-color: transparent;
+  border-color: #fff;
   border-radius: 3px;
-  border: 1px solid transparent;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.btn-inverted {
 
   &.btn-link {
     border: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: transparent;
-    border-color: #fff;
-    color: #fff;
-    padding: 5px 10px;
-    text-decoration: none;
   }
 
   &:focus {
@@ -78,16 +78,13 @@
   }
 }
 
-.btn-mini {
+.btn-mini,
+.btn-mini.btn-link {
   padding: 2px 6px 2px;
   border-radius: 3px;
-
-  &.btn-link {
   font-size: 12px;
-  padding: 2px 6px 2px;
-  }
 
-  &.btn-link:hover {
+  &:hover {
     text-decoration: none;
   }
 }

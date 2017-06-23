@@ -2108,21 +2108,20 @@ form .grid [class*=col-] > label textarea {
   box-shadow: none !important;
 }
 
-.btn-inverted {
+.btn-inverted,
+.btn-inverted:hover,
+.btn-inverted:active,
+.btn-inverted:focus {
+  background-color: transparent;
+  border-color: #fff;
   border-radius: 3px;
-  border: 1px solid transparent;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
 }
 
 .btn-inverted.btn-link {
   border: none;
-}
-
-.btn-inverted:hover, .btn-inverted:active, .btn-inverted:focus {
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
-  padding: 5px 10px;
-  text-decoration: none;
 }
 
 .btn-inverted:focus {
@@ -2140,16 +2139,14 @@ form .grid [class*=col-] > label textarea {
   background-color: transparent !important;
 }
 
-.btn-mini {
+.btn-mini,
+.btn-mini.btn-link {
   padding: 2px 6px 2px;
   border-radius: 3px;
-}
-
-.btn-mini.btn-link {
   font-size: 12px;
-  padding: 2px 6px 2px;
 }
 
+.btn-mini:hover,
 .btn-mini.btn-link:hover {
   text-decoration: none;
 }
