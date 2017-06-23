@@ -2108,6 +2108,10 @@ form .grid [class*=col-] > label textarea {
   box-shadow: none !important;
 }
 
+.btn-inverted.btn-link {
+  border: 1px solid transparent;
+}
+
 .btn-inverted,
 .btn-inverted:hover,
 .btn-inverted:active,
@@ -2118,10 +2122,6 @@ form .grid [class*=col-] > label textarea {
   color: #fff;
   padding: 5px 10px;
   text-decoration: none;
-}
-
-.btn-inverted.btn-link {
-  border: 1px solid transparent;
 }
 
 .btn-inverted:focus {
@@ -2140,14 +2140,13 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-mini,
+.btn-mini:hover,
+.btn-mini:active,
+.btn-mini:focus,
 .btn-mini.btn-link {
   padding: 2px 6px 2px;
   border-radius: 3px;
   font-size: 12px;
-}
-
-.btn-mini:hover,
-.btn-mini.btn-link:hover {
   text-decoration: none;
 }
 

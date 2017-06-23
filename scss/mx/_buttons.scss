@@ -43,6 +43,10 @@
   box-shadow: none !important;
 }
 
+.btn-inverted.btn-link {
+  border: 1px solid transparent;
+}
+
 .btn-inverted,
 .btn-inverted:hover,
 .btn-inverted:active,
@@ -56,10 +60,6 @@
 }
 
 .btn-inverted {
-
-  &.btn-link {
-    border: 1px solid transparent;
-  }
 
   &:focus {
     border-color: #fff;
@@ -79,12 +79,12 @@
 }
 
 .btn-mini,
+.btn-mini:hover,
+.btn-mini:active,
+.btn-mini:focus,
 .btn-mini.btn-link {
   padding: 2px 6px 2px;
   border-radius: 3px;
   font-size: 12px;
-
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
