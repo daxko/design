@@ -59,7 +59,7 @@ a.btn,
 .btn-link,
 .btn:hover,
 .btn-mini.btn-link,
-.btn-mini.btn-link:hover {
+.btn-link:hover {
   color: #00adbb;
   border: 1px solid #00adbb;
 }
