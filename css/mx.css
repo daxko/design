@@ -2110,6 +2110,7 @@ form .grid [class*=col-] > label textarea {
 
 .btn-inverted {
   border-radius: 3px;
+  border: 1px solid transparent;
 }
 
 .btn-inverted.btn-link {
