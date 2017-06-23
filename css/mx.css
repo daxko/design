@@ -2140,6 +2140,7 @@ form .grid [class*=col-] > label textarea {
 
 .btn-mini {
   padding: 2px 6px 2px;
+  border-radius: 3px;
 }
 
 .btn-mini.btn-link {
