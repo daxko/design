@@ -71,7 +71,7 @@ a.btn,
 .btn-link,
 .btn:hover,
 .btn-mini.btn-link,
-.btn-mini.btn-link:hover, {
+.btn-mini.btn-link:hover {
   color: theme-color($theme-color-primary, 'light');
   border: 1px solid theme-color($theme-color-primary, 'light');
 }
