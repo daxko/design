@@ -1225,6 +1225,7 @@ form .grid [class*=col-] > label textarea {
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label, .btn.focus {
   box-shadow: 0 -1px 0 #9e9e9e inset, 0 0 0 2px #89baeb;
+  z-index: 10;
 }
 
 .btn:hover {
@@ -1386,8 +1387,10 @@ form .grid [class*=col-] > label textarea {
   display: inline-block;
 }
 
-.btn-group .btn-mini {
+.btn-group .btn-mini,
+.btn-group .btn-mini:focus {
   font-size: 12px;
+  padding: 1px 6px 3px;
 }
 
 .btn-group .btn ~ .btn,
@@ -1438,6 +1441,10 @@ form .grid [class*=col-] > label textarea {
   padding: 1px 6px 3px;
 }
 
+.btn-mini:hover, .btn-mini.active, .btn-mini:active, .btn-mini:focus {
+  padding: 1px 6px 3px;
+}
+
 .btn-block {
   display: block;
   width: 100%;
@@ -1445,6 +1452,10 @@ form .grid [class*=col-] > label textarea {
 
 .btn-block + .btn-block {
   margin-top: 1em;
+}
+
+.btn-block + .btn-block.btn-mini {
+  padding: 1px 6px 3px;
 }
 
 .caret {

@@ -41,6 +41,7 @@ $btn-height: 32px;
   &:focus,
   &.focus {
     box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 2px $btn-focus-color;
+    z-index: z-index('btn-focus');
   }
 
   &:hover {
@@ -218,8 +219,10 @@ $btn-height: 32px;
     display: inline-block;
   }
 
-  .btn-mini {
+  .btn-mini,
+  .btn-mini:focus {
     font-size: $btn-mini-font-size;
+    padding: 1px 6px 3px;
   }
 
   .btn ~ .btn,
@@ -282,6 +285,13 @@ $btn-height: 32px;
   height: 26px;
   line-height: 19px;
   padding: 1px 6px 3px;
+
+  &:hover,
+  &.active,
+  &:active,
+  &:focus {
+    padding: 1px 6px 3px;
+  }
 }
 
 // Btn block
@@ -292,4 +302,8 @@ $btn-height: 32px;
 
 .btn-block + .btn-block {
   margin-top: 1em;
+
+  &.btn-mini {
+    padding: 1px 6px 3px;
+  }
 }
