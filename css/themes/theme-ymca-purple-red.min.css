@@ -10,7 +10,7 @@ input:focus,select:focus,textarea:focus{border-color:#c6168d}
 .theme--secondary-med{color:#ed1c24}
 .theme--secondary-light{color:#f1592b}
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#c6168d;color:#fff}
-.btn,.btn-link,.btn:hover,a.btn{color:#c6168d;border:1px solid #c6168d}
+.btn,.btn-link,.btn-mini.btn-link,.btn:hover,a.btn{color:#c6168d;border:1px solid #c6168d}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
 .btn-primary,.btn.active,.btn.active:focus,.btn:active,.btn:active:focus,.btn:focus{border:1px solid #c6168d}
 .btn:focus{box-shadow:none}
