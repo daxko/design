@@ -2108,17 +2108,19 @@ form .grid [class*=col-] > label textarea {
   box-shadow: none !important;
 }
 
+.btn-inverted {
+  border-radius: 3px;
+}
+
 .btn-inverted.btn-link {
   border: none;
 }
 
-.btn-inverted,
-.btn-inverted:hover,
-.btn-inverted:active,
-.btn-inverted:focus {
+.btn-inverted:hover, .btn-inverted:active, .btn-inverted:focus {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
+  text-decoration: none;
 }
 
 .btn-inverted:focus {
@@ -2130,8 +2132,7 @@ form .grid [class*=col-] > label textarea {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-.btn-inverted:disabled,
-.btn-inverted.disabled {
+.btn-inverted:disabled, .btn-inverted.disabled {
   color: rgba(255, 255, 255, 0.3) !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
   background-color: transparent !important;
