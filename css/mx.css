@@ -1858,11 +1858,6 @@ form .grid [class*=col-] > label textarea {
   outline: 0;
 }
 
-.toggle-switch input[type=checkbox]:focus ~ .switch {
-  border: 1px solid #5da1e4;
-  box-shadow: 0 0 0 3px #89baeb;
-}
-
 .toggle-switch [data-on]:before,
 .toggle-switch [data-on]:after {
   display: none;

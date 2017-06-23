@@ -32,11 +32,6 @@ $switch-height: $toggle-switch-height - 2px;
     outline: 0;
   }
 
-  input[type=checkbox]:focus ~ .switch {
-    border: 1px solid darken($btn-focus-color, 10%);
-    box-shadow: 0 0 0 3px $btn-focus-color;
-  }
-
   [data-on]:before,
   [data-on]:after {
     display: none;
