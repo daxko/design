@@ -57,9 +57,7 @@ textarea:focus {
 .btn,
 a.btn,
 .btn-link,
-.btn:hover,
-.btn-mini.btn-link,
-.btn-link:hover {
+.btn:hover {
   color: #fd7644;
   border: 1px solid #fd7644;
 }

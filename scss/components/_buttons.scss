@@ -166,7 +166,6 @@ $btn-height: 32px;
   text-shadow: none;
   font-weight: normal;
   font-size: $base-font-size;
-  color: $btn-primary-color;
   line-height: 20px;
   padding: 4px 10px 6px;
 }
@@ -188,7 +187,6 @@ $btn-height: 32px;
 }
 
 .btn-link:hover {
-  color: darken($btn-primary-color, 10%);
   text-decoration: underline;
 }
 

@@ -1998,7 +1998,6 @@ form .grid [class*=col-] > label textarea {
   text-shadow: none;
   font-weight: normal;
   font-size: 14px;
-  color: #0275d8;
   line-height: 20px;
   padding: 4px 10px 6px;
 }
@@ -2020,7 +2019,6 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-link:hover {
-  color: #025aa5;
   text-decoration: underline;
 }
 

@@ -1334,7 +1334,6 @@ form .grid [class*=col-] > label textarea {
   text-shadow: none;
   font-weight: normal;
   font-size: 14px;
-  color: #0275d8;
   line-height: 20px;
   padding: 4px 10px 6px;
 }
@@ -1356,7 +1355,6 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-link:hover {
-  color: #025aa5;
   text-decoration: underline;
 }
 
@@ -2143,7 +2141,7 @@ form .grid [class*=col-] > label textarea {
 .btn-mini:hover,
 .btn-mini:active,
 .btn-mini:focus,
-.btn-link:hover {
+.btn-mini.btn-link {
   padding: 2px 6px 2px;
   border-radius: 3px;
   font-size: 12px;
