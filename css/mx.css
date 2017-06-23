@@ -2120,6 +2120,7 @@ form .grid [class*=col-] > label textarea {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
+  padding: 5px 10px;
   text-decoration: none;
 }
 
