@@ -58,7 +58,7 @@
 .btn-inverted {
 
   &.btn-link {
-    border: none;
+    border: 1px solid transparent;
   }
 
   &:focus {

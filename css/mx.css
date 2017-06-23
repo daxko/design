@@ -2121,7 +2121,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-inverted.btn-link {
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn-inverted:focus {
