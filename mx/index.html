@@ -5,12 +5,12 @@
       var theme = target.getAttribute('data-toggle-theme');
       styleTag.setAttribute('href', ['../css/themes/', theme].join(''));
     }
-  });</script><h2 id="theming">Theming</h2><p>With MX, themes can be created to add accent colors that match a client’s branding.</p><p>When styling components, a good rule of thumb to follow is that <em>actions</em> should use a primary color, while accent elements should use a secondary color.</p><h3 id="theme-colors">Theme Colors</h3><p>For simple text components, you can use a <code>.theme–<em><strong>level</strong></em>-<em><strong>shade</strong></em></code> class to add accent colors to specific elements. There’s 2 levels of color, <code>primary</code> and <code>secondary</code> along with 3 shades of color, <code>light</code>, <code>medium</code>, and <code>dark</code>.</p><div class="example page--dark"><h5 class="theme--primary-dark">Theme Primary Color (Dark)</h5><h5 class="theme--primary-med">Theme Primary Color (Medium)</h5><h5 class="theme--primary-light">Theme Primary Color (Light)</h5><h5 class="theme--secondary-dark">Theme Secondary Color (Dark)</h5><h5 class="theme--secondary-med">Theme Secondary Color (Medium)</h5><h5 class="theme--secondary-light">Theme Secondary Color (Light)</h5></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--primary-dark"</span>&gt;</span>Theme Primary Color (Dark)<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--primary-med"</span>&gt;</span>Theme Primary Color (Medium)<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--primary-light"</span>&gt;</span>Theme Primary Color (Light)<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-dark"</span>&gt;</span>Theme Secondary Color (Dark)<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-med"</span>&gt;</span>Theme Secondary Color (Medium)<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
-<span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-light"</span>&gt;</span>Theme Secondary Color (Light)<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
+  });</script><h2 id="theming">Theming</h2><p>With MX, themes can be created to add accent colors that match a client’s branding.</p><p>When styling components, a good rule of thumb to follow is that <em>actions</em> should use a primary color, while accent elements should use a secondary color.</p><h3 id="theme-colors">Theme Colors</h3><p>For simple text components, you can use a <code>.theme–<em><strong>level</strong></em>-<em><strong>shade</strong></em></code> class to add accent colors to specific elements. There’s 2 levels of color, <code>primary</code> and <code>secondary</code> along with 3 shades of color, <code>light</code>, <code>medium</code>, and <code>dark</code>.</p><div class="example page--dark"><h3 class="theme--primary-dark">Theme Primary Color (Dark)</h3><h3 class="theme--primary-med">Theme Primary Color (Medium)</h3><h3 class="theme--primary-light">Theme Primary Color (Light)</h3><h3 class="theme--secondary-dark">Theme Secondary Color (Dark)</h3><h3 class="theme--secondary-med">Theme Secondary Color (Medium)</h3><h3 class="theme--secondary-light">Theme Secondary Color (Light)</h3></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--primary-dark"</span>&gt;</span>Theme Primary Color (Dark)<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--primary-med"</span>&gt;</span>Theme Primary Color (Medium)<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--primary-light"</span>&gt;</span>Theme Primary Color (Light)<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-dark"</span>&gt;</span>Theme Secondary Color (Dark)<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-med"</span>&gt;</span>Theme Secondary Color (Medium)<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-light"</span>&gt;</span>Theme Secondary Color (Light)<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
 </code></pre><h3 id="advanced-theming">Advanced Theming</h3><p>For more complex theming, such as changing colors based off of state or background colors, you can add your theme colors to <code>mx_themes/_theme.scss</code>. Only theme colors should be placed in this file. Positioning and layout values should otherwise be placed in their component file.</p><h2 id="nav">Nav</h2><p>The nav component is a <em><strong>mobile only</strong></em> fixed header that gives the current page’s context along with navigational links.</p><div class="example page--dark"><div class="mobile"><div class="screen"><nav class="nav" role="navigation"><button type="button" class="nav--left"></button><div class="nav--title">Association Name</div><button type="button" class="nav--right"></button></nav></div></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"nav"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">class</span>=<span class="value">"nav--left"</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">button</span>&gt;</span>
@@ -52,8 +52,8 @@
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre><h2 id="tiles">Tiles</h2><p>Tiles are used to group and display a list of tiles of related content using a <code>.tile</code> class. Tiles work best visually inside a dark contrasting element to help provide spacing between groups of tiles.</p><div class="example page--dark"><div class="tile"><h5 class="theme--secondary-med">Personal Training - 1 Session</h5><ul><li>Jan 1 - 31, 2016</li><li>Ages 13+</li></ul></div><div class="tile"><h5 class="theme--secondary-med">Personal Training - 3 Sessions</h5><ul><li>Jan 1 - 31, 2016</li><li>Ages 13+</li></ul></div><div class="tile"><h5 class="theme--secondary-med">Personal Training - 5 Sessions</h5><ul><li>Jan 1 - 31, 2016</li><li>Ages 13+</li></ul></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">h5</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-med"</span>&gt;</span>Personal Training - 1 Session<span class="tag">&lt;/<span class="title">h5</span>&gt;</span>
+</code></pre><h2 id="tiles">Tiles</h2><p>Tiles are used to group and display a list of tiles of related content using a <code>.tile</code> class. Tiles work best visually inside a dark contrasting element to help provide spacing between groups of tiles.</p><div class="example page--dark"><div class="tile"><h3 class="theme--secondary-med">Personal Training - 1 Session</h3><ul><li>Jan 1 - 31, 2016</li><li>Ages 13+</li></ul></div><div class="tile"><h3 class="theme--secondary-med">Personal Training - 3 Sessions</h3><ul><li>Jan 1 - 31, 2016</li><li>Ages 13+</li></ul></div><div class="tile"><h3 class="theme--secondary-med">Personal Training - 5 Sessions</h3><ul><li>Jan 1 - 31, 2016</li><li>Ages 13+</li></ul></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"theme--secondary-med"</span>&gt;</span>Personal Training - 1 Session<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
   <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
     <span class="tag">&lt;<span class="title">li</span>&gt;</span>Jan 1 - 31, 2016<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
     <span class="tag">&lt;<span class="title">li</span>&gt;</span>Ages 13+<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
@@ -61,12 +61,12 @@
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre><h3 id="tile-headers">Tile Headers</h3><p>You can separate specific groups of tiles by including a <code>.tile--header</code> element between the tiles you want to group.</p><div class="example page--dark"><div class="tile--header">3pm</div><div class="tile"><h5 class="theme--secondary-med">Open Gym</h5>3pm - 4:30 <span class="secondary">(1 hour 30 minutes)</span></div><div class="tile"><h5 class="theme--secondary-med">Extreme Zumba</h5>3:15pm - 4:00 <span class="secondary">(45 minutes)</span></div><div class="tile--header">4pm</div><div class="tile"><h5 class="theme--secondary-med">Underwater Basket Weaving</h5>4:05pm - 5:00 <span class="secondary">(55 minutes)</span></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile--header"</span>&gt;</span>3pm<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre><h3 id="tile-headers">Tile Headers</h3><p>You can separate specific groups of tiles by including a <code>.tile--header</code> element between the tiles you want to group.</p><div class="example page--dark"><div class="tile--header">3pm</div><div class="tile"><h3 class="theme--secondary-med">Open Gym</h3>3pm - 4:30 <span class="secondary">(1 hour 30 minutes)</span></div><div class="tile"><h3 class="theme--secondary-med">Extreme Zumba</h3>3:15pm - 4:00 <span class="secondary">(45 minutes)</span></div><div class="tile--header">4pm</div><div class="tile"><h3 class="theme--secondary-med">Underwater Basket Weaving</h3>4:05pm - 5:00 <span class="secondary">(55 minutes)</span></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile--header"</span>&gt;</span>3pm<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile--header"</span>&gt;</span>4pm<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre><h3 id="tile-descriptions">Tile Descriptions</h3><p>Additionally, tiles can include descriptions that give additional context for each tile.</p><div class="example page--dark"><div class="tile"><h5 class="theme--secondary-med">Underwater Basket Weaving</h5>4:05pm - 5:00 <span class="secondary">(55 minutes)</span><div class="tile--description">Join your friends as you learn to weave intricate baskets in a harsh underwater environment. (Note: Underwater breathing apparatus not included)</div></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>
+</code></pre><h3 id="tile-descriptions">Tile Descriptions</h3><p>Additionally, tiles can include descriptions that give additional context for each tile.</p><div class="example page--dark"><div class="tile"><h3 class="theme--secondary-med">Underwater Basket Weaving</h3>4:05pm - 5:00 <span class="secondary">(55 minutes)</span><div class="tile--description">Join your friends as you learn to weave intricate baskets in a harsh underwater environment. (Note: Underwater breathing apparatus not included)</div></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile"</span>&gt;</span>
   ...
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tile--description"</span>&gt;</span>
     Join your friends as you learn to weave intricate baskets in a harsh underwater environment.
@@ -134,4 +134,47 @@
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre><h2 id="loader">Loader</h2><p>When performing asynchronous actions that may cause some delay, you can use a <code>.loader</code> element to indicate that something is happening in the background.</p><div class="example"><div class="loader"></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"loader"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre></section><footer>Created and maintained by the design team at Daxko. <strong>v0.2.19</strong></footer></main><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="/design/js/scrollspy.js"></script><script src="/design/js/dropdown.js"></script><script src="/design/js/modal.js"></script><script src="/design/js/fixed-sticky.js"></script><script>jQuery('.sticky').fixedsticky();</script></body></html>
+</code></pre></section><footer>Created and maintained by the design team at Daxko. <strong>v0.3.0</strong></footer></main><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="/design/js/scrollspy.js"></script><script src="/design/js/dropdown.js"></script><script src="/design/js/modal.js"></script><script src="/design/js/fixed-sticky.js"></script><script src="/design/js/typeahead.jquery.js"></script><script src="/design/js/typeahead.js"></script><script>jQuery('.sticky').fixedsticky();
+
+    var substringMatcher = function(strs) {
+      return function findMatches(q, cb) {
+        var matches, substringRegex;
+
+        // an array that will be populated with substring matches
+        matches = [];
+
+        // regex used to determine if a string contains the substring `q`
+        substrRegex = new RegExp(q, 'i');
+
+        // iterate through the pool of strings and for any string that
+        // contains the substring `q`, add it to the `matches` array
+        $.each(strs, function(i, str) {
+          if (substrRegex.test(str)) {
+            matches.push(str);
+          }
+        });
+
+        cb(matches);
+      };
+    };
+
+    var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+      'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+      'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+      'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+      'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+      'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+      'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+    ];
+
+    $('#state-input .typeahead').typeahead({
+      hint: false,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'states',
+      source: substringMatcher(states)
+    });</script></body></html>

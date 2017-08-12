@@ -17,8 +17,7 @@ a:hover {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #f47920;
-  box-shadow: 0 0 4px #fcaf17;
+  border-color: #fcaf17;
 }
 
 .theme--primary-dark {
@@ -60,6 +59,7 @@ a.btn,
 .btn-link,
 .btn:hover {
   color: #fcaf17;
+  border: 1px solid #fcaf17;
 }
 
 .btn-inverted,
@@ -71,13 +71,15 @@ a.btn,
 }
 
 .btn:active,
-.btn.active {
+.btn.active,
+.btn:active:focus,
+.btn.active:focus {
   border: 1px solid #fcaf17;
 }
 
 .btn:focus {
   border: 1px solid #fcaf17;
-  box-shadow: 0 0 6px #fcaf17;
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -93,18 +95,27 @@ a.btn-primary:hover,
 }
 
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary.active:focus {
   border: 1px solid #fcaf17;
-  background-color: #fcaf17;
-}
-
-.btn-primary:focus {
   background-color: #fcaf17;
 }
 
 .btn-primary:hover {
   border: 1px solid #f47920;
   background-color: #f47920;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled,
+.btn-primary:disabled:hover,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary:disabled:focus,
+.btn-primary:disabled.focus {
+  border: 1px solid #fee3ae;
+  background-color: #fee3ae;
 }
 
 .btn-inverted:active,
