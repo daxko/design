@@ -2142,11 +2142,11 @@ form .grid [class*=col-] > label textarea {
   border-bottom: 4px solid #212121;
 }
 
-.open > .dropdown-menu, .open > .tt-menu.tt-open {
+.open > .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu, .tt-menu.tt-open {
+.dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -2165,8 +2165,8 @@ form .grid [class*=col-] > label textarea {
   z-index: 130;
 }
 
-.dropdown-menu a, .tt-menu.tt-open a,
-.dropdown-menu .dropdown-menu-item, .tt-menu.tt-open .dropdown-menu-item {
+.dropdown-menu a,
+.dropdown-menu .dropdown-menu-item {
   display: block;
   overflow: hidden;
   padding: .3em .8em;
@@ -2178,25 +2178,25 @@ form .grid [class*=col-] > label textarea {
   width: 100%;
 }
 
-.dropdown-menu a:hover, .tt-menu.tt-open a:hover,
-.dropdown-menu a:focus, .tt-menu.tt-open a:focus,
-.dropdown-menu .dropdown-menu-item:hover, .tt-menu.tt-open .dropdown-menu-item:hover,
-.dropdown-menu .dropdown-menu-item:focus, .tt-menu.tt-open .dropdown-menu-item:focus {
+.dropdown-menu a:hover,
+.dropdown-menu a:focus,
+.dropdown-menu .dropdown-menu-item:hover,
+.dropdown-menu .dropdown-menu-item:focus {
   background-color: #dcf1f0;
   color: #000;
 }
 
-.dropdown-menu .divider, .tt-menu.tt-open .divider {
+.dropdown-menu .divider {
   background-color: #e0e0e0;
   height: 1px;
   margin: 5px 0;
 }
 
-.dropdown-menu.right, .right.tt-menu.tt-open {
+.dropdown-menu.right {
   right: 0;
 }
 
-.dropup .dropdown-menu, .dropup .tt-menu.tt-open {
+.dropup .dropdown-menu {
   top: auto;
   bottom: 100%;
   margin-bottom: 1px;
@@ -2932,38 +2932,5 @@ form .grid [class*=col-] > label textarea {
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-.tt-menu.tt-open {
-  display: block;
-  font-size: 13px;
-  max-height: 250px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.tt-suggestion {
-  display: block;
-  overflow: hidden;
-  padding: .3em 10px;
-  color: #424242;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.typeahead {
-  width: 100%;
-}
-
-.tt-suggestion:hover,
-.tt-suggestion.selected {
-  background-color: #dcf1f0;
-  cursor: pointer;
-}
-
-input.tt-hint {
-  color: #9e9e9e;
-  z-index: 0;
 }
 /*# sourceMappingURL=global.css.map */
