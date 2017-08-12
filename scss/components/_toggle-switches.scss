@@ -1,8 +1,8 @@
-$on-switch-color: #4EBF5A !default;
+$on-switch-color: #4eBf5a !default;
 $on-switch-text-color: #fff !default;
 $off-switch-color: $gray-100 !default;
-$off-switch-text-color: $gray-700 !default;
 $toggle-switch-height: $btn-height !default;
+$toggle-switch-width: 64px !default;;
 
 $switch-height: $toggle-switch-height - 2px;
 
@@ -12,13 +12,13 @@ $switch-height: $toggle-switch-height - 2px;
 
   cursor: pointer;
   position: relative;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 0 6px;
   display: inline-block;
   margin: 0;
   height: $toggle-switch-height;
   line-height: $toggle-switch-height;
-  min-width: $toggle-switch-height * 2;
+  width: $toggle-switch-width;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 
@@ -26,49 +26,31 @@ $switch-height: $toggle-switch-height - 2px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%);
   }
 
   input[type=checkbox]:focus {
     outline: 0;
   }
 
-  input[type=checkbox]:focus ~ .switch {
-    border: 1px solid darken($btn-focus-color, 10%);
-    box-shadow: 0 0 4px $btn-focus-color;
-  }
-
   [data-on]:before,
   [data-on]:after {
-    color: $off-switch-text-color;
-    position: relative;
-    top: -1px;
-    display: inline-block;
-    padding: 0 4px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity ease-in .2s;
-    font-family: $btn-font-family;
-    font-size: $btn-font-size;
-    font-weight: $btn-font-weight;
-    min-width: $switch-height;
-    z-index: z-index('btn-focus');
-  }
-
-  [data-on]:before {
-    text-shadow: -1px 0 #fff;
-    content: attr(data-off);
+    display: none;
+    font-size: $base-font-size - 1px;
+    color: $gray-500;
+    padding-left: $toggle-switch-width + 5px;
   }
 
   [data-on]:after {
-    color: $on-switch-text-color;
     content: attr(data-on);
-    text-shadow: none;
+  }
+
+  [data-off]:before {
+    content: attr(data-off);
   }
 
   input:not(:checked) ~ [data-on]:before,
   input:checked ~ [data-on]:after {
-    opacity: 1;
+    display: block;
   }
 
   // Off State
@@ -77,7 +59,7 @@ $switch-height: $toggle-switch-height - 2px;
     height: $toggle-switch-height;
     left: 0;
     right: 0;
-    border-radius: 4px;
+    border-radius: 16px;
     background-color: $off-switch-color;
     border: 1px solid darken($off-switch-color, 5%);
     transition: background-color linear .2s;
@@ -86,12 +68,12 @@ $switch-height: $toggle-switch-height - 2px;
 
   .switch:after {
     content: "";
-    border-radius: 3px;
+    border-radius: 16px;
     position: absolute;
     height: $switch-height;
     width: $switch-height;
+    left: 0;
     background-color: #fff;
-    right: 0;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     transition: all ease-out .2s;
   }
@@ -103,8 +85,7 @@ $switch-height: $toggle-switch-height - 2px;
   }
 
   input:checked ~ .switch:after {
-    margin-right: -$switch-height;
-    right: 100%;
+    transform: translateX($switch-height + 2);
   }
 
 }

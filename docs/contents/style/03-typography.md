@@ -3,12 +3,12 @@
 ### Headings
 
 {{#example 'html'}}
-<h1>h1. Heading</h1> <!-- 35px -->
-<h2>h2. Heading</h2> <!-- 28px -->
-<h3>h3. Heading</h3> <!-- 23px -->
-<h4>h4. Heading</h4> <!-- 20px -->
-<h5>h5. Heading</h5> <!-- 18px -->
-<h6>h6. Heading</h6> <!-- 14px -->
+<h1>h1. Heading</h1> <!-- 24px -->
+<h2>h2. Heading</h2> <!-- 20px -->
+<h3>h3. Heading</h3> <!-- 16px -->
+<h4>h4. Heading</h4> <!-- 14px -->
+<h5>h5. Heading</h5> <!-- 12px -->
+<h6>h6. Heading</h6> <!-- 12px -->
 {{/example}}
 
 For headings, we're using [sass placeholders](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_) to set the appropriate font size for our headings. If you need to match a heading size with a particular element, you can do so by using `@extend` along with the placeholder name.
@@ -65,13 +65,8 @@ You can style inline text elements.
 
 {{#example 'html'}}
 <p>This text is <s>striked</s></p>
-<p>This text is <mark>marked</mark></p>
 <p>This text is <strong>strong</strong></p>
 <p>This text is <em>emphasized</em></p>
 <p>This text is <u>underlined</u></p>
 <p>This text is <small>small</small></p>
-<p>This text is <sup>superscript</sup></p>
-<p>This text is <sub>subscript</sub></p>
 {{/example}}
-
-test

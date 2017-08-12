@@ -28,6 +28,11 @@
     background-color: $gray-50;
   }
 
+  a.list-item:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
   .list-icons {
     color: $gray-300;
     &:hover {
@@ -44,8 +49,8 @@
 .list-header {
   margin-top: 1em;
   padding: .75em 1em;
-  border: 1px solid $gray-100;
-  background-color: $gray-50;
+  font-weight: 700;
+  background-color: $gray-100;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }

@@ -53,19 +53,17 @@ Button links allow you to place buttons that de-emphasize its button appearance,
 
 {{#example 'html'}}
 <button type="button" class="btn" disabled>Disabled Button</button>
-<a href="#" class="btn disabled" role="button">Disabled Link</a>
+<a href="#" class="btn-link btn disabled" role="button">Disabled Link</a>
 {{/example}}
 
 Disabled styling is also applied to primary and danger buttons:
 
 {{#example 'html'}}
 <button type="button" class="btn btn-primary" disabled>Primary Disabled Button</button>
-<a href="#" class="btn btn-primary disabled" role="button">Primary Disabled Link</a>
 {{/example}}
 
 {{#example 'html'}}
 <button type="button" class="btn btn-danger" disabled>Danger Disabled Button</button>
-<a href="#" class="btn btn-danger disabled" role="button">Danger Disabled Link</a>
 {{/example}}
 
 ### Button Groups

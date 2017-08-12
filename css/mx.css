@@ -402,10 +402,21 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h5 {
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 body {
+  line-height: 1.5;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
 }
 
@@ -415,31 +426,31 @@ strong {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 24px;
 }
 
-h2 {
-  font-size: 28px;
-}
-
-h3 {
-  font-size: 23px;
-}
-
-h4, .card--title {
+h2, .card--title {
   font-size: 20px;
 }
 
-h5, fieldset legend, .modal-header, .nav--title {
-  font-size: 18px;
+h3, fieldset legend, .modal-header, .nav--title {
+  font-size: 16px;
 }
 
-h6 {
+h4 {
   font-size: 14px;
 }
 
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
 .secondary, .tile--description {
-  color: #6d6d6d;
+  color: #616161;
 }
 
 h1 .secondary, h1 .tile--description,
@@ -483,11 +494,12 @@ img {
 }
 
 a {
-  color: #33817c;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #163836;
+  text-decoration: underline;
 }
 
 .cf:before, .list .list-item:before, .cf:after, .list .list-item:after {
@@ -730,8 +742,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) inset;
+  border: 1px solid #e0e0e0;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: 13px;
@@ -742,8 +753,16 @@ textarea {
   position: relative;
 }
 
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 3px 8px;
+}
+
 textarea {
   height: auto;
+  min-width: 250px;
 }
 
 select {
@@ -799,13 +818,13 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #81ccc8;
-  box-shadow: 0 0 4px #a5dbd8;
+  border: 1px solid #89baeb;
   z-index: 10;
 }
 
 form label {
-  color: #545454;
+  color: #424242;
+  font-weight: 500;
 }
 
 fieldset {
@@ -819,32 +838,37 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  border-bottom: 1px solid #e6e6e6;
-  color: #2d2d2d;
-  font-weight: normal;
+  color: #212121;
+  font-weight: 500;
   display: block;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 input::-webkit-input-placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 input::-moz-placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 input:-ms-input-placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 input::placeholder {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .grid label {
   display: block;
+}
+
+.grid input,
+.grid select,
+.grid textarea {
+  font-weight: normal;
 }
 
 .grid .toggle-switch {
@@ -892,6 +916,7 @@ form .grid [class*=col-] > label textarea {
   vertical-align: middle;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-weight: normal;
 }
 
 .form-horizontal .control-group .controls > label.toggle-switch {
@@ -937,13 +962,13 @@ form .grid [class*=col-] > label textarea {
 }
 
 .input-group .add-on {
-  color: #6d6d6d;
+  color: #616161;
   text-shadow: -1px 0 #fff;
   border-radius: 3px;
   font-size: 13px;
   padding: 5px 10px;
-  background-color: #f6f6f6;
-  border: 1px solid #e6e6e6;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
 }
 
 .input-group .add-on:first-child {
@@ -1008,7 +1033,10 @@ form .grid [class*=col-] > label textarea {
 }
 
 .table.table-bordered {
-  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e0e0e0;
 }
 
 .table.table-fixed {
@@ -1022,21 +1050,21 @@ form .grid [class*=col-] > label textarea {
 
 .table > thead > tr td,
 .table > thead > tr th {
-  background-color: #f6f6f6;
-  padding: .5em 1em;
+  background-color: #e0e0e0;
+  padding: 0.8em 1em;
   vertical-align: bottom;
 }
 
 .table > tbody > tr td,
 .table > tbody > tr th {
-  border-top: 1px solid #e6e6e6;
-  padding: .5em 1em;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.75em 1em;
   vertical-align: top;
 }
 
 .table.table-hover > tbody > tr:hover td,
 .table.table-hover > tbody > tr:hover th {
-  background-color: #f6f6f6;
+  background-color: #f5f5f5;
 }
 
 .table.table-condensed > tbody > tr td,
@@ -1175,77 +1203,59 @@ form .grid [class*=col-] > label textarea {
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #cccccc;
+  border: 1px solid #9e9e9e;
   border-radius: .2em;
+  box-shadow: 0 -1px 0 #9e9e9e inset;
   font-size: 13px;
-  font-weight: 600;
-  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 20px;
   height: 32px;
-  color: #2d2d2d;
+  color: #212121;
   text-decoration: none;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: baseline;
   white-space: nowrap;
   outline: none;
-  padding: 5px 10px;
-  background-size: 100% 210%;
-  background-color: #f2f2f2;
-  background-image: linear-gradient(to bottom, white, #cccccc);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px #fff;
-  transition: ease-in-out .1s background-position;
-}
-
-.btn:hover {
-  background-position: 100% 50%;
-  color: #2d2d2d;
+  padding: 4px 10px 6px;
+  background-color: #f5f5f5;
+  transition: ease-in-out .1s background-color, ease-in-out .1s border;
 }
 
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
-.btn-group > input[type=radio]:focus + label,
-.btn:active,
-.btn.active,
-.btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label {
-  border-color: #81ccc8;
-  box-shadow: 0 0 4px #a5dbd8;
-  outline: none;
+.btn-group > input[type=radio]:focus + label, .btn.focus {
+  box-shadow: 0 -1px 0 #9e9e9e inset, 0 0 0 2px #89baeb;
   z-index: 10;
 }
 
-.btn:active,
-.btn.active,
-.btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label {
-  border-color: #a6a6a6;
-  background-color: #d2d2d2;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
-  background-image: none;
+.btn:hover {
+  border-color: #6b6b6b;
+  background-color: gainsboro;
+  text-decoration: none;
 }
 
-.btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
-.btn-group > input[type=radio]:focus + label:active,
-.btn.active:focus,
-.btn-group > input[type=checkbox]:focus + label.active,
-.btn-group > input[type=radio]:focus + label.active,
-.btn-group > input[type=checkbox]:checked + label:focus,
-.btn-group > input[type=radio]:checked + label:focus {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #a5dbd8;
-}
-
-.btn:disabled, .btn-primary:disabled,
-.btn-primary.disabled,
-.btn-primary:disabled:hover,
-.btn-primary.disabled:hover,
-.btn.disabled {
-  cursor: default;
+.btn.active, .btn-group > input[type=checkbox]:checked + label,
+.btn-group > input[type=radio]:checked + label, .btn:active, .btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
+.btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
+.btn-group > input[type=radio]:focus + label:active {
+  border-color: #c2c2c2;
+  background-color: gainsboro;
   box-shadow: none;
   background-image: none;
-  background-color: #f2f2f2;
+  line-height: 19px;
+  padding: 5px 10px;
+}
+
+.btn:disabled, .btn.disabled, .btn:disabled:hover, .btn.disabled:hover {
+  cursor: not-allowed;
+  box-shadow: none !important;
+  background-image: none;
+  background-color: #f5f5f5;
   text-shadow: none;
-  border-color: #e6e6e6;
-  color: rgba(45, 45, 45, 0.3);
+  border-color: inherit;
+  padding: 5px 10px !important;
+  color: rgba(33, 33, 33, 0.3);
 }
 
 .btn::-moz-focus-inner {
@@ -1255,72 +1265,68 @@ form .grid [class*=col-] > label textarea {
 
 .btn-primary {
   color: #fff;
-  background-color: #8f963f;
-  border-color: #7e8437;
-  background-image: linear-gradient(to bottom, #afb651, #6d7230);
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
+  background-color: #0275d8;
+  border-color: #025aa5;
+  box-shadow: 0 -1px 0 #025aa5 inset;
 }
 
 .btn-primary:hover {
-  color: #fff;
+  background-color: #025aa5;
+  border-color: #013e73;
+  box-shadow: 0 -1px 0 #013e73 inset;
 }
 
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
-  border-color: #6d7230;
-  background-color: #7e8437;
+.btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary.active:focus {
+  background-color: #025aa5;
+  border-color: #013e73;
+  box-shadow: none;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 -1px 0 #025aa5 inset, 0 0 0 2px #89baeb;
 }
 
 .btn-primary:disabled,
-.btn-primary.disabled {
+.btn-primary.disabled,
+.btn-primary:disabled:hover,
+.btn-primary.disabled:hover, .btn-primary.disabled, .btn-primary:hover:disabled,
+.btn-primary.disabled:hover, .btn-primary.disabled:hover {
   color: #fff;
-  border-color: #6d7230;
-  background-color: #7e8437;
-  opacity: .6;
+  border-color: #75bffe;
+  background-color: #75bffe;
 }
 
 .btn-danger {
-  color: #bd1b1f;
-}
-
-.btn-danger:active,
-.btn-danger.active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
-}
-
-.btn-danger:active,
-.btn-danger.active,
-.btn-danger:focus,
-.btn-danger:hover {
   color: #fff;
-  background-color: #bd1b1f;
-  border-color: #7a1114;
-  background-image: linear-gradient(to bottom, #e12a2f, #901518);
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
+  background: #D9534F;
+  border-color: #c9302c;
+  box-shadow: 0 -1px 0 #c9302c inset;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+  border-color: #a02622;
+  box-shadow: 0 -1px 0 #a02622 inset;
+}
+
+.btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger.active:focus {
+  background-color: #c9302c;
+  border-color: #a02622;
+  box-shadow: none;
 }
 
 .btn-danger:focus {
-  border-color: #a7181b;
+  box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 2px #89baeb;
 }
 
-.btn-danger.disabled,
-.btn-danger:disabled {
-  cursor: default;
-  box-shadow: none;
-  background-image: none;
-  background-color: #f2f2f2;
-  text-shadow: none;
-  border-color: #e6e6e6;
-  color: rgba(45, 45, 45, 0.3);
+.btn-danger.disabled, .btn-danger:disabled, .btn-danger.disabled:hover, .btn-danger:disabled:hover {
+  color: #fff;
+  border-color: #f4cecd;
+  background-color: #f4cecd;
 }
 
-.btn-danger:disabled,
-.btn-danger.disabled {
-  box-shadow: none;
-}
-
-.btn-link {
+.btn-link,
+.btn-link:hover {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -1328,7 +1334,8 @@ form .grid [class*=col-] > label textarea {
   text-shadow: none;
   font-weight: normal;
   font-size: 14px;
-  color: #33817c;
+  line-height: 20px;
+  padding: 4px 10px 6px;
 }
 
 .btn-link.active,
@@ -1340,8 +1347,15 @@ form .grid [class*=col-] > label textarea {
   box-shadow: none;
 }
 
+.btn-link:focus,
+.btn-link:focus {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 2px #89baeb;
+}
+
 .btn-link:hover {
-  color: #163836;
+  text-decoration: underline;
 }
 
 .btn-link:disabled,
@@ -1350,7 +1364,8 @@ form .grid [class*=col-] > label textarea {
 .btn-link.disabled:hover {
   background-color: transparent;
   border-color: transparent;
-  color: rgba(45, 45, 45, 0.3);
+  color: rgba(33, 33, 33, 0.3);
+  text-decoration: none;
 }
 
 .btn-link + .btn-link {
@@ -1370,8 +1385,10 @@ form .grid [class*=col-] > label textarea {
   display: inline-block;
 }
 
-.btn-group .btn-mini {
+.btn-group .btn-mini,
+.btn-group .btn-mini:focus {
   font-size: 12px;
+  padding: 1px 6px 3px;
 }
 
 .btn-group .btn ~ .btn,
@@ -1396,6 +1413,14 @@ form .grid [class*=col-] > label textarea {
   margin-left: 5px;
 }
 
+.btn-group > .btn:hover,
+.btn-group > .btn:active,
+.btn-group > .btn:focus,
+.btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label {
+  z-index: 2;
+}
+
 .btn-group > input[type=checkbox],
 .btn-group > input[type=radio] {
   opacity: 0;
@@ -1407,16 +1432,15 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
 }
 
-.btn-group > input[type=checkbox]:checked:focus + label,
-.btn-group > input[type=radio]:checked:focus + label {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 4px #a5dbd8;
-}
-
 .btn-mini {
   font-size: 12px;
   height: 26px;
-  line-height: 21px;
-  padding: 2px 6px 2px;
+  line-height: 19px;
+  padding: 1px 6px 3px;
+}
+
+.btn-mini:hover, .btn-mini.active, .btn-mini:active, .btn-mini:focus {
+  padding: 1px 6px 3px;
 }
 
 .btn-block {
@@ -1428,13 +1452,17 @@ form .grid [class*=col-] > label textarea {
   margin-top: 1em;
 }
 
+.btn-block + .btn-block.btn-mini {
+  padding: 1px 6px 3px;
+}
+
 .caret {
   display: inline-block;
   width: 0;
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px solid #2d2d2d;
+  border-top: 4px solid #212121;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -1447,7 +1475,7 @@ form .grid [class*=col-] > label textarea {
 
 .dropup .caret {
   border-top-width: 0;
-  border-bottom: 4px solid #2d2d2d;
+  border-bottom: 4px solid #212121;
 }
 
 .open > .dropdown-menu {
@@ -1459,8 +1487,8 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 100%;
   border-radius: 4px;
-  border: 1px solid #e6e6e6;
-  color: #545454;
+  border: 1px solid #e0e0e0;
+  color: #424242;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   background-clip: padding-box;
@@ -1478,7 +1506,7 @@ form .grid [class*=col-] > label textarea {
   display: block;
   overflow: hidden;
   padding: .3em .8em;
-  color: #545454;
+  color: #424242;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1495,7 +1523,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .dropdown-menu .divider {
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   height: 1px;
   margin: 5px 0;
 }
@@ -1531,7 +1559,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .dropdown-caret:before {
-  border-bottom: 8px solid #e6e6e6;
+  border-bottom: 8px solid #e0e0e0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
 }
@@ -1550,7 +1578,7 @@ form .grid [class*=col-] > label textarea {
 
 .dropup .dropdown-caret:before {
   border-bottom: none;
-  border-top: 8px solid #e6e6e6;
+  border-top: 8px solid #e0e0e0;
   bottom: 0;
 }
 
@@ -1576,13 +1604,13 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list small {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .list .list-item {
   display: block;
   padding: .75em 1em;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .list a.list-item {
@@ -1592,26 +1620,31 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list a.list-item:hover {
-  background-color: #f6f6f6;
+  background-color: #f5f5f5;
+}
+
+.list a.list-item:focus {
+  box-shadow: none;
+  outline: none;
 }
 
 .list .list-icons {
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .list .list-icons:hover {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .list a:hover .list-icons {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .list-header {
   margin-top: 1em;
   padding: .75em 1em;
-  border: 1px solid #e6e6e6;
-  background-color: #f6f6f6;
+  font-weight: 700;
+  background-color: #e0e0e0;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -1630,13 +1663,13 @@ form .grid [class*=col-] > label textarea {
 
 .list-bordered {
   border-radius: 3px;
-  border-top: 1px solid #e6e6e6;
-  border-left: 1px solid #e6e6e6;
-  border-right: 1px solid #e6e6e6;
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
 }
 
 .loader {
-  color: #a6a6a6;
+  color: #9e9e9e;
   width: 2em;
   height: 1em;
   font-size: 20px;
@@ -1697,7 +1730,7 @@ form .grid [class*=col-] > label textarea {
   border-radius: 3px;
   background-clip: padding-box;
   padding: 1rem;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e0e0e0;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   position: fixed;
@@ -1727,11 +1760,11 @@ form .grid [class*=col-] > label textarea {
 
 .close {
   cursor: pointer;
-  color: #6d6d6d;
+  color: #616161;
 }
 
 .close:hover {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .close:before {
@@ -1742,9 +1775,8 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header,
 .modal-footer {
-  background-color: #f6f6f6;
-  border: 0 solid #e6e6e6;
-  padding: .5rem 1rem;
+  border: 0 solid #e0e0e0;
+  padding: .67rem 1rem;
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -1760,22 +1792,22 @@ form .grid [class*=col-] > label textarea {
   padding: 0;
   border: none;
   background: none;
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .modal-header .close:hover {
-  color: #2d2d2d;
-  background-color: #e6e6e6;
+  color: #212121;
 }
 
 .modal-header {
   border-bottom-width: 1px;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: -1rem;
   padding-right: 4rem;
 }
 
 .modal-footer {
+  background-color: #f5f5f5;
   border-top-width: 1px;
   margin-bottom: -1rem;
   text-align: right;
@@ -1797,19 +1829,19 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   right: 0;
   z-index: 140;
-  background-color: rgba(109, 109, 109, 0.6);
+  background-color: rgba(97, 97, 97, 0.6);
 }
 
 .toggle-switch {
   cursor: pointer;
   position: relative;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 0 6px;
   display: inline-block;
   margin: 0;
   height: 32px;
   line-height: 32px;
-  min-width: 64px;
+  width: 64px;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
@@ -1818,51 +1850,31 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
 }
 
 .toggle-switch input[type=checkbox]:focus {
   outline: 0;
 }
 
-.toggle-switch input[type=checkbox]:focus ~ .switch {
-  border: 1px solid #81ccc8;
-  box-shadow: 0 0 4px #a5dbd8;
-}
-
 .toggle-switch [data-on]:before,
 .toggle-switch [data-on]:after {
-  color: #545454;
-  position: relative;
-  top: -1px;
-  display: inline-block;
-  padding: 0 4px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity ease-in .2s;
-  font-family: Helvetica, Arial, sans-serif;
+  display: none;
   font-size: 13px;
-  font-weight: 600;
-  min-width: 30px;
-  z-index: 10;
-}
-
-.toggle-switch [data-on]:before {
-  text-shadow: -1px 0 #fff;
-  content: attr(data-off);
+  color: #616161;
+  padding-left: 69px;
 }
 
 .toggle-switch [data-on]:after {
-  color: #fff;
   content: attr(data-on);
-  text-shadow: none;
+}
+
+.toggle-switch [data-off]:before {
+  content: attr(data-off);
 }
 
 .toggle-switch input:not(:checked) ~ [data-on]:before,
 .toggle-switch input:checked ~ [data-on]:after {
-  opacity: 1;
+  display: block;
 }
 
 .toggle-switch .switch {
@@ -1870,33 +1882,34 @@ form .grid [class*=col-] > label textarea {
   height: 32px;
   left: 0;
   right: 0;
-  border-radius: 4px;
-  background-color: #e6e6e6;
-  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  border: 1px solid lightgray;
   transition: background-color linear .2s;
   z-index: 10;
 }
 
 .toggle-switch .switch:after {
   content: "";
-  border-radius: 3px;
+  border-radius: 16px;
   position: absolute;
   height: 30px;
   width: 30px;
+  left: 0;
   background-color: #fff;
-  right: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   transition: all ease-out .2s;
 }
 
 .toggle-switch input:checked ~ .switch {
-  background-color: #4EBF5A;
+  background-color: #4eBf5a;
   border: 1px solid #41b34d;
 }
 
 .toggle-switch input:checked ~ .switch:after {
-  margin-right: -30px;
-  right: 100%;
+  -webkit-transform: translateX(32px);
+      -ms-transform: translateX(32px);
+          transform: translateX(32px);
 }
 
 .tooltip {
@@ -1917,7 +1930,7 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   color: #fff;
   content: attr(aria-label);
-  background-color: rgba(45, 45, 45, 0.9);
+  background-color: rgba(33, 33, 33, 0.9);
   border-radius: 3px;
   font-size: 11px;
   line-height: 1.5;
@@ -1960,7 +1973,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-n:before,
 .tooltip-s:before {
   bottom: 100%;
-  border-top: 5px solid rgba(45, 45, 45, 0.9);
+  border-top: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .tooltip-s:after {
@@ -1973,7 +1986,7 @@ form .grid [class*=col-] > label textarea {
   top: 100%;
   bottom: auto;
   border-top: 5px solid transparent;
-  border-bottom: 5px solid rgba(45, 45, 45, 0.9);
+  border-bottom: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .tooltip-e:after, .tooltip-e:before,
@@ -2000,7 +2013,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-w:before {
   right: 100%;
   margin-right: 5px;
-  border-left: 5px solid rgba(45, 45, 45, 0.9);
+  border-left: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .tooltip-e:after {
@@ -2011,7 +2024,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-e:before {
   left: 100%;
   margin-left: 5px;
-  border-right: 5px solid rgba(45, 45, 45, 0.9);
+  border-right: 5px solid rgba(33, 33, 33, 0.9);
 }
 
 .status-flag, .nav .badge {
@@ -2019,13 +2032,20 @@ form .grid [class*=col-] > label textarea {
   height: .8em;
   width: .8em;
   border-radius: 50%;
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   margin-right: .3em;
 }
 
 .status-flag--active {
   background-color: #4ebf5a;
-  box-shadow: 0 0 5px rgba(78, 191, 90, 0.65);
+}
+
+.status-flag--on-hold {
+  background-color: #efad1c;
+}
+
+.status-flag--prospect {
+  background-color: #0275d8;
 }
 
 .icon {
@@ -2043,18 +2063,23 @@ form .grid [class*=col-] > label textarea {
   text-shadow: none;
   box-shadow: none;
   font-weight: 400;
+  padding: 5px 10px;
   transition: background-color ease-in-out .1s;
 }
 
 .btn:hover {
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
 }
 
 .btn.active, .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label,
 .btn:active {
   background-color: #fff;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+  line-height: 20px;
+}
+
+.btn-primary:hover {
+  box-shadow: none;
 }
 
 .btn-full {
@@ -2062,27 +2087,27 @@ form .grid [class*=col-] > label textarea {
   margin-top: .5em;
 }
 
-.btn:disabled, .btn-primary:disabled,
-.btn-primary.disabled,
-.btn-primary:disabled:hover,
-.btn-primary.disabled:hover,
+.btn:disabled,
 .btn.disabled {
-  border-color: #a6a6a6;
-  background-color: #fff;
-  color: #a6a6a6 !important;
+  border-color: #e0e0e0;
+  background-color: #f5f5f5;
+  color: #9e9e9e !important;
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled,
 .btn-primary:disabled:hover,
+.btn-primary.disabled:hover,
+.btn-primary.disabled,
+.btn-primary:hover:disabled,
+.btn-primary.disabled:hover,
 .btn-primary.disabled:hover {
-  background-color: #a6a6a6;
   color: #fff !important;
   box-shadow: none !important;
 }
 
 .btn-inverted.btn-link {
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn-inverted,
@@ -2091,7 +2116,10 @@ form .grid [class*=col-] > label textarea {
 .btn-inverted:focus {
   background-color: transparent;
   border-color: #fff;
+  border-radius: 3px;
   color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
 }
 
 .btn-inverted:focus {
@@ -2103,16 +2131,26 @@ form .grid [class*=col-] > label textarea {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-.btn-inverted:disabled,
-.btn-inverted.disabled {
+.btn-inverted:disabled, .btn-inverted.disabled {
   color: rgba(255, 255, 255, 0.3) !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
   background-color: transparent !important;
 }
 
+.btn-mini,
+.btn-mini:hover,
+.btn-mini:active,
+.btn-mini:focus,
+.btn-mini.btn-link {
+  padding: 2px 6px 2px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
 nav.nav {
   background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e0e0e0;
   height: 40px;
   position: relative;
   position: -webkit-sticky;
@@ -2136,7 +2174,7 @@ nav.nav a {
   stroke-width: 4px;
   text-decoration: none;
   vertical-align: middle;
-  color: #2d2d2d;
+  color: #212121;
   position: relative;
   top: -1px;
 }
@@ -2159,7 +2197,7 @@ nav.nav a {
   line-height: 40px;
   min-width: 40px;
   font-size: 14px;
-  color: #545454;
+  color: #424242;
   position: absolute;
   top: 0;
   border: 0;
@@ -2221,7 +2259,7 @@ nav.nav a {
 }
 
 .page--dark {
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
 }
 
 .page--small-padding {
@@ -2239,16 +2277,16 @@ nav.nav a {
 .tile {
   display: block;
   background-color: #fff;
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid #f5f5f5;
   padding: .5em 1em;
   position: relative;
   overflow: hidden;
-  color: #2d2d2d;
+  color: #212121;
   outline: 6px solid transparent;
 }
 
 a.tile {
-  color: #2d2d2d;
+  color: #212121;
 }
 
 .tile:last-child {
@@ -2256,7 +2294,7 @@ a.tile {
 }
 
 .tile--header {
-  color: #6d6d6d;
+  color: #616161;
   margin: 1em 0 .25em;
 }
 
@@ -2270,7 +2308,7 @@ a.tile {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #a6a6a6;
+  color: #9e9e9e;
 }
 
 .tile--description {
@@ -2347,7 +2385,7 @@ a.tile {
 }
 
 .card--number {
-  color: #2d2d2d;
+  color: #212121;
   margin-top: -1em;
   letter-spacing: .05em;
   font-family: monospace;
@@ -2367,7 +2405,7 @@ a.tile {
 }
 
 .card:not(:last-child) {
-  background-color: #f6f6f6;
+  background-color: #f5f5f5;
   -webkit-transform: scale(0.95);
       -ms-transform: scale(0.95);
           transform: scale(0.95);
@@ -2430,31 +2468,6 @@ a.tile {
   width: 100%;
   padding: 0;
   padding-bottom: 66.6666666667%;
-}
-
-.mobile-banner--text {
-  padding: .5em .5em 1em;
-}
-
-.mobile-banner--progress {
-  position: relative;
-  margin-top: -21px;
-  z-index: 2;
-}
-
-.mobile-banner--progress-circle {
-  width: 6px;
-  height: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 100%;
-  background-color: transparent;
-  display: inline-block;
-  margin: 4px 6px;
-}
-
-.mobile-banner--progress-circle--current {
-  background-color: #FFF;
-  border: 1px solid #FFF;
 }
 
 .mobile-banner--progress-circle {

@@ -10,6 +10,13 @@ $active-status-color: #4ebf5a !default;
 }
 
 .status-flag--active {
-  background-color: $active-status-color;
-  box-shadow: 0 0 5px rgba($active-status-color, .65);
+  background-color: $active-status-color;  
+}
+
+.status-flag--on-hold {
+  background-color: $banana-pudding;  
+}
+
+.status-flag--prospect {
+  background-color: $primary-color;
 }

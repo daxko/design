@@ -1,4 +1,4 @@
-$input-focus-color: $cotton-candy !default;
+$input-focus-color: $focus-color !default;
 $input-large-font-size: 18px !default;
 $input-font-size: 13px !default;
 $input-mini-font-size: 12px !default;
@@ -21,7 +21,6 @@ input[type=date],
 select,
 textarea {
   border: 1px solid $gray-100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .05) inset;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: $input-font-size;
@@ -32,8 +31,16 @@ textarea {
   position: relative;
 }
 
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 3px 8px;
+}
+
 textarea {
   height: auto;
+  min-width: 250px;
 }
 
 // Standardize select appearance
@@ -94,13 +101,13 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: darken($input-focus-color, 10%);
-  box-shadow: 0 0 4px $input-focus-color;
+  border: 1px solid $input-focus-color;
   z-index: z-index('input-focus');
 }
 
 form label {
   color: $gray-700;
+  font-weight: 500;
 }
 
 fieldset {
@@ -114,13 +121,12 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  border-bottom: 1px solid $gray-100;
   color: $gray-900;
-  font-weight: normal;
+  font-weight: 500;
   display: block;
   width: 100%;
-  @extend %h5;
-  margin-bottom: 1em;
+  @extend %h3;
+  margin-bottom: 1rem;
 }
 
 input::placeholder {
@@ -132,6 +138,12 @@ input::placeholder {
 
   label {
     display: block;
+  }
+
+  input,
+  select,
+  textarea {
+    font-weight: normal;
   }
 
   .toggle-switch {
@@ -186,6 +198,7 @@ form .grid {
     vertical-align: middle;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-weight: normal;
   }
 
   .controls > label.toggle-switch {

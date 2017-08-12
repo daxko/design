@@ -1,14 +1,14 @@
-$btn-font-family: Helvetica, Arial, sans-serif !default;
-$btn-color: $gray-100 !default;
+$btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$btn-color: $gray-50 !default;
+$btn-border-color: $gray-300 !default;
 $btn-text-color: $gray-900 !default;
-$btn-primary-color: darken($key-lime, 12.5%) !default;
+$btn-primary-color: #0275d8 !default;
 $btn-primary-text-color: #fff !default;
-$btn-danger-color: #bd1b1f !default;
+$btn-danger-color: #D9534F !default;
 $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
-$btn-focus-color: $cotton-candy !default;
-
-$btn-font-weight: 600;
+$btn-focus-color: $focus-color !default;
+$btn-font-weight: 500;
 $btn-height: 32px;
 
 // Buttons
@@ -20,8 +20,9 @@ $btn-height: 32px;
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid darken($btn-color, 10%);
+  border: 1px solid $btn-border-color;
   border-radius: .2em;
+  box-shadow: 0 -1px 0 $btn-border-color inset;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
@@ -30,54 +31,50 @@ $btn-height: 32px;
   color: $btn-text-color;
   text-decoration: none;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: baseline;
   white-space: nowrap;
   outline: none;
-  padding: 5px 10px;
-  background-size: 100% 210%;
-  background-color: lighten($btn-color, 5%);
-  background-image: linear-gradient(to bottom, lighten($btn-color, 10%), darken($btn-color, 10%));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15);
-  text-shadow: 0 1px #fff;
-  transition: ease-in-out .1s background-position;
-}
+  padding: 4px 10px 6px;
+  background-color: $btn-color;
+  transition: ease-in-out .1s background-color, ease-in-out .1s border;
 
-.btn:hover {
-  background-position: 100% 50%;
-  color: $btn-text-color;
-}
+  &:focus,
+  &.focus {
+    box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 2px $btn-focus-color;
+    z-index: z-index('btn-focus');
+  }
 
-.btn:focus,
-.btn:active,
-.btn.active {
-  border-color: darken($btn-focus-color, 10%);
-  box-shadow: 0 0 4px $btn-focus-color;
-  outline: none;
-  z-index: z-index('btn-focus'); // show outline of focused elements above adjacent elements
-}
+  &:hover {
+    border-color: darken($btn-border-color, 20%);
+    background-color: darken($btn-color, 10%);
+    text-decoration: none;
+  }
 
-.btn:active,
-.btn.active {
-  border-color: darken($btn-color, 25%);
-  background-color: darken($btn-color, 7.5%);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15);
-  background-image: none;
-}
+  &.active,
+  &:active,
+  &.active:focus,
+  &:active:focus {
+    border-color: darken($btn-color, 20%);
+    background-color: darken($btn-color, 10%);
+    box-shadow: none;
+    background-image: none;
+    line-height: 19px;
+    padding: 5px 10px;
+  }
 
-.btn:active:focus,
-.btn.active:focus {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 0 4px $btn-focus-color;
-}
-
-.btn:disabled,
-.btn.disabled {
-  cursor: default;
-  box-shadow: none;
-  background-image: none;
-  background-color: lighten($btn-color, 5%);
-  text-shadow: none;
-  border-color: $btn-color;
-  color: rgba($btn-text-color, .3);
+  &:disabled,
+  &.disabled,
+  &:disabled:hover,
+  &.disabled:hover {
+    cursor: not-allowed;
+    box-shadow: none !important;
+    background-image: none;
+    background-color: $btn-color;
+    text-shadow: none;
+    border-color: inherit;
+    padding: 5px 10px !important;
+    color: rgba($btn-text-color, .3);
+  }
 }
 
 // overrides extra padding on button elements in Firefox
@@ -90,73 +87,78 @@ $btn-height: 32px;
 .btn-primary {
   color: $btn-primary-text-color;
   background-color: $btn-primary-color;
-  border-color: darken($btn-primary-color, 5%);
-  background-image: linear-gradient(to bottom, lighten($btn-primary-color, 10%), darken($btn-primary-color, 10%));
-  text-shadow: 0 -1px rgba(0, 0, 0, .15);
-}
-
-.btn-primary:hover {
-  color: #fff;
-}
-
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
   border-color: darken($btn-primary-color, 10%);
-  background-color: darken($btn-primary-color, 5%);
-}
+  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset;
 
-.btn-primary:disabled,
-.btn-primary.disabled {
-  color: #fff;
-  border-color: darken($btn-primary-color, 10%);
-  background-color: darken($btn-primary-color, 5%);
-  opacity: .6;
+  &:hover {
+    background-color: darken($btn-primary-color, 10%);
+    border-color: darken($btn-primary-color, 20%);
+    box-shadow: 0 -1px 0 darken($btn-primary-color, 20%) inset;
+  }
+
+  &:active,
+  &.active,
+  &:active:focus,
+  &.active:focus {
+    background-color: darken($btn-primary-color, 10%);
+    border-color: darken($btn-primary-color, 20%);
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 2px $btn-focus-color;
+  }
+
+  &:disabled,
+  &.disabled,
+  &:disabled:hover,
+  &.disabled:hover {
+    color: $btn-primary-text-color;
+    border-color: lighten($btn-primary-color, 30%);
+    background-color: lighten($btn-primary-color, 30%);
+  }
 }
 
 // Btn danger
 .btn-danger {
-  color: $btn-danger-color;
+  color: $btn-primary-text-color;
+  background: $btn-danger-color;
+  border-color: darken($btn-danger-color, 10%);
+  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
+
+  &:hover {
+    background-color: darken($btn-danger-color, 10%);
+    border-color: darken($btn-danger-color, 20%);
+    box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
+  }
+
+  &:active,
+  &.active,
+  &:active:focus,
+  &.active:focus {
+    background-color: darken($btn-danger-color, 10%);
+    border-color: darken($btn-danger-color, 20%);
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
+  }
+
+  &.disabled,
+  &:disabled,
+  &.disabled:hover,
+  &:disabled:hover {
+    color: $btn-primary-text-color;
+    border-color: lighten($btn-danger-color, 30%);
+    background-color: lighten($btn-danger-color, 30%);
+  }
 }
 
-.btn-danger:active,
-.btn-danger.active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .35);
-}
-
-.btn-danger:active,
-.btn-danger.active,
-.btn-danger:focus,
-.btn-danger:hover {
-  color: #fff;
-  background-color: $btn-danger-color;
-  border-color: darken($btn-danger-color, 15%);
-  background-image: linear-gradient(to bottom, lighten($btn-danger-color, 10%), darken($btn-danger-color, 10%));
-  text-shadow: 0 -1px rgba(0, 0, 0, .15);
-}
-
-.btn-danger:focus {
-  border-color: darken($btn-danger-color, 5%);
-}
-
-.btn-danger.disabled,
-.btn-danger:disabled {
-  cursor: default;
-  box-shadow: none;
-  background-image: none;
-  background-color: lighten($btn-color, 5%);
-  text-shadow: none;
-  border-color: $btn-color;
-  color: rgba($btn-text-color, .3);
-}
-
-.btn-danger:disabled,
-.btn-danger.disabled {
-  box-shadow: none;
-}
 
 // Btn Link
-.btn-link {
+.btn-link,
+.btn-link:hover {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -164,7 +166,8 @@ $btn-height: 32px;
   text-shadow: none;
   font-weight: normal;
   font-size: $base-font-size;
-  color: darken($cotton-candy, 40%);
+  line-height: 20px;
+  padding: 4px 10px 6px;
 }
 
 .btn-link.active,
@@ -176,8 +179,15 @@ $btn-height: 32px;
   box-shadow: none;
 }
 
+.btn-link:focus,
+.btn-link:focus {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 2px $focus-color;
+}
+
 .btn-link:hover {
-  color: darken($cotton-candy, 60%);
+  text-decoration: underline;
 }
 
 .btn-link:disabled,
@@ -187,6 +197,7 @@ $btn-height: 32px;
   background-color: transparent;
   border-color: transparent;
   color: rgba($btn-text-color, .3);
+  text-decoration: none;
 }
 
 .btn-link + .btn-link {
@@ -206,8 +217,10 @@ $btn-height: 32px;
     display: inline-block;
   }
 
-  .btn-mini {
+  .btn-mini,
+  .btn-mini:focus {
     font-size: $btn-mini-font-size;
+    padding: 1px 6px 3px;
   }
 
   .btn ~ .btn,
@@ -232,6 +245,12 @@ $btn-height: 32px;
     margin-left: 5px;
   }
 
+  > .btn:hover,
+  > .btn:active,
+  > .btn:focus {
+    z-index: 2;
+  }
+
 }
 
 // Button groups with input checkboxes and radio buttons
@@ -254,10 +273,6 @@ $btn-height: 32px;
     &:checked + label {
       @extend .btn.active;
     }
-
-    &:checked:focus + label {
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 0 4px $btn-focus-color;
-    }
   }
 
 }
@@ -266,8 +281,15 @@ $btn-height: 32px;
 .btn-mini {
   font-size: $btn-mini-font-size;
   height: 26px;
-  line-height: 21px;
-  padding: 2px 6px 2px;
+  line-height: 19px;
+  padding: 1px 6px 3px;
+
+  &:hover,
+  &.active,
+  &:active,
+  &:focus {
+    padding: 1px 6px 3px;
+  }
 }
 
 // Btn block
@@ -278,4 +300,8 @@ $btn-height: 32px;
 
 .btn-block + .btn-block {
   margin-top: 1em;
+
+  &.btn-mini {
+    padding: 1px 6px 3px;
+  }
 }

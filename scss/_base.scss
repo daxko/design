@@ -31,9 +31,10 @@ img {
 }
 
 a {
-  color: darken($cotton-candy, 40%);
+  color: $primary-color;
+  text-decoration: none;
   &:hover {
-    color: darken($cotton-candy, 60%);
+    text-decoration: underline;
   }
 }
 

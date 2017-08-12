@@ -26,6 +26,7 @@ $navbar-link-color: $cotton-candy !default;
   height: 40px;
   line-height: 40px;
   font-size: 20px;
+  font-weight: 200;
   display: inline-block;
   float: left;
   margin-right: 1em;
@@ -52,6 +53,10 @@ $navbar-link-color: $cotton-candy !default;
 
   a:hover .caret {
     border-top-color: #fff;
+  }
+
+  .nav--active {
+    color: #fff;
   }
 
   > li {

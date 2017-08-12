@@ -6,14 +6,10 @@ By default, forms don't have a standard layout. You will need to use one of the 
 
 {{#example 'html'}}
 <form>
-  <label>
-    Name
-    <input type="text"/>
-  </label>
-  <label>
-    Phone Number
-    <input type="tel"/>
-  </label>
+  <label>Name</label>
+  <input type="text"/>
+  <label>Phone Number</label>
+  <input type="tel"/>
   <button type="submit" class="btn">Submit</button>
 </form>
 {{/example}}
@@ -44,6 +40,16 @@ Selects also have have some of their basic styles overwritten to match the style
   <option>Pear</option>
   <!-- /... -->
 </select>
+{{/example}}
+
+#### Textarea
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate tempore commodi, minima quia reprehenderit. Saepe aperiam cum fugiat ullam, autem quasi minima ipsam quo, a nihil eum fugit, vel velit.
+
+{{#example 'html'}}
+<textarea>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</textarea>
 {{/example}}
 
 ### Input Sizing
@@ -124,9 +130,79 @@ Layout your forms horizontally with `.form-horizontal`. You can group form label
     </div>
     <!-- ... -->
     <div class="control-group">
-      <label for="quest">Quest</label>
+      <label for="states">States</label>
       <div class="controls">
-        <input id="quest" type="text" />
+        <select id="states">
+            <option>Alabama</option>
+            <option>Alaska</option>
+            <option>Arizona</option>
+            <option>Arkansas</option>
+            <option>California</option>
+            <option>Colorado</option>
+            <option>Connecticut</option>
+            <option>Delaware</option>
+            <option>Dist of Columbia</option>
+            <option>Florida</option>
+            <option>Georgia</option>
+            <option>Hawaii</option>
+            <option>Idaho</option>
+            <option>Illinois</option>
+            <option>Indiana</option>
+            <option>Iowa</option>
+            <option>Kansas</option>
+            <option>Kentucky</option>
+            <option>Louisiana</option>
+            <option>Maine</option>
+            <option>Maryland</option>
+            <option>Massachusetts</option>
+            <option>Michigan</option>
+            <option>Minnesota</option>
+            <option>Mississippi</option>
+            <option>Missouri</option>
+            <option>Montana</option>
+            <option>Nebraska</option>
+            <option>Nevada</option>
+            <option>New Hampshire</option>
+            <option>New Jersey</option>
+            <option>New Mexico</option>
+            <option>New York</option>
+            <option>North Carolina</option>
+            <option>North Dakota</option>
+            <option>Ohio</option>
+            <option>Oklahoma</option>
+            <option>Oregon</option>
+            <option>Pennsylvania</option>
+            <option>Rhode Island</option>
+            <option>South Carolina</option>
+            <option>South Dakota</option>
+            <option>Tennessee</option>
+            <option>Texas</option>
+            <option>Utah</option>
+            <option>Vermont</option>
+            <option>Virginia</option>
+            <option>Washington</option>
+            <option>West Virginia</option>
+            <option>Wisconsin</option>
+            <option>Wyoming</option>
+            <!-- /... -->
+          </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="quest">Favorite Colors</label>
+      <div class="controls">
+        <label>
+          <input type="checkbox" name="color" /> Red
+        </label>
+        <label>
+          <input type="checkbox" name="color" /> Blue
+        </label>
+        <label>
+          <input type="checkbox" name="color" /> Green
+        </label>
+        <label>
+          <input type="checkbox" name="color" /> Yellow
+        </label>
       </div>
     </div>
     <!-- /... -->
