@@ -188,8 +188,8 @@ module.exports = function(grunt) {
           }
         ]
       },
-      mxicons: {
-        src: 'node_modules/mx-icons/dist/icons.svg',
+      copyIcons: {
+        src: 'icons/icons.svg',
         dest: '<%= config.docs %>/contents/images/icons.svg'
       }
     },
