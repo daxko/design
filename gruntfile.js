@@ -272,7 +272,7 @@ module.exports = function(grunt) {
           '<%= config.contents %>/{,*/}*',
           '<%= config.docs %>/templates/{,*/}*.{hbs,js}'
         ],
-        tasks: ['shell:metalsmith']
+        tasks: ['build-icons', 'shell:metalsmith']
       }
     },
 
@@ -349,6 +349,7 @@ module.exports = function(grunt) {
   grunt.registerTask('assets', ['copy', 'sass', 'postcss', 'cssmin', 'parker']);
   grunt.registerTask('build', [
     'assets',
+    'build-icons',
     'eslint',
     'mocha',
     'shell:metalsmith',
