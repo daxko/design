@@ -1,25 +1,4 @@
-<style>
-  svg {
-    fill: #000;
-  }
-
-  .icons-48 {
-    margin-bottom: 1em;
-  }
-
-  .icons-24 svg {
-    height: 24px;
-    width: 24px;
-  }
-
-  .icons-48 svg {
-    height: 48px;
-    width: 48px;
-  }
-</style>
-
-
-<svg xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;"><defs><linearGradient id="calendar-SVGID_1_" gradientUnits="userSpaceOnUse" x1="16.75" y1="12.45" x2="18.25" y2="12.45" gradientTransform="matrix(1 0 0 -1 0 24)"> <stop offset="0" style="stop-color:#FFFFFF"/> <stop offset="1" style="stop-color:#000000"/> </linearGradient><linearGradient id="calendar-SVGID_2_" gradientUnits="userSpaceOnUse" x1="16.75" y1="6.45" x2="18.25" y2="6.45" gradientTransform="matrix(1 0 0 -1 0 24)"> <stop offset="0" style="stop-color:#FFFFFF"/> <stop offset="1" style="stop-color:#000000"/> </linearGradient></defs><symbol viewBox="0 0 24 24" id="icon-barcode"><title>barcode</title> <g> <g stroke-width="1"> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="8" x2="4.5" y2="16"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="8" x2="6.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="19.5" y1="8" x2="19.5" y2="16"/> <polygon points="7,15 6,15 6,16 7,16 			"/> <polygon points="10,15 9,15 9,16 10,16 			"/> <polygon points="12,15 11,15 11,16 12,16 			"/> <polygon points="16,15 15,15 15,16 16,16 			"/> <polygon points="18,15 17,15 17,16 18,16 			"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="9.5" y1="8" x2="9.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="11.5" y1="8" x2="11.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="15.5" y1="8" x2="15.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="17.5" y1="8" x2="17.5" y2="14"/> </g> <path fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10" d="M21.8,18.2H2.2
+ <svg xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;"><defs><linearGradient id="calendar-SVGID_1_" gradientUnits="userSpaceOnUse" x1="16.75" y1="12.45" x2="18.25" y2="12.45" gradientTransform="matrix(1 0 0 -1 0 24)"> <stop offset="0" style="stop-color:#FFFFFF"/> <stop offset="1" style="stop-color:#000000"/> </linearGradient><linearGradient id="calendar-SVGID_2_" gradientUnits="userSpaceOnUse" x1="16.75" y1="6.45" x2="18.25" y2="6.45" gradientTransform="matrix(1 0 0 -1 0 24)"> <stop offset="0" style="stop-color:#FFFFFF"/> <stop offset="1" style="stop-color:#000000"/> </linearGradient></defs><symbol viewBox="0 0 24 24" id="icon-barcode"><title>barcode</title> <g> <g stroke-width="1"> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="8" x2="4.5" y2="16"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="8" x2="6.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="19.5" y1="8" x2="19.5" y2="16"/> <polygon points="7,15 6,15 6,16 7,16 			"/> <polygon points="10,15 9,15 9,16 10,16 			"/> <polygon points="12,15 11,15 11,16 12,16 			"/> <polygon points="16,15 15,15 15,16 16,16 			"/> <polygon points="18,15 17,15 17,16 18,16 			"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="9.5" y1="8" x2="9.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="11.5" y1="8" x2="11.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="15.5" y1="8" x2="15.5" y2="14"/> <line fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" x1="17.5" y1="8" x2="17.5" y2="14"/> </g> <path fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10" d="M21.8,18.2H2.2
 		c-0.8,0-1.5-0.7-1.5-1.5V7.2c0-0.8,0.7-1.5,1.5-1.5h19.5c0.8,0,1.5,0.7,1.5,1.5v9.5C23.2,17.6,22.6,18.2,21.8,18.2z"/> </g> </symbol><symbol viewBox="0 0 24 24" id="icon-basketball"><title>basketball</title> <g> <ellipse fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10" cx="11.9" cy="12" rx="11.2" ry="11.2"/> <path fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10" d="M3.7,19.7
 		C5,15.6,9.2,6.5,20.2,4.3"/> <path fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10" d="M3.5,4.5
 		c4.5,1.6,12.8,6,14.7,16.9"/> <path fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10" d="M10.5,0.9
@@ -78,243 +57,318 @@
 		c0,0.4,0,0.7,0.1,1.1c-4-0.2-7.6-2.1-10-5.1C1.3,4,1.1,4.9,1.1,5.7c0,1.7,0.9,3.2,2.2,4C2.4,9.7,1.7,9.5,1,9.2c0,0,0,0,0,0.1
 		c0,2.3,1.7,4.3,3.9,4.7c-0.7,0.2-1.5,0.2-2.2,0.1c0.6,1.9,2.4,3.3,4.5,3.4c-2.1,1.6-4.6,2.3-7.2,2c2.1,1.4,4.7,2.2,7.4,2.2
 		c8.9,0,13.8-7.4,13.8-13.8c0-0.2,0-0.4,0-0.6C22.2,6.5,23.3,5.9,24,4.9z"/> </g> </symbol><symbol viewBox="0 0 24 24" id="icon-upload"><title>upload</title> <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5" transform="translate(1 1)"> <path d="M8.5,23.5 L8.5,6.885"/> <polyline points="12.5 11.885 8.5 6.885 4.5 11.885"/> <polyline points="6 16.5 .5 16.5 .5 .5 16.5 .5 16.5 16.5 11 16.5"/> </g> </symbol></svg>
-<h1>48x48 Icons</h1>
-<div class="icons-48">
-  <svg class="icon-barcode">
-    <use xlink:href="#icon-barcode" />
-  </svg>
-  <svg class="icon-basketball">
-    <use xlink:href="#icon-basketball" />
-  </svg>
-  <svg class="icon-calendar">
-    <use xlink:href="#icon-calendar" />
-  </svg>
-  <svg class="icon-cart">
-    <use xlink:href="#icon-cart" />
-  </svg>
-  <svg class="icon-change-status">
-    <use xlink:href="#icon-change-status" />
-  </svg>
-  <svg class="icon-check">
-    <use xlink:href="#icon-check" />
-  </svg>
-  <svg class="icon-chevron-down">
-    <use xlink:href="#icon-chevron-down" />
-  </svg>
-  <svg class="icon-chevron-left">
-    <use xlink:href="#icon-chevron-left" />
-  </svg>
-  <svg class="icon-chevron-right">
-    <use xlink:href="#icon-chevron-right" />
-  </svg>
-  <svg class="icon-chevron-up">
-    <use xlink:href="#icon-chevron-up" />
-  </svg>
-  <svg class="icon-circle-x">
-    <use xlink:href="#icon-circle-x" />
-  </svg>
-  <svg class="icon-clock">
-    <use xlink:href="#icon-clock" />
-  </svg>
-  <svg class="icon-daxko">
-    <use xlink:href="#icon-daxko" />
-  </svg>
-  <svg class="icon-edit-person">
-    <use xlink:href="#icon-edit-person" />
-  </svg>
-  <svg class="icon-email">
-    <use xlink:href="#icon-email" />
-  </svg>
-  <svg class="icon-exit">
-    <use xlink:href="#icon-exit" />
-  </svg>
-  <svg class="icon-facebook">
-    <use xlink:href="#icon-facebook" />
-  </svg>
-  <svg class="icon-gear">
-    <use xlink:href="#icon-gear" />
-  </svg>
-  <svg class="icon-give">
-    <use xlink:href="#icon-give" />
-  </svg>
-  <svg class="icon-globe">
-    <use xlink:href="#icon-globe" />
-  </svg>
-  <svg class="icon-heart">
-    <use xlink:href="#icon-heart" />
-  </svg>
-  <svg class="icon-house">
-    <use xlink:href="#icon-house" />
-  </svg>
-  <svg class="icon-lock">
-    <use xlink:href="#icon-lock" />
-  </svg>
-  <svg class="icon-logout">
-    <use xlink:href="#icon-logout" />
-  </svg>
-  <svg class="icon-meatball-menu">
-    <use xlink:href="#icon-meatball-menu" />
-  </svg>
-  <svg class="icon-megaphone">
-    <use xlink:href="#icon-megaphone" />
-  </svg>
-  <svg class="icon-paper-airplane">
-    <use xlink:href="#icon-paper-airplane" />
-  </svg>
-  <svg class="icon-pen">
-    <use xlink:href="#icon-pen" />
-  </svg>
-  <svg class="icon-people">
-    <use xlink:href="#icon-people" />
-  </svg>
-  <svg class="icon-person-card">
-    <use xlink:href="#icon-person-card" />
-  </svg>
-  <svg class="icon-phone">
-    <use xlink:href="#icon-phone" />
-  </svg>
-  <svg class="icon-pin">
-    <use xlink:href="#icon-pin" />
-  </svg>
-  <svg class="icon-printer">
-    <use xlink:href="#icon-printer" />
-  </svg>
-  <svg class="icon-profile">
-    <use xlink:href="#icon-profile" />
-  </svg>
-  <svg class="icon-question-mark">
-    <use xlink:href="#icon-question-mark" />
-  </svg>
-  <svg class="icon-search">
-    <use xlink:href="#icon-search" />
-  </svg>
-  <svg class="icon-trash">
-    <use xlink:href="#icon-trash" />
-  </svg>
-  <svg class="icon-twitter">
-    <use xlink:href="#icon-twitter" />
-  </svg>
-  <svg class="icon-upload">
-    <use xlink:href="#icon-upload" />
-  </svg>
-</div>
-<h1>24x24 Icons</h1>
-<div class="icons-24">
-  <svg class="icon-barcode">
-    <use xlink:href="#icon-barcode" />
-  </svg>
-  <svg class="icon-basketball">
-    <use xlink:href="#icon-basketball" />
-  </svg>
-  <svg class="icon-calendar">
-    <use xlink:href="#icon-calendar" />
-  </svg>
-  <svg class="icon-cart">
-    <use xlink:href="#icon-cart" />
-  </svg>
-  <svg class="icon-change-status">
-    <use xlink:href="#icon-change-status" />
-  </svg>
-  <svg class="icon-check">
-    <use xlink:href="#icon-check" />
-  </svg>
-  <svg class="icon-chevron-down">
-    <use xlink:href="#icon-chevron-down" />
-  </svg>
-  <svg class="icon-chevron-left">
-    <use xlink:href="#icon-chevron-left" />
-  </svg>
-  <svg class="icon-chevron-right">
-    <use xlink:href="#icon-chevron-right" />
-  </svg>
-  <svg class="icon-chevron-up">
-    <use xlink:href="#icon-chevron-up" />
-  </svg>
-  <svg class="icon-circle-x">
-    <use xlink:href="#icon-circle-x" />
-  </svg>
-  <svg class="icon-clock">
-    <use xlink:href="#icon-clock" />
-  </svg>
-  <svg class="icon-daxko">
-    <use xlink:href="#icon-daxko" />
-  </svg>
-  <svg class="icon-edit-person">
-    <use xlink:href="#icon-edit-person" />
-  </svg>
-  <svg class="icon-email">
-    <use xlink:href="#icon-email" />
-  </svg>
-  <svg class="icon-exit">
-    <use xlink:href="#icon-exit" />
-  </svg>
-  <svg class="icon-facebook">
-    <use xlink:href="#icon-facebook" />
-  </svg>
-  <svg class="icon-gear">
-    <use xlink:href="#icon-gear" />
-  </svg>
-  <svg class="icon-give">
-    <use xlink:href="#icon-give" />
-  </svg>
-  <svg class="icon-globe">
-    <use xlink:href="#icon-globe" />
-  </svg>
-  <svg class="icon-heart">
-    <use xlink:href="#icon-heart" />
-  </svg>
-  <svg class="icon-house">
-    <use xlink:href="#icon-house" />
-  </svg>
-  <svg class="icon-lock">
-    <use xlink:href="#icon-lock" />
-  </svg>
-  <svg class="icon-logout">
-    <use xlink:href="#icon-logout" />
-  </svg>
-  <svg class="icon-meatball-menu">
-    <use xlink:href="#icon-meatball-menu" />
-  </svg>
-  <svg class="icon-megaphone">
-    <use xlink:href="#icon-megaphone" />
-  </svg>
-  <svg class="icon-paper-airplane">
-    <use xlink:href="#icon-paper-airplane" />
-  </svg>
-  <svg class="icon-pen">
-    <use xlink:href="#icon-pen" />
-  </svg>
-  <svg class="icon-people">
-    <use xlink:href="#icon-people" />
-  </svg>
-  <svg class="icon-person-card">
-    <use xlink:href="#icon-person-card" />
-  </svg>
-  <svg class="icon-phone">
-    <use xlink:href="#icon-phone" />
-  </svg>
-  <svg class="icon-pin">
-    <use xlink:href="#icon-pin" />
-  </svg>
-  <svg class="icon-printer">
-    <use xlink:href="#icon-printer" />
-  </svg>
-  <svg class="icon-profile">
-    <use xlink:href="#icon-profile" />
-  </svg>
-  <svg class="icon-question-mark">
-    <use xlink:href="#icon-question-mark" />
-  </svg>
-  <svg class="icon-search">
-    <use xlink:href="#icon-search" />
-  </svg>
-  <svg class="icon-trash">
-    <use xlink:href="#icon-trash" />
-  </svg>
-  <svg class="icon-twitter">
-    <use xlink:href="#icon-twitter" />
-  </svg>
-  <svg class="icon-upload">
-    <use xlink:href="#icon-upload" />
-  </svg>
+<h1>Icons</h1>
+<div class="icons-48 grid">
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-barcode">
+        <use xlink:href="#icon-barcode" />
+      </svg>
+      <p>icon-barcode</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-basketball">
+        <use xlink:href="#icon-basketball" />
+      </svg>
+      <p>icon-basketball</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-calendar">
+        <use xlink:href="#icon-calendar" />
+      </svg>
+      <p>icon-calendar</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-cart">
+        <use xlink:href="#icon-cart" />
+      </svg>
+      <p>icon-cart</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-change-status">
+        <use xlink:href="#icon-change-status" />
+      </svg>
+      <p>icon-change-status</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-check">
+        <use xlink:href="#icon-check" />
+      </svg>
+      <p>icon-check</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-chevron-down">
+        <use xlink:href="#icon-chevron-down" />
+      </svg>
+      <p>icon-chevron-down</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-chevron-left">
+        <use xlink:href="#icon-chevron-left" />
+      </svg>
+      <p>icon-chevron-left</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-chevron-right">
+        <use xlink:href="#icon-chevron-right" />
+      </svg>
+      <p>icon-chevron-right</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-chevron-up">
+        <use xlink:href="#icon-chevron-up" />
+      </svg>
+      <p>icon-chevron-up</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-circle-x">
+        <use xlink:href="#icon-circle-x" />
+      </svg>
+      <p>icon-circle-x</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-clock">
+        <use xlink:href="#icon-clock" />
+      </svg>
+      <p>icon-clock</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-daxko">
+        <use xlink:href="#icon-daxko" />
+      </svg>
+      <p>icon-daxko</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-edit-person">
+        <use xlink:href="#icon-edit-person" />
+      </svg>
+      <p>icon-edit-person</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-email">
+        <use xlink:href="#icon-email" />
+      </svg>
+      <p>icon-email</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-exit">
+        <use xlink:href="#icon-exit" />
+      </svg>
+      <p>icon-exit</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-facebook">
+        <use xlink:href="#icon-facebook" />
+      </svg>
+      <p>icon-facebook</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-gear">
+        <use xlink:href="#icon-gear" />
+      </svg>
+      <p>icon-gear</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-give">
+        <use xlink:href="#icon-give" />
+      </svg>
+      <p>icon-give</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-globe">
+        <use xlink:href="#icon-globe" />
+      </svg>
+      <p>icon-globe</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-heart">
+        <use xlink:href="#icon-heart" />
+      </svg>
+      <p>icon-heart</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-house">
+        <use xlink:href="#icon-house" />
+      </svg>
+      <p>icon-house</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-lock">
+        <use xlink:href="#icon-lock" />
+      </svg>
+      <p>icon-lock</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-logout">
+        <use xlink:href="#icon-logout" />
+      </svg>
+      <p>icon-logout</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-meatball-menu">
+        <use xlink:href="#icon-meatball-menu" />
+      </svg>
+      <p>icon-meatball-menu</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-megaphone">
+        <use xlink:href="#icon-megaphone" />
+      </svg>
+      <p>icon-megaphone</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-paper-airplane">
+        <use xlink:href="#icon-paper-airplane" />
+      </svg>
+      <p>icon-paper-airplane</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-pen">
+        <use xlink:href="#icon-pen" />
+      </svg>
+      <p>icon-pen</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-people">
+        <use xlink:href="#icon-people" />
+      </svg>
+      <p>icon-people</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-person-card">
+        <use xlink:href="#icon-person-card" />
+      </svg>
+      <p>icon-person-card</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-phone">
+        <use xlink:href="#icon-phone" />
+      </svg>
+      <p>icon-phone</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-pin">
+        <use xlink:href="#icon-pin" />
+      </svg>
+      <p>icon-pin</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-printer">
+        <use xlink:href="#icon-printer" />
+      </svg>
+      <p>icon-printer</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-profile">
+        <use xlink:href="#icon-profile" />
+      </svg>
+      <p>icon-profile</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-question-mark">
+        <use xlink:href="#icon-question-mark" />
+      </svg>
+      <p>icon-question-mark</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-search">
+        <use xlink:href="#icon-search" />
+      </svg>
+      <p>icon-search</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-trash">
+        <use xlink:href="#icon-trash" />
+      </svg>
+      <p>icon-trash</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-twitter">
+        <use xlink:href="#icon-twitter" />
+      </svg>
+      <p>icon-twitter</p>
+    </div>
+  </div>
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="icon-upload">
+        <use xlink:href="#icon-upload" />
+      </svg>
+      <p>icon-upload</p>
+    </div>
+  </div>
 </div>
