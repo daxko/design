@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-var React = require("react"),
+var React = require('react'),
   { string } = React.PropTypes;
 
 var Icon = React.createClass({
@@ -12,8 +12,8 @@ var Icon = React.createClass({
 
   getDefaultProps() {
     return {
-      prefix: "icon",
-      iconSvg: "images/icons.svg"
+      prefix: 'icon',
+      iconSvg: 'icons/icons.svg'
     };
   },
 
