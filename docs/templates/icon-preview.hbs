@@ -1,0 +1,38 @@
+<style>
+  svg {
+    fill: #000;
+  }
+
+  .icons-48 {
+    margin-bottom: 1em;
+  }
+
+  .icons-24 svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  .icons-48 svg {
+    height: 48px;
+    width: 48px;
+  }
+</style>
+
+
+{{{svg}}}
+<h1>48x48 Icons</h1>
+<div class="icons-48">
+  {{#each icons}}
+  <svg class="{{name}}">
+    <use xlink:href="#{{name}}" />
+  </svg>
+  {{/each}}
+</div>
+<h1>24x24 Icons</h1>
+<div class="icons-24">
+  {{#each icons}}
+  <svg class="{{name}}">
+    <use xlink:href="#{{name}}" />
+  </svg>
+  {{/each}}
+</div>
