@@ -2750,6 +2750,83 @@ svg {
           transform: scaleX(1);
 }
 
+.label {
+  display: inline;
+  padding: 3px 7px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+
+.label:empty {
+  display: none;
+}
+
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+
+a.label:hover, a.label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label-default {
+  background-color: #9e9e9e;
+}
+
+.label-default[href]:hover, .label-default[href]:focus {
+  background-color: #858585;
+}
+
+.label-primary {
+  background-color: #0275d8;
+}
+
+.label-primary[href]:hover, .label-primary[href]:focus {
+  background-color: #025aa5;
+}
+
+.label-success {
+  background-color: #33817c;
+}
+
+.label-success[href]:hover, .label-success[href]:focus {
+  background-color: #255c59;
+}
+
+.label-info {
+  background-color: #707531;
+}
+
+.label-info[href]:hover, .label-info[href]:focus {
+  background-color: #4e5122;
+}
+
+.label-warning {
+  background-color: #966a0b;
+}
+
+.label-warning[href]:hover, .label-warning[href]:focus {
+  background-color: #664808;
+}
+
+.label-danger {
+  background-color: #d9534f;
+}
+
+.label-danger[href]:hover, .label-danger[href]:focus {
+  background-color: #c9302c;
+}
+
 .toggle-switch {
   cursor: pointer;
   position: relative;
