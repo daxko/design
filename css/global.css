@@ -2759,6 +2759,7 @@ svg {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: none;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25em;
