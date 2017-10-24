@@ -9,7 +9,9 @@
   } else {
     // Browser globals (root is window)
     var bsn = factory();
+    root.Modal = bsn.Modal;
     root.Dropdown = bsn.Dropdown;
+    root.ScrollSpy = bsn.ScrollSpy;
   }
 })(this, function() {
   /* Native Javascript for Bootstrap 4 | Internal Utility Functions
@@ -333,6 +335,321 @@
             : position === right ? left : position; // right
     };
 
+  /* Native Javascript for Bootstrap 4 | Modal
+  -------------------------------------------*/
+
+  // MODAL DEFINITION
+  // ===============
+  var Modal = function(element, options) {
+    // element can be the modal/triggering button
+
+    // the modal (both JavaScript / DATA API init) / triggering button element (DATA API)
+    element = queryElement(element);
+
+    // determine modal, triggering element
+    var btnCheck =
+        element[getAttribute](dataTarget) || element[getAttribute]('href'),
+      checkModal = queryElement(btnCheck),
+      modal = hasClass(element, 'modal') ? element : checkModal,
+      // strings
+      component = 'modal',
+      staticString = 'static',
+      paddingLeft = 'paddingLeft',
+      paddingRight = 'paddingRight',
+      modalBackdropString = 'modal-backdrop';
+
+    if (hasClass(element, 'modal')) {
+      element = null;
+    } // modal is now independent of it's triggering element
+
+    if (!modal) {
+      return;
+    } // invalidate
+
+    // set options
+    options = options || {};
+
+    this[keyboard] =
+      options[keyboard] === false ||
+      modal[getAttribute](dataKeyboard) === 'false'
+        ? false
+        : true;
+    this[backdrop] =
+      options[backdrop] === staticString ||
+      modal[getAttribute](databackdrop) === staticString
+        ? staticString
+        : true;
+    this[backdrop] =
+      options[backdrop] === false ||
+      modal[getAttribute](databackdrop) === 'false'
+        ? false
+        : this[backdrop];
+    this[content] = options[content]; // JavaScript only
+
+    // bind, constants, event targets and other vars
+    var self = this,
+      relatedTarget = null,
+      bodyIsOverflowing,
+      modalIsOverflowing,
+      scrollbarWidth,
+      overlay,
+      // also find fixed-top / fixed-bottom items
+      fixedItems = getElementsByClassName(doc, fixedTop).concat(
+        getElementsByClassName(doc, fixedBottom)
+      ),
+      // private methods
+      getWindowWidth = function() {
+        var htmlRect = doc[getBoundingClientRect]();
+        return (
+          globalObject[innerWidth] || htmlRect[right] - Math.abs(htmlRect[left])
+        );
+      },
+      setScrollbar = function() {
+        var bodyStyle = globalObject.getComputedStyle(body),
+          bodyPad = parseInt(bodyStyle[paddingRight], 10),
+          itemPad;
+        if (bodyIsOverflowing) {
+          body[style][paddingRight] = bodyPad + scrollbarWidth + 'px';
+          if (fixedItems[length]) {
+            for (var i = 0; i < fixedItems[length]; i++) {
+              itemPad = globalObject.getComputedStyle(fixedItems[i])[
+                paddingRight
+              ];
+              fixedItems[i][style][paddingRight] =
+                parseInt(itemPad) + scrollbarWidth + 'px';
+            }
+          }
+        }
+      },
+      resetScrollbar = function() {
+        body[style][paddingRight] = '';
+        if (fixedItems[length]) {
+          for (var i = 0; i < fixedItems[length]; i++) {
+            fixedItems[i][style][paddingRight] = '';
+          }
+        }
+      },
+      measureScrollbar = function() {
+        // thx walsh
+        var scrollDiv = document.createElement('div'),
+          scrollBarWidth;
+        scrollDiv.className = component + '-scrollbar-measure'; // this is here to stay
+        body.appendChild(scrollDiv);
+        scrollBarWidth = scrollDiv[offsetWidth] - scrollDiv[clientWidth];
+        body.removeChild(scrollDiv);
+        return scrollBarWidth;
+      },
+      checkScrollbar = function() {
+        bodyIsOverflowing = body[clientWidth] < getWindowWidth();
+        modalIsOverflowing = modal[scrollHeight] > doc[clientHeight];
+        scrollbarWidth = measureScrollbar();
+      },
+      adjustDialog = function() {
+        modal[style][paddingLeft] =
+          !bodyIsOverflowing && modalIsOverflowing ? scrollbarWidth + 'px' : '';
+        modal[style][paddingRight] =
+          bodyIsOverflowing && !modalIsOverflowing ? scrollbarWidth + 'px' : '';
+      },
+      resetAdjustments = function() {
+        modal[style][paddingLeft] = '';
+        modal[style][paddingRight] = '';
+      },
+      createOverlay = function() {
+        modalOverlay = 1;
+
+        var newOverlay = document.createElement('div');
+        overlay = queryElement('.' + modalBackdropString);
+
+        if (overlay === null) {
+          newOverlay[setAttribute]('class', modalBackdropString + ' fade');
+          overlay = newOverlay;
+          body.appendChild(overlay);
+        }
+      },
+      removeOverlay = function() {
+        overlay = queryElement('.' + modalBackdropString);
+        if (overlay && overlay !== null && typeof overlay === 'object') {
+          modalOverlay = 0;
+          body.removeChild(overlay);
+          overlay = null;
+        }
+        bootstrapCustomEvent.call(modal, hiddenEvent, component);
+      },
+      keydownHandlerToggle = function() {
+        if (!hasClass(modal, showClass)) {
+          on(document, keydownEvent, keyHandler);
+        } else {
+          off(document, keydownEvent, keyHandler);
+        }
+      },
+      resizeHandlerToggle = function() {
+        if (!hasClass(modal, showClass)) {
+          on(globalObject, resizeEvent, self.update);
+        } else {
+          off(globalObject, resizeEvent, self.update);
+        }
+      },
+      dismissHandlerToggle = function() {
+        if (!hasClass(modal, showClass)) {
+          on(modal, clickEvent, dismissHandler);
+        } else {
+          off(modal, clickEvent, dismissHandler);
+        }
+      },
+      // triggers
+      triggerShow = function() {
+        setFocus(modal);
+        bootstrapCustomEvent.call(modal, shownEvent, component, relatedTarget);
+      },
+      triggerHide = function() {
+        resizeHandlerToggle();
+        dismissHandlerToggle();
+        keydownHandlerToggle();
+
+        modal[style].display = '';
+        element && setFocus(element);
+
+        setTimeout(function() {
+          if (
+            !getElementsByClassName(document, component + ' ' + showClass)[0]
+          ) {
+            resetAdjustments();
+            resetScrollbar();
+            removeClass(body, component + '-open');
+            overlay && hasClass(overlay, 'fade')
+              ? (removeClass(overlay, showClass),
+                emulateTransitionEnd(overlay, removeOverlay))
+              : removeOverlay();
+          }
+        }, 50);
+      },
+      // handlers
+      clickHandler = function(e) {
+        var clickTarget = e[target];
+        clickTarget =
+          clickTarget[hasAttribute](dataTarget) ||
+          clickTarget[hasAttribute]('href')
+            ? clickTarget
+            : clickTarget[parentNode];
+        if (clickTarget === element && !hasClass(modal, showClass)) {
+          modal.modalTrigger = element;
+          relatedTarget = element;
+          self.show();
+          e.preventDefault();
+        }
+      },
+      keyHandler = function(e) {
+        var key = e.which || e.keyCode; // keyCode for IE8
+        if (self[keyboard] && key === 27 && hasClass(modal, showClass)) {
+          self.hide();
+        }
+      },
+      dismissHandler = function(e) {
+        var clickTarget = e[target];
+        if (
+          hasClass(modal, showClass) &&
+          (clickTarget[parentNode][getAttribute](dataDismiss) === component ||
+            clickTarget[getAttribute](dataDismiss) === component ||
+            (clickTarget === modal && self[backdrop] !== staticString))
+        ) {
+          self.hide();
+          relatedTarget = null;
+          e.preventDefault();
+        }
+      };
+
+    // public methods
+    this.toggle = function() {
+      if (hasClass(modal, showClass)) {
+        this.hide();
+      } else {
+        this.show();
+      }
+    };
+    this.show = function() {
+      bootstrapCustomEvent.call(modal, showEvent, component, relatedTarget);
+
+      // we elegantly hide any opened modal
+      var currentOpen = getElementsByClassName(
+        document,
+        component + ' ' + showClass
+      )[0];
+      currentOpen &&
+        currentOpen !== modal &&
+        currentOpen.modalTrigger[stringModal].hide();
+
+      if (this[backdrop]) {
+        !modalOverlay && createOverlay();
+      }
+
+      if (overlay && modalOverlay && !hasClass(overlay, showClass)) {
+        overlay[offsetWidth]; // force reflow to enable trasition
+        addClass(overlay, showClass);
+      }
+
+      setTimeout(function() {
+        modal[style].display = 'block';
+
+        checkScrollbar();
+        setScrollbar();
+        adjustDialog();
+
+        resizeHandlerToggle();
+        dismissHandlerToggle();
+        keydownHandlerToggle();
+
+        addClass(body, component + '-open');
+        addClass(modal, showClass);
+        modal[setAttribute](ariaHidden, false);
+
+        hasClass(modal, 'fade')
+          ? emulateTransitionEnd(modal, triggerShow)
+          : triggerShow();
+      }, supportTransitions ? 150 : 0);
+    };
+    this.hide = function() {
+      bootstrapCustomEvent.call(modal, hideEvent, component);
+      overlay = queryElement('.' + modalBackdropString);
+
+      removeClass(modal, showClass);
+      modal[setAttribute](ariaHidden, true);
+
+      setTimeout(function() {
+        hasClass(modal, 'fade')
+          ? emulateTransitionEnd(modal, triggerHide)
+          : triggerHide();
+      }, supportTransitions ? 150 : 0);
+    };
+    this.setContent = function(content) {
+      queryElement('.' + component + '-content', modal).innerHTML = content;
+    };
+    this.update = function() {
+      if (open) {
+        checkScrollbar();
+        setScrollbar();
+        adjustDialog();
+      }
+    };
+
+    // init
+    // prevent adding event handlers over and over
+    // modal is independent of a triggering element
+    if (!!element && !(stringModal in element)) {
+      on(element, clickEvent, clickHandler);
+    }
+    if (this[content]) {
+      this.setContent(this[content]);
+    }
+    !!element && (element[stringModal] = this);
+  };
+
+  // DATA API
+  initializeDataAPI(
+    stringModal,
+    Modal,
+    doc[querySelectorAll]('[' + dataToggle + '="modal"]')
+  );
+
   /* Native Javascript for Bootstrap 4 | Dropdown
   ----------------------------------------------*/
 
@@ -357,7 +674,7 @@
       menu = queryElement('.dropdown-menu', parent),
       // handlers
       keyHandler = function(e) {
-        if (isOpen && (e.which == 27 || e.keyCode == 27)) {
+        if (isOpen && (e.which === 27 || e.keyCode === 27)) {
           relatedTarget = null;
           hide();
         } // e.keyCode for IE8
@@ -446,7 +763,132 @@
     doc[querySelectorAll]('[' + dataToggle + '="dropdown"]')
   );
 
+  /* Native Javascript for Bootstrap 4 | ScrollSpy
+  -----------------------------------------------*/
+
+  // SCROLLSPY DEFINITION
+  // ====================
+  var ScrollSpy = function(element, options) {
+    // initialization element, the element we spy on
+    element = queryElement(element);
+
+    // DATA API
+    var targetData = queryElement(element[getAttribute](dataTarget)),
+      offsetData = element[getAttribute]('data-offset');
+
+    // set options
+    options = options || {};
+    if (!options[target] && !targetData) {
+      return;
+    } // invalidate
+
+    // event targets, constants
+    var spyTarget =
+        (options[target] && queryElement(options[target])) || targetData,
+      links = spyTarget && spyTarget[getElementsByTagName]('A'),
+      offset = parseInt(offsetData || options['offset']) || 10,
+      items = [],
+      targetItems = [],
+      scrollOffset,
+      scrollTarget =
+        element[offsetHeight] < element[scrollHeight] ? element : globalObject, // determine which is the real scrollTarget
+      isWindow = scrollTarget === globalObject;
+
+    // populate items and targets
+    for (var i = 0, il = links[length]; i < il; i++) {
+      var href = links[i][getAttribute]('href'),
+        targetItem = href && targetsReg.test(href) && queryElement(href);
+      if (targetItem) {
+        items.push(links[i]);
+        targetItems.push(targetItem);
+      }
+    }
+
+    // private methods
+    var updateItem = function(index) {
+        // var parent = items[index][parentNode], // item's item LI element
+        var item = items[index],
+          targetItem = targetItems[index], // the menu item targets this element
+          dropdown = item[parentNode][parentNode],
+          dropdownLink =
+            hasClass(dropdown, 'dropdown') &&
+            dropdown[getElementsByTagName]('A')[0],
+          targetRect = isWindow && targetItem[getBoundingClientRect](),
+          isActive = hasClass(item, active) || false,
+          topEdge =
+            (isWindow
+              ? targetRect[top] + scrollOffset
+              : targetItem[offsetTop]) - offset,
+          bottomEdge = isWindow
+            ? targetRect[bottom] + scrollOffset - offset
+            : targetItems[index + 1]
+              ? targetItems[index + 1][offsetTop] - offset
+              : element[scrollHeight],
+          inside = scrollOffset >= topEdge && bottomEdge > scrollOffset;
+
+        if (!isActive && inside) {
+          if (!hasClass(item, active)) {
+            addClass(item, active);
+            isActive = true;
+            if (dropdownLink && !hasClass(dropdownLink, active)) {
+              addClass(dropdownLink, active);
+            }
+            bootstrapCustomEvent.call(
+              element,
+              'activate',
+              'scrollspy',
+              items[index]
+            );
+          }
+        } else if (!inside) {
+          if (hasClass(item, active)) {
+            removeClass(item, active);
+            isActive = false;
+            if (
+              dropdownLink &&
+              hasClass(dropdownLink, active) &&
+              !getElementsByClassName(item[parentNode], active).length
+            ) {
+              removeClass(dropdownLink, active);
+            }
+          }
+        } else if ((!inside && !isActive) || (isActive && inside)) {
+          return;
+        }
+      },
+      updateItems = function() {
+        scrollOffset = isWindow ? getScroll().y : element[scrollTop];
+        for (var index = 0, itl = items[length]; index < itl; index++) {
+          updateItem(index);
+        }
+      };
+
+    // public method
+    this.refresh = function() {
+      updateItems();
+    };
+
+    // init
+    if (!(stringScrollSpy in element)) {
+      // prevent adding event handlers twice
+      on(scrollTarget, scrollEvent, this.refresh);
+      on(globalObject, resizeEvent, this.refresh);
+    }
+    this.refresh();
+    element[stringScrollSpy] = this;
+  };
+
+  // SCROLLSPY DATA API
+  // ==================
+  initializeDataAPI(
+    stringScrollSpy,
+    ScrollSpy,
+    doc[querySelectorAll]('[' + dataSpy + '="scroll"]')
+  );
+
   return {
-    Dropdown: Dropdown
+    Modal: Modal,
+    Dropdown: Dropdown,
+    ScrollSpy: ScrollSpy
   };
 });

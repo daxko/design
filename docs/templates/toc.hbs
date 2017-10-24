@@ -1,9 +1,8 @@
-{{!< layout.hbs }}
-<aside>
-  <div class="sticky">
-  {{{toc contents}}}
-  </div>
-</aside>
-<section>
-{{{contents}}}
-</section>
+{{!< layout.hbs }} <aside>
+  <nav id="toc" class="nav nav-stacked sticky">
+    {{{toc contents}}}
+  </nav>
+  </aside>
+  <section>
+    {{{contents}}}
+  </section>

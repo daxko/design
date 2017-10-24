@@ -20,16 +20,16 @@ module.exports = function(context) {
     if(sections.eq(i + 1).is('h3')) {
       var subElements = el.nextUntil('h2[id]').filter('h3[id]');
 
-      subsection += '<ul>';
+      subsection += '<nav class="nav">';
       subElements.each(function() {
         var that = $(this);
-        subsection += '<li><a href="#' + that.attr('id') + '">' + that.text() + '</a>';
+        subsection += '<a href="#' + that.attr('id') + '">' + that.text() + '</a>';
       });
-      subsection += '</ul>';
+      subsection += '</nav>';
     }
 
-    content += '<li><a href="#' + el.attr('id') + '">' + el.text() + '</a>' + subsection + '</li>';
+    content += '<a href="#' + el.attr('id') + '">' + el.text() + '</a>' + subsection;
   });
 
-  return '<ul class="nav section-nav tabs tabs-vertical">' + content + '</ul>';
+  return '<nav class="nav section-nav tabs tabs-vertical">' + content + '</nav>';
 };

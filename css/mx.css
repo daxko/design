@@ -1505,7 +1505,7 @@ form .grid [class*=col-] > label textarea {
 .dropdown-menu .dropdown-menu-item {
   display: block;
   overflow: hidden;
-  padding: .3em .8em;
+  padding: 0.3em 0.8em;
   color: #424242;
   text-decoration: none;
   text-overflow: ellipsis;
@@ -1547,7 +1547,7 @@ form .grid [class*=col-] > label textarea {
   z-index: 131;
 }
 
-.open .dropdown-caret {
+.dropdown-menu.show {
   display: block;
 }
 

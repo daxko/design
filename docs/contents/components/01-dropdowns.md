@@ -6,14 +6,20 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 
 {{#example 'html'}}
 <div class="dropdown">
-  <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+  <button 
+    class="btn" 
+    type="button" 
+    data-toggle="dropdown" 
+    aria-haspopup="true" 
+    aria-expanded="false">
+    Dropdown 
+    <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Bacon</a></li>
-    <li><a href="#">Ham</a></li>
-    <li><a href="#">Sausage</a></li>
-  </ul>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Bacon</a>
+    <a class="dropdown-item" href="#">Ham</a>
+    <a class="dropdown-item" href="#">Sausage</a>
+  </div>
 </div>
 {{/example}}
 
