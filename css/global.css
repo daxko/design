@@ -3491,7 +3491,7 @@ svg {
 }
 
 .ql-picker.ql-size {
-  width: 98px;
+  width: 80px;
 }
 
 .ql-picker.ql-size .ql-picker-label::before,
@@ -3515,15 +3515,15 @@ svg {
 }
 
 .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .ql-color-picker.ql-background .ql-picker-item {
@@ -3542,7 +3542,13 @@ svg {
 }
 
 .ql-toolbar .ql-formats {
-  margin-right: 15px;
+  border-right: 1px solid #9e9e9e;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.ql-toolbar .ql-formats:last-child {
+  border-right: none;
 }
 
 .ql-toolbar .ql-picker-label {

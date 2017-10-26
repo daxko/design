@@ -719,7 +719,7 @@
   font-family: Monaco, Courier New, monospace;
 }
  .ql-picker.ql-size {
-  width: 98px;
+  width: 80px;
 }
  .ql-picker.ql-size .ql-picker-label::before,
  .ql-picker.ql-size .ql-picker-item::before {
@@ -738,13 +738,13 @@
   content: 'Huge';
 }
  .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
-  font-size: 10px;
+  font-size: 12px;
 }
  .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
-  font-size: 18px;
+  font-size: 20px;
 }
  .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
-  font-size: 32px;
+  font-size: 24px;
 }
  .ql-color-picker.ql-background .ql-picker-item {
   background-color: #fff;
@@ -759,7 +759,12 @@
   border-bottom: 1px solid $gray-100;
 }
 .ql-toolbar .ql-formats {
-  margin-right: 15px;
+  border-right: 1px solid $gray-300;
+  padding-right: 10px;
+  margin-right: 10px;
+  &:last-child {
+    border-right: none;
+  }
 }
 .ql-toolbar .ql-picker-label {
   border: 1px solid transparent;
