@@ -1,0 +1,14 @@
+ {{{svg}}}
+<h1>Icons</h1>
+<div class="icons-48 grid">
+  {{#each icons}}
+  <div class="col-2 text-center">
+    <div class="icon-wrapper">
+      <svg class="{{name}}">
+        <use xlink:href="#{{name}}" />
+      </svg>
+      <p>{{name}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>

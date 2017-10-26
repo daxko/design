@@ -1,18 +1,78 @@
 'use strict';
 
-module.exports = function(grunt) {
+var fs = require('fs'),
+  handlebars = require('handlebars');
 
+module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   grunt.initConfig({
-
     config: {
       docs: 'docs',
       contents: '<%= config.docs %>/contents',
       css: 'css',
       js: 'js',
       scss: 'scss',
-      fonts: 'fonts'
+      fonts: 'fonts',
+      icons: 'icons'
+    },
+
+    clean: {
+      svg: ['icons/icons.svg']
+    },
+
+    babel: {
+      options: {
+        plugins: ['transform-react-jsx', 'transform-object-rest-spread'],
+        presets: ['es2015', 'react']
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'components',
+            src: '*.js',
+            dest: 'lib',
+            ext: '.js'
+          }
+        ]
+      }
+    },
+
+    svgstore: {
+      options: {
+        prefix: 'icon-',
+        includedemo: data => {
+          return handlebars.compile(
+            fs.readFileSync('./docs/templates/icon-preview.hbs', 'utf8')
+          )(data);
+        }
+      },
+      dist: {
+        files: {
+          'icons/icons.svg': ['icons/*.svg']
+        }
+      }
+    },
+
+    svgmin: {
+      options: {
+        plugins: [
+          { convertColors: { currentColor: true } },
+          { removeComments: true },
+          { removeMetadata: true }
+        ]
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'icons',
+            src: 'icons.svg',
+            dest: 'icons'
+          }
+        ]
+      }
     },
 
     sass: {
@@ -26,19 +86,24 @@ module.exports = function(grunt) {
           '<%= config.css %>/mx.css': '<%= config.scss %>/mx.scss'
         }
       },
+
       themes: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.scss %>/mx-themes',
-          dest: '<%= config.css %>/themes',
-          src: 'theme-*.scss',
-          ext: '.css'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.scss %>/mx-themes',
+            dest: '<%= config.css %>/themes',
+            src: 'theme-*.scss',
+            ext: '.css'
+          }
+        ]
       },
       docs: {
         files: {
-          '<%= config.contents %>/css/styleguide.css': '<%= config.docs %>/scss/styleguide.scss',
-          '<%= config.contents %>/css/mx-styleguide.css': '<%= config.docs %>/scss/mx-styleguide.scss'
+          '<%= config.contents %>/css/styleguide.css':
+            '<%= config.docs %>/scss/styleguide.scss',
+          '<%= config.contents %>/css/mx-styleguide.css':
+            '<%= config.docs %>/scss/mx-styleguide.scss'
         }
       }
     },
@@ -57,7 +122,9 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer-core')({ browsers: ['last 3 versions', 'ie >= 9'] })
+          require('autoprefixer-core')({
+            browsers: ['last 3 versions', 'ie >= 9']
+          })
         ]
       },
       dist: {
@@ -68,20 +135,35 @@ module.exports = function(grunt) {
       }
     },
 
+    rename: {
+      main: {
+        files: [
+          {
+            src: ['icons/icons-demo.html'],
+            dest: '<%= config.docs %>/contents/icons/01-icons.md'
+          }
+        ]
+      }
+    },
+
     copy: {
       js: {
-        files: [{
-          expand: true,
-          src: ['*.js'],
-          cwd: '<%= config.js %>/',
-          dest: '<%= config.contents %>/js',
-          filter: 'isFile'
-        }]
+        files: [
+          {
+            expand: true,
+            src: ['*.js'],
+            cwd: '<%= config.js %>/',
+            dest: '<%= config.contents %>/js',
+            filter: 'isFile'
+          }
+        ]
       },
       normalize: {
         files: {
           // Because sass can't include normal css files
-          '<%= config.scss %>/_normalize.scss': ['node_modules/normalize.css/normalize.css'],
+          '<%= config.scss %>/_normalize.scss': [
+            'node_modules/normalize.css/normalize.css'
+          ]
         }
       },
       themes: {
@@ -106,8 +188,8 @@ module.exports = function(grunt) {
           }
         ]
       },
-      mxicons: {
-        src: 'node_modules/mx-icons/dist/icons.svg',
+      copyIcons: {
+        src: 'icons/icons.svg',
         dest: '<%= config.docs %>/contents/images/icons.svg'
       }
     },
@@ -126,18 +208,24 @@ module.exports = function(grunt) {
         options: {
           keepBreaks: true
         },
-        files: [{
-          expand: true,
-          cwd: '<%= config.css %>/themes/',
-          dest: '<%= config.css %>/themes/',
-          ext: '.min.css',
-          src: ['*.css', '!*.min.css']
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: '<%= config.css %>/themes/',
+            dest: '<%= config.css %>/themes/',
+            ext: '.min.css',
+            src: ['*.css', '!*.min.css']
+          }
+        ]
       },
       docs: {
         files: {
-          '<%= config.contents %>/css/styleguide.min.css': ['<%= config.contents %>/css/styleguide.css'],
-          '<%= config.contents %>/css/mx-styleguide.min.css': ['<%= config.contents %>/css/mx-styleguide.css']
+          '<%= config.contents %>/css/styleguide.min.css': [
+            '<%= config.contents %>/css/styleguide.css'
+          ],
+          '<%= config.contents %>/css/mx-styleguide.min.css': [
+            '<%= config.contents %>/css/mx-styleguide.css'
+          ]
         }
       }
     },
@@ -163,13 +251,16 @@ module.exports = function(grunt) {
       files: [
         'gruntfile.js',
         '<%= config.js %>/*.js',
-        '<%= config.docs %>/index.js',
+        '<%= config.docs %>/index.js'
       ]
     },
 
     watch: {
       sass: {
-        files: ['<%= config.scss %>/{,*/}*.{scss,sass}', '<%= config.docs %>/scss/{,*/}*.{scss,sass}'],
+        files: [
+          '<%= config.scss %>/{,*/}*.{scss,sass}',
+          '<%= config.docs %>/scss/{,*/}*.{scss,sass}'
+        ],
         tasks: ['sass', 'postcss', 'cssmin']
       },
       js: {
@@ -177,8 +268,11 @@ module.exports = function(grunt) {
         tasks: ['copy:js']
       },
       docs: {
-        files: ['<%= config.contents %>/{,*/}*', '<%= config.docs %>/templates/{,*/}*.{hbs,js}'],
-        tasks: ['shell:metalsmith']
+        files: [
+          '<%= config.contents %>/{,*/}*',
+          '<%= config.docs %>/templates/{,*/}*.{hbs,js}'
+        ],
+        tasks: ['build-icons', 'shell:metalsmith']
       }
     },
 
@@ -195,18 +289,17 @@ module.exports = function(grunt) {
       metalsmith: {
         command: 'cd docs && node index.js'
       },
-      'preview': {
+      preview: {
         command: 'node node_modules/.bin/http-server docs/build -p 3000'
       }
     }
-
   });
 
   // Generate Parker Stats for CSS
   grunt.registerTask('parker', function() {
-    var Parker = require('parker/lib/Parker')
-      , metrics = require('parker/metrics/All')
-      , dir = grunt.config.data.config.css;
+    var Parker = require('parker/lib/Parker'),
+      metrics = require('parker/metrics/All'),
+      dir = grunt.config.data.config.css;
 
     ['/global.min.css', '/mx.min.css'].forEach(cssFile => {
       var file = grunt.file.read(dir + cssFile);
@@ -215,7 +308,13 @@ module.exports = function(grunt) {
       var out = [];
 
       out.push('## Design');
-      out.push('`v' + pkg.version + '` - *generated on ' + grunt.template.today('mmm dd yyyy') + '*');
+      out.push(
+        '`v' +
+          pkg.version +
+          '` - *generated on ' +
+          grunt.template.today('mmm dd yyyy') +
+          '*'
+      );
       out.push('### Stats');
 
       out.push('#### ' + dir + cssFile);
@@ -223,10 +322,10 @@ module.exports = function(grunt) {
       out.push('|---|---|');
 
       metrics.forEach(function(m) {
-        if(stats[m.id]) {
+        if (stats[m.id]) {
           var stat = stats[m.id];
 
-          if(Array.isArray(stat)) {
+          if (Array.isArray(stat)) {
             stat = stat.join('<br/>');
           }
 
@@ -234,16 +333,39 @@ module.exports = function(grunt) {
         }
       });
 
-      grunt.file.write(dir + '/.' + cssFile.match(/([a-z]+)\.min\.css/i)[1] + '-stats.md', out.join('\n'));
+      grunt.file.write(
+        dir + '/.' + cssFile.match(/([a-z]+)\.min\.css/i)[1] + '-stats.md',
+        out.join('\n')
+      );
     });
   });
 
-  require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
+  require('matchdep')
+    .filterAll('grunt-*')
+    .forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['assets']);
   grunt.registerTask('test', ['eslint', 'mocha']);
   grunt.registerTask('assets', ['copy', 'sass', 'postcss', 'cssmin', 'parker']);
-  grunt.registerTask('build', ['assets', 'eslint', 'mocha', 'shell:metalsmith', 'htmlmin']);
-  grunt.registerTask('preview', ['assets', 'copy', 'shell:metalsmith', 'concurrent:docs']);
-
+  grunt.registerTask('build', [
+    'assets',
+    'build-icons',
+    'eslint',
+    'mocha',
+    'shell:metalsmith',
+    'htmlmin'
+  ]);
+  grunt.registerTask('preview', [
+    'assets',
+    'build-icons',
+    'shell:metalsmith',
+    'concurrent:docs'
+  ]);
+  grunt.registerTask('build-icons', [
+    'clean',
+    'svgmin',
+    'svgstore',
+    'babel',
+    'rename'
+  ]);
 };
