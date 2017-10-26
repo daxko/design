@@ -1696,6 +1696,29 @@ form .grid [class*=col-] > label textarea {
   content: "\e694";
 }
 
+svg {
+  fill: #000;
+}
+
+.icons-48 {
+  margin-bottom: 1em;
+}
+
+.icons-16 svg {
+  height: 16px;
+  width: 16px;
+}
+
+.icons-24 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.icons-48 svg {
+  height: 48px;
+  width: 48px;
+}
+
 .hide {
   display: none !important;
   visibility: hidden !important;
@@ -2549,6 +2572,25 @@ form .grid [class*=col-] > label textarea {
   border-top-color: #fff;
 }
 
+.panel {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
+.panel-header {
+  min-height: 43px;
+  padding: 5px;
+  line-height: 32px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.panel-body {
+  min-height: 43px;
+  padding: 10px 20px;
+}
+
 .tabs {
   border-bottom: 1px solid #e0e0e0;
 }
@@ -2668,6 +2710,84 @@ form .grid [class*=col-] > label textarea {
 .tabs-vertical .active > a:before {
   -ms-transform: scaleX(1);
       transform: scaleX(1);
+}
+
+.label {
+  display: inline;
+  padding: 3px 7px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+
+.label:empty {
+  display: none;
+}
+
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+
+a.label:hover, a.label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label-default {
+  background-color: #9e9e9e;
+}
+
+.label-default[href]:hover, .label-default[href]:focus {
+  background-color: #858585;
+}
+
+.label-primary {
+  background-color: #0275d8;
+}
+
+.label-primary[href]:hover, .label-primary[href]:focus {
+  background-color: #025aa5;
+}
+
+.label-success {
+  background-color: #33817c;
+}
+
+.label-success[href]:hover, .label-success[href]:focus {
+  background-color: #255c59;
+}
+
+.label-info {
+  background-color: #707531;
+}
+
+.label-info[href]:hover, .label-info[href]:focus {
+  background-color: #4e5122;
+}
+
+.label-warning {
+  background-color: #966a0b;
+}
+
+.label-warning[href]:hover, .label-warning[href]:focus {
+  background-color: #664808;
+}
+
+.label-danger {
+  background-color: #d9534f;
+}
+
+.label-danger[href]:hover, .label-danger[href]:focus {
+  background-color: #c9302c;
 }
 
 .toggle-switch {
@@ -3169,7 +3289,7 @@ section > h4 {
 }
 
 .content .heading p {
-  font-size: .5em;
+  font-size: 0.5em;
   color: rgba(0, 0, 0, 0.65);
   margin-bottom: 0;
 }
@@ -3215,7 +3335,7 @@ section > h4 {
 }
 
 blockquote {
-  margin-left: .5em;
+  margin-left: 0.5em;
   padding-left: 1em;
   color: rgba(0, 0, 0, 0.65);
   border-left: 5px solid rgba(0, 0, 0, 0.1);
@@ -3247,17 +3367,20 @@ section > :first-child {
   padding-top: 0;
 }
 
-.good, .bad {
+.good,
+.bad {
   display: inline-block;
   margin-top: 2em;
   margin-bottom: 1em;
 }
 
-.good:first-child, .bad:first-child {
+.good:first-child,
+.bad:first-child {
   margin-top: 0;
 }
 
-.good [class*=icon-], .bad [class*=icon-] {
+.good [class*="icon-"],
+.bad [class*="icon-"] {
   color: #fff;
   display: inline-block;
   height: 20px;
@@ -3265,14 +3388,14 @@ section > :first-child {
   border-radius: 1em;
   line-height: 20px;
   text-align: center;
-  margin-right: .2em;
+  margin-right: 0.2em;
 }
 
 .good {
   color: #989f42;
 }
 
-.good [class*=icon-] {
+.good [class*="icon-"] {
   background-color: #b3ba5a;
 }
 
@@ -3280,11 +3403,11 @@ section > :first-child {
   color: #ee264e;
 }
 
-.bad [class*=icon-] {
+.bad [class*="icon-"] {
   background-color: #ee264e;
 }
 
-.grid-example .grid [class*=col-] {
+.grid-example .grid [class*="col-"] {
   background-color: #d4d8a2;
   border-left: 5px solid #fff;
   border-right: 5px solid #fff;
@@ -3404,5 +3527,10 @@ footer strong {
 
 .toggle-theme .icon {
   vertical-align: text-top;
+}
+
+.icon-wrapper {
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 1em;
 }
 /*# sourceMappingURL=styleguide.css.map */
