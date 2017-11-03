@@ -1845,6 +1845,11 @@ svg {
 
 .alert {
   padding: .6em .8em;
+  clear: both;
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .alert + .alert {
@@ -2720,7 +2725,6 @@ svg {
   line-height: 1;
   color: #ffffff;
   text-align: center;
-  text-transform: uppercase;
   text-shadow: none;
   white-space: nowrap;
   vertical-align: baseline;
@@ -2742,52 +2746,48 @@ a.label:hover, a.label:focus {
   cursor: pointer;
 }
 
+.label-uppercase {
+  text-transform: uppercase;
+}
+
 .label-default {
-  background-color: #9e9e9e;
+  background-color: #757575;
 }
 
 .label-default[href]:hover, .label-default[href]:focus {
-  background-color: #858585;
+  background-color: #5c5c5c;
 }
 
-.label-primary {
-  background-color: #0275d8;
+.label-green {
+  background-color: #5CB85C;
 }
 
-.label-primary[href]:hover, .label-primary[href]:focus {
-  background-color: #025aa5;
+.label-green[href]:hover, .label-green[href]:focus {
+  background-color: #449d44;
 }
 
-.label-success {
-  background-color: #33817c;
+.label-blue {
+  background-color: #5BC0DE;
 }
 
-.label-success[href]:hover, .label-success[href]:focus {
-  background-color: #255c59;
+.label-blue[href]:hover, .label-blue[href]:focus {
+  background-color: #31b0d5;
 }
 
-.label-info {
-  background-color: #707531;
+.label-orange {
+  background-color: #F0AD4E;
 }
 
-.label-info[href]:hover, .label-info[href]:focus {
-  background-color: #4e5122;
+.label-orange[href]:hover, .label-orange[href]:focus {
+  background-color: #ec971f;
 }
 
-.label-warning {
-  background-color: #966a0b;
+.label-red {
+  background-color: #F9534F;
 }
 
-.label-warning[href]:hover, .label-warning[href]:focus {
-  background-color: #664808;
-}
-
-.label-danger {
-  background-color: #d9534f;
-}
-
-.label-danger[href]:hover, .label-danger[href]:focus {
-  background-color: #c9302c;
+.label-red[href]:hover, .label-red[href]:focus {
+  background-color: #f7231e;
 }
 
 .toggle-switch {
@@ -2835,7 +2835,7 @@ a.label:hover, a.label:focus {
   display: block;
 }
 
-.toggle-switch .switch {
+.toggle-switch input ~ .switch {
   position: absolute;
   height: 32px;
   left: 0;
@@ -2847,7 +2847,7 @@ a.label:hover, a.label:focus {
   z-index: 10;
 }
 
-.toggle-switch .switch:after {
+.toggle-switch input ~ .switch:after {
   content: "";
   border-radius: 16px;
   position: absolute;

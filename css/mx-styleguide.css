@@ -1970,7 +1970,7 @@ form .grid [class*=col-] > label textarea {
   display: block;
 }
 
-.toggle-switch .switch {
+.toggle-switch input ~ .switch {
   position: absolute;
   height: 32px;
   left: 0;
@@ -1982,7 +1982,7 @@ form .grid [class*=col-] > label textarea {
   z-index: 10;
 }
 
-.toggle-switch .switch:after {
+.toggle-switch input ~ .switch:after {
   content: "";
   border-radius: 16px;
   position: absolute;
