@@ -1982,7 +1982,7 @@ form .grid [class*=col-] > label textarea {
   z-index: 10;
 }
 
-.toggle-switch input:focus ~ .switch:before {
+.toggle-switch input[type=checkbox]:focus ~ .switch:before {
   box-shadow: none;
 }
 
