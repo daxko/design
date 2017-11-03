@@ -27,6 +27,11 @@ $alert-warning: (
 
 .alert {
   padding: .6em .8em;
+  clear: both;
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .alert + .alert {

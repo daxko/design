@@ -9,7 +9,6 @@ $switch-height: $toggle-switch-height - 2px;
 // Toggle Switches
 // ----------------------------------------------
 .toggle-switch {
-
   cursor: pointer;
   position: relative;
   border-radius: 16px;
@@ -52,40 +51,39 @@ $switch-height: $toggle-switch-height - 2px;
   input:checked ~ [data-on]:after {
     display: block;
   }
+}
 
-  // Off State
-  .switch {
-    position: absolute;
-    height: $toggle-switch-height;
-    left: 0;
-    right: 0;
-    border-radius: 16px;
-    background-color: $off-switch-color;
-    border: 1px solid darken($off-switch-color, 5%);
-    transition: background-color linear .2s;
-    z-index: z-index('btn-focus');
-  }
+// Off State
+.toggle-switch input ~ .switch {
+  position: absolute;
+  height: $toggle-switch-height;
+  left: 0;
+  right: 0;
+  border-radius: 16px;
+  background-color: $off-switch-color;
+  border: 1px solid darken($off-switch-color, 5%);
+  transition: background-color linear .2s;
+  z-index: z-index('btn-focus');
+}
 
-  .switch:after {
-    content: "";
-    border-radius: 16px;
-    position: absolute;
-    height: $switch-height;
-    width: $switch-height;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    transition: all ease-out .2s;
-  }
+.toggle-switch input ~ .switch:after {
+  content: "";
+  border-radius: 16px;
+  position: absolute;
+  height: $switch-height;
+  width: $switch-height;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: all ease-out .2s;
+}
 
-  // On State
-  input:checked ~ .switch {
-    background-color: $on-switch-color;
-    border: 1px solid darken($on-switch-color, 5%);
-  }
+// On State
+.toggle-switch input:checked ~ .switch {
+  background-color: $on-switch-color;
+  border: 1px solid darken($on-switch-color, 5%);
+}
 
-  input:checked ~ .switch:after {
-    transform: translateX($switch-height + 2);
-  }
-
+.toggle-switch input:checked ~ .switch:after {
+  transform: translateX($switch-height + 2);
 }
