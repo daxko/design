@@ -66,7 +66,7 @@ $switch-height: $toggle-switch-height - 2px;
   z-index: z-index('btn-focus');
 }
 
-.toggle-switch input:focus ~ .switch:before {
+.toggle-switch input[type=checkbox]:focus ~ .switch:before {
   box-shadow: none;
 }
 
