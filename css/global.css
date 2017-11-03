@@ -2847,6 +2847,10 @@ a.label:hover, a.label:focus {
   z-index: 10;
 }
 
+.toggle-switch input ~ .switch:before {
+  box-shadow: none;
+}
+
 .toggle-switch input ~ .switch:after {
   content: "";
   border-radius: 16px;

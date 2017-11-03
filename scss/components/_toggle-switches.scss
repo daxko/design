@@ -66,6 +66,10 @@ $switch-height: $toggle-switch-height - 2px;
   z-index: z-index('btn-focus');
 }
 
+.toggle-switch input ~ .switch:before {
+  box-shadow: none;
+}
+
 .toggle-switch input ~ .switch:after {
   content: "";
   border-radius: 16px;
