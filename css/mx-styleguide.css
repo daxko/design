@@ -2008,6 +2008,48 @@ form .grid [class*=col-] > label textarea {
       transform: translateX(32px);
 }
 
+.toggle-switch-small {
+  border-radius: 12px;
+  height: 24px;
+  line-height: 24px;
+  width: 48px;
+}
+
+.toggle-switch-small input[type=checkbox] {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.toggle-switch-small [data-on]:before,
+.toggle-switch-small [data-on]:after {
+  display: none;
+  font-size: 13px;
+  color: #616161;
+  padding-left: 53px;
+}
+
+.toggle-switch-small input ~ .switch {
+  height: 24px;
+  border-radius: 12px;
+}
+
+.toggle-switch-small input ~ .switch:after {
+  border-radius: 12px;
+  height: 22px;
+  width: 22px;
+}
+
+.toggle-switch-small input ~ .switch {
+  height: 24px;
+  border-radius: 12px;
+}
+
+.toggle-switch-small input:checked ~ .switch:after {
+  -ms-transform: translateX(24px);
+      transform: translateX(24px);
+}
+
 .tooltip {
   position: relative;
 }
