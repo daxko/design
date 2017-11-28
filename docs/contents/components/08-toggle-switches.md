@@ -10,6 +10,16 @@ Toggle switches are used in place of regular checkboxes to indicate the on/off s
 </label>
 {{/example}}
 
+To display a smaller toggle just change the class
+
+{{#example 'html'}}
+<label class="toggle-switch toggle-switch-small">
+  <input type="checkbox" />
+  <span class="switch"></span>
+  <span data-on="Active" data-off="Inactive"></span>
+</label>
+{{/example}}
+
 To display a toggle switch as active, just set the `checked` property on the checkbox.
 
 {{#example 'html'}}
