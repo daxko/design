@@ -4,6 +4,8 @@ node_js:
 script:
 - npm run test
 - grunt eslint
+before_script:
+  - npm install grunt-cli -g
 sudo: false
 branches:
   only:
