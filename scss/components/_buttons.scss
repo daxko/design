@@ -287,8 +287,12 @@ $btn-height: 32px;
   &:hover,
   &.active,
   &:active,
-  &:focus {
-    padding: 1px 6px 3px;
+  &:focus,
+  &.disabled,
+  &:disabled,
+  &.disabled:hover,
+  &:disabled:hover {
+    padding: 1px 6px 3px !important;
   }
 }
 
