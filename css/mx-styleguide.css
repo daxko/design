@@ -1556,8 +1556,8 @@ form .grid [class*=col-] > label textarea {
   padding: 1px 6px 3px;
 }
 
-.btn-mini:hover, .btn-mini.active, .btn-mini:active, .btn-mini:focus {
-  padding: 1px 6px 3px;
+.btn-mini:hover, .btn-mini.active, .btn-mini:active, .btn-mini:focus, .btn-mini.disabled, .btn-mini:disabled, .btn-mini.disabled:hover, .btn-mini:disabled:hover {
+  padding: 1px 6px 3px !important;
 }
 
 .btn-block {
@@ -1967,7 +1967,14 @@ form .grid [class*=col-] > label textarea {
 
 .toggle-switch input:not(:checked) ~ [data-on]:before,
 .toggle-switch input:checked ~ [data-on]:after {
-  display: block;
+  color: #616161;
+  -ms-transform: translate(60px, 0);
+      transform: translate(60px, 0);
+}
+
+.toggle-switch input:checked ~ [data-on]:after {
+  -ms-transform: translate(60px, -34px);
+      transform: translate(60px, -34px);
 }
 
 .toggle-switch input ~ .switch {
