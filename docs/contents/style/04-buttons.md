@@ -26,8 +26,6 @@ Primary buttons are used to indicate a primary action, such as a form save. Just
 
 {{#example 'html'}}
 <button type="button" class="btn btn-primary">Primary Button</button>
-<button type="button" class="btn btn-primary">Primary Button</button>
-<button type="button" disabled="disabled" class="btn btn-primary">Primary Button</button>
 <button type="button" class="btn btn-mini btn-primary">Small Primary Button</button>
 {{/example}}
 
