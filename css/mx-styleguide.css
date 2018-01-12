@@ -1373,6 +1373,7 @@ form .grid [class*=col-] > label textarea {
   border-color: inherit;
   padding: 5px 10px !important;
   color: rgba(33, 33, 33, 0.3);
+  vertical-align: top;
 }
 
 .btn::-moz-focus-inner {
