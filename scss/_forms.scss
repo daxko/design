@@ -29,6 +29,9 @@ textarea {
   vertical-align: middle;
   outline: 0;
   position: relative;
+  &:disabled {
+    background: $gray-50;
+  }
 }
 
 input[type=checkbox],
