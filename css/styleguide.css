@@ -1087,10 +1087,7 @@ form .grid [class*=col-] > label textarea {
 @font-face {
   font-family: 'daxicons';
   src: url("fonts/daxicons.eot?v1");
-  src: url("fonts/daxicons.eot?#v1") format("embedded-opentype");
-  src: url("fonts/daxicons.woff?v1") format("woff");
-  src: url("fonts/daxicons.ttf?v1") format("truetype");
-  src: url("fonts/daxicons.svg?v1#daxicons") format("svg");
+  src: url("fonts/daxicons.eot?#v1") format("embedded-opentype"), url("fonts/daxicons.woff?v1") format("woff"), url("fonts/daxicons.ttf?v1") format("truetype"), url("fonts/daxicons.svg?v1#daxicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
