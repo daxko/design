@@ -9,10 +9,27 @@
 
 .panel-header {
   min-height: 43px;
-  padding: 5px;
+  padding: 5px 20px;
   line-height: 32px;
   background-color: $gray-50;
   border-bottom: 1px solid $gray-100;
+}
+
+.panel-header .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  line-height: 2.25;
+  padding: 0;
+  border: none;
+  background: none;
+  color: $gray-300;
+  &:hover {
+    color: $gray-900;
+  }
 }
 
 .panel-body {
