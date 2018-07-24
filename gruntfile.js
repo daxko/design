@@ -1,9 +1,10 @@
 'use strict';
 
 var fs = require('fs'),
-  handlebars = require('handlebars');
+  handlebars = require('handlebars'),
+  sass = require('node-sass');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   grunt.initConfig({
@@ -77,6 +78,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
+        implementation: sass,
         outputStyle: 'expanded',
         sourceMap: true
       },
@@ -296,7 +298,7 @@ module.exports = function(grunt) {
   });
 
   // Generate Parker Stats for CSS
-  grunt.registerTask('parker', function() {
+  grunt.registerTask('parker', function () {
     var Parker = require('parker/lib/Parker'),
       metrics = require('parker/metrics/All'),
       dir = grunt.config.data.config.css;
@@ -310,10 +312,10 @@ module.exports = function(grunt) {
       out.push('## Design');
       out.push(
         '`v' +
-          pkg.version +
-          '` - *generated on ' +
-          grunt.template.today('mmm dd yyyy') +
-          '*'
+        pkg.version +
+        '` - *generated on ' +
+        grunt.template.today('mmm dd yyyy') +
+        '*'
       );
       out.push('### Stats');
 
@@ -321,7 +323,7 @@ module.exports = function(grunt) {
       out.push('|Stat|Metric|');
       out.push('|---|---|');
 
-      metrics.forEach(function(m) {
+      metrics.forEach(function (m) {
         if (stats[m.id]) {
           var stat = stats[m.id];
 
