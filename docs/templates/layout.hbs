@@ -62,6 +62,7 @@
   <script src="/js/fixed-sticky.js"></script>
   <script src="/js/typeahead.jquery.js"></script>
   <script src="/js/typeahead.js"></script>
+  <script src="/js/popover.js"></script>
   <script>
     jQuery('.sticky').fixedsticky();
 
@@ -107,6 +108,9 @@
         name: 'states',
         source: substringMatcher(states)
       });
+
+    popover('.popover', { animation: 'fade' })
+    popover('.popover-with-html', { html: '#myHtml', arrow: true, animation: 'fade', trigger: 'click', placement: 'top-start', interactive: false })
   </script>
 </body>
 
