@@ -134,50 +134,7 @@
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre><h2 id="loader">Loader</h2><p>When performing asynchronous actions that may cause some delay, you can use a <code>.loader</code> element to indicate that something is happening in the background.</p><div class="example"><div class="loader"></div></div><pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"loader"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-</code></pre></section><footer>Created and maintained by the design team at Daxko. <strong>v1.0.8</strong></footer></main><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="/design/js/scrollspy.js"></script><script src="/design/js/dropdown.js"></script><script src="/design/js/modal.js"></script><script src="/design/js/fixed-sticky.js"></script><script src="/design/js/typeahead.jquery.js"></script><script src="/design/js/typeahead.js"></script><script src="/design/js/popover.js"></script><script>jQuery('.sticky').fixedsticky();
-
-    var substringMatcher = function (strs) {
-      return function findMatches(q, cb) {
-        var matches, substringRegex;
-
-        // an array that will be populated with substring matches
-        matches = [];
-
-        // regex used to determine if a string contains the substring `q`
-        substrRegex = new RegExp(q, 'i');
-
-        // iterate through the pool of strings and for any string that
-        // contains the substring `q`, add it to the `matches` array
-        $.each(strs, function (i, str) {
-          if (substrRegex.test(str)) {
-            matches.push(str);
-          }
-        });
-
-        cb(matches);
-      };
-    };
-
-    var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-      'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-      'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-      'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-      'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-      'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-      'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-    ];
-
-    $('#state-input .typeahead').typeahead({
-      hint: false,
-      highlight: true,
-      minLength: 1
-    },
-      {
-        name: 'states',
-        source: substringMatcher(states)
-      });
+</code></pre></section><footer>Created and maintained by the design team at Daxko. <strong>v1.0.8</strong></footer></main><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="/design/js/scrollspy.js"></script><script src="/design/js/dropdown.js"></script><script src="/design/js/modal.js"></script><script src="/design/js/fixed-sticky.js"></script><script src="/design/js/popover.js"></script><script>jQuery('.sticky').fixedsticky();
 
     popover('.popover', { animation: 'fade' })
     popover('.popover-with-html', { html: '#myHtml', arrow: true, animation: 'fade', trigger: 'click', placement: 'top-start', interactive: false })</script></body></html>
