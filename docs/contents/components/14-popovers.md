@@ -27,11 +27,6 @@ Make sure to include the popover.js file and initialize
 
 HTML Template
 {{#example 'html'}}
-<script>
-  popover('.popover-with-html', {
-    html: '#myHtml',
-  })
-</script>
 <a class="popover-with-html">HTML Templates</a>
 <div id="myHtml" class="panel hide">
   <div class="panel-header">
