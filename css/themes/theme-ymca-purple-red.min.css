@@ -12,9 +12,9 @@ input:focus,select:focus,textarea:focus{border-color:#c6168d}
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#c6168d;color:#fff}
 .btn,.btn-link,.btn:hover,a.btn{color:#c6168d;border:1px solid #c6168d}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
-.btn-primary,.btn.active,.btn.active:focus,.btn:active,.btn:active:focus,.btn:focus{border:1px solid #c6168d}
-.btn:focus{box-shadow:none}
-.btn-primary{background-color:#c6168d;color:#fff}
+.btn.active,.btn.active:focus,.btn:active,.btn:active:focus{border:1px solid #c6168d}
+.btn:focus{border:1px solid #c6168d;box-shadow:none}
+.btn-primary{background-color:#c6168d;border:1px solid #c6168d;color:#fff}
 .btn-primary:hover,a.btn-primary,a.btn-primary:hover{color:#fff}
 .btn-primary.active,.btn-primary.active:focus,.btn-primary:active,.btn-primary:active:focus{border:1px solid #c6168d;background-color:#c6168d}
 .btn-primary:hover{border:1px solid #92278f;background-color:#92278f}
@@ -26,4 +26,5 @@ input:focus,select:focus,textarea:focus{border-color:#c6168d}
 .dropdown-trigger .caret{border-top-color:#5c2e91}
 .fullscreen-modal-backdrop{background-color:rgba(146,39,143,.9)}
 .has-backdrop-filter .fullscreen-modal-backdrop{background-color:rgba(146,39,143,.7)}
+.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,#5c2e91,#f1592b);opacity:.7}
 /*# sourceMappingURL=theme-ymca-purple-red.min.css.map */
