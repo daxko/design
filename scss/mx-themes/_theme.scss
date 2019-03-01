@@ -177,6 +177,5 @@ a.btn-primary:hover,
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top right, theme-color($theme-color-primary, 'dark'), theme-color($theme-color-secondary, 'light'));
-  opacity: .7; 
+  background-image: linear-gradient(to top right, rgba(theme-color($theme-color-primary, 'dark'), .7), rgba(theme-color($theme-color-secondary, 'light'), .7));
 }

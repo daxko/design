@@ -26,5 +26,5 @@ input:focus,select:focus,textarea:focus{border-color:#f1592b}
 .dropdown-trigger .caret{border-top-color:#a92b31}
 .fullscreen-modal-backdrop{background-color:rgba(237,28,36,.9)}
 .has-backdrop-filter .fullscreen-modal-backdrop{background-color:rgba(237,28,36,.7)}
-.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,#a92b31,#fcaf17);opacity:.7}
+.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,rgba(169,43,49,.7),rgba(252,175,23,.7))}
 /*# sourceMappingURL=theme-ymca-red-orange.min.css.map */

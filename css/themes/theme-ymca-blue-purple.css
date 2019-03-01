@@ -155,8 +155,7 @@ a.btn-primary:hover,
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top right, #0060af, #c6168d);
-  opacity: .7;
+  background-image: linear-gradient(to top right, rgba(0, 96, 175, 0.7), rgba(198, 22, 141, 0.7));
 }
 
 /*# sourceMappingURL=theme-ymca-blue-purple.css.map */

@@ -26,5 +26,5 @@ input:focus,select:focus,textarea:focus{border-color:#00adbb}
 .dropdown-trigger .caret{border-top-color:#046}
 .fullscreen-modal-backdrop{background-color:rgba(0,104,165,.9)}
 .has-backdrop-filter .fullscreen-modal-backdrop{background-color:rgba(0,104,165,.7)}
-.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,#046,#00adbb);opacity:.7}
+.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,rgba(0,68,102,.7),rgba(0,173,187,.7))}
 /*# sourceMappingURL=theme-jcc-blue.min.css.map */
