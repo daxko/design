@@ -148,4 +148,14 @@ a.btn-primary:hover,
   background-color: rgba(0, 137, 208, 0.7);
 }
 
+.background-gradient-filter:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top right, rgba(0, 96, 175, 0.7), rgba(198, 22, 141, 0.7));
+}
+
 /*# sourceMappingURL=theme-ymca-blue-purple.css.map */
