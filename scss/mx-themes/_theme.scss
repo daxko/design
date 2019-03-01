@@ -167,3 +167,15 @@ a.btn-primary:hover,
 .has-backdrop-filter .fullscreen-modal-backdrop {
   background-color: rgba(theme-color($theme-color-primary, 'medium'), .7);
 }
+
+// Page Background Gradient Filter
+
+.background-gradient-filter:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top right, rgba(theme-color($theme-color-primary, 'dark'), .7), rgba(theme-color($theme-color-secondary, 'light'), .7));
+}

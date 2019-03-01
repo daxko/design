@@ -12,9 +12,9 @@ input:focus,select:focus,textarea:focus{border-color:#f1592b}
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#f1592b;color:#fff}
 .btn,.btn-link,.btn:hover,a.btn{color:#f1592b;border:1px solid #f1592b}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
-.btn-primary,.btn.active,.btn.active:focus,.btn:active,.btn:active:focus,.btn:focus{border:1px solid #f1592b}
-.btn:focus{box-shadow:none}
-.btn-primary{background-color:#f1592b;color:#fff}
+.btn.active,.btn.active:focus,.btn:active,.btn:active:focus{border:1px solid #f1592b}
+.btn:focus{border:1px solid #f1592b;box-shadow:none}
+.btn-primary{background-color:#f1592b;border:1px solid #f1592b;color:#fff}
 .btn-primary:hover,a.btn-primary,a.btn-primary:hover{color:#fff}
 .btn-primary.active,.btn-primary.active:focus,.btn-primary:active,.btn-primary:active:focus{border:1px solid #f1592b;background-color:#f1592b}
 .btn-primary:hover{border:1px solid #ed1c24;background-color:#ed1c24}
@@ -26,4 +26,5 @@ input:focus,select:focus,textarea:focus{border-color:#f1592b}
 .dropdown-trigger .caret{border-top-color:#a92b31}
 .fullscreen-modal-backdrop{background-color:rgba(237,28,36,.9)}
 .has-backdrop-filter .fullscreen-modal-backdrop{background-color:rgba(237,28,36,.7)}
+.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,rgba(169,43,49,.7),rgba(252,175,23,.7))}
 /*# sourceMappingURL=theme-ymca-red-orange.min.css.map */

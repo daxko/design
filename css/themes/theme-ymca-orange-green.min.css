@@ -12,9 +12,9 @@ input:focus,select:focus,textarea:focus{border-color:#fcaf17}
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#fcaf17;color:#fff}
 .btn,.btn-link,.btn:hover,a.btn{color:#fcaf17;border:1px solid #fcaf17}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
-.btn-primary,.btn.active,.btn.active:focus,.btn:active,.btn:active:focus,.btn:focus{border:1px solid #fcaf17}
-.btn:focus{box-shadow:none}
-.btn-primary{background-color:#fcaf17;color:#fff}
+.btn.active,.btn.active:focus,.btn:active,.btn:active:focus{border:1px solid #fcaf17}
+.btn:focus{border:1px solid #fcaf17;box-shadow:none}
+.btn-primary{background-color:#fcaf17;border:1px solid #fcaf17;color:#fff}
 .btn-primary:hover,a.btn-primary,a.btn-primary:hover{color:#fff}
 .btn-primary.active,.btn-primary.active:focus,.btn-primary:active,.btn-primary:active:focus{border:1px solid #fcaf17;background-color:#fcaf17}
 .btn-primary:hover{border:1px solid #f47920;background-color:#f47920}
@@ -26,4 +26,5 @@ input:focus,select:focus,textarea:focus{border-color:#fcaf17}
 .dropdown-trigger .caret{border-top-color:#dd5828}
 .fullscreen-modal-backdrop{background-color:rgba(244,121,32,.9)}
 .has-backdrop-filter .fullscreen-modal-backdrop{background-color:rgba(244,121,32,.7)}
+.background-gradient-filter:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(to top right,rgba(221,88,40,.7),rgba(32,189,190,.7))}
 /*# sourceMappingURL=theme-ymca-orange-green.min.css.map */
