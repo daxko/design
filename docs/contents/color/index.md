@@ -75,6 +75,68 @@ This color palette consists of daxko's four primary brand colors.
   </div>
   <div class="col-5">
     <ul class="swatch-list">
+      <li class="secondary-000">
+        000
+        <span class="pull-right">
+          <em>Hex</em> #F5F5F5
+        </span>
+      </li>
+      <li class="secondary-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #F0F0F0
+        </span>
+      </li>
+      <li class="secondary-200">
+        200
+        <span class="pull-right">
+          <em>Hex</em> #D9D9D9
+        </span>
+      </li>
+      <li class="secondary-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #B8B8B8
+        </span>
+      </li>
+      <li class="secondary-400">
+        400
+        <span class="pull-right">
+          <em>Hex</em> #8C8C8C
+        </span>
+      </li>
+      <li class="secondary-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #757575
+        </span>
+      </li>
+      <li class="secondary-600">
+        600
+        <span class="pull-right">
+          <em>Hex</em> #5C5C5C
+        </span>
+      </li>
+      <li class="secondary-700">
+        700
+        <span class="pull-right">
+          <em>Hex</em> #424242
+        </span>
+      </li>
+      <li class="secondary-800">
+        800
+        <span class="pull-right">
+          <em>Hex</em> #292929
+        </span>
+      </li>
+      <li class="secondary-900">
+        900
+        <span class="pull-right">
+          <em>Hex</em> #0F0F0F
+        </span>
+      </li>
+    </ul>
+    <!-- <ul class="swatch-list">
       <li class="gray-50">
         50
         <span class="pull-right">
@@ -109,6 +171,337 @@ This color palette consists of daxko's four primary brand colors.
         900
         <span class="pull-right">
           <em>Hex</em> #212121
+        </span>
+      </li>
+    </ul> -->
+  </div>
+</div>
+
+### Contextual Colors
+
+<div class="grid">
+  <div class="col-7">
+    <p>The colors are contextual based on the type of interaction that is being had. Primary should be used for hyperlinks and items that are important to highlight. Success is used for positive interactions. Warning is used to warn the user that something could potentially be a problem. Danger is used to indicate something went wrong.</p>
+  </div>
+  <div class="col-5">
+    <ul class="swatch-list">
+      <li class="primary">
+      Primary
+        <span class="pull-right">
+          <em>Hex</em> #0070CB
+        </span>
+      </li>
+      <li class="primary-variant">
+      Primary Variant
+        <span class="pull-right">
+          <em>Hex</em> #0059A2
+        </span>
+      </li>
+      <li class="success">
+      Success
+        <span class="pull-right">
+          <em>Hex</em> #008011
+        </span>
+      </li>
+      <li class="success-variant">
+      Success Variant
+        <span class="pull-right">
+          <em>Hex</em> #00640D
+        </span>
+      </li>
+      <li class="warning">
+      Warning
+        <span class="pull-right">
+          <em>Hex</em> #8E6408
+        </span>
+      </li>
+      <li class="warning-variant">
+      Warning Variant
+        <span class="pull-right">
+          <em>Hex</em> #6F4E04
+        </span>
+      </li>
+      <li class="danger">
+      Danger
+        <span class="pull-right">
+          <em>Hex</em> #D5110A
+        </span>
+      </li>
+      <li class="danger-variant">
+      Danger Variant
+        <span class="pull-right">
+          <em>Hex</em> #A90B05
+        </span>
+      </li>
+      <li class="secondary">
+      Secondary
+        <span class="pull-right">
+          <em>Hex</em> #F5F5F5
+        </span>
+      </li>
+      <li class="secondary-variant">
+      Secondary Variant
+        <span class="pull-right">
+          <em>Hex</em> #8C8C8C
+        </span>
+      </li>
+    </ul>
+  </div>
+  
+</div>
+
+### Contextual Color Variants
+
+<div class="grid">
+  <div class="col-12">
+    <p>These are all of the color variants for each context color. Some of these color vairants are used for the various components throughout the Daxko Design Library</p>
+  </div>
+  <div class="col-3">
+    <h4>Primary</h4>
+  </div>
+  <div class="col-3">
+    <h4>Success</h4>
+  </div>
+  <div class="col-3">
+    <h4>Warning</h4>
+  </div>
+  <div class="col-3">
+    <h4>Danger</h4>
+  </div>
+  <div class="col-3">
+    <ul class="swatch-list">
+      <li class="primary-000">
+        000
+        <span class="pull-right">
+          <em>Hex</em> #E9F6FF
+        </span>
+      </li>
+      <li class="primary-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #CBE7FF
+        </span>
+      </li>
+      <li class="primary-200">
+        200
+        <span class="pull-right">
+          <em>Hex</em> #9BD2FF
+        </span>
+      </li>
+      <li class="primary-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #63B9FF
+        </span>
+      </li>
+      <li class="primary-400">
+        400
+        <span class="pull-right">
+          <em>Hex</em> #3192E3
+        </span>
+      </li>
+      <li class="primary-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #0070CB
+        </span>
+      </li>
+      <li class="primary-600">
+        600
+        <span class="pull-right">
+          <em>Hex</em> #0059A2
+        </span>
+      </li>
+      <li class="primary-700">
+        700
+        <span class="pull-right">
+          <em>Hex</em> #004175
+        </span>
+      </li>
+      <li class="primary-800">
+        800
+        <span class="pull-right">
+          <em>Hex</em> #002B4D
+        </span>
+      </li>
+      <li class="primary-900">
+        900
+        <span class="pull-right">
+          <em>Hex</em> #001527
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-3">
+    <ul class="swatch-list">
+      <li class="success-000">
+        000
+        <span class="pull-right">
+          <em>Hex</em> #DCFBE0
+        </span>
+      </li>
+      <li class="success-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #BDEEC6
+        </span>
+      </li>
+      <li class="success-200">
+        200
+        <span class="pull-right">
+          <em>Hex</em> #86E196
+        </span>
+      </li>
+      <li class="success-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #4DC860
+        </span>
+      </li>
+      <li class="success-400">
+        400
+        <span class="pull-right">
+          <em>Hex</em> #22A135
+        </span>
+      </li>
+      <li class="success-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #008011
+        </span>
+      </li>
+      <li class="success-600">
+        600
+        <span class="pull-right">
+          <em>Hex</em> #00640D
+        </span>
+      </li>
+      <li class="success-700">
+        700
+        <span class="pull-right">
+          <em>Hex</em> #00470D
+        </span>
+      </li>
+      <li class="success-800">
+        800
+        <span class="pull-right">
+          <em>Hex</em> #003109
+        </span>
+      </li>
+      <li class="success-900">
+        900
+        <span class="pull-right">
+          <em>Hex</em> #001705
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-3">
+    <ul class="swatch-list">
+      <li class="warning-000">
+        000
+        <span class="pull-right">
+          <em>Hex</em> #FFF1D2
+        </span>
+      </li>
+      <li class="warning-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #F5DFAC
+        </span>
+      </li>
+      <li class="warning-200">
+        200
+        <span class="pull-right">
+          <em>Hex</em> #E8C780
+        </span>
+      </li>
+      <li class="warning-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #D4A94B
+        </span>
+      </li>
+      <li class="warning-400">
+        400
+        <span class="pull-right">
+          <em>Hex</em> #AD8125
+        </span>
+      </li>
+      <li class="warning-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #8E6408
+        </span>
+      </li>
+      <li class="warning-600">
+        600
+        <span class="pull-right">
+          <em>Hex</em> #6F4E04
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-3">
+    <ul class="swatch-list">
+      <li class="danger-000">
+        000
+        <span class="pull-right">
+          <em>Hex</em> #FFEFF0
+        </span>
+      </li>
+      <li class="danger-100">
+        100
+        <span class="pull-right">
+          <em>Hex</em> #FFD5D5
+        </span>
+      </li>
+      <li class="danger-200">
+        200
+        <span class="pull-right">
+          <em>Hex</em> #FFB1B0
+        </span>
+      </li>
+      <li class="danger-300">
+        300
+        <span class="pull-right">
+          <em>Hex</em> #FF7D77
+        </span>
+      </li>
+      <li class="danger-400">
+        400
+        <span class="pull-right">
+          <em>Hex</em> #F84845
+        </span>
+      </li>
+      <li class="danger-500">
+        500
+        <span class="pull-right">
+          <em>Hex</em> #D5110A
+        </span>
+      </li>
+      <li class="danger-600">
+        600
+        <span class="pull-right">
+          <em>Hex</em> #A90B05
+        </span>
+      </li>
+      <li class="danger-700">
+        700
+        <span class="pull-right">
+          <em>Hex</em> #7C0E0A
+        </span>
+      </li>
+      <li class="danger-800">
+        800
+        <span class="pull-right">
+          <em>Hex</em> #540705
+        </span>
+      </li>
+      <li class="danger-900">
+        900
+        <span class="pull-right">
+          <em>Hex</em> #280909
         </span>
       </li>
     </ul>

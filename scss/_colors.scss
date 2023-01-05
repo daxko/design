@@ -1,4 +1,85 @@
-// Primary Colors
+// Default Color Variants
+$primary-default-000: #E9F6FF;
+$primary-default-100: #CBE7FF;
+$primary-default-200: #9BD2FF;
+$primary-default-300: #63B9FF;
+$primary-default-400: #3192E3;
+$primary-default-500: #0070CB;
+$primary-default-600: #0059A2;
+$primary-default-700: #004175;
+$primary-default-800: #002B4D;
+$primary-default-900: #001527;
+
+// Success Color Variants
+$primary-success-000: #DCFBE0;
+$primary-success-100: #BDEEC6;
+$primary-success-200: #86E196;
+$primary-success-300: #4DC860;
+$primary-success-400: #22A135;
+$primary-success-500: #008011;
+$primary-success-600: #00640D;
+$primary-success-700: #00470D;
+$primary-success-800: #003109;
+$primary-success-900: #001705;
+
+// Warning Color Variants
+$primary-warning-000: #FFF1D2;
+$primary-warning-100: #F5DFAC;
+$primary-warning-200: #E8C780;
+$primary-warning-300: #D4A94B;
+$primary-warning-400: #AD8125;
+$primary-warning-500: #8E6408;
+$primary-warning-600: #6F4E04;
+
+// Danger Color Variants
+$primary-danger-000: #FFEFF0;
+$primary-danger-100: #FFD5D5;
+$primary-danger-200: #FFB1B0;
+$primary-danger-300: #FF7D77;
+$primary-danger-400: #F84845;
+$primary-danger-500: #D5110A;
+$primary-danger-600: #A90B05;
+$primary-danger-700: #7C0E0A;
+$primary-danger-800: #540705;
+$primary-danger-900: #280909;
+
+// Secondary Color Variants
+$secondary-000: #F5F5F5;
+$secondary-100: #F0F0F0;
+$secondary-200: #D9D9D9;
+$secondary-300: #B8B8B8;
+$secondary-400: #8C8C8C;
+$secondary-500: #757575;
+$secondary-600: #5C5C5C;
+$secondary-700: #424242;
+$secondary-800: #292929;
+$secondary-900: #0F0F0F;
+
+$white: #FFFFFF;
+
+// Contextual Colors
+$primary:             $primary-default-500;
+$primary-variant:     $primary-default-600;
+$success:             $primary-success-500;
+$success-variant:     $primary-success-600;
+$warning:             $primary-warning-500;
+$warning-variant:     $primary-warning-600;
+$danger:              $primary-danger-500;
+$danger-variant:      $primary-danger-600;
+$secondary:           $secondary-000;
+$secondary-variant:   $secondary-400;
+
+// Background
+$background:  $white;
+
+// Text Colors
+$text-light:     $white;
+$text-dark:      $secondary-900;
+$text-half-tone: $secondary-500;
+
+
+
+// Daxko Theme Colors
 $red-velvet:     #ee264e;
 $banana-pudding: #efad1c;
 $key-lime:       #b3ba5a;
