@@ -1,5 +1,5 @@
-$tab-border-color: $gray-100 !default;
-$tab-accent-color: $cotton-candy !default;
+$tab-border-color: $secondary-100 !default;
+$tab-accent-color: $primary-default-200 !default;
 $tab-accent-size: 3px !default;
 
 // Tabs
@@ -18,7 +18,7 @@ $tab-accent-size: 3px !default;
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: $gray-300;
+    color: $secondary-300;
     line-height: 2.5;
     padding-left: 1em;
     padding-right: 1em;
@@ -26,7 +26,7 @@ $tab-accent-size: 3px !default;
   }
 
   a:hover {
-    color: $gray-900;
+    color: $secondary-900;
   }
 
   a:before {
@@ -43,7 +43,7 @@ $tab-accent-size: 3px !default;
   }
 
   .active > a {
-    color: $gray-900;
+    color: $secondary-900;
   }
 
   .active > a:before {

@@ -24,5 +24,10 @@ Status flags are used to indicate *active* or *inactive* status for anything tha
   <span class="status-flag status-flag--prospect tooltip" aria-label="Prospect"></span> Prospect
 <!-- hide -->
 </p>
+<p>
+<!-- /hide -->
+  <span class="status-flag status-flag--danger tooltip" aria-label="Danger"></span> Danger
+<!-- hide -->
+</p>
 <!-- /hide -->
 {{/example}}

@@ -1,25 +1,24 @@
-$alert-success: (
-  body: #f0f2de,
-  text: #707531,
-  border: #d9ddad
-);
-
-$alert-error: (
-  body: #fcd4dc,
-  text: #9a0c28,
-  border: #f793a7
-);
-
-$alert-info: (
-  body: #edf8f8,
-  text: #42a59f,
-  border: #d2edec
-);
-
-$alert-warning: (
-  body: #fcefd2,
-  text: #966a0b,
-  border: #f7d68e
+$alert-types: (
+  'success': (
+    body: $primary-success-000,
+    text: $primary-success-600,
+    border: $primary-success-300
+  ),
+  'error': (
+    body: $primary-danger-000,
+    text: $primary-danger-600,
+    border: $primary-danger-300
+  ),
+  'info': (
+    body: $primary-default-000,
+    text: $primary-default-600,
+    border: $primary-default-300
+  ),
+  'warning': (
+    body: $primary-warning-000,
+    text: $primary-warning-600,
+    border: $primary-warning-300
+  )
 );
 
 // Alerts
@@ -32,38 +31,24 @@ $alert-warning: (
   border-top: none;
   border-right: none;
   border-bottom: none;
+
+  + .alert {
+    margin-top: 5px;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.alert + .alert {
-  margin-top: 5px;
-}
-
-.alert p:first-child {
-  margin-top: 0;
-}
-
-.alert p:last-child {
-  margin-bottom: 0;
-}
-
-@mixin alert($type) {
-  background-color: map-get($type, 'body');
-  color: map-get($type, 'text');
-  border-left: 5px solid map-get($type, 'border');
-}
-
-.alert.alert-success {
-  @include alert($alert-success);
-}
-
-.alert.alert-error {
-  @include alert($alert-error);
-}
-
-.alert.alert-info {
-  @include alert($alert-info);
-}
-
-.alert.alert-warning {
-  @include alert($alert-warning);
+@each $type, $value in $alert-types {
+  .alert.alert-#{$type} {
+    background-color: map-get($value, 'body');
+    color: map-get($value, 'text');
+    border-left: 5px solid map-get($value, 'border');
+  }
 }

@@ -29,3 +29,23 @@ To display a toggle switch as active, just set the `checked` property on the che
   <span data-on="Active" data-off="Inactive"></span>
 </label>
 {{/example}}
+
+To disable a toggle switch add the `disabled` property to the check box
+
+{{#example 'html'}}
+<label class="toggle-switch">
+  <input type="checkbox" disabled />
+  <span class="switch"></span>
+  <span data-on="Active" data-off="Inactive"></span>
+</label>
+{{/example}}
+
+Disabled also works on active toggle switches
+
+{{#example 'html'}}
+<label class="toggle-switch">
+  <input type="checkbox" disabled checked />
+  <span class="switch"></span>
+  <span data-on="Active" data-off="Inactive"></span>
+</label>
+{{/example}}

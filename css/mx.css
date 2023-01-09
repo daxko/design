@@ -450,7 +450,7 @@ h6 {
 }
 
 .secondary, .tile--description {
-  color: #616161;
+  color: #F5F5F5;
 }
 
 h1 .secondary, h1 .tile--description,
@@ -494,7 +494,7 @@ img {
 }
 
 a {
-  color: #0275d8;
+  color: #0070CB;
   text-decoration: none;
 }
 
@@ -743,7 +743,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #D9D9D9;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: 13px;
@@ -767,7 +767,7 @@ input[type=time]:disabled,
 input[type=date]:disabled,
 select:disabled,
 textarea:disabled {
-  background: #f5f5f5;
+  background: #F5F5F5;
 }
 
 input[type="checkbox"],
@@ -840,7 +840,7 @@ textarea:focus {
 }
 
 form label {
-  color: #424242;
+  color: #0F0F0F;
   font-weight: 500;
 }
 
@@ -855,7 +855,7 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  color: #212121;
+  color: #0F0F0F;
   font-weight: 500;
   display: block;
   width: 100%;
@@ -863,15 +863,15 @@ fieldset legend {
 }
 
 input::-webkit-input-placeholder {
-  color: #9e9e9e;
+  color: #757575;
 }
 
 input:-ms-input-placeholder {
-  color: #9e9e9e;
+  color: #757575;
 }
 
 input::placeholder {
-  color: #9e9e9e;
+  color: #757575;
 }
 
 .grid label {
@@ -975,13 +975,13 @@ form .grid [class*=col-] > label textarea {
 }
 
 .input-group .add-on {
-  color: #616161;
+  color: #0F0F0F;
   text-shadow: -1px 0 #fff;
   border-radius: 3px;
   font-size: 13px;
   padding: 5px 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
+  background-color: #F5F5F5;
+  border: 1px solid #D9D9D9;
 }
 
 .input-group .add-on:first-child {
@@ -1049,7 +1049,7 @@ form .grid [class*=col-] > label textarea {
   border-radius: 3px;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #D9D9D9;
 }
 
 .table.table-fixed {
@@ -1063,21 +1063,21 @@ form .grid [class*=col-] > label textarea {
 
 .table > thead > tr td,
 .table > thead > tr th {
-  background-color: #e0e0e0;
+  background-color: #F0F0F0;
   padding: 0.8em 1em;
   vertical-align: bottom;
 }
 
 .table > tbody > tr td,
 .table > tbody > tr th {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #D9D9D9;
   padding: 0.75em 1em;
   vertical-align: top;
 }
 
 .table.table-hover > tbody > tr:hover td,
 .table.table-hover > tbody > tr:hover th {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
 }
 
 .table.table-condensed > tbody > tr td,
@@ -1216,33 +1216,33 @@ form .grid [class*=col-] > label textarea {
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #9e9e9e;
+  border: 1px solid #B8B8B8;
   border-radius: .2em;
-  box-shadow: 0 -1px 0 #9e9e9e inset;
+  box-shadow: 0 -1px 0 #B8B8B8 inset;
   font-size: 13px;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 20px;
   height: 32px;
-  color: #212121;
+  color: #0F0F0F;
   text-decoration: none;
   text-align: center;
   vertical-align: baseline;
   white-space: nowrap;
   outline: none;
   padding: 4px 10px 6px;
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   transition: ease-in-out .1s background-color, ease-in-out .1s border;
 }
 
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label, .btn.focus {
-  box-shadow: 0 -1px 0 #9e9e9e inset, 0 0 0 2px #89baeb;
+  box-shadow: 0 -1px 0 #B8B8B8 inset, 0 0 0 2px #89baeb;
   z-index: 10;
 }
 
 .btn:hover {
-  border-color: #6b6b6b;
+  border-color: #858585;
   background-color: #dcdbdb;
   text-decoration: none;
 }
@@ -1264,11 +1264,11 @@ form .grid [class*=col-] > label textarea {
   cursor: not-allowed;
   box-shadow: none !important;
   background-image: none;
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   text-shadow: none;
   border-color: inherit;
   padding: 5px 10px !important;
-  color: rgba(33, 33, 33, 0.3);
+  color: rgba(15, 15, 15, 0.3);
   vertical-align: top;
 }
 
@@ -1278,26 +1278,26 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0275d8;
-  border-color: #025aa5;
-  box-shadow: 0 -1px 0 #025aa5 inset;
+  color: #FFFFFF;
+  background-color: #0070CB;
+  border-color: #005498;
+  box-shadow: 0 -1px 0 #005498 inset;
 }
 
 .btn-primary:hover {
-  background-color: #025aa5;
-  border-color: #013e73;
-  box-shadow: 0 -1px 0 #013e73 inset;
+  background-color: #005498;
+  border-color: #003865;
+  box-shadow: 0 -1px 0 #003865 inset;
 }
 
 .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary.active:focus {
-  background-color: #025aa5;
-  border-color: #013e73;
+  background-color: #005498;
+  border-color: #003865;
   box-shadow: none;
 }
 
 .btn-primary:focus {
-  box-shadow: 0 -1px 0 #025aa5 inset, 0 0 0 2px #89baeb;
+  box-shadow: 0 -1px 0 #005498 inset, 0 0 0 2px #89baeb;
 }
 
 .btn-primary:disabled,
@@ -1305,42 +1305,41 @@ form .grid [class*=col-] > label textarea {
 .btn-primary:disabled:hover,
 .btn-primary.disabled:hover, .btn-primary.disabled, .btn-primary:hover:disabled,
 .btn-primary.disabled:hover, .btn-primary.disabled:hover {
-  color: #fff;
-  border-color: #75bffe;
-  background-color: #75bffe;
+  color: #FFFFFF;
+  border-color: #65baff;
+  background-color: #65baff;
 }
 
 .btn-danger {
-  color: #fff;
-  background: #D9534F;
-  border-color: #c9302c;
-  box-shadow: 0 -1px 0 #c9302c inset;
+  color: #FFFFFF;
+  background-color: #D5110A;
+  border-color: #a40d08;
+  box-shadow: 0 -1px 0 #a40d08 inset;
 }
 
 .btn-danger:hover {
-  background-color: #c9302c;
-  border-color: #a02622;
-  box-shadow: 0 -1px 0 #a02622 inset;
+  background-color: #a40d08;
+  border-color: #740905;
+  box-shadow: 0 -1px 0 #740905 inset;
 }
 
 .btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger.active:focus {
-  background-color: #c9302c;
-  border-color: #a02622;
+  background-color: #a40d08;
+  border-color: #740905;
   box-shadow: none;
 }
 
 .btn-danger:focus {
-  box-shadow: 0 -1px 0 #c9302c inset, 0 0 0 2px #89baeb;
+  box-shadow: 0 -1px 0 #a40d08 inset, 0 0 0 2px #89baeb;
 }
 
-.btn-danger.disabled, .btn-danger:disabled, .btn-danger.disabled:hover, .btn-danger:disabled:hover {
-  color: #fff;
-  border-color: #f4cecd;
-  background-color: #f4cecd;
+.btn-danger:disabled, .btn-danger.disabled, .btn-danger:disabled:hover, .btn-danger.disabled:hover {
+  color: #FFFFFF;
+  border-color: #f9837f;
+  background-color: #f9837f;
 }
 
-.btn-link,
-.btn-link:hover {
+.btn-link, .btn-link:hover {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -1352,33 +1351,26 @@ form .grid [class*=col-] > label textarea {
   padding: 4px 10px 6px;
 }
 
-.btn-link.active,
-.btn-link:active,
-.btn-link.active:focus,
-.btn-link:active:focus {
+.btn-link.active, .btn-link:active, .btn-link.active:focus, .btn-link:active:focus {
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
 }
 
-.btn-link:focus,
 .btn-link:focus {
   border-color: transparent;
   background-color: transparent;
-  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 2px #89baeb;
+  box-shadow: 0 -1px 0 #FFFFFF inset, 0 0 0 2px #89baeb;
 }
 
 .btn-link:hover {
   text-decoration: underline;
 }
 
-.btn-link:disabled,
-.btn-link.disabled,
-.btn-link:disabled:hover,
-.btn-link.disabled:hover {
+.btn-link:disabled, .btn-link.disabled, .btn-link:disabled:hover, .btn-link.disabled:hover {
   background-color: transparent;
   border-color: transparent;
-  color: rgba(33, 33, 33, 0.3);
+  color: rgba(15, 15, 15, 0.3);
   text-decoration: none;
 }
 
@@ -1476,7 +1468,7 @@ form .grid [class*=col-] > label textarea {
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px solid #212121;
+  border-top: 4px solid #0F0F0F;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -1489,7 +1481,7 @@ form .grid [class*=col-] > label textarea {
 
 .dropup .caret {
   border-top-width: 0;
-  border-bottom: 4px solid #212121;
+  border-bottom: 4px solid #0F0F0F;
 }
 
 .open > .dropdown-menu {
@@ -1501,10 +1493,10 @@ form .grid [class*=col-] > label textarea {
   position: absolute;
   top: 100%;
   border-radius: 4px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #D9D9D9;
   color: #424242;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-clip: padding-box;
   min-width: 160px;
   margin-top: 1px;
@@ -1533,11 +1525,11 @@ form .grid [class*=col-] > label textarea {
 .dropdown-menu .dropdown-menu-item:hover,
 .dropdown-menu .dropdown-menu-item:focus {
   background-color: #dcf1f0;
-  color: #000;
+  color: #0F0F0F;
 }
 
 .dropdown-menu .divider {
-  background-color: #e0e0e0;
+  background-color: #D9D9D9;
   height: 1px;
   margin: 5px 0;
 }
@@ -1573,13 +1565,13 @@ form .grid [class*=col-] > label textarea {
 }
 
 .dropdown-caret:before {
-  border-bottom: 8px solid #e0e0e0;
+  border-bottom: 8px solid #F0F0F0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
 }
 
 .dropdown-caret:after {
-  border-bottom: 7px solid #fff;
+  border-bottom: 7px solid #FFFFFF;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   left: 1px;
@@ -1592,13 +1584,13 @@ form .grid [class*=col-] > label textarea {
 
 .dropup .dropdown-caret:before {
   border-bottom: none;
-  border-top: 8px solid #e0e0e0;
+  border-top: 8px solid #F0F0F0;
   bottom: 0;
 }
 
 .dropup .dropdown-caret:after {
   border-bottom: none;
-  border-top: 7px solid #fff;
+  border-top: 7px solid #FFFFFF;
   bottom: 2px;
 }
 
@@ -1618,23 +1610,23 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list small {
-  color: #9e9e9e;
+  color: #B8B8B8;
 }
 
 .list .list-item {
   display: block;
   padding: .75em 1em;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #D9D9D9;
 }
 
 .list a.list-item {
   cursor: pointer;
-  color: #000;
+  color: #0F0F0F;
   text-decoration: none;
 }
 
 .list a.list-item:hover {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
 }
 
 .list a.list-item:focus {
@@ -1643,24 +1635,29 @@ form .grid [class*=col-] > label textarea {
 }
 
 .list .list-icons {
-  color: #9e9e9e;
+  color: #B8B8B8;
 }
 
 .list .list-icons:hover {
-  color: #212121;
+  color: #0F0F0F;
 }
 
 .list a:hover .list-icons {
-  color: #212121;
+  color: #0F0F0F;
 }
 
 .list-header {
   margin-top: 1em;
   padding: .75em 1em;
   font-weight: 700;
-  background-color: #e0e0e0;
+  background-color: #F5F5F5;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.list-header-bordered {
+  border: 1px solid #D9D9D9;
 }
 
 .list-header:first-child,
@@ -1677,13 +1674,13 @@ form .grid [class*=col-] > label textarea {
 
 .list-bordered {
   border-radius: 3px;
-  border-top: 1px solid #e0e0e0;
-  border-left: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
+  border-top: 1px solid #D9D9D9;
+  border-left: 1px solid #D9D9D9;
+  border-right: 1px solid #D9D9D9;
 }
 
 .loader {
-  color: #9e9e9e;
+  color: #B8B8B8;
   width: 2em;
   height: 1em;
   font-size: 20px;
@@ -1722,8 +1719,8 @@ form .grid [class*=col-] > label textarea {
   border-radius: 3px;
   background-clip: padding-box;
   padding: 1rem;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
+  border: 1px solid #D9D9D9;
+  background-color: #FFFFFF;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   position: fixed;
   z-index: 150;
@@ -1750,11 +1747,11 @@ form .grid [class*=col-] > label textarea {
 
 .close {
   cursor: pointer;
-  color: #616161;
+  color: #8C8C8C;
 }
 
 .close:hover {
-  color: #212121;
+  color: #0F0F0F;
 }
 
 .close:before {
@@ -1765,7 +1762,7 @@ form .grid [class*=col-] > label textarea {
 
 .modal-header,
 .modal-footer {
-  border: 0 solid #e0e0e0;
+  border: 0 solid #D9D9D9;
   padding: .67rem 1rem;
   margin-right: -1rem;
   margin-left: -1rem;
@@ -1782,11 +1779,11 @@ form .grid [class*=col-] > label textarea {
   padding: 0;
   border: none;
   background: none;
-  color: #9e9e9e;
+  color: #8C8C8C;
 }
 
 .modal-header .close:hover {
-  color: #212121;
+  color: #0F0F0F;
 }
 
 .modal-header {
@@ -1797,7 +1794,7 @@ form .grid [class*=col-] > label textarea {
 }
 
 .modal-footer {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   border-top-width: 1px;
   margin-bottom: -1rem;
   text-align: right;
@@ -1819,7 +1816,7 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   right: 0;
   z-index: 140;
-  background-color: rgba(97, 97, 97, 0.6);
+  background-color: rgba(245, 245, 245, 0.6);
 }
 
 .toggle-switch {
@@ -1850,7 +1847,7 @@ form .grid [class*=col-] > label textarea {
 .toggle-switch [data-on]:after {
   display: none;
   font-size: 13px;
-  color: #616161;
+  color: #F5F5F5;
   padding-left: 69px;
 }
 
@@ -1864,7 +1861,7 @@ form .grid [class*=col-] > label textarea {
 
 .toggle-switch input:not(:checked) ~ [data-on]:before,
 .toggle-switch input:checked ~ [data-on]:after {
-  color: #616161;
+  color: #F5F5F5;
   -ms-transform: translate(60px, 0);
       transform: translate(60px, 0);
 }
@@ -1880,14 +1877,10 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   right: 0;
   border-radius: 16px;
-  background-color: #e0e0e0;
-  border: 1px solid lightgray;
+  background-color: #D9D9D9;
+  border: 1px solid #8C8C8C;
   transition: background-color linear .2s;
   z-index: 10;
-}
-
-.toggle-switch input[type=checkbox]:focus ~ .switch:before {
-  box-shadow: none;
 }
 
 .toggle-switch input ~ .switch:after {
@@ -1897,14 +1890,23 @@ form .grid [class*=col-] > label textarea {
   height: 30px;
   width: 30px;
   left: 0;
-  background-color: #fff;
+  background-color: #FFFFFF;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   transition: all ease-out .2s;
 }
 
+.toggle-switch input[type=checkbox]:focus ~ .switch:before {
+  box-shadow: none;
+}
+
+.toggle-switch input:disabled ~ .switch {
+  background-color: #F0F0F0;
+  border-color: #D9D9D9;
+}
+
 .toggle-switch input:checked ~ .switch {
-  background-color: #4eBf5a;
-  border: 1px solid #41b34d;
+  background-color: #4DC860;
+  border: 1px solid #22A135;
 }
 
 .toggle-switch input:checked ~ .switch:after {
@@ -1912,44 +1914,44 @@ form .grid [class*=col-] > label textarea {
       transform: translateX(32px);
 }
 
-.toggle-switch-small {
+.toggle-switch input:checked:disabled ~ .switch {
+  background-color: #86E196;
+  border-color: #86E196;
+}
+
+.toggle-switch.toggle-switch-small {
   border-radius: 12px;
   height: 24px;
   line-height: 24px;
   width: 48px;
 }
 
-.toggle-switch-small input[type=checkbox] {
+.toggle-switch.toggle-switch-small input[type=checkbox] {
   position: absolute;
   top: 30%;
   left: 30%;
 }
 
-.toggle-switch-small [data-on]:before,
-.toggle-switch-small [data-on]:after {
+.toggle-switch.toggle-switch-small [data-on]:before,
+.toggle-switch.toggle-switch-small [data-on]:after {
   display: none;
   font-size: 13px;
-  color: #616161;
+  color: #F5F5F5;
   padding-left: 53px;
 }
 
-.toggle-switch-small input ~ .switch {
+.toggle-switch.toggle-switch-small input ~ .switch {
   height: 24px;
   border-radius: 12px;
 }
 
-.toggle-switch-small input ~ .switch:after {
+.toggle-switch.toggle-switch-small input ~ .switch:after {
   border-radius: 12px;
   height: 22px;
   width: 22px;
 }
 
-.toggle-switch-small input ~ .switch {
-  height: 24px;
-  border-radius: 12px;
-}
-
-.toggle-switch-small input:checked ~ .switch:after {
+.toggle-switch.toggle-switch-small input:checked ~ .switch:after {
   -ms-transform: translateX(24px);
       transform: translateX(24px);
 }
@@ -1970,9 +1972,9 @@ form .grid [class*=col-] > label textarea {
 .tooltip:after {
   display: none;
   position: absolute;
-  color: #fff;
+  color: #FFFFFF;
   content: attr(aria-label);
-  background-color: rgba(33, 33, 33, 0.9);
+  background-color: #0F0F0F;
   border-radius: 3px;
   font-size: 11px;
   line-height: 1.5;
@@ -2014,7 +2016,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-n:before,
 .tooltip-s:before {
   bottom: 100%;
-  border-top: 5px solid rgba(33, 33, 33, 0.9);
+  border-top: 5px solid #0F0F0F;
 }
 
 .tooltip-s:after {
@@ -2027,7 +2029,7 @@ form .grid [class*=col-] > label textarea {
   top: 100%;
   bottom: auto;
   border-top: 5px solid transparent;
-  border-bottom: 5px solid rgba(33, 33, 33, 0.9);
+  border-bottom: 5px solid #0F0F0F;
 }
 
 .tooltip-e:after, .tooltip-e:before,
@@ -2053,7 +2055,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-w:before {
   right: 100%;
   margin-right: 5px;
-  border-left: 5px solid rgba(33, 33, 33, 0.9);
+  border-left: 5px solid #0F0F0F;
 }
 
 .tooltip-e:after {
@@ -2064,7 +2066,7 @@ form .grid [class*=col-] > label textarea {
 .tooltip-e:before {
   left: 100%;
   margin-left: 5px;
-  border-right: 5px solid rgba(33, 33, 33, 0.9);
+  border-right: 5px solid #0F0F0F;
 }
 
 .status-flag, .nav .badge {
@@ -2072,12 +2074,12 @@ form .grid [class*=col-] > label textarea {
   height: .8em;
   width: .8em;
   border-radius: 50%;
-  background-color: #e0e0e0;
+  background-color: #8C8C8C;
   margin-right: .3em;
 }
 
 .status-flag--active {
-  background-color: #4ebf5a;
+  background-color: #008011;
 }
 
 .status-flag--on-hold {
@@ -2085,7 +2087,11 @@ form .grid [class*=col-] > label textarea {
 }
 
 .status-flag--prospect {
-  background-color: #0275d8;
+  background-color: #0070CB;
+}
+
+.status-flag--danger {
+  background-color: #D5110A;
 }
 
 .icon {
@@ -2108,13 +2114,13 @@ form .grid [class*=col-] > label textarea {
 }
 
 .btn:hover {
-  background-color: #e0e0e0;
+  background-color: #F0F0F0;
 }
 
 .btn.active, .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label,
 .btn:active {
-  background-color: #fff;
+  background-color: #FFFFFF;
   line-height: 20px;
 }
 
@@ -2129,9 +2135,9 @@ form .grid [class*=col-] > label textarea {
 
 .btn:disabled,
 .btn.disabled {
-  border-color: #e0e0e0;
-  background-color: #f5f5f5;
-  color: #9e9e9e !important;
+  border-color: #F0F0F0;
+  background-color: #F5F5F5;
+  color: #B8B8B8 !important;
 }
 
 .btn-primary:disabled,
@@ -2139,7 +2145,7 @@ form .grid [class*=col-] > label textarea {
 .btn-primary:disabled:hover,
 .btn-primary.disabled:hover, .btn-primary.disabled, .btn-primary:hover:disabled,
 .btn-primary.disabled:hover, .btn-primary.disabled:hover {
-  color: #fff !important;
+  color: #FFFFFF !important;
   box-shadow: none !important;
 }
 
@@ -2187,7 +2193,7 @@ form .grid [class*=col-] > label textarea {
 
 nav.nav {
   background-color: #fff;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #F0F0F0;
   height: 40px;
   position: relative;
   position: -webkit-sticky;
@@ -2211,7 +2217,7 @@ nav.nav a {
   stroke-width: 4px;
   text-decoration: none;
   vertical-align: middle;
-  color: #212121;
+  color: #0F0F0F;
   position: relative;
   top: -1px;
 }
@@ -2294,7 +2300,7 @@ nav.nav a {
 }
 
 .page--dark {
-  background-color: #e0e0e0;
+  background-color: #F0F0F0;
 }
 
 .page--small-padding {
@@ -2312,16 +2318,16 @@ nav.nav a {
 .tile {
   display: block;
   background-color: #fff;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #F5F5F5;
   padding: .5em 1em;
   position: relative;
   overflow: hidden;
-  color: #212121;
+  color: #0F0F0F;
   outline: 6px solid transparent;
 }
 
 a.tile {
-  color: #212121;
+  color: #0F0F0F;
 }
 
 .tile:last-child {
@@ -2329,7 +2335,7 @@ a.tile {
 }
 
 .tile--header {
-  color: #616161;
+  color: #F5F5F5;
   margin: 1em 0 .25em;
 }
 
@@ -2342,7 +2348,7 @@ a.tile {
   right: .5em;
   -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-  color: #9e9e9e;
+  color: #B8B8B8;
 }
 
 .tile--description {
@@ -2415,7 +2421,7 @@ a.tile {
 }
 
 .card--number {
-  color: #212121;
+  color: #0F0F0F;
   margin-top: -1em;
   letter-spacing: .05em;
   font-family: monospace;
@@ -2435,7 +2441,7 @@ a.tile {
 }
 
 .card:not(:last-child) {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   -ms-transform: scale(0.95);
       transform: scale(0.95);
 }

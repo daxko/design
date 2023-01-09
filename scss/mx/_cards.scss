@@ -23,7 +23,7 @@
 }
 
 .card--number {
-  color: $gray-900;
+  color: $secondary-900;
   margin-top: -1em;
   letter-spacing: .05em;
   font-family: monospace;
@@ -43,7 +43,7 @@
 }
 
 .card:not(:last-child) {
-  background-color: $gray-50;
+  background-color: $secondary-000;
   transform: scale(.95);
 }
 

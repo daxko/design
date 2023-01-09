@@ -9,7 +9,7 @@ code {
 }
 
 .example {
-  border: 1px solid $gray-100;
+  border: 1px solid $secondary-100;
   padding: 1em;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -30,8 +30,8 @@ pre {
   & > code {
     display: block;
     overflow-y: auto;
-    background-color: $gray-50;
-    border: 1px solid $gray-100;
+    background-color: $secondary-000;
+    border: 1px solid $secondary-100;
     padding: 1em;
     font-size: 12px;
     line-height: 1.6;

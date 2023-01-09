@@ -1,7 +1,7 @@
-$tooltip-background-color: rgba($gray-900, .9) !default;
-$tooltip-text-color: #fff !default;
+$tooltip-background-color: $secondary-900 !default;
+$tooltip-text-color: $text-light !default;
 $tooltip-tail-size: 5px;
-
+ 
 // Tooltips
 // ----------------------------------------------
 

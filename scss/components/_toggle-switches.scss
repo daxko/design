@@ -1,6 +1,12 @@
-$on-switch-color: #4eBf5a !default;
-$on-switch-text-color: #fff !default;
-$off-switch-color: $gray-100 !default;
+$on-switch-color: $primary-success-300 !default;
+$on-switch-border-color: $primary-success-400 !default;
+$on-switch-disabled-color: $primary-success-200 !default;
+$on-switch-disabled-border-color: $primary-success-200 !default;
+$on-switch-text-color: $text-light !default;
+$off-switch-color: $secondary-200 !default;
+$off-switch-border-color: $secondary-400 !default;
+$off-switch-disabled-color: $secondary-100 !default;
+$off-switch-disabled-border-color: $secondary-200 !default;
 
 $toggle-switch-height: 32px !default;
 $toggle-switch-width: 64px !default;
@@ -30,17 +36,17 @@ $switch-height-small: $toggle-switch-height-small - 2;
     position: absolute;
     top: 50%;
     left: 50%;
-  }
 
-  input[type=checkbox]:focus {
-    outline: 0;
+    &:focus {
+      outline: 0;
+    }
   }
 
   [data-on]:before,
   [data-on]:after {
     display: none;
     font-size: $base-font-size - 1;
-    color: $gray-500;
+    color: $secondary-000;
     padding-left: $toggle-switch-width + 5;
   }
 
@@ -54,92 +60,100 @@ $switch-height-small: $toggle-switch-height-small - 2;
 
   input:not(:checked) ~ [data-on]:before,
   input:checked ~ [data-on]:after {
-    color: $gray-500;
+    color: $secondary-000;
     transform: translate(60px, 0);
   }
 
   input:checked ~ [data-on]:after {
     transform: translate(60px, -34px);
   }
-}
 
-// Off State
-.toggle-switch input ~ .switch {
-  position: absolute;
-  height: $toggle-switch-height;
-  left: 0;
-  right: 0;
-  border-radius: 16px;
-  background-color: $off-switch-color;
-  border: 1px solid darken($off-switch-color, 5%);
-  transition: background-color linear .2s;
-  z-index: z-index('btn-focus');
-}
-
-.toggle-switch input[type=checkbox]:focus ~ .switch:before {
-  box-shadow: none;
-}
-
-.toggle-switch input ~ .switch:after {
-  content: "";
-  border-radius: 16px;
-  position: absolute;
-  height: $switch-height;
-  width: $switch-height;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  transition: all ease-out .2s;
-}
-
-// On State
-.toggle-switch input:checked ~ .switch {
-  background-color: $on-switch-color;
-  border: 1px solid darken($on-switch-color, 5%);
-}
-
-.toggle-switch input:checked ~ .switch:after {
-  transform: translateX($switch-height + 2);
-}
-
-// Small version
-.toggle-switch-small {
-  border-radius: 12px;
-  height: $toggle-switch-height-small;
-  line-height: $toggle-switch-height-small;
-  width: $toggle-switch-width-small;
-
-  input[type=checkbox] {
+  // Off State
+  input ~ .switch {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    height: $toggle-switch-height; 
+    left: 0;
+    right: 0;
+    border-radius: 16px;
+    background-color: $off-switch-color;
+    border: 1px solid $off-switch-border-color;
+    transition: background-color linear .2s;
+    z-index: z-index('btn-focus');
+
+    &:after {
+      content: "";
+      border-radius: 16px;
+      position: absolute;
+      height: $switch-height;
+      width: $switch-height;
+      left: 0;
+      background-color: $background;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+      transition: all ease-out .2s;
+    }
   }
 
-  [data-on]:before,
-  [data-on]:after {
-    display: none;
-    font-size: $base-font-size - 1;
-    color: $gray-500;
-    padding-left: $toggle-switch-width-small + 5;
+  input[type=checkbox]:focus ~ .switch:before {
+    box-shadow: none;
+  }
+
+  // Off State Disabled
+  input:disabled ~ .switch {
+    background-color: $off-switch-disabled-color;
+    border-color: $off-switch-disabled-border-color;
+  }
+
+  // On State
+  input:checked ~ .switch {
+    background-color: $on-switch-color;
+    border: 1px solid $on-switch-border-color;
+
+    &:after {
+      transform: translateX($switch-height + 2);
+    }
+  }
+
+  // On State Disabled
+  input:checked:disabled ~ .switch {
+    background-color: $on-switch-disabled-color;
+    border-color: $on-switch-disabled-border-color;
+  }
+
+  // Small version
+  &.toggle-switch-small {
+    border-radius: 12px;
+    height: $toggle-switch-height-small;
+    line-height: $toggle-switch-height-small;
+    width: $toggle-switch-width-small;
+
+    input[type=checkbox] {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+    }
+
+    [data-on]:before,
+    [data-on]:after {
+      display: none;
+      font-size: $base-font-size - 1;
+      color: $secondary-000;
+      padding-left: $toggle-switch-width-small + 5;
+    }
+
+    input ~ .switch {
+      height: $toggle-switch-height-small;
+      border-radius: 12px;
+
+      &:after {
+        border-radius: 12px;
+        height: $switch-height-small;
+        width: $switch-height-small;
+      }
+    }
+
+    input:checked ~ .switch:after {
+      transform: translateX($switch-height-small + 2);
+    } 
   }
 }
 
-.toggle-switch-small input ~ .switch {
-  height: $toggle-switch-height-small;
-  border-radius: 12px;
-}
-
-.toggle-switch-small input ~ .switch:after {
-  border-radius: 12px;
-  height: $switch-height-small;
-  width: $switch-height-small;
-}
-
-.toggle-switch-small input ~ .switch {
-  height: $toggle-switch-height-small;
-  border-radius: 12px;
-}
-
-.toggle-switch-small input:checked ~ .switch:after {
-  transform: translateX($switch-height-small + 2);
-}

@@ -1,6 +1,9 @@
-$modal-border-color: $gray-100;
-$modal-background-color: $gray-50;
-$modal-backdrop-color: rgba($gray-500, .6);
+$modal-border-color: $secondary-200;
+$modal-footer-background-color: $secondary-000;
+$modal-backdrop-color: rgba($secondary-000, .6);
+$modal-background-color: $background;
+$modal-close-color: $secondary-400;
+$modal-close-hover: $text-dark;
 
 // Modals
 // ----------------------------------------------
@@ -12,7 +15,7 @@ $modal-backdrop-color: rgba($gray-500, .6);
   background-clip: padding-box;
   padding: 1rem;
   border: 1px solid $modal-border-color;
-  background-color: #fff;
+  background-color: $modal-background-color;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
   position: fixed;
   z-index: z-index('modal');
@@ -38,10 +41,10 @@ $modal-backdrop-color: rgba($gray-500, .6);
 
 .close {
   cursor: pointer;
-  color: $gray-500;
+  color: $modal-close-color;
 
   &:hover {
-    color: $gray-900;
+    color: $modal-close-hover;
   }
 
   &:before {
@@ -70,9 +73,9 @@ $modal-backdrop-color: rgba($gray-500, .6);
   padding: 0;
   border: none;
   background: none;
-  color: $gray-300;
+  color: $modal-close-color;
   &:hover {
-    color: $gray-900;
+    color: $modal-close-hover;
   }
 }
 
@@ -85,7 +88,7 @@ $modal-backdrop-color: rgba($gray-500, .6);
 }
 
 .modal-footer {
-  background-color: $modal-background-color;
+  background-color: $modal-footer-background-color;
   border-top-width: 1px;
   margin-bottom: -1rem;
   text-align: right;

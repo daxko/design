@@ -1,16 +1,14 @@
-$active-status-color: #4ebf5a !default;
-
 .status-flag {
   display: inline-block;
   height: .8em;
   width: .8em;
   border-radius: 50%;
-  background-color: $gray-100;
+  background-color: $secondary-variant;
   margin-right: .3em;
 }
 
 .status-flag--active {
-  background-color: $active-status-color;  
+  background-color: $success;  
 }
 
 .status-flag--on-hold {
@@ -18,5 +16,9 @@ $active-status-color: #4ebf5a !default;
 }
 
 .status-flag--prospect {
-  background-color: $primary-color;
+  background-color: $primary;
+}
+
+.status-flag--danger {
+  background-color: $danger;
 }

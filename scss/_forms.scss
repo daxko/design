@@ -3,6 +3,13 @@ $input-large-font-size: 18px !default;
 $input-font-size: 13px !default;
 $input-mini-font-size: 12px !default;
 $form-horizontal-breakpoint: 600px !default;
+$input-border-color: $secondary-200 !default;
+$input-disabled-background-color: $secondary-000 !default;
+$input-color: $text-dark !default;
+$add-on-color: $text-dark !default;
+$add-on-background-color: $secondary-000 !default;
+$add-on-border-color: $secondary-200 !default;
+$placeholder-color: $text-half-tone !default;
 
 // Forms
 // ----------------------------------------------
@@ -20,7 +27,7 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid $gray-100;
+  border: 1px solid $input-border-color;
   border-radius: .2em;
   padding: 5px 10px;
   font-size: $input-font-size;
@@ -30,7 +37,7 @@ textarea {
   outline: 0;
   position: relative;
   &:disabled {
-    background: $gray-50;
+    background: $input-disabled-background-color;
   }
 }
 
@@ -109,7 +116,7 @@ textarea:focus {
 }
 
 form label {
-  color: $gray-700;
+  color: $input-color;
   font-weight: 500;
 }
 
@@ -124,7 +131,7 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  color: $gray-900;
+  color: $input-color;
   font-weight: 500;
   display: block;
   width: 100%;
@@ -133,7 +140,7 @@ fieldset legend {
 }
 
 input::placeholder {
-  color: $gray-300;
+  color: $placeholder-color;
 }
 
 // Form layouts
@@ -250,13 +257,13 @@ form .grid {
   }
 
   .add-on {
-    color: $gray-500;
+    color: $add-on-color;
     text-shadow: -1px 0 #fff;
     border-radius: 3px;
     font-size: $input-font-size;
     padding: 5px 10px;
-    background-color: $gray-50;
-    border: 1px solid $gray-100;
+    background-color: $add-on-background-color;
+    border: 1px solid $add-on-border-color;
   }
 
   .add-on:first-child {

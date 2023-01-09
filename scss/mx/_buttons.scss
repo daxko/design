@@ -9,12 +9,12 @@
 }
 
 .btn:hover {
-  background-color: $gray-100;
+  background-color: $secondary-100;
 }
 
 .btn.active,
 .btn:active {
-  background-color: #fff;
+  background-color: $background;
   line-height: 20px;
 }
 
@@ -29,9 +29,9 @@
 
 .btn:disabled,
 .btn.disabled {
-  border-color: $gray-100;
-  background-color: $gray-50;
-  color: $gray-300 !important;
+  border-color: $secondary-100;
+  background-color: $secondary-000;
+  color: $secondary-300 !important;
 }
 
 .btn-primary:disabled,
@@ -39,7 +39,7 @@
 .btn-primary:disabled:hover,
 .btn-primary.disabled:hover  {
   @extend .btn-primary:disabled;
-  color: #fff !important;
+  color: $text-light !important;
   box-shadow: none !important;
 }
 

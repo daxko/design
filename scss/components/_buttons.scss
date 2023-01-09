@@ -1,15 +1,20 @@
 $btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$btn-color: $gray-50 !default;
-$btn-border-color: $gray-300 !default;
-$btn-text-color: $gray-900 !default;
-$btn-primary-color: #0275d8 !default;
-$btn-primary-text-color: #fff !default;
-$btn-danger-color: #D9534F !default;
+$btn-color: $secondary-000 !default;
+$btn-border-color: $secondary-300 !default;
+$btn-text-color: $secondary-900 !default;
+//$btn-primary-color: $primary !default;
+$btn-primary-text-color: $text-light !default;
+//$btn-danger-color: $danger !default;
 $btn-font-size: 13px !default;
 $btn-mini-font-size: 12px !default;
 $btn-focus-color: $focus-color !default;
 $btn-font-weight: 500;
 $btn-height: 32px;
+
+$btn-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
 
 // Buttons
 // ----------------------------------------------
@@ -40,7 +45,7 @@ $btn-height: 32px;
 
   &:focus,
   &.focus {
-    box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 2px $btn-focus-color;
+    box-shadow: 0 -1px 0 $secondary-300 inset, 0 0 0 2px $btn-focus-color;
     z-index: z-index('btn-focus');
   }
 
@@ -84,125 +89,98 @@ $btn-height: 32px;
   border: 0;
 }
 
-// Btn primary
-.btn-primary {
-  color: $btn-primary-text-color;
-  background-color: $btn-primary-color;
-  border-color: darken($btn-primary-color, 10%);
-  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset;
+@each $color, $value in $btn-colors{
+  .btn-#{$color} {
+    color: $btn-primary-text-color;
+    background-color: $value;
+    border-color: darken($value, 10%);
+    box-shadow: 0 -1px 0 darken($value, 10%) inset;
+  
+    &:hover {
+      background-color: darken($value, 10%);
+      border-color: darken($value, 20%);
+      box-shadow: 0 -1px 0 darken($value, 20%) inset;
+    }
+  
+    &:active,
+    &.active,
+    &:active:focus,
+    &.active:focus {
+      background-color: darken($value, 10%);
+      border-color: darken($value, 20%);
+      box-shadow: none;
+    }
+  
+    &:focus {
+      box-shadow: 0 -1px 0 darken($value, 10%) inset, 0 0 0 2px $btn-focus-color;
+    }
+  
+    &:disabled,
+    &.disabled,
+    &:disabled:hover,
+    &.disabled:hover {
+      color: $btn-primary-text-color;
+      border-color: lighten($value, 30%);
+      background-color: lighten($value, 30%);
+    }
+  }
+}
 
-  &:hover {
-    background-color: darken($btn-primary-color, 10%);
-    border-color: darken($btn-primary-color, 20%);
-    box-shadow: 0 -1px 0 darken($btn-primary-color, 20%) inset;
+// Btn Link
+.btn-link {
+  &, &:hover{
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-weight: normal;
+    font-size: $base-font-size;
+    line-height: 20px;
+    padding: 4px 10px 6px;
   }
 
-  &:active,
   &.active,
-  &:active:focus,
-  &.active:focus {
-    background-color: darken($btn-primary-color, 10%);
-    border-color: darken($btn-primary-color, 20%);
+  &:active,
+  &.active:focus,
+  &:active:focus {
+    border-color: transparent;
+    background-color: transparent;
     box-shadow: none;
   }
 
-  &:focus {
-    box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 2px $btn-focus-color;
+  &:focus{
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: 0 -1px 0 $white inset, 0 0 0 2px $focus-color;
+  }
+
+  &:hover {
+    // border-color: transparent;
+    // background-color: transparent;
+    // background-image: none;
+    // box-shadow: none;
+    // text-shadow: none;
+    // font-weight: normal;
+    // font-size: $base-font-size;
+    // line-height: 20px;
+    // padding: 4px 10px 6px;
+    text-decoration: underline;
   }
 
   &:disabled,
   &.disabled,
   &:disabled:hover,
   &.disabled:hover {
-    color: $btn-primary-text-color;
-    border-color: lighten($btn-primary-color, 30%);
-    background-color: lighten($btn-primary-color, 30%);
-  }
-}
-
-// Btn danger
-.btn-danger {
-  color: $btn-primary-text-color;
-  background: $btn-danger-color;
-  border-color: darken($btn-danger-color, 10%);
-  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
-
-  &:hover {
-    background-color: darken($btn-danger-color, 10%);
-    border-color: darken($btn-danger-color, 20%);
-    box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
+    background-color: transparent;
+    border-color: transparent;
+    color: rgba($btn-text-color, .3);
+    text-decoration: none;
   }
 
-  &:active,
-  &.active,
-  &:active:focus,
-  &.active:focus {
-    background-color: darken($btn-danger-color, 10%);
-    border-color: darken($btn-danger-color, 20%);
-    box-shadow: none;
+  & + .btn-link {
+    padding-left: 0;
   }
-
-  &:focus {
-    box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
-  }
-
-  &.disabled,
-  &:disabled,
-  &.disabled:hover,
-  &:disabled:hover {
-    color: $btn-primary-text-color;
-    border-color: lighten($btn-danger-color, 30%);
-    background-color: lighten($btn-danger-color, 30%);
-  }
-}
-
-
-// Btn Link
-.btn-link,
-.btn-link:hover {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  font-weight: normal;
-  font-size: $base-font-size;
-  line-height: 20px;
-  padding: 4px 10px 6px;
-}
-
-.btn-link.active,
-.btn-link:active,
-.btn-link.active:focus,
-.btn-link:active:focus {
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.btn-link:focus,
-.btn-link:focus {
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 2px $focus-color;
-}
-
-.btn-link:hover {
-  text-decoration: underline;
-}
-
-.btn-link:disabled,
-.btn-link.disabled,
-.btn-link:disabled:hover,
-.btn-link.disabled:hover {
-  background-color: transparent;
-  border-color: transparent;
-  color: rgba($btn-text-color, .3);
-  text-decoration: none;
-}
-
-.btn-link + .btn-link {
-  padding-left: 0;
 }
 
 // Btn groups
@@ -238,7 +216,7 @@ $btn-height: 32px;
     border-bottom-right-radius: 0;
   }
 
-  .btn-group:not(:first-child):not(:last-child) > .btn, {
+  .btn-group:not(:first-child):not(:last-child) > .btn {
     border-radius: 0;
   }
 
@@ -252,11 +230,7 @@ $btn-height: 32px;
     z-index: 2;
   }
 
-}
-
-// Button groups with input checkboxes and radio buttons
-.btn-group {
-
+  // Button groups with input checkboxes and radio buttons
   > input[type=checkbox],
   > input[type=radio] {
     opacity: 0;
@@ -275,7 +249,6 @@ $btn-height: 32px;
       @extend .btn.active;
     }
   }
-
 }
 
 // Btn mini
@@ -301,12 +274,12 @@ $btn-height: 32px;
 .btn-block {
   display: block;
   width: 100%;
-}
 
-.btn-block + .btn-block {
-  margin-top: 1em;
-
-  &.btn-mini {
-    padding: 1px 6px 3px;
+  + .btn-block {
+    margin-top: 1em;
+  
+    &.btn-mini {
+      padding: 1px 6px 3px;
+    }
   }
 }

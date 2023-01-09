@@ -70,7 +70,7 @@ This color palette consists of daxko's four primary brand colors.
 
 <div class="grid">
   <div class="col-7">
-    <p>There are various shades of gray that can be used for application chrome colors or to make distinctions between different kinds of information. Anything with an background alpha value greater than 50% should have white <code>#fff</code> text and anything less should have black <code>#000</code> text to maintain good visual contrast.</p>
+    <p>There are various shades of gray that can be used for application chrome colors or to make distinctions between different kinds of information. Anything with an background alpha value greater than 50% should have light text and anything less should have dark text to maintain good visual contrast.</p>
     <p></p>
   </div>
   <div class="col-5">
