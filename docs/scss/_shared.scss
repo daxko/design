@@ -137,6 +137,11 @@ section > h4 {
   color: $text-dark;
 }
 
+.gray-500 {
+  background-color: $secondary-500;
+  color: $text-light;
+}
+
 // Color Maps
 $primaries: (
   "primary-000": $primary-default-000,
@@ -366,9 +371,9 @@ section > :first-child {
 
 footer {
   margin-top: 4em;
-  border-top: 1px solid $secondary-100;
+  border-top: 1px solid $secondary-200;
   padding: 2em 0;
-  color: $secondary-000;
+  color: $secondary-500;
   strong {
     color: $text-dark;
   }

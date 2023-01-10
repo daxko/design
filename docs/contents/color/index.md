@@ -136,44 +136,6 @@ This color palette consists of daxko's four primary brand colors.
         </span>
       </li>
     </ul>
-    <!-- <ul class="swatch-list">
-      <li class="gray-50">
-        50
-        <span class="pull-right">
-          <em>Hex</em> #f5f5f5
-        </span>
-      </li>
-      <li class="gray-100">
-        100
-        <span class="pull-right">
-          <em>Hex</em> #e0e0e0
-        </span>
-      </li>
-      <li class="gray-300">
-        300
-        <span class="pull-right">
-          <em>Hex</em> #9e9e9e
-        </span>
-      </li>
-      <li class="gray-500">
-        500
-        <span class="pull-right">
-          <em>Hex</em> #616161
-        </span>
-      </li>
-      <li class="gray-700">
-        700
-        <span class="pull-right">
-          <em>Hex</em> #424242
-        </span>
-      </li>
-      <li class="gray-900">
-        900
-        <span class="pull-right">
-          <em>Hex</em> #212121
-        </span>
-      </li>
-    </ul> -->
   </div>
 </div>
 
