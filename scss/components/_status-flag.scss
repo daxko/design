@@ -1,24 +1,21 @@
+$theme-colors: (
+  'active': $primary-success-200,
+  'on-hold': $primary-warning-200,
+  'prospect': $primary-default-200,
+  'danger': $primary-danger-200
+);
+
 .status-flag {
   display: inline-block;
-  height: .8em;
-  width: .8em;
-  border-radius: 50%;
-  background-color: $secondary-variant;
-  margin-right: .3em;
+  height: 12px;
+  width: 12px;
+  border-radius: 99px;
+  background-color: $secondary-200;
+  margin-right: 4px;
 }
 
-.status-flag--active {
-  background-color: $success;  
-}
-
-.status-flag--on-hold {
-  background-color: $banana-pudding;  
-}
-
-.status-flag--prospect {
-  background-color: $primary;
-}
-
-.status-flag--danger {
-  background-color: $danger;
+@each $value, $color in $theme-colors {
+  .status-flag--#{$value} {
+    background-color: #{$color};  
+  }
 }

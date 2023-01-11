@@ -1,11 +1,36 @@
-$label-color: $text-light !default;
+// $label-color: $text-light !default;
 
 $label-colors: (
-  "default": $secondary-500,
-  "green": $success,
-  "blue": $primary,
-  "orange": $banana-pudding,
-  "red": $danger
+  "default": (
+    "background": $secondary-000,
+    "border": $secondary-200,
+    "text": $secondary-900
+  ),
+  "green": (
+    "background": $primary-success-000,
+    "border": $primary-success-200,
+    "text": $primary-success-600
+  ),
+  "blue": (
+    "background": $primary-default-000,
+    "border": $primary-default-200,
+    "text": $primary-default-600
+  ),
+  "orange": (
+    "background": $primary-warning-000,
+    "border": $primary-warning-200,
+    "text": $primary-warning-600
+  ),
+  "red": (
+    "background": $primary-danger-000,
+    "border": $primary-danger-200,
+    "text": $primary-danger-600
+  ),
+  "light": (
+    "background": $background,
+    "border": $secondary-200,
+    "text": $secondary-900
+  )
 );
 
 // Labels
@@ -13,34 +38,12 @@ $label-colors: (
 
 .label {
   display: inline;
-  padding: 3px 7px;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 1;
-  color: $label-color;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
   text-align: center;
-  text-shadow: none;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25em;
-
-  &:empty {
-    display: none;
-  }
-
-  .btn & {
-    position: relative;
-    top: -1px;
-  }
-}
-
-a.label {
-  &:hover,
-  &:focus {
-    color: $label-color;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  border-radius: 99px;
 }
 
 .label-uppercase {
@@ -52,26 +55,8 @@ a.label {
 
 @each $color, $value in $label-colors {
   .label-#{$color} {
-    background-color: $value;
-
-    &[href] {
-      &:hover,
-      &:focus {
-        background-color: darken($value, 10%);
-      }
-    }
+    background-color: map-get($value, 'background');
+    border: 1px solid map-get($value, 'border');
+    color: map-get($value, 'text');
   }
-}
-
-.label-light {
-  background-color: $background;
-
-  &[href] {
-    &:hover,
-    &:focus {
-      background-color: darken($background, 10%);
-    }
-  }
-  color: $text-dark; 
-  border: 1px solid $secondary-variant;
 }

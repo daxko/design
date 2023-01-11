@@ -3353,31 +3353,12 @@ body:not(.popover-touch) .popover-popper[x-placement='left'] .popover-tooltip[da
 
 .label {
   display: inline;
-  padding: 3px 7px;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 1;
-  color: #FFFFFF;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
   text-align: center;
-  text-shadow: none;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25em;
-}
-
-.label:empty {
-  display: none;
-}
-
-.btn .label {
-  position: relative;
-  top: -1px;
-}
-
-a.label:hover, a.label:focus {
-  color: #FFFFFF;
-  text-decoration: none;
-  cursor: pointer;
+  border-radius: 99px;
 }
 
 .label-uppercase {
@@ -3385,53 +3366,39 @@ a.label:hover, a.label:focus {
 }
 
 .label-default {
-  background-color: #757575;
-}
-
-.label-default[href]:hover, .label-default[href]:focus {
-  background-color: #5c5b5b;
+  background-color: #F5F5F5;
+  border: 1px solid #D9D9D9;
+  color: #0F0F0F;
 }
 
 .label-green {
-  background-color: #008011;
-}
-
-.label-green[href]:hover, .label-green[href]:focus {
-  background-color: #004d0a;
+  background-color: #DCFBE0;
+  border: 1px solid #86E196;
+  color: #00640D;
 }
 
 .label-blue {
-  background-color: #0070CB;
-}
-
-.label-blue[href]:hover, .label-blue[href]:focus {
-  background-color: #005498;
+  background-color: #E9F6FF;
+  border: 1px solid #9BD2FF;
+  color: #0059A2;
 }
 
 .label-orange {
-  background-color: #efad1c;
-}
-
-.label-orange[href]:hover, .label-orange[href]:focus {
-  background-color: #ca8f0e;
+  background-color: #FFF1D2;
+  border: 1px solid #E8C780;
+  color: #6F4E04;
 }
 
 .label-red {
-  background-color: #D5110A;
-}
-
-.label-red[href]:hover, .label-red[href]:focus {
-  background-color: #a40d08;
+  background-color: #FFEFF0;
+  border: 1px solid #FFB1B0;
+  color: #A90B05;
 }
 
 .label-light {
   background-color: #FFFFFF;
+  border: 1px solid #D9D9D9;
   color: #0F0F0F;
-  border: 1px solid #8C8C8C;
-}
-
-.label-light[href]:hover, .label-light[href]:focus {
-  background-color: #e6e5e5;
 }
 
 .toggle-switch {
@@ -3686,27 +3653,27 @@ a.label:hover, a.label:focus {
 
 .status-flag {
   display: inline-block;
-  height: .8em;
-  width: .8em;
-  border-radius: 50%;
-  background-color: #8C8C8C;
-  margin-right: .3em;
+  height: 12px;
+  width: 12px;
+  border-radius: 99px;
+  background-color: #D9D9D9;
+  margin-right: 4px;
 }
 
 .status-flag--active {
-  background-color: #008011;
+  background-color: #86E196;
 }
 
 .status-flag--on-hold {
-  background-color: #efad1c;
+  background-color: #E8C780;
 }
 
 .status-flag--prospect {
-  background-color: #0070CB;
+  background-color: #9BD2FF;
 }
 
 .status-flag--danger {
-  background-color: #D5110A;
+  background-color: #FFB1B0;
 }
 
 .well {
