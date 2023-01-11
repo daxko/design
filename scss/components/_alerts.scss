@@ -2,22 +2,22 @@ $alert-types: (
   'success': (
     body: $primary-success-000,
     text: $primary-success-600,
-    border: $primary-success-300
+    border: $primary-success-200
   ),
   'error': (
     body: $primary-danger-000,
     text: $primary-danger-600,
-    border: $primary-danger-300
+    border: $primary-danger-200
   ),
   'info': (
     body: $primary-default-000,
     text: $primary-default-600,
-    border: $primary-default-300
+    border: $primary-default-200
   ),
   'warning': (
     body: $primary-warning-000,
     text: $primary-warning-600,
-    border: $primary-warning-300
+    border: $primary-warning-200
   )
 );
 
@@ -25,12 +25,11 @@ $alert-types: (
 // ----------------------------------------------
 
 .alert {
-  padding: .6em .8em;
+  padding: 8px;
   clear: both;
-  border-radius: 0;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
 
   + .alert {
     margin-top: 5px;
@@ -49,6 +48,6 @@ $alert-types: (
   .alert.alert-#{$type} {
     background-color: map-get($value, 'body');
     color: map-get($value, 'text');
-    border-left: 5px solid map-get($value, 'border');
+    border: 1px solid map-get($value, 'border');
   }
 }

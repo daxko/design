@@ -1861,12 +1861,12 @@ svg {
 }
 
 .alert {
-  padding: .6em .8em;
+  padding: 8px;
   clear: both;
-  border-radius: 0;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
 .alert + .alert {
@@ -1884,25 +1884,25 @@ svg {
 .alert.alert-success {
   background-color: #DCFBE0;
   color: #00640D;
-  border-left: 5px solid #4DC860;
+  border: 1px solid #86E196;
 }
 
 .alert.alert-error {
   background-color: #FFEFF0;
   color: #A90B05;
-  border-left: 5px solid #FF7D77;
+  border: 1px solid #FFB1B0;
 }
 
 .alert.alert-info {
   background-color: #E9F6FF;
   color: #0059A2;
-  border-left: 5px solid #63B9FF;
+  border: 1px solid #9BD2FF;
 }
 
 .alert.alert-warning {
   background-color: #FFF1D2;
   color: #6F4E04;
-  border-left: 5px solid #D4A94B;
+  border: 1px solid #E8C780;
 }
 
 .btn {
