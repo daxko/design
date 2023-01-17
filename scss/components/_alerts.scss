@@ -42,6 +42,11 @@ $alert-types: (
   p:last-child {
     margin-bottom: 0;
   }
+
+  &-icon {
+    margin-right: 8px;
+    display: inline-block;
+  }
 }
 
 @each $type, $value in $alert-types {

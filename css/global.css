@@ -1881,6 +1881,11 @@ svg {
   margin-bottom: 0;
 }
 
+.alert-icon {
+  margin-right: 8px;
+  display: inline-block;
+}
+
 .alert.alert-success {
   background-color: #DCFBE0;
   color: #00640D;
