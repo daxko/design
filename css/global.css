@@ -3685,4 +3685,162 @@ body:not(.popover-touch) .popover-popper[x-placement='left'] .popover-tooltip[da
   border-radius: 3px;
   box-shadow: none;
 }
+
+.dax-toast {
+  display: none;
+}
+
+.dax-toast-icon {
+  margin-right: 4px;
+  display: inline-block;
+}
+
+.dax-toast-inner {
+  display: inline-block;
+  width: 184px;
+}
+
+.dax-toast-title {
+  font-weight: 600;
+  display: inline-block;
+}
+
+.dax-toast-btn {
+  float: right;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: auto;
+}
+
+.dax-toast-btn.btn.active, .btn-group > input[type=checkbox]:checked + label.dax-toast-btn,
+.btn-group > input[type=radio]:checked + label.dax-toast-btn, .dax-toast-btn.btn:active, .dax-toast-btn.btn.active:focus, .btn-group > input[type=checkbox]:focus + label.dax-toast-btn.active,
+.btn-group > input[type=radio]:focus + label.dax-toast-btn.active, .btn-group > input[type=checkbox]:checked + label.dax-toast-btn:focus,
+.btn-group > input[type=radio]:checked + label.dax-toast-btn:focus,
+.dax-toast-btn.btn:active:focus .dax-toast-btn.btn:focus,
+.btn-group > input[type=checkbox]:focus + label.dax-toast-btn:active .dax-toast-btn.btn:focus,
+.btn-group > input[type=radio]:focus + label.dax-toast-btn:active .dax-toast-btn.btn:focus,
+.dax-toast-btn.btn:active:focus .btn-group > input[type=checkbox]:focus + label.dax-toast-btn,
+.btn-group > input[type=checkbox]:focus + label.dax-toast-btn:active .btn-group > input[type=checkbox]:focus + label.dax-toast-btn,
+.btn-group > input[type=radio]:focus + label.dax-toast-btn:active .btn-group > input[type=checkbox]:focus + label.dax-toast-btn,
+.dax-toast-btn.btn:active:focus .btn-group > input[type=radio]:focus + label.dax-toast-btn,
+.btn-group > input[type=checkbox]:focus + label.dax-toast-btn:active .btn-group > input[type=radio]:focus + label.dax-toast-btn,
+.btn-group > input[type=radio]:focus + label.dax-toast-btn:active .btn-group > input[type=radio]:focus + label.dax-toast-btn, .dax-toast-btn.btn:hover {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: auto;
+}
+
+.dax-toast-body {
+  margin-top: 3px;
+}
+
+.dax-toast-success {
+  padding: 8px;
+  clear: both;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #DCFBE0;
+  color: #00640D;
+  border: 1px solid #86E196;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  width: 224px;
+}
+
+.dax-toast-success .toast-close {
+  color: #00640D;
+  opacity: 1;
+  font-size: 14px;
+  padding: 0 5px;
+  vertical-align: top;
+}
+
+.dax-toast-danger {
+  padding: 8px;
+  clear: both;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #FFEFF0;
+  color: #A90B05;
+  border: 1px solid #FFB1B0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  width: 224px;
+}
+
+.dax-toast-danger .toast-close {
+  color: #A90B05;
+  opacity: 1;
+  font-size: 14px;
+  padding: 0 5px;
+  vertical-align: top;
+}
+
+.dax-toast-info {
+  padding: 8px;
+  clear: both;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #E9F6FF;
+  color: #0059A2;
+  border: 1px solid #9BD2FF;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  width: 224px;
+}
+
+.dax-toast-info .toast-close {
+  color: #0059A2;
+  opacity: 1;
+  font-size: 14px;
+  padding: 0 5px;
+  vertical-align: top;
+}
+
+.dax-toast-warning {
+  padding: 8px;
+  clear: both;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #FFF1D2;
+  color: #6F4E04;
+  border: 1px solid #E8C780;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  width: 224px;
+}
+
+.dax-toast-warning .toast-close {
+  color: #6F4E04;
+  opacity: 1;
+  font-size: 14px;
+  padding: 0 5px;
+  vertical-align: top;
+}
+
+.dax-toast-secondary {
+  padding: 8px;
+  clear: both;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #F5F5F5;
+  color: #0F0F0F;
+  border: 1px solid #D9D9D9;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  width: 224px;
+}
+
+.dax-toast-secondary .toast-close {
+  color: #0F0F0F;
+  opacity: 1;
+  font-size: 14px;
+  padding: 0 5px;
+  vertical-align: top;
+}
 /*# sourceMappingURL=global.css.map */
