@@ -1915,60 +1915,45 @@ svg {
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #B8B8B8;
-  border-radius: .2em;
-  box-shadow: 0 -1px 0 #B8B8B8 inset;
-  font-size: 13px;
-  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 20px;
-  height: 32px;
-  color: #0F0F0F;
+  line-height: 16px;
   text-decoration: none;
   text-align: center;
   vertical-align: baseline;
   white-space: nowrap;
   outline: none;
-  padding: 4px 10px 6px;
-  background-color: #F5F5F5;
-  transition: ease-in-out .1s background-color, ease-in-out .1s border;
+  padding: 7px 12px;
+  text-transform: uppercase;
 }
 
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label, .btn.focus {
-  box-shadow: 0 -1px 0 #B8B8B8 inset, 0 0 0 2px #89baeb;
+  box-shadow: 0 0 0 2px #89baeb;
   z-index: 10;
 }
 
 .btn:hover {
-  border-color: #858585;
-  background-color: #dcdbdb;
   text-decoration: none;
 }
 
 .btn.active, .btn-group > input[type=checkbox]:checked + label,
-.btn-group > input[type=radio]:checked + label, .btn:active, .btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:checked + label, .btn-group > input[type=checkbox]:checked:focus + label,
+.btn-group > input[type=radio]:checked:focus + label, .btn:active, .btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
 .btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
 .btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
 .btn-group > input[type=radio]:focus + label:active {
-  border-color: #c2c2c2;
-  background-color: #dcdbdb;
   box-shadow: none;
   background-image: none;
-  line-height: 19px;
-  padding: 5px 10px;
 }
 
 .btn:disabled, .btn.disabled, .btn:disabled:hover, .btn.disabled:hover {
   cursor: not-allowed;
   box-shadow: none !important;
   background-image: none;
-  background-color: #F5F5F5;
   text-shadow: none;
-  border-color: inherit;
-  padding: 5px 10px !important;
-  color: rgba(15, 15, 15, 0.3);
-  vertical-align: top;
 }
 
 .btn::-moz-focus-inner {
@@ -1976,101 +1961,178 @@ svg {
   border: 0;
 }
 
+.btn {
+  color: #0F0F0F;
+  background-color: #FFFFFF;
+  border: 1px solid #B8B8B8;
+}
+
+.btn:hover {
+  background-color: #F0F0F0;
+  border-color: #B8B8B8;
+}
+
+.btn:active, .btn.active, .btn-group > input[type=checkbox]:checked + label,
+.btn-group > input[type=radio]:checked + label, .btn-group > input[type=checkbox]:checked:focus + label,
+.btn-group > input[type=radio]:checked:focus + label, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
+.btn-group > input[type=radio]:focus + label:active, .btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
+.btn-group > input[type=radio]:checked + label:focus {
+  background-color: #D9D9D9;
+  border-color: #B8B8B8;
+  box-shadow: none;
+}
+
+.btn:focus, .btn-group > input[type=checkbox]:focus + label,
+.btn-group > input[type=radio]:focus + label {
+  background-color: #FFFFFF;
+  border-color: #B8B8B8;
+}
+
+.btn:disabled, .btn.disabled, .btn:disabled:hover, .btn.disabled:hover {
+  color: #B8B8B8;
+  border-color: #B8B8B8;
+  background-color: #FFFFFF;
+}
+
 .btn-primary {
   color: #FFFFFF;
   background-color: #0070CB;
-  border-color: #005498;
-  box-shadow: 0 -1px 0 #005498 inset;
+  border: 1px solid #0070CB;
 }
 
 .btn-primary:hover {
-  background-color: #005498;
-  border-color: #003865;
-  box-shadow: 0 -1px 0 #003865 inset;
+  background-color: #0059A2;
+  border-color: #0059A2;
 }
 
 .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary.active:focus {
-  background-color: #005498;
-  border-color: #003865;
+  background-color: #004175;
+  border-color: #004175;
   box-shadow: none;
 }
 
 .btn-primary:focus {
-  box-shadow: 0 -1px 0 #005498 inset, 0 0 0 2px #89baeb;
+  background-color: #0070CB;
+  border-color: #0070CB;
 }
 
 .btn-primary:disabled, .btn-primary.disabled, .btn-primary:disabled:hover, .btn-primary.disabled:hover {
   color: #FFFFFF;
-  border-color: #65baff;
-  background-color: #65baff;
+  border-color: #9BD2FF;
+  background-color: #9BD2FF;
+}
+
+.btn-success {
+  color: #FFFFFF;
+  background-color: #008011;
+  border: 1px solid #008011;
+}
+
+.btn-success:hover {
+  background-color: #00640D;
+  border-color: #0059A2;
+}
+
+.btn-success:active, .btn-success.active, .btn-success:active:focus, .btn-success.active:focus {
+  background-color: #00470D;
+  border-color: #00470D;
+  box-shadow: none;
+}
+
+.btn-success:focus {
+  background-color: #008011;
+  border-color: #008011;
+}
+
+.btn-success:disabled, .btn-success.disabled, .btn-success:disabled:hover, .btn-success.disabled:hover {
+  color: #FFFFFF;
+  border-color: #86E196;
+  background-color: #86E196;
 }
 
 .btn-danger {
   color: #FFFFFF;
   background-color: #D5110A;
-  border-color: #a40d08;
-  box-shadow: 0 -1px 0 #a40d08 inset;
+  border: 1px solid #D5110A;
 }
 
 .btn-danger:hover {
-  background-color: #a40d08;
-  border-color: #740905;
-  box-shadow: 0 -1px 0 #740905 inset;
+  background-color: #A90B05;
+  border-color: #A90B05;
 }
 
 .btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger.active:focus {
-  background-color: #a40d08;
-  border-color: #740905;
+  background-color: #7C0E0A;
+  border-color: #7C0E0A;
   box-shadow: none;
 }
 
 .btn-danger:focus {
-  box-shadow: 0 -1px 0 #a40d08 inset, 0 0 0 2px #89baeb;
+  background-color: #D5110A;
+  border-color: #D5110A;
 }
 
 .btn-danger:disabled, .btn-danger.disabled, .btn-danger:disabled:hover, .btn-danger.disabled:hover {
   color: #FFFFFF;
-  border-color: #f9837f;
-  background-color: #f9837f;
+  border-color: #FFB1B0;
+  background-color: #FFB1B0;
 }
 
-.btn-link, .btn-link:hover {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
+.btn-secondary {
+  color: #0F0F0F;
+  background-color: #F0F0F0;
+  border: 1px solid #F0F0F0;
+}
+
+.btn-secondary:hover {
+  background-color: #D9D9D9;
+  border-color: #D9D9D9;
+}
+
+.btn-secondary:active, .btn-secondary.active, .btn-secondary:active:focus, .btn-secondary.active:focus {
+  background-color: #B8B8B8;
+  border-color: #B8B8B8;
   box-shadow: none;
-  text-shadow: none;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 4px 10px 6px;
 }
 
-.btn-link.active, .btn-link:active, .btn-link.active:focus, .btn-link:active:focus {
-  border-color: transparent;
+.btn-secondary:focus {
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+
+.btn-secondary:disabled, .btn-secondary.disabled, .btn-secondary:disabled:hover, .btn-secondary.disabled:hover {
+  color: #B8B8B8;
+  border-color: #F0F0F0;
+  background-color: #F0F0F0;
+}
+
+.btn-link {
+  color: #004175;
   background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.btn-link:hover {
+  background-color: #F5F5F5;
+  border-color: transparent;
+}
+
+.btn-link:active, .btn-link.active, .btn-link:active:focus, .btn-link.active:focus {
+  background-color: #F0F0F0;
+  border-color: transparent;
   box-shadow: none;
 }
 
 .btn-link:focus {
-  border-color: transparent;
   background-color: transparent;
-  box-shadow: 0 -1px 0 #FFFFFF inset, 0 0 0 2px #89baeb;
-}
-
-.btn-link:hover {
-  text-decoration: underline;
+  border-color: transparent;
 }
 
 .btn-link:disabled, .btn-link.disabled, .btn-link:disabled:hover, .btn-link.disabled:hover {
-  background-color: transparent;
+  color: #B8B8B8;
   border-color: transparent;
-  color: rgba(15, 15, 15, 0.3);
-  text-decoration: none;
-}
-
-.btn-link + .btn-link {
-  padding-left: 0;
+  background-color: transparent;
 }
 
 .btn-group {
@@ -2082,14 +2144,14 @@ svg {
 }
 
 .btn-group .btn {
-  font-size: 13px;
+  font-size: 14px;
   display: inline-block;
 }
 
 .btn-group .btn-mini,
 .btn-group .btn-mini:focus {
-  font-size: 12px;
-  padding: 1px 6px 3px;
+  font-size: 14px;
+  padding: 3px 8px;
 }
 
 .btn-group .btn ~ .btn,
@@ -2133,15 +2195,19 @@ svg {
   position: absolute;
 }
 
+.btn-group > input[type=checkbox]:checked:focus + label,
+.btn-group > input[type=radio]:checked:focus + label {
+  box-shadow: 0 0 0 2px #89baeb;
+}
+
 .btn-mini {
-  font-size: 12px;
-  height: 26px;
-  line-height: 19px;
-  padding: 1px 6px 3px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 3px 8px;
 }
 
 .btn-mini:hover, .btn-mini.active, .btn-mini:active, .btn-mini:focus, .btn-mini.disabled, .btn-mini:disabled, .btn-mini.disabled:hover, .btn-mini:disabled:hover {
-  padding: 1px 6px 3px !important;
+  padding: 3px 8px !important;
 }
 
 .btn-block {
@@ -2150,11 +2216,11 @@ svg {
 }
 
 .btn-block + .btn-block {
-  margin-top: 1em;
+  margin-top: 14px;
 }
 
 .btn-block + .btn-block.btn-mini {
-  padding: 1px 6px 3px;
+  padding: 3px 8px;
 }
 
 .caret {

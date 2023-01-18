@@ -1,19 +1,98 @@
-$btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$btn-color: $secondary-000 !default;
-$btn-border-color: $secondary-300 !default;
-$btn-text-color: $secondary-900 !default;
-//$btn-primary-color: $primary !default;
-$btn-primary-text-color: $text-light !default;
-//$btn-danger-color: $danger !default;
-$btn-font-size: 13px !default;
-$btn-mini-font-size: 12px !default;
+$btn-font-size: 14px !default;
+$btn-line-height: 16px !default;
+$btn-padding: 7px 12px !default;
+$btn-mini-font-size: 14px !default;
+$btn-mini-line-height: 16px !default;
+$btn-mini-padding: 3px 8px !default;
+$btn-border-radius: 4px !default;
 $btn-focus-color: $focus-color !default;
-$btn-font-weight: 500;
-$btn-height: 32px;
+$btn-font-weight: 600;
 
-$btn-colors: (
-  "primary": $primary,
-  "danger": $danger
+$btn-primary-colors: (
+  "": (
+    background: $white,
+    border: $secondary-300,
+    text: $text-dark,
+    hover: $secondary-100,
+    hoverBorder: $secondary-300,
+    active: $secondary-200,
+    activeBorder: $secondary-300,
+    focus: $white,
+    focusBorder: $secondary-300,
+    disabled: $white,
+    disabledBorder: $secondary-300,
+    disabledText: $secondary-300
+  ),
+  "-primary": (
+    background: $primary,
+    border: $primary,
+    text: $text-light,
+    hover: $primary-variant,
+    hoverBorder: $primary-variant,
+    active: $primary-default-700,
+    activeBorder: $primary-default-700,
+    focus: $primary,
+    focusBorder: $primary,
+    disabled: $primary-default-200,
+    disabledBorder: $primary-default-200,
+    disabledText: $text-light
+  ),
+  "-success": (
+    background: $success,
+    border: $success,
+    text: $text-light,
+    hover: $success-variant,
+    hoverBorder: $primary-variant,
+    active: $primary-success-700,
+    activeBorder: $primary-success-700,
+    focus: $success,
+    focusBorder: $success,
+    disabled: $primary-success-200,
+    disabledBorder: $primary-success-200,
+    disabledText: $text-light
+  ),
+  "-danger": (
+    background: $danger,
+    border: $danger,
+    text: $text-light,
+    hover: $danger-variant,
+    hoverBorder: $danger-variant,
+    active: $primary-danger-700,
+    activeBorder: $primary-danger-700,
+    focus: $danger,
+    focusBorder: $danger,
+    disabled: $primary-danger-200,
+    disabledBorder: $primary-danger-200,
+    disabledText: $text-light
+  ),
+  "-secondary": (
+    background: $secondary-100,
+    border: $secondary-100,
+    text: $text-dark,
+    hover: $secondary-200,
+    hoverBorder: $secondary-200,
+    active: $secondary-300,
+    activeBorder: $secondary-300,
+    focus: $secondary-100,
+    focusBorder: $secondary-100,
+    disabled: $secondary-100,
+    disabledBorder: $secondary-100,
+    disabledText: $secondary-300
+  ),
+  "-link": (
+    background: transparent,
+    border: transparent,
+    text: $primary-default-700,
+    hover: $secondary-000,
+    hoverBorder: transparent,
+    active: $secondary-100,
+    activeBorder: transparent,
+    focus: transparent,
+    focusBorder: transparent,
+    disabled: transparent,
+    disabledBorder: transparent,
+    disabledText: $secondary-300
+  )
 );
 
 // Buttons
@@ -25,33 +104,26 @@ $btn-colors: (
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid $btn-border-color;
-  border-radius: .2em;
-  box-shadow: 0 -1px 0 $btn-border-color inset;
+  border-radius: $btn-border-radius;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
-  font-family: $btn-font-family;
-  line-height: 20px;
-  height: $btn-height;
-  color: $btn-text-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: $btn-line-height;
   text-decoration: none;
   text-align: center;
   vertical-align: baseline;
   white-space: nowrap;
   outline: none;
-  padding: 4px 10px 6px;
-  background-color: $btn-color;
-  transition: ease-in-out .1s background-color, ease-in-out .1s border;
+  padding: $btn-padding;
+  text-transform: uppercase;
 
   &:focus,
   &.focus {
-    box-shadow: 0 -1px 0 $secondary-300 inset, 0 0 0 2px $btn-focus-color;
+    box-shadow: 0 0 0 2px $btn-focus-color;
     z-index: z-index('btn-focus');
   }
 
   &:hover {
-    border-color: darken($btn-border-color, 20%);
-    background-color: darken($btn-color, 10%);
     text-decoration: none;
   }
 
@@ -59,12 +131,8 @@ $btn-colors: (
   &:active,
   &.active:focus,
   &:active:focus {
-    border-color: darken($btn-color, 20%);
-    background-color: darken($btn-color, 10%);
     box-shadow: none;
     background-image: none;
-    line-height: 19px;
-    padding: 5px 10px;
   }
 
   &:disabled,
@@ -74,12 +142,7 @@ $btn-colors: (
     cursor: not-allowed;
     box-shadow: none !important;
     background-image: none;
-    background-color: $btn-color;
     text-shadow: none;
-    border-color: inherit;
-    padding: 5px 10px !important;
-    color: rgba($btn-text-color, .3);
-    vertical-align: top;
   }
 }
 
@@ -89,97 +152,39 @@ $btn-colors: (
   border: 0;
 }
 
-@each $color, $value in $btn-colors{
-  .btn-#{$color} {
-    color: $btn-primary-text-color;
-    background-color: $value;
-    border-color: darken($value, 10%);
-    box-shadow: 0 -1px 0 darken($value, 10%) inset;
+@each $color, $value in $btn-primary-colors{
+  .btn#{$color} {
+    color: map-get($value, 'text');
+    background-color: map-get($value, 'background');
+    border: 1px solid map-get($value, 'border');
   
     &:hover {
-      background-color: darken($value, 10%);
-      border-color: darken($value, 20%);
-      box-shadow: 0 -1px 0 darken($value, 20%) inset;
+      background-color: map-get($value, 'hover');
+      border-color: map-get($value, 'hoverBorder');
     }
   
     &:active,
     &.active,
     &:active:focus,
     &.active:focus {
-      background-color: darken($value, 10%);
-      border-color: darken($value, 20%);
+      background-color: map-get($value, 'active');
+      border-color: map-get($value, 'activeBorder');
       box-shadow: none;
     }
   
     &:focus {
-      box-shadow: 0 -1px 0 darken($value, 10%) inset, 0 0 0 2px $btn-focus-color;
+      background-color: map-get($value, 'focus');
+      border-color: map-get($value, 'focusBorder');
     }
   
     &:disabled,
     &.disabled,
     &:disabled:hover,
     &.disabled:hover {
-      color: $btn-primary-text-color;
-      border-color: lighten($value, 30%);
-      background-color: lighten($value, 30%);
+      color: map-get($value, 'disabledText');
+      border-color: map-get($value, 'disabledBorder');
+      background-color: map-get($value, 'disabled');
     }
-  }
-}
-
-// Btn Link
-.btn-link {
-  &, &:hover{
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    font-weight: normal;
-    font-size: $base-font-size;
-    line-height: 20px;
-    padding: 4px 10px 6px;
-  }
-
-  &.active,
-  &:active,
-  &.active:focus,
-  &:active:focus {
-    border-color: transparent;
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  &:focus{
-    border-color: transparent;
-    background-color: transparent;
-    box-shadow: 0 -1px 0 $white inset, 0 0 0 2px $focus-color;
-  }
-
-  &:hover {
-    // border-color: transparent;
-    // background-color: transparent;
-    // background-image: none;
-    // box-shadow: none;
-    // text-shadow: none;
-    // font-weight: normal;
-    // font-size: $base-font-size;
-    // line-height: 20px;
-    // padding: 4px 10px 6px;
-    text-decoration: underline;
-  }
-
-  &:disabled,
-  &.disabled,
-  &:disabled:hover,
-  &.disabled:hover {
-    background-color: transparent;
-    border-color: transparent;
-    color: rgba($btn-text-color, .3);
-    text-decoration: none;
-  }
-
-  & + .btn-link {
-    padding-left: 0;
   }
 }
 
@@ -199,7 +204,7 @@ $btn-colors: (
   .btn-mini,
   .btn-mini:focus {
     font-size: $btn-mini-font-size;
-    padding: 1px 6px 3px;
+    padding: $btn-mini-padding;
   }
 
   .btn ~ .btn,
@@ -248,15 +253,18 @@ $btn-colors: (
     &:checked + label {
       @extend .btn.active;
     }
+    &:checked:focus + label {
+      @extend .btn.active;
+      box-shadow: 0 0 0 2px $btn-focus-color;
+    }
   }
 }
 
 // Btn mini
 .btn-mini {
   font-size: $btn-mini-font-size;
-  height: 26px;
-  line-height: 19px;
-  padding: 1px 6px 3px;
+  line-height: $btn-mini-line-height;
+  padding: $btn-mini-padding;
 
   &:hover,
   &.active,
@@ -266,7 +274,7 @@ $btn-colors: (
   &:disabled,
   &.disabled:hover,
   &:disabled:hover {
-    padding: 1px 6px 3px !important;
+    padding: $btn-mini-padding !important;
   }
 }
 
@@ -276,10 +284,10 @@ $btn-colors: (
   width: 100%;
 
   + .btn-block {
-    margin-top: 1em;
+    margin-top: 14px;
   
     &.btn-mini {
-      padding: 1px 6px 3px;
+      padding: $btn-mini-padding;
     }
   }
 }
