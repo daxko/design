@@ -1,11 +1,68 @@
-$base-font-size: 14px !default;
-$base-font-color: $text-dark !default;
-$base-line-height: 1.5 !default;
-$base-font-weight: normal !default;
-$base-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+@font-face {
+  font-family: 'SF Pro';
+  src:url('fonts/SF-Pro.ttf') format('truetype-variations');
+  font-weight: 100 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('fonts/SF-Pro-Italic.ttf') format('truetype-variations');
+  font-weight: 100 1000;
+  font-style: italic;
+}
+
+// $base-font-size: 14px !default;
+// $base-font-color: $text-dark !default;
+// $base-line-height: 1.5 !default;
+// $base-font-weight: normal !default;
+// $base-font-family: "SF Pro", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 
 // Base typography
 // ----------------------------------------------
+
+$typography-font: "SF Pro", Helvetica, Arial, "Lucida Grande", sans-serif;
+$typography-color: $text-dark;
+$typography-font-size: 14px;
+
+%bdy1{
+  color: $typography-color;
+  font-size: 14px;
+  font-family: $typography-font;
+  font-weight: 400;
+  line-height: 20px;
+}
+%bdy2{
+  color: $typography-color;
+  font-size: 12px;
+  font-family: $typography-font;
+  font-weight: 274;
+  line-height: 16px;
+}
+%lbl1{
+  color: $typography-color;
+  font-size: 14px;
+  font-family: $typography-font;
+  font-weight: 590;
+  line-height: 20px;
+}
+%lbl2{
+  color: $typography-color;
+  font-size: 12px;
+  font-family: $typography-font;
+  font-weight: 510;
+  line-height: 16px;
+}
+%btn{
+  color: $typography-color;
+  font-size: 14px;
+  font-family: $typography-font;
+  font-weight: 590;
+  line-height: 16px;
+  text-transform: uppercase;
+  align-items: center;
+}
+
 
 h1,
 h2,
@@ -15,7 +72,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 510;
 }
 
 h1 {
@@ -27,24 +84,36 @@ h5 {
   text-transform: uppercase;
 }
 
-body {
-  line-height: $base-line-height;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-}
-
 b,
 strong {
   font-weight: 700;
 }
 
 // Create placeholder selectors
-%h1 { font-size: round(1.71 * $base-font-size); }    // 24px
-%h2 { font-size: round(1.43 * $base-font-size); }    // 20px
-%h3 { font-size: round(1.14 * $base-font-size); }    // 16px
-%h4 { font-size: round($base-font-size); }           // 14px
-%h5 { font-size: round(0.86 * $base-font-size); }    // 12px
-%h6 { font-size: round(0.86 * $base-font-size); }    // 12px
+%h1 { 
+  font-size: 24px;
+  line-height: 36px;
+}
+%h2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+%h3 { 
+  font-size: 16px;
+  line-height: 24px;
+}
+%h4 {
+  font-size: 14px;
+  line-height: 21px;
+}
+%h5 {
+  font-size: 12px;
+  line-height: 18px;
+}
+%h6 {
+  font-size: 12px;
+  line-height:18px; 
+}
 
 h1 { @extend %h1; }
 h2 { @extend %h2; }

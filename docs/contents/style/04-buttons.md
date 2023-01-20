@@ -94,6 +94,46 @@ Buttons can also be combined into button groups. Wrap them with a `.btn-group` c
 </div>
 {{/example}}
 
+Button groups can also use all of the available button colors
+
+{{#example 'html'}}
+<div class="btn-group">
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+</div>
+<br/>
+<div class="btn-group">
+  <button class="btn btn-secondary">Button</button>
+  <button class="btn btn-secondary">Button</button>
+  <button class="btn btn-secondary">Button</button>
+</div>
+<br/>
+<div class="btn-group">
+  <button class="btn btn-primary">Button</button>
+  <button class="btn btn-primary">Button</button>
+  <button class="btn btn-primary">Button</button>
+</div>
+<br/>
+<div class="btn-group">
+  <button class="btn btn-success">Button</button>
+  <button class="btn btn-success">Button</button>
+  <button class="btn btn-success">Button</button>
+</div>
+<br/>
+<div class="btn-group">
+  <button class="btn btn-danger">Button</button>
+  <button class="btn btn-danger">Button</button>
+  <button class="btn btn-danger">Button</button>
+</div>
+<br/>
+<div class="btn-group">
+  <button class="btn btn-link">Button</button>
+  <button class="btn btn-link">Button</button>
+  <button class="btn btn-link">Button</button>
+</div>
+{{/example}}
+
 ### Block Buttons
 
 You can make any button take up the full width of its container by adding a `.btn-block` class.

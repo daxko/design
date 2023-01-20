@@ -49,7 +49,7 @@ $modal-close-hover: $text-dark;
 
   &:before {
     content: "×";
-    font-size: $base-font-size + 8px;
+    font-size: $typography-font-size + 8px;
     line-height: 1em;
   }
 }

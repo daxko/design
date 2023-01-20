@@ -45,7 +45,7 @@ $switch-height-small: $toggle-switch-height-small - 2;
   [data-on]:before,
   [data-on]:after {
     display: none;
-    font-size: $base-font-size - 1;
+    font-size: $typography-font-size - 1;
     color: $secondary-000;
     padding-left: $toggle-switch-width + 5;
   }
@@ -135,7 +135,7 @@ $switch-height-small: $toggle-switch-height-small - 2;
     [data-on]:before,
     [data-on]:after {
       display: none;
-      font-size: $base-font-size - 1;
+      font-size: $typography-font-size - 1;
       color: $secondary-000;
       padding-left: $toggle-switch-width-small + 5;
     }

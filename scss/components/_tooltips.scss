@@ -1,7 +1,7 @@
 $tooltip-background-color: $secondary-900 !default;
 $tooltip-text-color: $text-light !default;
 $tooltip-tail-size: 5px;
- 
+
 // Tooltips
 // ----------------------------------------------
 
@@ -16,21 +16,19 @@ $tooltip-tail-size: 5px;
   content: "";
   width: 0;
   height: 0;
-  border: 5px solid transparent;
+  border: 5px solid transparent;  
 }
 
 // Tooltip container
 .tooltip:after {
+  @extend %bdy2;
+  
   display: none;
   position: absolute;
   color: $tooltip-text-color;
   content: attr(aria-label);
   background-color: $tooltip-background-color;
   border-radius: 3px;
-  font-size: 11px;
-  line-height: $base-line-height;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
   text-decoration: none;
   text-shadow: none;
   white-space: pre;

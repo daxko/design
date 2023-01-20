@@ -10,6 +10,7 @@ $add-on-color: $text-dark !default;
 $add-on-background-color: $secondary-000 !default;
 $add-on-border-color: $secondary-200 !default;
 $placeholder-color: $text-half-tone !default;
+$form-line-height: 20px !default;
 
 // Forms
 // ----------------------------------------------
@@ -27,11 +28,11 @@ input[type=time],
 input[type=date],
 select,
 textarea {
+  @extend %bdy1;
+
   border: 1px solid $input-border-color;
   border-radius: .2em;
   padding: 5px 10px;
-  font-size: $input-font-size;
-  line-height: $base-line-height;
   height: 32px;
   vertical-align: middle;
   outline: 0;
