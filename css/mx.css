@@ -420,27 +420,28 @@ input[type=search],
 input[type=datetime],
 input[type=time],
 select,
-textarea, .dropdown-menu, .dropdown-menu a,
+textarea, input.input-mini,
+select.input-mini, .dropdown-menu, .dropdown-menu a,
 .dropdown-menu .dropdown-menu-item {
-  color: #0F0F0F;
   font-size: 14px;
-  font-family: "SF Pro", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
   line-height: 20px;
 }
 
 .tooltip:after {
-  color: #0F0F0F;
   font-size: 12px;
-  font-family: "SF Pro", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 274;
   line-height: 16px;
 }
 
-.btn, .btn-group .btn {
-  color: #0F0F0F;
+form label {
   font-size: 14px;
-  font-family: "SF Pro", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 590;
+  line-height: 20px;
+}
+
+.btn, .btn-group .btn {
+  font-size: 14px;
   font-weight: 590;
   line-height: 16px;
   text-transform: uppercase;
@@ -523,6 +524,12 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+html,
+body {
+  color: #0F0F0F;
+  font-family: "SF Pro", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 body {
@@ -792,8 +799,7 @@ select,
 textarea {
   border: 1px solid #D9D9D9;
   border-radius: .2em;
-  padding: 5px 10px;
-  height: 32px;
+  padding: 6px 11px;
   vertical-align: middle;
   outline: 0;
   position: relative;
@@ -813,6 +819,23 @@ input[type=date]:disabled,
 select:disabled,
 textarea:disabled {
   background: #F5F5F5;
+  cursor: not-allowed;
+}
+
+input[type=text].error,
+input[type=password].error,
+input[type=email].error,
+input[type=number].error,
+input[type=tel].error,
+input[type=url].error,
+input[type=date].error,
+input[type=search].error,
+input[type=datetime].error,
+input[type=time].error,
+input[type=date].error,
+select.error,
+textarea.error {
+  border-color: #F84845;
 }
 
 input[type="checkbox"],
@@ -851,9 +874,7 @@ select.input-large {
 
 input.input-mini,
 select.input-mini {
-  height: 26px;
-  font-size: 12px;
-  padding: 2px 6px 2px;
+  padding: 3px 7px;
 }
 
 select.input-mini {
@@ -886,7 +907,6 @@ textarea:focus {
 
 form label {
   color: #0F0F0F;
-  font-weight: 500;
 }
 
 fieldset {
@@ -1023,7 +1043,7 @@ form .grid [class*=col-] > label textarea {
   color: #0F0F0F;
   text-shadow: -1px 0 #fff;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 14px;
   padding: 5px 10px;
   background-color: #F5F5F5;
   border: 1px solid #D9D9D9;
@@ -1263,7 +1283,7 @@ form .grid [class*=col-] > label textarea {
   cursor: pointer;
   border-radius: 4px;
   text-decoration: none;
-  vertical-align: baseline;
+  vertical-align: middle;
   white-space: nowrap;
   outline: none;
 }
@@ -1635,6 +1655,7 @@ form .grid [class*=col-] > label textarea {
 
 .dropdown-menu a,
 .dropdown-menu .dropdown-menu-item {
+  color: #0F0F0F;
   display: block;
   overflow: hidden;
   padding: .3em .8em;
@@ -1795,7 +1816,7 @@ form .grid [class*=col-] > label textarea {
   padding: 1rem;
   border: 1px solid #D9D9D9;
   background-color: #FFFFFF;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
   position: fixed;
   z-index: 150;
   margin: 0 auto;

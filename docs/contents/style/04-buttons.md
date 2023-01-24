@@ -76,6 +76,19 @@ Button links allow you to place buttons that de-emphasize its button appearance,
 <a href="javascript:void(0)" class="btn-link btn disabled" role="button">Link</a>
 {{/example}}
 
+### Loader
+
+`<button>` elements can also contain a loding icon when necessary
+
+{{#example 'html'}}
+<button type="button" class="btn" disabled><div class="loader"></div></button>
+<button type="button" class="btn btn-secondary" disabled><div class="loader"></div></button>
+<button type="button" class="btn btn-primary" disabled><div class="loader"></div></button>
+<button type="button" class="btn btn-success" disabled><div class="loader"></div></button>
+<button type="button" class="btn btn-danger" disabled><div class="loader"></div></button>
+<a href="javascript:void(0)" class="btn-link btn disabled" role="button"><div class="loader"></div></a>
+{{/example}}
+
 ### Button Groups
 
 Buttons can also be combined into button groups. Wrap them with a `.btn-group` class and your buttons will automatically be displayed with the correct spacing.

@@ -10,7 +10,10 @@ html {
 
 html,
 body {
-  @extend %bdy1
+  @extend %bdy1;
+
+  color: $typography-color;
+  font-family: $typography-font;
 }
 
 body {

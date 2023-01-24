@@ -40,7 +40,8 @@ $toast-types: (
   }
 
   &-title {
-    font-weight: 600;
+    @extend %lbl1;
+    
     display: inline-block;
   }
   &-btn {

@@ -1,6 +1,6 @@
 $input-focus-color: $focus-color !default;
 $input-large-font-size: 18px !default;
-$input-font-size: 13px !default;
+$input-font-size: 14px !default;
 $input-mini-font-size: 12px !default;
 $form-horizontal-breakpoint: 600px !default;
 $input-border-color: $secondary-200 !default;
@@ -32,13 +32,17 @@ textarea {
 
   border: 1px solid $input-border-color;
   border-radius: .2em;
-  padding: 5px 10px;
-  height: 32px;
+  padding: 6px 11px;
   vertical-align: middle;
   outline: 0;
   position: relative;
   &:disabled {
     background: $input-disabled-background-color;
+    cursor: not-allowed;   
+  }
+
+  &.error {
+    border-color: $primary-danger-400;
   }
 }
 
@@ -79,9 +83,9 @@ select.input-large {
 
 input.input-mini,
 select.input-mini {
-  height: 26px;
-  font-size: $input-mini-font-size;
-  padding: 2px 6px 2px;
+  @extend %bdy1;
+  
+  padding: 3px 7px;
 }
 
 select.input-mini {
@@ -117,8 +121,9 @@ textarea:focus {
 }
 
 form label {
-  color: $input-color;
-  font-weight: 500;
+  @extend %lbl1;
+
+  color: $typography-color;
 }
 
 fieldset {

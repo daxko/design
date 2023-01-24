@@ -49,6 +49,7 @@ $dropdown-hover-color: $primary-default-000 !default;
   .dropdown-menu-item {
     @extend %bdy1;
 
+    color: $typography-color;
     display: block;
     overflow: hidden;
     padding: .3em .8em;

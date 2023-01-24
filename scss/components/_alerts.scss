@@ -25,12 +25,12 @@ $alert-types: (
 // ----------------------------------------------
 
 .alert {
+  @extend %bdy1;
+
   padding: 8px;
   clear: both;
   align-items: center;
   border-radius: 4px;
-  font-size: 14px;
-
   + .alert {
     margin-top: 5px;
   }
@@ -46,6 +46,10 @@ $alert-types: (
   &-icon {
     margin-right: 8px;
     display: inline-block;
+  }
+
+  &-title {
+    @extend %lbl1;
   }
 }
 

@@ -26,37 +26,27 @@ $typography-color: $text-dark;
 $typography-font-size: 14px;
 
 %bdy1{
-  color: $typography-color;
   font-size: 14px;
-  font-family: $typography-font;
   font-weight: 400;
   line-height: 20px;
 }
 %bdy2{
-  color: $typography-color;
   font-size: 12px;
-  font-family: $typography-font;
   font-weight: 274;
   line-height: 16px;
 }
 %lbl1{
-  color: $typography-color;
   font-size: 14px;
-  font-family: $typography-font;
   font-weight: 590;
   line-height: 20px;
 }
 %lbl2{
-  color: $typography-color;
   font-size: 12px;
-  font-family: $typography-font;
   font-weight: 510;
   line-height: 16px;
 }
 %btn{
-  color: $typography-color;
   font-size: 14px;
-  font-family: $typography-font;
   font-weight: 590;
   line-height: 16px;
   text-transform: uppercase;
