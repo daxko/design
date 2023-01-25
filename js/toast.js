@@ -12,9 +12,9 @@ function createToast(query) {
   });
 
   // Configurable properties of the toast message
-  var gravity = element.dataset.gravity ?? "top"; // `top` or `bottom`
-  var position = element.dataset.position ?? "right"; // `left`, `center` or `right`
-  var duration = element.dataset.duration ?? 5000;
+  var gravity = element.dataset.gravity ? element.dataset.gravity : "top"; // `top` or `bottom`
+  var position = element.dataset.position ? element.dataset.position : "right"; // `left`, `center` or `right`
+  var duration = element.dataset.duration ? element.dataset.duration : 5000;
 
   // Create and show the toast message
   Toastify({
