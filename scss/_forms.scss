@@ -36,6 +36,7 @@ textarea {
   vertical-align: middle;
   outline: 0;
   position: relative;
+  height: auto;
   &:disabled {
     background: $input-disabled-background-color;
     cursor: not-allowed;   

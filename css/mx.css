@@ -803,6 +803,7 @@ textarea {
   vertical-align: middle;
   outline: 0;
   position: relative;
+  height: auto;
 }
 
 input[type=text]:disabled,
