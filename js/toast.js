@@ -6,7 +6,7 @@ function createToast(query) {
   var inner = element.getElementsByClassName('dax-toast-inner')[0];
   // Class names to be added to the outer toastify element
   var classList = [];
-  element.classList.forEach(c => {
+  element.classList.forEach(function(c){
     if(c !== 'dax-toast')
       classList.push(c);
   });
