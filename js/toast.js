@@ -1,5 +1,5 @@
 // A function to create a toast message using Toastify JS
-const createToast = (query) => {
+function createToast(query) {
   // Element for the toast
   let element = document.querySelector(query);
   // The inner element of the dax-toast elemnent that contains all of the toast message
