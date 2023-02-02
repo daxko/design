@@ -1876,6 +1876,7 @@ form .grid [class*=col-] > label textarea {
   border: none;
   background: none;
   color: #8C8C8C;
+  margin: 0;
 }
 
 .modal-header .close:hover {

@@ -48,7 +48,7 @@ $alert-types: (
     display: inline-block;
   }
 
-  &-title {
+  strong {
     @extend %lbl1;
   }
 }

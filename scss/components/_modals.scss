@@ -74,6 +74,7 @@ $modal-close-hover: $text-dark;
   border: none;
   background: none;
   color: $modal-close-color;
+  margin: 0;
   &:hover {
     color: $modal-close-hover;
   }

@@ -434,7 +434,7 @@ select.input-mini, .alert, .dropdown-menu, .dropdown-menu a,
   line-height: 16px;
 }
 
-form label, .alert-title, .dax-toast-title {
+form label, .alert strong, .dax-toast-title {
   font-size: 14px;
   font-weight: 590;
   line-height: 20px;
@@ -2576,6 +2576,7 @@ svg {
   border: none;
   background: none;
   color: #8C8C8C;
+  margin: 0;
 }
 
 .modal-header .close:hover {
