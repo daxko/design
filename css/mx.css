@@ -1958,7 +1958,7 @@ form .grid [class*=col-] > label textarea {
 
 .toggle-switch input:not(:checked) ~ [data-on]:before,
 .toggle-switch input:checked ~ [data-on]:after {
-  color: #F5F5F5;
+  color: #757575;
   -ms-transform: translate(60px, 0);
       transform: translate(60px, 0);
 }

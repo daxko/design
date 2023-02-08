@@ -60,7 +60,7 @@ $switch-height-small: $toggle-switch-height-small - 2;
 
   input:not(:checked) ~ [data-on]:before,
   input:checked ~ [data-on]:after {
-    color: $secondary-000;
+    color: $secondary-500;
     transform: translate(60px, 0);
   }
 
