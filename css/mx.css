@@ -409,7 +409,15 @@ th {
 }
 
 html,
-body, input[type=text],
+body, input.input-mini,
+select.input-mini, .dropdown-menu, .dropdown-menu a,
+.dropdown-menu .dropdown-menu-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+input[type=text],
 input[type=password],
 input[type=email],
 input[type=number],
@@ -420,12 +428,10 @@ input[type=search],
 input[type=datetime],
 input[type=time],
 select,
-textarea, input.input-mini,
-select.input-mini, .dropdown-menu, .dropdown-menu a,
-.dropdown-menu .dropdown-menu-item {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+textarea {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
 }
 
 .tooltip:after {
@@ -837,6 +843,10 @@ input[type=date].error,
 select.error,
 textarea.error {
   border-color: #F84845;
+}
+
+select {
+  padding-right: 23px !important;
 }
 
 input[type="checkbox"],
@@ -1629,7 +1639,7 @@ form .grid [class*=col-] > label textarea {
   font-weight: 400;
   display: inline-block;
   border: 0;
-  width: inheirt;
+  width: inherit;
   height: inherit;
   margin: 0;
 }
