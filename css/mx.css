@@ -797,13 +797,13 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid #D9D9D9;
-  border-radius: .2em;
-  padding: 6px 11px;
-  vertical-align: middle;
+  border: 1px solid #D9D9D9 !important;
+  border-radius: .2em !important;
+  padding: 6px 11px !important;
+  vertical-align: middle !important;
   outline: 0;
   position: relative;
-  height: auto;
+  height: auto !important;
 }
 
 input[type=text]:disabled,
@@ -852,15 +852,15 @@ textarea {
 }
 
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
   padding-right: 25px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUAQMAAACHy55vAAAABlBMVEUAAAAtLS3wB2rmAAAAAXRSTlMAQObYZgAAAC5JREFUCNdjYGZgYG9g4D/AIP+Awf4DQ/0Phv9/GDAAUBAoBVQAVAZUDNQC1AgAn5gN8xIbpEwAAAAASUVORK5CYII=);
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 select::-ms-expand {
@@ -1287,6 +1287,17 @@ form .grid [class*=col-] > label textarea {
   vertical-align: middle;
   white-space: nowrap;
   outline: none;
+  background-image: none;
+  text-shadow: none;
+  background-repeat: no-repeat;
+  box-shadow: none;
+}
+
+.btn .caret {
+  border: 0;
+  width: inherit;
+  height: inherit;
+  margin: 0;
 }
 
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
@@ -1617,6 +1628,10 @@ form .grid [class*=col-] > label textarea {
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
   display: inline-block;
+  border: 0;
+  width: inheirt;
+  height: inherit;
+  margin: 0;
 }
 
 .caret:before {

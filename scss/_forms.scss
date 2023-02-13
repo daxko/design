@@ -28,15 +28,15 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  @extend %bdy1;
+  @extend %bdy1important;
 
-  border: 1px solid $input-border-color;
-  border-radius: .2em;
-  padding: 6px 11px;
-  vertical-align: middle;
+  border: 1px solid $input-border-color !important;
+  border-radius: .2em !important;
+  padding: 6px 11px !important;
+  vertical-align: middle !important;
   outline: 0;
   position: relative;
-  height: auto;
+  height: auto !important;
   &:disabled {
     background: $input-disabled-background-color;
     cursor: not-allowed;   
@@ -61,15 +61,15 @@ textarea {
 
 // Standardize select appearance
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
   padding-right: 25px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUAQMAAACHy55vAAAABlBMVEUAAAAtLS3wB2rmAAAAAXRSTlMAQObYZgAAAC5JREFUCNdjYGZgYG9g4D/AIP+Awf4DQ/0Phv9/GDAAUBAoBVQAVAZUDNQC1AgAn5gN8xIbpEwAAAAASUVORK5CYII=);
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-color: #fff;
+  background-color: #fff !important;
   // Hide IE selector in IE10+
   &::-ms-expand {
     display: none;
