@@ -6,7 +6,11 @@ $dropdown-hover-color: $primary-default-000 !default;
 .caret {
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
-  display: inline-block;
+  display: inline-block;  
+  border: 0;
+  width: inheirt;
+  height: inherit;
+  margin: 0;
 
   &:before {
     content: "\f0d7";
