@@ -97,7 +97,14 @@ $btn-primary-colors: (
   text-shadow: none;
   background-repeat: no-repeat;
   box-shadow: none;
-  
+
+  .caret {
+    border: 0;
+    width: inheirt;
+    height: inherit;
+    margin: 0;
+  }
+
   &:focus,
   &.focus {
     box-shadow: 0 0 0 2px $btn-focus-color;
