@@ -1938,7 +1938,7 @@ form .grid [class*=col-] > label textarea {
   left: 0;
   right: 0;
   z-index: 140;
-  background-color: rgba(245, 245, 245, 0.6);
+  background-color: rgba(92, 92, 92, 0.6);
 }
 
 .toggle-switch {
