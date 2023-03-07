@@ -14,6 +14,28 @@ By default, forms don't have a standard layout. You will need to use one of the 
 </form>
 {{/example}}
 
+### Form Styling
+
+Form styling can be applied using the `<form>` tag or by using the `<div class="form">` class instead. 
+
+{{#example 'html'}}
+<form>
+  <label>Name</label>
+  <input type="text"/>
+  <label>Phone Number</label>
+  <input type="tel"/>
+  <button type="submit" class="btn">Submit</button>
+</form>
+<br/>
+<div class="form">
+  <label>Name</label>
+  <input type="text"/>
+  <label>Phone Number</label>
+  <input type="tel"/>
+  <button type="submit" class="btn">Submit</button>
+</div>
+{{/example}}
+
 ### Inputs
 
 We style the most common text-based input fields, including `text`, `password`, `email`, `number`, `tel`, `url`, `date`, `search`, `datetime`, `time`, and `date`.
@@ -112,6 +134,20 @@ You can group inputs with text add-ons with `.add-on`, or buttons with `.add-on-
     </div>
   </div>
 </div>
+{{/example}}
+
+### Inline Forms
+
+Layout your forms inline with `.form-inline`. This will ensure that a form is displayed inline.
+
+{{#example 'html'}}
+<form class="form-inline">
+  <label>Name</label>
+  <input type="text"/>
+  <label>Phone Number</label>
+  <input type="tel"/>
+  <button type="submit" class="btn">Submit</button>
+</form>
 {{/example}}
 
 ### Horizontal Forms

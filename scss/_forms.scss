@@ -125,7 +125,8 @@ textarea:focus {
   z-index: z-index('input-focus');
 }
 
-form label {
+form label,
+.form label {
   @extend %lbl1;
 
   color: $typography-color;
@@ -173,7 +174,8 @@ input::placeholder {
 
 }
 
-form .grid {
+form .grid,
+.form .grid {
   vertical-align: bottom;
 
   [class*=col-] {
@@ -191,6 +193,16 @@ form .grid {
     }
   }
 
+}
+
+.form-inline {
+  label, select, input, textarea {
+    display: inline-block;
+  }
+
+  label:not(:first-child) {
+    margin-left: 12px;
+  }
 }
 
 .form-horizontal .control-group {

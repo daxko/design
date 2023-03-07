@@ -440,7 +440,8 @@ textarea {
   line-height: 16px;
 }
 
-form label, .alert strong, .dax-toast-title {
+form label,
+.form label, .alert strong, .dax-toast-title {
   font-size: 14px;
   font-weight: 590;
   line-height: 20px;
@@ -920,7 +921,8 @@ textarea:focus {
   z-index: 10;
 }
 
-form label {
+form label,
+.form label {
   color: #0F0F0F;
 }
 
@@ -968,11 +970,13 @@ input::placeholder {
   display: inline-block;
 }
 
-form .grid {
+form .grid,
+.form .grid {
   vertical-align: bottom;
 }
 
-form .grid [class*=col-] {
+form .grid [class*=col-],
+.form .grid [class*=col-] {
   margin-bottom: 1em;
 }
 
@@ -981,8 +985,22 @@ form .grid [class*=col-] > select,
 form .grid [class*=col-] > textarea,
 form .grid [class*=col-] > label input:not([type=checkbox]):not([type=radio]),
 form .grid [class*=col-] > label select,
-form .grid [class*=col-] > label textarea {
+form .grid [class*=col-] > label textarea,
+.form .grid [class*=col-] > input:not([type=checkbox]):not([type=radio]),
+.form .grid [class*=col-] > select,
+.form .grid [class*=col-] > textarea,
+.form .grid [class*=col-] > label input:not([type=checkbox]):not([type=radio]),
+.form .grid [class*=col-] > label select,
+.form .grid [class*=col-] > label textarea {
   width: 100%;
+}
+
+.form-inline label, .form-inline select, .form-inline input, .form-inline textarea {
+  display: inline-block;
+}
+
+.form-inline label:not(:first-child) {
+  margin-left: 12px;
 }
 
 .form-horizontal .control-group > label {
