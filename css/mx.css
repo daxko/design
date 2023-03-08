@@ -1168,6 +1168,7 @@ form .grid [class*=col-] > label textarea,
 .table td,
 .table th {
   text-align: left;
+  line-height: 20px;
 }
 
 .table > thead > tr td,
