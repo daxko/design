@@ -260,23 +260,23 @@ form .grid,
 // Input group + add-ons
 .input-group {
 
-  display: table;
+  display: flex;
   border-collapse: separate;
   position: relative;
-  width: 1%;
+  flex-direction: row;
 
   input {
-    display: table-cell;
-    float: left;
+    display: flex;
+    flex-direction: row;
   }
 
   .add-on,
   .add-on-btn {
-    display: table-cell;
+    display: flex;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    width: 1%;
+    flex-direction: row;
   }
 
   .add-on {
@@ -296,13 +296,13 @@ form .grid,
   }
 
   .add-on + input {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
   }
 
   input:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
   }
 
   .add-on:last-child {

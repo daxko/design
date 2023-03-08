@@ -1048,24 +1048,30 @@ form .grid [class*=col-] > label textarea,
 }
 
 .input-group {
-  display: table;
+  display: -ms-flexbox;
+  display: flex;
   border-collapse: separate;
   position: relative;
-  width: 1%;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .input-group input {
-  display: table-cell;
-  float: left;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .input-group .add-on,
 .input-group .add-on-btn {
-  display: table-cell;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
-  width: 1%;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .input-group .add-on {
@@ -1085,13 +1091,13 @@ form .grid [class*=col-] > label textarea,
 }
 
 .input-group .add-on + input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .input-group input:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .input-group .add-on:last-child {
