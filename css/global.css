@@ -1052,8 +1052,8 @@ form .grid [class*=col-] > label textarea,
 }
 
 .input-group {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-collapse: separate;
   position: relative;
   -ms-flex-direction: row;
@@ -1061,16 +1061,17 @@ form .grid [class*=col-] > label textarea,
 }
 
 .input-group input {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-direction: row;
       flex-direction: row;
+  width: 100%;
 }
 
 .input-group .add-on,
 .input-group .add-on-btn {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
@@ -1094,7 +1095,15 @@ form .grid [class*=col-] > label textarea,
   border-right: none;
 }
 
-.input-group .add-on + input {
+.input-group .add-on-btn:first-child .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: -1px;
+  z-index: 1;
+}
+
+.input-group .add-on + input,
+.input-group .add-on-btn + input {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
@@ -1104,15 +1113,15 @@ form .grid [class*=col-] > label textarea,
   border-bottom-right-radius: 0 !important;
 }
 
-.input-group .add-on:last-child {
+.input-group .add-on:last-child,
+.input-group .add-on-btn:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 0;
 }
 
 .input-group input:not(:first-child):not(:last-child) {
-  border-radius: 0;
-  margin-left: -1px;
+  border-radius: 0 !important;
 }
 
 .input-group .add-on-btn:last-child .btn {

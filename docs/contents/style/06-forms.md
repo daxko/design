@@ -122,11 +122,40 @@ You can group inputs with text add-ons with `.add-on`, or buttons with `.add-on-
   <div class="col-4">
     <div class="input-group">
       <input type="text" />
-      <span class="add-on">.00</span>
+      <span class="add-on">@</span>
     </div>
   </div>
   <div class="col-4">
     <div class="input-group">
+      <span class="add-on">@</span>
+      <input type="text" />
+      <span class="add-on">@</span>
+    </div>
+  </div>
+</div>
+<br/>
+<div class="grid">
+  <div class="col-4">
+    <div class="input-group">
+      <span class="add-on-btn">
+        <button type="button" class="btn">Go!</button>
+      </span>
+      <input type="text"/>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="input-group">
+      <input type="text"/>
+      <span class="add-on-btn">
+        <button type="button" class="btn">Go!</button>
+      </span>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="input-group">
+      <span class="add-on-btn">
+        <button type="button" class="btn">Go!</button>
+      </span>
       <input type="text"/>
       <span class="add-on-btn">
         <button type="button" class="btn">Go!</button>
