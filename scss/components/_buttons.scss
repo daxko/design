@@ -164,13 +164,11 @@ $btn-primary-colors: (
     &:active:focus,
     &.active:focus {
       background-color: map-get($value, 'active');
-      box-shadow: none;
       border-color: map-get($value, 'borderColor');
       color: map-get($value, 'text');
     }
   
     &:focus {
-      background-color: map-get($value, 'focus');
       border-color: map-get($value, 'borderColor');
       color: map-get($value, 'text');
     }

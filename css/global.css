@@ -2100,14 +2100,12 @@ svg {
 .btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
 .btn-group > input[type=radio]:checked + label:focus {
   background-color: #D9D9D9;
-  box-shadow: none;
   border-color: #B8B8B8;
   color: #0F0F0F;
 }
 
 .btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label {
-  background-color: #FFFFFF;
   border-color: #B8B8B8;
   color: #0F0F0F;
 }
@@ -2133,13 +2131,11 @@ svg {
 
 .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary.active:focus {
   background-color: #004175;
-  box-shadow: none;
   border-color: transparent;
   color: #FFFFFF;
 }
 
 .btn-primary:focus {
-  background-color: #0070CB;
   border-color: transparent;
   color: #FFFFFF;
 }
@@ -2165,13 +2161,11 @@ svg {
 
 .btn-success:active, .btn-success.active, .btn-success:active:focus, .btn-success.active:focus {
   background-color: #00470D;
-  box-shadow: none;
   border-color: transparent;
   color: #FFFFFF;
 }
 
 .btn-success:focus {
-  background-color: #008011;
   border-color: transparent;
   color: #FFFFFF;
 }
@@ -2197,13 +2191,11 @@ svg {
 
 .btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger.active:focus {
   background-color: #7C0E0A;
-  box-shadow: none;
   border-color: transparent;
   color: #FFFFFF;
 }
 
 .btn-danger:focus {
-  background-color: #D5110A;
   border-color: transparent;
   color: #FFFFFF;
 }
@@ -2229,13 +2221,11 @@ svg {
 
 .btn-secondary:active, .btn-secondary.active, .btn-secondary:active:focus, .btn-secondary.active:focus {
   background-color: #B8B8B8;
-  box-shadow: none;
   border-color: transparent;
   color: #0F0F0F;
 }
 
 .btn-secondary:focus {
-  background-color: #F0F0F0;
   border-color: transparent;
   color: #0F0F0F;
 }
@@ -2261,13 +2251,11 @@ svg {
 
 .btn-link:active, .btn-link.active, .btn-link:active:focus, .btn-link.active:focus {
   background-color: #F0F0F0;
-  box-shadow: none;
   border-color: transparent;
   color: #004175;
 }
 
 .btn-link:focus {
-  background-color: transparent;
   border-color: transparent;
   color: #004175;
 }
