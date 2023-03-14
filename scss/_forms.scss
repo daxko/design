@@ -37,6 +37,7 @@ textarea {
   outline: 0;
   position: relative;
   height: auto !important;
+  width: 220px;
   &:disabled {
     background: $input-disabled-background-color;
     cursor: not-allowed;   
@@ -55,7 +56,8 @@ input[type=checkbox],
 input[type=radio] {
   box-sizing: border-box;
   padding: 0;
-  margin: 3px 8px;
+  margin: 1px 8px 3px 0;
+  vertical-align: middle;
 }
 
 textarea {
@@ -196,60 +198,83 @@ form .grid,
 }
 
 .form-inline {
-  label, select, input, textarea {
+  label, select, input, textarea, button {
     display: inline-block;
   }
 
   label:not(:first-child) {
     margin-left: 12px;
   }
+
+  select, input, textarea, button {
+    ~ select, ~ input, ~ textarea, ~ button{
+      margin-left: 12px;
+    }
+  }
 }
 
-.form-horizontal .control-group {
-
-  > label {
-    text-align: right;
-    width: 9em;
-    margin-right: 1em;
-    float: left;
-    padding: 5px 0;
-    vertical-align: middle;
-    display: inline-block;
-    position: absolute;
+.form-horizontal {
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=tel],
+  input[type=url],
+  input[type=date],
+  input[type=search],
+  input[type=datetime],
+  input[type=time],
+  input[type=date],
+  select,
+  textarea{
+    width: auto;
   }
 
-  .controls {
-    margin-left: 10em;
-  }
+  .control-group {
 
-  .controls > .grid {
-    vertical-align: middle;
-  }
+    > label {
+      text-align: right;
+      width: 9em;
+      margin-right: 1em;
+      float: left;
+      padding: 5px 0;
+      vertical-align: middle;
+      display: inline-block;
+      position: absolute;
+    }
 
-  .controls > label {
-    display: block;
-    vertical-align: middle;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: normal;
-  }
+    .controls {
+      margin-left: 10em;
+    }
 
-  .controls > label.toggle-switch {
-    display: inline-block;
-    padding-top: inherit;
-    padding-bottom: inherit;
-  }
+    .controls > .grid {
+      vertical-align: middle;
+    }
 
-  .btn-group {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    .controls > label {
+      display: block;
+      vertical-align: middle;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: normal;
+    }
 
-  + .control-group {
-    margin-top: 1em;
-    clear: left;
-  }
+    .controls > label.toggle-switch {
+      display: inline-block;
+      padding-top: inherit;
+      padding-bottom: inherit;
+    }
 
+    .btn-group {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    + .control-group {
+      margin-top: 1em;
+      clear: left;
+    }
+  }
 }
 
 .form-actions {
@@ -331,7 +356,7 @@ form .grid,
     margin-left: -1px;
   }
 
-  + .input-group {
+  + .input-group { 
     margin-left: .5em;
   }
 

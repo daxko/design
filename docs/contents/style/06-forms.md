@@ -173,6 +173,9 @@ Layout your forms inline with `.form-inline`. This will ensure that a form is di
 <form class="form-inline">
   <label>Name</label>
   <input type="text"/>
+  <label>
+    <input type="checkbox" name="inline-check" /> Checked
+  </label>
   <label>Phone Number</label>
   <input type="tel"/>
   <button type="submit" class="btn">Submit</button>
