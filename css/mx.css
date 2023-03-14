@@ -1363,6 +1363,13 @@ form .grid [class*=col-] > label textarea,
   background-image: none;
 }
 
+.btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
+.btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
+.btn-group > input[type=radio]:focus + label:active {
+  box-shadow: none;
+}
+
 .btn:disabled, .btn.disabled, .btn:disabled:hover, .btn.disabled:hover {
   cursor: not-allowed;
   box-shadow: none !important;
