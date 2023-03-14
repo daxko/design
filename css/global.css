@@ -1005,7 +1005,7 @@ form .grid [class*=col-] > label textarea,
   margin-left: 12px;
 }
 
-.form-inline select ~ select, .form-inline select ~ input, .form-inline select ~ textarea, .form-inline select ~ button, .form-inline select ~ .btn-group, .form-inline input ~ select, .form-inline input ~ input, .form-inline input ~ textarea, .form-inline input ~ button, .form-inline input ~ .btn-group, .form-inline textarea ~ select, .form-inline textarea ~ input, .form-inline textarea ~ textarea, .form-inline textarea ~ button, .form-inline textarea ~ .btn-group, .form-inline button ~ select, .form-inline button ~ input, .form-inline button ~ textarea, .form-inline button ~ button, .form-inline button ~ .btn-group, .form-inline .sr-only ~ select, .form-inline .sr-only ~ input, .form-inline .sr-only ~ textarea, .form-inline .sr-only ~ button, .form-inline .sr-only ~ .btn-group {
+.form-inline select + select, .form-inline select + input, .form-inline select + textarea, .form-inline select + button, .form-inline select + .btn-group, .form-inline input + select, .form-inline input + input, .form-inline input + textarea, .form-inline input + button, .form-inline input + .btn-group, .form-inline textarea + select, .form-inline textarea + input, .form-inline textarea + textarea, .form-inline textarea + button, .form-inline textarea + .btn-group, .form-inline button + select, .form-inline button + input, .form-inline button + textarea, .form-inline button + button, .form-inline button + .btn-group, .form-inline .sr-only:not(:first-child) + select, .form-inline .sr-only:not(:first-child) + input, .form-inline .sr-only:not(:first-child) + textarea, .form-inline .sr-only:not(:first-child) + button, .form-inline .sr-only:not(:first-child) + .btn-group {
   margin-left: 12px;
 }
 

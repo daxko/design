@@ -206,8 +206,8 @@ form .grid,
     margin-left: 12px;
   }
 
-  select, input, textarea, button, .sr-only {
-    ~ select, ~ input, ~ textarea, ~ button, ~ .btn-group {
+  select, input, textarea, button, .sr-only:not(:first-child) {
+    + select, + input, + textarea, + button, + .btn-group {
       margin-left: 12px;
     }
   }
