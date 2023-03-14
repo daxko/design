@@ -2087,12 +2087,6 @@ svg {
 .btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
 .btn-group > input[type=radio]:focus + label:active {
   background-image: none;
-}
-
-.btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
-.btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
-.btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
-.btn-group > input[type=radio]:focus + label:active {
   box-shadow: none;
 }
 
