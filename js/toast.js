@@ -1,3 +1,4 @@
+// global Toastify
 // A function to create a toast message using Toastify JS
 function createToast(query) {
   // Element for the toast
@@ -7,8 +8,9 @@ function createToast(query) {
   // Class names to be added to the outer toastify element
   var classList = [];
   element.classList.forEach(function(c){
-    if(c !== 'dax-toast')
+    if(c !== 'dax-toast'){
       classList.push(c);
+    }
   });
 
   // Configurable properties of the toast message

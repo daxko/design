@@ -206,8 +206,8 @@ form .grid,
     margin-left: 12px;
   }
 
-  select, input, textarea, button {
-    ~ select, ~ input, ~ textarea, ~ button{
+  select, input, textarea, button, .sr-only {
+    ~ select, ~ input, ~ textarea, ~ button, ~ .btn-group {
       margin-left: 12px;
     }
   }
@@ -224,7 +224,7 @@ form .grid,
   input[type=search],
   input[type=datetime],
   input[type=time],
-  input[type=date],
+  input[type=date], 
   select,
   textarea{
     width: auto;
