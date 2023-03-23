@@ -1201,7 +1201,7 @@ form .grid [class*=col-] > label textarea,
 .table > thead > tr th {
   background-color: #F0F0F0;
   padding: 0.8em 1em;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .table > tbody > tr td,
