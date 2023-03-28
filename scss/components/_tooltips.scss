@@ -34,6 +34,7 @@ $tooltip-tail-size: 5px;
   white-space: pre;
   padding: 3px 10px;
   z-index: z-index('tooltip');
+  text-transform: none;
 }
 
 .tooltip:hover,

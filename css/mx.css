@@ -2189,6 +2189,7 @@ form .grid [class*=col-] > label textarea,
   white-space: pre;
   padding: 3px 10px;
   z-index: 160;
+  text-transform: none;
 }
 
 .tooltip:hover:before, .tooltip:hover:after,

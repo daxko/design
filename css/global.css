@@ -3778,6 +3778,7 @@ body:not(.popover-touch) .popover-popper[x-placement='left'] .popover-tooltip[da
   white-space: pre;
   padding: 3px 10px;
   z-index: 160;
+  text-transform: none;
 }
 
 .tooltip:hover:before, .tooltip:hover:after,
