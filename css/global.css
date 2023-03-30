@@ -3574,6 +3574,7 @@ body:not(.popover-touch) .popover-popper[x-placement='left'] .popover-tooltip[da
   padding: 4px 8px;
   text-align: center;
   border-radius: 99px;
+  text-shadow: none;
 }
 
 .label-uppercase {
