@@ -1,6 +1,7 @@
-$navbar-color: $gray-900 !default;
+$navbar-color: $secondary-900 !default;
 $navbar-accent-color: $cotton-candy !default;
 $navbar-link-color: $cotton-candy !default;
+$navbar-item-color: $secondary-300 !default;
 
 // Navbar
 // ----------------------------------------------
@@ -36,15 +37,14 @@ $navbar-link-color: $cotton-candy !default;
   }
 }
 
+
 .navbar .nav {
+
   display: inline-block;
   float: left;
-}
-
-.navbar .nav {
 
   .caret {
-    border-top-color: $gray-300;
+    border-top-color: $navbar-item-color;
   }
 
   ul {
@@ -52,11 +52,11 @@ $navbar-link-color: $cotton-candy !default;
   }
 
   a:hover .caret {
-    border-top-color: #fff;
+    border-top-color: $text-light;
   }
 
   .nav--active {
-    color: #fff;
+    color: $text-light;
   }
 
   > li {
@@ -65,29 +65,29 @@ $navbar-link-color: $cotton-candy !default;
   }
 
   > li > a {
-    color: $gray-300;
+    color: $navbar-item-color;
     display: block;
     height: 40px;
     line-height: 40px;
     padding: 0 1em;
-    font-size: $base-font-size;
+    font-size: $typography-font-size;
   }
 
   > li > a:hover {
-    color: #fff;
+    color: $text-light;
   }
 
-}
-
-// Navbar dropdowns
-.navbar .nav > li.dropdown.open {
-  background-color: rgba(0, 0, 0, .3);
-
-  > a {
-    color: #fff;
+  // Navbar dropdowns
+  > li.dropdown.open {
+    background-color: $background-dark;
+  
+    > a {
+      color: $text-light;
+    }
+  
+    .caret {
+      border-top-color: $text-light;
+    }
   }
 
-  .caret {
-    border-top-color: #fff;
-  }
 }

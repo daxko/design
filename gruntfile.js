@@ -283,16 +283,23 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       },
       docs: {
-        tasks: ['watch', 'shell:preview']
+        tasks: ['watch', 'connect']
       }
     },
 
     shell: {
       metalsmith: {
         command: 'cd docs && node index.js'
-      },
-      preview: {
-        command: 'node node_modules/.bin/http-server docs/build -p 3000'
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          base: 'docs/build',
+          keepalive: true
+        }
       }
     }
   });
@@ -345,6 +352,8 @@ module.exports = function (grunt) {
   require('matchdep')
     .filterAll('grunt-*')
     .forEach(grunt.loadNpmTasks);
+
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['assets']);
   grunt.registerTask('test', ['eslint', 'mocha']);

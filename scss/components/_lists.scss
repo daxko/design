@@ -1,3 +1,8 @@
+$list-border-color: $secondary-200;
+$list-secondary-text: $secondary-300;
+$list-highlight-background: $secondary-000;
+$list-icon-color: $secondary-900;
+
 // Lists
 // ----------------------------------------------
 
@@ -8,24 +13,24 @@
   margin-top: 1em;
 
   small {
-    color: $gray-300;
+    color: $list-secondary-text;
   }
 
   .list-item {
     display: block;
     padding: .75em 1em;
-    border-bottom: 1px solid $gray-100;
+    border-bottom: 1px solid $list-border-color;
     @extend .cf;
   }
 
   a.list-item {
     cursor: pointer;
-    color: #000;
+    color: $text-dark;
     text-decoration: none;
   }
 
   a.list-item:hover {
-    background-color: $gray-50;
+    background-color: $list-highlight-background;
   }
 
   a.list-item:focus {
@@ -34,14 +39,14 @@
   }
 
   .list-icons {
-    color: $gray-300;
+    color: $list-secondary-text;
     &:hover {
-      color: $gray-900;
+      color: $list-icon-color;
     }
   }
 
   a:hover .list-icons {
-    color: $gray-900;
+    color: $list-icon-color;
   }
 
 }
@@ -50,9 +55,14 @@
   margin-top: 1em;
   padding: .75em 1em;
   font-weight: 700;
-  background-color: $gray-100;
+  background-color: $list-highlight-background;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  border-bottom: 1px solid $list-border-color;
+}
+
+.list-header-bordered {
+  border: 1px solid $list-border-color;
 }
 
 .list-header:first-child,
@@ -69,7 +79,7 @@
 
 .list-bordered {
   border-radius: 3px;
-  border-top: 1px solid $gray-100;
-  border-left: 1px solid $gray-100;
-  border-right: 1px solid $gray-100;
+  border-top: 1px solid $list-border-color;
+  border-left: 1px solid $list-border-color;
+  border-right: 1px solid $list-border-color;
 }

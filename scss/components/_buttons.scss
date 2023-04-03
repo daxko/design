@@ -1,52 +1,123 @@
-$btn-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$btn-color: $gray-50 !default;
-$btn-border-color: $gray-300 !default;
-$btn-text-color: $gray-900 !default;
-$btn-primary-color: #0275d8 !default;
-$btn-primary-text-color: #fff !default;
-$btn-danger-color: #D9534F !default;
-$btn-font-size: 13px !default;
-$btn-mini-font-size: 12px !default;
+$btn-mini-padding: 4px 8px !default;
+$btn-border-radius: 4px !default;
 $btn-focus-color: $focus-color !default;
-$btn-font-weight: 500;
-$btn-height: 32px;
+
+$btn-primary-colors: (
+  "": (
+    background: $white,
+    borderColor: $secondary-300,
+    border: 1px solid $secondary-300,
+    text: $text-dark,
+    hover: $secondary-100,
+    active: $secondary-200,
+    focus: $white,
+    disabled: $white,
+    disabledText: $secondary-300,
+    padding: 8px 12px,
+    groupBorder: 1px solid $secondary-300
+  ),
+  "-primary": (
+    background: $primary,
+    borderColor: transparent,
+    border: 1px solid transparent,
+    text: $text-light,
+    hover: $primary-variant,
+    active: $primary-default-700,
+    focus: $primary,
+    disabled: $primary-default-200,
+    disabledText: $text-light,
+    padding: 8px 12px,
+    groupBorder: 1px solid $primary-default-700
+  ),
+  "-success": (
+    background: $success,
+    borderColor: transparent,
+    border: 1px solid transparent,
+    text: $text-light,
+    hover: $success-variant,
+    active: $primary-success-700,
+    focus: $success,
+    disabled: $primary-success-200,
+    disabledText: $text-light,
+    padding: 8px 12px,
+    groupBorder: 1px solid $primary-success-700
+  ),
+  "-danger": (
+    background: $danger,
+    borderColor: transparent,
+    border: 1px solid transparent,
+    text: $text-light,
+    hover: $danger-variant,
+    active: $primary-danger-700,
+    focus: $danger,
+    disabled: $primary-danger-200,
+    disabledText: $text-light,
+    padding: 8px 12px,
+    groupBorder: 1px solid $primary-danger-700
+  ),
+  "-secondary": (
+    background: $secondary-100,
+    borderColor: transparent,
+    border: 1px solid transparent,
+    text: $text-dark,
+    hover: $secondary-200,
+    active: $secondary-300,
+    focus: $secondary-100,
+    disabled: $secondary-100,
+    disabledText: $secondary-300,
+    padding: 8px 12px,
+    groupBorder: 1px solid $secondary-300
+  ),
+  "-link": (
+    background: transparent,
+    borderColor: transparent,
+    border: 1px solid transparent,
+    text: $primary-default-700,
+    hover: $secondary-000,
+    active: $secondary-100,
+    focus: transparent,
+    disabled: transparent,
+    disabledText: $secondary-300,
+    padding: 8px,
+    groupBorder: 1px solid transparent
+  )
+);
 
 // Buttons
 // ----------------------------------------------
 
 // Btn default
 .btn {
+  @extend %btn;
+  
   position: relative;
   overflow: visible;
   display: inline-block;
   cursor: pointer;
-  border: 1px solid $btn-border-color;
-  border-radius: .2em;
-  box-shadow: 0 -1px 0 $btn-border-color inset;
-  font-size: $btn-font-size;
-  font-weight: $btn-font-weight;
-  font-family: $btn-font-family;
-  line-height: 20px;
-  height: $btn-height;
-  color: $btn-text-color;
+  border-radius: $btn-border-radius;
   text-decoration: none;
-  text-align: center;
-  vertical-align: baseline;
+  vertical-align: middle;
   white-space: nowrap;
   outline: none;
-  padding: 4px 10px 6px;
-  background-color: $btn-color;
-  transition: ease-in-out .1s background-color, ease-in-out .1s border;
+  background-image: none;
+  text-shadow: none;
+  background-repeat: no-repeat;
+  box-shadow: none;
+
+  .caret {
+    border: 0;
+    width: inherit;
+    height: inherit;
+    margin: 0;
+  }
 
   &:focus,
   &.focus {
-    box-shadow: 0 -1px 0 $gray-300 inset, 0 0 0 2px $btn-focus-color;
+    box-shadow: 0 0 0 2px $btn-focus-color;
     z-index: z-index('btn-focus');
   }
 
   &:hover {
-    border-color: darken($btn-border-color, 20%);
-    background-color: darken($btn-color, 10%);
     text-decoration: none;
   }
 
@@ -54,12 +125,8 @@ $btn-height: 32px;
   &:active,
   &.active:focus,
   &:active:focus {
-    border-color: darken($btn-color, 20%);
-    background-color: darken($btn-color, 10%);
-    box-shadow: none;
     background-image: none;
-    line-height: 19px;
-    padding: 5px 10px;
+    box-shadow: none;
   }
 
   &:disabled,
@@ -69,12 +136,7 @@ $btn-height: 32px;
     cursor: not-allowed;
     box-shadow: none !important;
     background-image: none;
-    background-color: $btn-color;
     text-shadow: none;
-    border-color: inherit;
-    padding: 5px 10px !important;
-    color: rgba($btn-text-color, .3);
-    vertical-align: top;
   }
 }
 
@@ -84,125 +146,42 @@ $btn-height: 32px;
   border: 0;
 }
 
-// Btn primary
-.btn-primary {
-  color: $btn-primary-text-color;
-  background-color: $btn-primary-color;
-  border-color: darken($btn-primary-color, 10%);
-  box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset;
-
-  &:hover {
-    background-color: darken($btn-primary-color, 10%);
-    border-color: darken($btn-primary-color, 20%);
-    box-shadow: 0 -1px 0 darken($btn-primary-color, 20%) inset;
+@each $color, $value in $btn-primary-colors{
+  .btn#{$color} {
+    color: map-get($value, 'text');
+    background-color: map-get($value, 'background');
+    border: map-get($value, 'border');
+    padding: map-get($value, 'padding');
+  
+    &:hover {
+      background-color: map-get($value, 'hover');
+      border-color: map-get($value, 'borderColor');
+      color: map-get($value, 'text');
+    }
+  
+    &:active,
+    &.active,
+    &:active:focus,
+    &.active:focus {
+      background-color: map-get($value, 'active');
+      border-color: map-get($value, 'borderColor');
+      color: map-get($value, 'text');
+    }
+  
+    &:focus {
+      border-color: map-get($value, 'borderColor');
+      color: map-get($value, 'text');
+    }
+  
+    &:disabled,
+    &.disabled,
+    &:disabled:hover,
+    &.disabled:hover {
+      color: map-get($value, 'disabledText');
+      background-color: map-get($value, 'disabled');
+      border-color: map-get($value, 'borderColor');
+    }
   }
-
-  &:active,
-  &.active,
-  &:active:focus,
-  &.active:focus {
-    background-color: darken($btn-primary-color, 10%);
-    border-color: darken($btn-primary-color, 20%);
-    box-shadow: none;
-  }
-
-  &:focus {
-    box-shadow: 0 -1px 0 darken($btn-primary-color, 10%) inset, 0 0 0 2px $btn-focus-color;
-  }
-
-  &:disabled,
-  &.disabled,
-  &:disabled:hover,
-  &.disabled:hover {
-    color: $btn-primary-text-color;
-    border-color: lighten($btn-primary-color, 30%);
-    background-color: lighten($btn-primary-color, 30%);
-  }
-}
-
-// Btn danger
-.btn-danger {
-  color: $btn-primary-text-color;
-  background: $btn-danger-color;
-  border-color: darken($btn-danger-color, 10%);
-  box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset;
-
-  &:hover {
-    background-color: darken($btn-danger-color, 10%);
-    border-color: darken($btn-danger-color, 20%);
-    box-shadow: 0 -1px 0 darken($btn-danger-color, 20%) inset;
-  }
-
-  &:active,
-  &.active,
-  &:active:focus,
-  &.active:focus {
-    background-color: darken($btn-danger-color, 10%);
-    border-color: darken($btn-danger-color, 20%);
-    box-shadow: none;
-  }
-
-  &:focus {
-    box-shadow: 0 -1px 0 darken($btn-danger-color, 10%) inset, 0 0 0 2px $btn-focus-color;
-  }
-
-  &.disabled,
-  &:disabled,
-  &.disabled:hover,
-  &:disabled:hover {
-    color: $btn-primary-text-color;
-    border-color: lighten($btn-danger-color, 30%);
-    background-color: lighten($btn-danger-color, 30%);
-  }
-}
-
-
-// Btn Link
-.btn-link,
-.btn-link:hover {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  font-weight: normal;
-  font-size: $base-font-size;
-  line-height: 20px;
-  padding: 4px 10px 6px;
-}
-
-.btn-link.active,
-.btn-link:active,
-.btn-link.active:focus,
-.btn-link:active:focus {
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.btn-link:focus,
-.btn-link:focus {
-  border-color: transparent;
-  background-color: transparent;
-  box-shadow: 0 -1px 0 #ffffff inset, 0 0 0 2px $focus-color;
-}
-
-.btn-link:hover {
-  text-decoration: underline;
-}
-
-.btn-link:disabled,
-.btn-link.disabled,
-.btn-link:disabled:hover,
-.btn-link.disabled:hover {
-  background-color: transparent;
-  border-color: transparent;
-  color: rgba($btn-text-color, .3);
-  text-decoration: none;
-}
-
-.btn-link + .btn-link {
-  padding-left: 0;
 }
 
 // Btn groups
@@ -214,14 +193,23 @@ $btn-height: 32px;
   vertical-align: middle;
 
   .btn {
-    font-size: $btn-font-size;
+    @extend %btn;
     display: inline-block;
+  }
+
+  @each $color, $value in $btn-primary-colors {
+    .btn#{$color} {
+      color: map-get($value, 'text');
+
+      &:not(:first-child){
+        border-left: map-get($value, 'groupBorder');
+      }
+    }
   }
 
   .btn-mini,
   .btn-mini:focus {
-    font-size: $btn-mini-font-size;
-    padding: 1px 6px 3px;
+    padding: $btn-mini-padding;
   }
 
   .btn ~ .btn,
@@ -238,7 +226,7 @@ $btn-height: 32px;
     border-bottom-right-radius: 0;
   }
 
-  .btn-group:not(:first-child):not(:last-child) > .btn, {
+  .btn-group:not(:first-child):not(:last-child) > .btn {
     border-radius: 0;
   }
 
@@ -252,11 +240,7 @@ $btn-height: 32px;
     z-index: 2;
   }
 
-}
-
-// Button groups with input checkboxes and radio buttons
-.btn-group {
-
+  // Button groups with input checkboxes and radio buttons
   > input[type=checkbox],
   > input[type=radio] {
     opacity: 0;
@@ -274,16 +258,16 @@ $btn-height: 32px;
     &:checked + label {
       @extend .btn.active;
     }
+    &:checked:focus + label {
+      @extend .btn.active;
+      box-shadow: 0 0 0 2px $btn-focus-color;
+    }
   }
-
 }
 
 // Btn mini
 .btn-mini {
-  font-size: $btn-mini-font-size;
-  height: 26px;
-  line-height: 19px;
-  padding: 1px 6px 3px;
+  padding: $btn-mini-padding;
 
   &:hover,
   &.active,
@@ -293,7 +277,7 @@ $btn-height: 32px;
   &:disabled,
   &.disabled:hover,
   &:disabled:hover {
-    padding: 1px 6px 3px !important;
+    padding: $btn-mini-padding !important;
   }
 }
 
@@ -301,12 +285,12 @@ $btn-height: 32px;
 .btn-block {
   display: block;
   width: 100%;
-}
 
-.btn-block + .btn-block {
-  margin-top: 1em;
-
-  &.btn-mini {
-    padding: 1px 6px 3px;
+  + .btn-block {
+    margin-top: 14px;
+  
+    &.btn-mini {
+      padding: $btn-mini-padding;
+    }
   }
 }

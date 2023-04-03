@@ -1,0 +1,91 @@
+$toast-types: (
+  'success': (
+    body: $primary-success-000,
+    text: $primary-success-600,
+    border: $primary-success-200
+  ),
+  'danger': (
+    body: $primary-danger-000,
+    text: $primary-danger-600,
+    border: $primary-danger-200
+  ),
+  'info': (
+    body: $primary-default-000,
+    text: $primary-default-600,
+    border: $primary-default-200
+  ),
+  'warning': (
+    body: $primary-warning-000,
+    text: $primary-warning-600,
+    border: $primary-warning-200
+  ),
+  'secondary': (
+    body: $secondary-000,
+    text: $text-dark,
+    border: $secondary-200
+  )
+);
+
+.dax-toast {
+  display: none;
+
+  &-icon {
+    margin-right: 4px;
+    display: inline-block;
+  }
+
+  &-inner {
+    display: inline-block;
+    width: 184px; 
+  }
+
+  &-title {
+    @extend %lbl1;
+    
+    display: inline-block;
+  }
+  &-btn {
+    float: right;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
+
+    &.btn.active,
+    &.btn:active,
+    &.btn.active:focus,
+    &.btn:active:focus
+    &.btn:focus,
+    &.btn:hover {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: auto;
+    }
+  }
+
+  &-body {
+    margin-top: 3px
+  }
+}
+
+@each $type, $value in $toast-types {
+  .dax-toast-#{$type} {
+    padding: 8px;
+    clear: both;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 14px;
+    background: map-get($value, 'body');
+    color: map-get($value, 'text');
+    border: 1px solid map-get($value, 'border');
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    width: 224px;
+
+    .toast-close {
+      color: map-get($value, 'text');
+      opacity: 1;
+      font-size: 14px;
+      padding: 0 5px;
+      vertical-align: top;
+    }
+  }
+}

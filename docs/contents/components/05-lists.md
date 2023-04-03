@@ -59,6 +59,17 @@ You can also have a list header by including a preceding element with a `.list-h
 
 {{#example 'html'}}
 <div class="list-header">List Header</div>
+<ul class="list">
+  <li class="list-item">List Item</li>
+  <!-- ... -->
+  <li class="list-item">List Item</li>
+  <li class="list-item">List Item</li>
+  <!-- /... -->
+</ul>
+{{/example}}
+
+{{#example 'html'}}
+<div class="list-header list-header-bordered">List Header</div>
 <ul class="list list-bordered">
   <li class="list-item">List Item</li>
   <!-- ... -->

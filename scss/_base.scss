@@ -10,14 +10,15 @@ html {
 
 html,
 body {
-  font-size: $base-font-size;
+  @extend %bdy1;
+
+  color: $typography-color;
+  font-family: $typography-font;
 }
 
 body {
   padding: 0;
   margin: 0;
-  line-height: $base-line-height;
-  font-family: $base-font-family;
 }
 
 ul {
@@ -31,7 +32,7 @@ img {
 }
 
 a {
-  color: $primary-color;
+  color: $primary;
   text-decoration: none;
   &:hover {
     cursor: pointer;

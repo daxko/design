@@ -1,8 +1,16 @@
 $input-focus-color: $focus-color !default;
 $input-large-font-size: 18px !default;
-$input-font-size: 13px !default;
+$input-font-size: 14px !default;
 $input-mini-font-size: 12px !default;
 $form-horizontal-breakpoint: 600px !default;
+$input-border-color: $secondary-200 !default;
+$input-disabled-background-color: $secondary-000 !default;
+$input-color: $text-dark !default;
+$add-on-color: $text-dark !default;
+$add-on-background-color: $secondary-000 !default;
+$add-on-border-color: $secondary-200 !default;
+$placeholder-color: $text-half-tone !default;
+$form-line-height: 20px !default;
 
 // Forms
 // ----------------------------------------------
@@ -20,25 +28,36 @@ input[type=time],
 input[type=date],
 select,
 textarea {
-  border: 1px solid $gray-100;
-  border-radius: .2em;
-  padding: 5px 10px;
-  font-size: $input-font-size;
-  line-height: $base-line-height;
-  height: 32px;
-  vertical-align: middle;
+  @extend %bdy1important;
+
+  border: 1px solid $input-border-color !important;
+  border-radius: .2em !important;
+  padding: 6px 11px !important;
+  vertical-align: middle !important;
   outline: 0;
   position: relative;
+  height: auto !important;
+  width: 220px;
   &:disabled {
-    background: $gray-50;
+    background: $input-disabled-background-color;
+    cursor: not-allowed;   
   }
+
+  &.error {
+    border-color: $primary-danger-400;
+  }
+}
+
+select {
+  padding-right: 23px !important;
 }
 
 input[type=checkbox],
 input[type=radio] {
   box-sizing: border-box;
   padding: 0;
-  margin: 3px 8px;
+  margin: 1px 8px 3px 0;
+  vertical-align: middle;
 }
 
 textarea {
@@ -48,15 +67,15 @@ textarea {
 
 // Standardize select appearance
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
   padding-right: 25px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUAQMAAACHy55vAAAABlBMVEUAAAAtLS3wB2rmAAAAAXRSTlMAQObYZgAAAC5JREFUCNdjYGZgYG9g4D/AIP+Awf4DQ/0Phv9/GDAAUBAoBVQAVAZUDNQC1AgAn5gN8xIbpEwAAAAASUVORK5CYII=);
   background-size: 7px 11px;
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-color: #fff;
+  background-color: #fff !important;
   // Hide IE selector in IE10+
   &::-ms-expand {
     display: none;
@@ -71,9 +90,9 @@ select.input-large {
 
 input.input-mini,
 select.input-mini {
-  height: 26px;
-  font-size: $input-mini-font-size;
-  padding: 2px 6px 2px;
+  @extend %bdy1;
+  
+  padding: 3px 7px;
 }
 
 select.input-mini {
@@ -108,9 +127,11 @@ textarea:focus {
   z-index: z-index('input-focus');
 }
 
-form label {
-  color: $gray-700;
-  font-weight: 500;
+form label,
+.form label {
+  @extend %lbl1;
+
+  color: $typography-color;
 }
 
 fieldset {
@@ -124,7 +145,7 @@ fieldset + fieldset {
 }
 
 fieldset legend {
-  color: $gray-900;
+  color: $input-color;
   font-weight: 500;
   display: block;
   width: 100%;
@@ -133,7 +154,7 @@ fieldset legend {
 }
 
 input::placeholder {
-  color: $gray-300;
+  color: $placeholder-color;
 }
 
 // Form layouts
@@ -155,7 +176,8 @@ input::placeholder {
 
 }
 
-form .grid {
+form .grid,
+.form .grid {
   vertical-align: bottom;
 
   [class*=col-] {
@@ -175,51 +197,84 @@ form .grid {
 
 }
 
-.form-horizontal .control-group {
-
-  > label {
-    text-align: right;
-    width: 9em;
-    margin-right: 1em;
-    float: left;
-    padding: 5px 0;
-    vertical-align: middle;
+.form-inline {
+  label, select, input, textarea, button {
     display: inline-block;
-    position: absolute;
   }
 
-  .controls {
-    margin-left: 10em;
+  label:not(:first-child) {
+    margin-left: 12px;
   }
 
-  .controls > .grid {
-    vertical-align: middle;
+  select, input, textarea, button, .sr-only:not(:first-child) {
+    + select, + input, + textarea, + button, + .btn-group {
+      margin-left: 12px;
+    }
+  }
+}
+
+.form-horizontal {
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=number],
+  input[type=tel],
+  input[type=url],
+  input[type=date],
+  input[type=search],
+  input[type=datetime],
+  input[type=time],
+  input[type=date], 
+  select,
+  textarea{
+    width: auto;
   }
 
-  .controls > label {
-    display: block;
-    vertical-align: middle;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: normal;
-  }
+  .control-group {
 
-  .controls > label.toggle-switch {
-    display: inline-block;
-    padding-top: inherit;
-    padding-bottom: inherit;
-  }
+    > label {
+      text-align: right;
+      width: 9em;
+      margin-right: 1em;
+      float: left;
+      padding: 5px 0;
+      vertical-align: middle;
+      display: inline-block;
+      position: absolute;
+    }
 
-  .btn-group {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    .controls {
+      margin-left: 10em;
+    }
 
-  + .control-group {
-    margin-top: 1em;
-    clear: left;
-  }
+    .controls > .grid {
+      vertical-align: middle;
+    }
 
+    .controls > label {
+      display: block;
+      vertical-align: middle;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: normal;
+    }
+
+    .controls > label.toggle-switch {
+      display: inline-block;
+      padding-top: inherit;
+      padding-bottom: inherit;
+    }
+
+    .btn-group {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    + .control-group {
+      margin-top: 1em;
+      clear: left;
+    }
+  }
 }
 
 .form-actions {
@@ -230,33 +285,34 @@ form .grid {
 // Input group + add-ons
 .input-group {
 
-  display: table;
+  display: inline-flex;
   border-collapse: separate;
   position: relative;
-  width: 1%;
+  flex-direction: row;
 
   input {
-    display: table-cell;
-    float: left;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .add-on,
   .add-on-btn {
-    display: table-cell;
+    display: inline-flex;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    width: 1%;
+    flex-direction: row;
   }
 
   .add-on {
-    color: $gray-500;
+    color: $add-on-color;
     text-shadow: -1px 0 #fff;
     border-radius: 3px;
     font-size: $input-font-size;
     padding: 5px 10px;
-    background-color: $gray-50;
-    border: 1px solid $gray-100;
+    background-color: $add-on-background-color;
+    border: 1px solid $add-on-border-color;
   }
 
   .add-on:first-child {
@@ -264,26 +320,34 @@ form .grid {
     border-bottom-right-radius: 0;
     border-right: none;
   }
+  .add-on-btn:first-child .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -1px;
+    z-index: 1;
+  }
 
-  .add-on + input {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+
+  .add-on + input,
+  .add-on-btn + input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
   }
 
   input:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
   }
 
-  .add-on:last-child {
+  .add-on:last-child,
+  .add-on-btn:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: 0;
   }
 
   input:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    margin-left: -1px;
+    border-radius: 0 !important;
   }
 
   .add-on-btn:last-child .btn {
@@ -292,7 +356,7 @@ form .grid {
     margin-left: -1px;
   }
 
-  + .input-group {
+  + .input-group { 
     margin-left: .5em;
   }
 

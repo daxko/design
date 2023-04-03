@@ -1,20 +1,20 @@
-$dropdown-font-size: 12px !default;
-$dropdown-font-color: $gray-700 !default;
-$dropdown-font-hover-color: #000 !default;
-$dropdown-hover-color: lighten($cotton-candy, 15%) !default;
+$dropdown-hover-color: $primary-default-000 !default;
 
 // Dropdown menus
 // ----------------------------------------------
 
 .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px solid $gray-900;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  display: inline-block;  
+  border: 0;
+  width: inherit;
+  height: inherit;
+  margin: 0;
+
+  &:before {
+    content: "\f0d7";
+  }
 }
 
 .dropdown,
@@ -23,9 +23,8 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   display: inline-block;
 }
 
-.dropup .caret {
-  border-top-width: 0;
-  border-bottom: 4px solid $gray-900;
+.dropup .caret:before {
+  content: "\f0d8";
 }
 
 .open > .dropdown-menu {
@@ -33,29 +32,31 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
 }
 
 .dropdown-menu {
+  @extend %bdy1;
+
   display: none;
   position: absolute;
   top: 100%;
   border-radius: 4px;
-  border: 1px solid $gray-100;
-  color: $dropdown-font-color;
+  border: 1px solid $secondary-200;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
-  background-color: #fff;
+  background-color: $background;
   background-clip: padding-box;
   min-width: 160px;
   margin-top: 1px;
   float: left;
   padding: 5px 0;
   list-style-type: none;
-  font-size: $dropdown-font-size;
   z-index: z-index('dropdown-menu');
 
   a,
   .dropdown-menu-item {
+    @extend %bdy1;
+
+    color: $typography-color;
     display: block;
     overflow: hidden;
     padding: .3em .8em;
-    color: $dropdown-font-color;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -68,11 +69,10 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   .dropdown-menu-item:hover,
   .dropdown-menu-item:focus {
     background-color: $dropdown-hover-color;
-    color: $dropdown-font-hover-color;
   }
 
   .divider {
-    background-color: $gray-100;
+    background-color: $secondary-200;
     height: 1px;
     margin: 5px 0;
   }
@@ -86,57 +86,6 @@ $dropdown-hover-color: lighten($cotton-candy, 15%) !default;
   top: auto;
   bottom: 100%;
   margin-bottom: 1px;
-}
-
-// Dropdown caret
-.dropdown-caret {
-  display: none;
-  position: absolute;
-  right: 24px;
-  top: 100%;
-  margin-top: 1px;
-  z-index: (z-index('dropdown-menu') + 1);
-}
-
-.open .dropdown-caret {
-  display: block;
-}
-
-.dropdown-caret:before,
-.dropdown-caret:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-}
-
-.dropdown-caret:before {
-  border-bottom: 8px solid $gray-100;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-}
-
-.dropdown-caret:after {
-  border-bottom: 7px solid #fff;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  left: 1px;
-  bottom: -1px;
-}
-
-.dropup .dropdown-caret {
-  top: 6px;
-
-  &:before {
-    border-bottom: none;
-    border-top: 8px solid $gray-100;
-    bottom: 0;
-  }
-
-  &:after {
-    border-bottom: none;
-    border-top: 7px solid #fff;
-    bottom: 2px;
-  }
 }
 
 // Backdrop

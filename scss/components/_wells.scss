@@ -1,4 +1,4 @@
-// $tooltip-background-color: rgba($gray-900, .9) !default;
+// $tooltip-background-color: rgba($secondary-900, .9) !default;
 // $tooltip-text-color: #fff !default;
 // $tooltip-tail-size: 5px;
 
@@ -9,8 +9,8 @@
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: $gray-50;
-  border: 1px solid $gray-100;
+  background-color: $secondary-000;
+  border: 1px solid $secondary-200;
   border-radius: 3px; 
   box-shadow: none;
 }

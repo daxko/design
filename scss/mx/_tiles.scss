@@ -1,18 +1,18 @@
 .tile {
   display: block;
   background-color: #fff;
-  border-bottom: 1px solid $gray-50;
+  border-bottom: 1px solid $secondary-000;
   padding: .5em 1em;
   position: relative;
   overflow: hidden;
-  color: $gray-900;
+  color: $secondary-900;
   // fix for iOS not including drop shadows as part of repaints
   // see http://stackoverflow.com/questions/9983520/webkit-animation-is-leaving-junk-pixels-behind-on-the-screen
   outline: 6px solid transparent;
 }
 
 a.tile {
-  color: $gray-900;
+  color: $secondary-900;
 }
 
 .tile:last-child {
@@ -20,7 +20,7 @@ a.tile {
 }
 
 .tile--header {
-  color: $gray-500;
+  color: $secondary-000;
   margin: 1em 0 .25em;
 }
 
@@ -32,7 +32,7 @@ a.tile {
   position: absolute;
   right: .5em;
   transform: translateY(-50%);
-  color: $gray-300;
+  color: $secondary-300;
 }
 
 .tile--description {

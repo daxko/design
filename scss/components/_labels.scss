@@ -1,54 +1,49 @@
-$label-color: #ffffff !default;
-$label-default-bg: #757575 !default;
-$label-green-bg: #5CB85C !default;
-$label-blue-bg: #5BC0DE !default;
-$label-orange-bg: #F0AD4E !default;
-$label-red-bg: #F9534F !default;
+// $label-color: $text-light !default;
 
-@mixin label-variant($color) {
-  background-color: $color;
-
-  &[href] {
-    &:hover,
-    &:focus {
-      background-color: darken($color, 10%);
-    }
-  }
-}
+$label-colors: (
+  "default": (
+    "background": $secondary-000,
+    "border": $secondary-200,
+    "text": $secondary-900
+  ),
+  "green": (
+    "background": $primary-success-000,
+    "border": $primary-success-200,
+    "text": $primary-success-600
+  ),
+  "blue": (
+    "background": $primary-default-000,
+    "border": $primary-default-200,
+    "text": $primary-default-600
+  ),
+  "orange": (
+    "background": $primary-warning-000,
+    "border": $primary-warning-200,
+    "text": $primary-warning-600
+  ),
+  "red": (
+    "background": $primary-danger-000,
+    "border": $primary-danger-200,
+    "text": $primary-danger-600
+  ),
+  "light": (
+    "background": $background,
+    "border": $secondary-200,
+    "text": $secondary-900
+  )
+);
 
 // Labels
 // --------------------------------------------------
 
 .label {
+  @extend %lbl2;
+
   display: inline;
-  padding: 3px 7px;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 1;
-  color: $label-color;
+  padding: 4px 8px;
   text-align: center;
+  border-radius: 99px;
   text-shadow: none;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25em;
-
-  &:empty {
-    display: none;
-  }
-
-  .btn & {
-    position: relative;
-    top: -1px;
-  }
-}
-
-a.label {
-  &:hover,
-  &:focus {
-    color: $label-color;
-    text-decoration: none;
-    cursor: pointer;
-  }
 }
 
 .label-uppercase {
@@ -58,22 +53,10 @@ a.label {
 // Colors
 // Contextual variations (linked labels get darker on :hover)
 
-.label-default {
-  @include label-variant($label-default-bg);
-}
-
-.label-green {
-  @include label-variant($label-green-bg);
-}
-
-.label-blue {
-  @include label-variant($label-blue-bg);
-}
-
-.label-orange {
-  @include label-variant($label-orange-bg);
-}
-
-.label-red {
-  @include label-variant($label-red-bg);
+@each $color, $value in $label-colors {
+  .label-#{$color} {
+    background-color: map-get($value, 'background');
+    border: 1px solid map-get($value, 'border');
+    color: map-get($value, 'text');
+  }
 }

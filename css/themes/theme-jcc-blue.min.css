@@ -12,9 +12,9 @@ input:focus,select:focus,textarea:focus{border-color:#00adbb}
 .dropdown .dropdown-menu-item:focus,.dropdown .dropdown-menu-item:hover{background-color:#00adbb;color:#fff}
 .btn,.btn-link,.btn:hover,a.btn{color:#00adbb;border:1px solid #00adbb}
 .btn-inverted,.btn-inverted:active,.btn-inverted:focus,.btn-inverted:hover{color:#fff;border-color:#fff}
-.btn.active,.btn.active:focus,.btn:active,.btn:active:focus{border:1px solid #00adbb}
-.btn:focus{border:1px solid #00adbb;box-shadow:none}
-.btn-primary{background-color:#00adbb;border:1px solid #00adbb;color:#fff}
+.btn-primary,.btn.active,.btn.active:focus,.btn:active,.btn:active:focus,.btn:focus{border:1px solid #00adbb}
+.btn:focus{box-shadow:none}
+.btn-primary{background-color:#00adbb;color:#fff}
 .btn-primary:hover,a.btn-primary,a.btn-primary:hover{color:#fff}
 .btn-primary.active,.btn-primary.active:focus,.btn-primary:active,.btn-primary:active:focus{border:1px solid #00adbb;background-color:#00adbb}
 .btn-primary:hover{border:1px solid #0068a5;background-color:#0068a5}
