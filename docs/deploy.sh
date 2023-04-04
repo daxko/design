@@ -1,4 +1,9 @@
 #!/bin/bash
+# !!!!! DO NOT USE !!!!!
+# This was for the old Travis CI tool that would automate the build 
+# process in the Github pages site. This is no longer used. Please 
+# refer to the deployment powershell script in the root of the project 
+# and run with NPM
 
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
 
