@@ -19,7 +19,7 @@
     }
 
     var $parent = selector && $(selector);
-    return $parent && $parent.length ? $parent : $this.parent();
+    return $parent && $parent.length ? $parent : $this.parents('.dropdown');
   }
 
   function closeMenus(e) {
