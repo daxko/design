@@ -5,8 +5,9 @@
   "author": "Daxko",
   "license": "MIT",
   "scripts": {
-    "deploy": "cd docs && ./deploy.sh",
-    "test": "grunt mocha"
+    "deploy": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command .\\deploy.ps1",
+    "test": "grunt mocha",
+    "clean": "rm -rf docs/build/*"
   },
   "repository": {
     "type": "git",
