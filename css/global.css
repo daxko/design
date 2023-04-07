@@ -3571,7 +3571,7 @@ body:not(.popover-touch) .popover-popper[x-placement='left'] .popover-tooltip[da
 
 .label {
   display: inline;
-  padding: 4px 8px;
+  padding: 1px 7px;
   text-align: center;
   border-radius: 99px;
   text-shadow: none;
