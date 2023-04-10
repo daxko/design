@@ -14,7 +14,7 @@ Move-Item docs/build/* $stageFolder
 Set-Location $stageFolder
 
 # Prepend the basepath to all absolute links for gh-pages
-$files = Get-ChildItem $path -Recurse -Filter ".html"
+$files = Get-ChildItem *.html -Recurse
 foreach($file in $files){
   $filetext = Get-Content $file.FullName -Raw
   $filetextNew = $filetext     -replace '(href=\"?\/|src=\"?\/)([^\/])', '$1design/$2'
