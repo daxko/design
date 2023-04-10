@@ -434,7 +434,7 @@ textarea {
   line-height: 20px !important;
 }
 
-.tooltip:after {
+small, .tooltip:after {
   font-size: 12px;
   font-weight: 274;
   line-height: 16px;
