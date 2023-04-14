@@ -176,7 +176,10 @@ $warnings: (
   "warning-300": $primary-warning-300,
   "warning-400": $primary-warning-400,
   "warning-500": $primary-warning-500,
-  "warning-600": $primary-warning-600
+  "warning-600": $primary-warning-600,
+  "warning-700": $primary-warning-700,
+  "warning-800": $primary-warning-800,
+  "warning-900": $primary-warning-900
 );
 
 $dangers: (
@@ -209,13 +212,13 @@ $secondaries: (
 @each $color, $value in $primaries{
   .#{$color} {
     background-color: $value;
-    @if (str-index($color, "-000") or 
-      str-index($color, "-100") or 
-      str-index($color, "-200") or 
-      str-index($color, "-300") or 
+    @if (str-index($color, "-000") or
+      str-index($color, "-100") or
+      str-index($color, "-200") or
+      str-index($color, "-300") or
       str-index($color, "-400") ){
-        color: $text-dark;
-    }
+      color: $text-dark;
+    } 
     @else{
       color: $text-light;
     }
@@ -225,12 +228,12 @@ $secondaries: (
 @each $color, $value in $successes{
   .#{$color} {
     background-color: $value;
-    @if (str-index($color, "-000") or 
-      str-index($color, "-100") or 
-      str-index($color, "-200") or 
-      str-index($color, "-300") or 
-      str-index($color, "-400") ){
-        color: $text-dark;
+    @if (str-index($color, "-000") or
+        str-index($color, "-100") or
+        str-index($color, "-200") or
+        str-index($color, "-300") or
+        str-index($color, "-400") ){
+      color: $text-dark;
     }
     @else{
       color: $text-light;
@@ -241,12 +244,12 @@ $secondaries: (
 @each $color, $value in $warnings{
   .#{$color} {
     background-color: $value;
-    @if (str-index($color, "-000") or 
-      str-index($color, "-100") or 
-      str-index($color, "-200") or 
-      str-index($color, "-300") or 
-      str-index($color, "-400") ){
-        color: $text-dark;
+    @if (str-index($color, "-000") or
+        str-index($color, "-100") or
+        str-index($color, "-200") or
+        str-index($color, "-300") or
+        str-index($color, "-400") ){
+      color: $text-dark;
     }
     @else{
       color: $text-light;
