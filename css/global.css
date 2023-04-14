@@ -2029,10 +2029,28 @@ svg {
   border: 1px solid #86E196;
 }
 
+.alert.alert-success a {
+  color: #00640D;
+  text-decoration: underline;
+}
+
+.alert.alert-success a:hover {
+  color: #00470D;
+}
+
 .alert.alert-error {
   background-color: #FFEFF0;
   color: #A90B05;
   border: 1px solid #FFB1B0;
+}
+
+.alert.alert-error a {
+  color: #A90B05;
+  text-decoration: underline;
+}
+
+.alert.alert-error a:hover {
+  color: #7C0E0A;
 }
 
 .alert.alert-info {
@@ -2041,10 +2059,28 @@ svg {
   border: 1px solid #9BD2FF;
 }
 
+.alert.alert-info a {
+  color: #0059A2;
+  text-decoration: underline;
+}
+
+.alert.alert-info a:hover {
+  color: #004175;
+}
+
 .alert.alert-warning {
   background-color: #FFF1D2;
   color: #6F4E04;
   border: 1px solid #E8C780;
+}
+
+.alert.alert-warning a {
+  color: #6F4E04;
+  text-decoration: underline;
+}
+
+.alert.alert-warning a:hover {
+  color: #6F4E04;
 }
 
 .btn {
