@@ -3326,6 +3326,21 @@ section > h4 {
   color: #FFFFFF;
 }
 
+.warning-700 {
+  background-color: #513A06;
+  color: #FFFFFF;
+}
+
+.warning-800 {
+  background-color: #342607;
+  color: #FFFFFF;
+}
+
+.warning-900 {
+  background-color: #191306;
+  color: #FFFFFF;
+}
+
 .danger-000 {
   background-color: #FFEFF0;
   color: #0F0F0F;
