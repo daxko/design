@@ -2,21 +2,25 @@ $alert-types: (
   'success': (
     body: $primary-success-000,
     text: $primary-success-600,
+    text_hover: $primary-success-700,
     border: $primary-success-200
   ),
   'error': (
     body: $primary-danger-000,
     text: $primary-danger-600,
+    text_hover: $primary-danger-700,
     border: $primary-danger-200
   ),
   'info': (
     body: $primary-default-000,
     text: $primary-default-600,
+    text_hover: $primary-default-700,
     border: $primary-default-200
   ),
   'warning': (
     body: $primary-warning-000,
     text: $primary-warning-600,
+    text_hover: $primary-warning-700,
     border: $primary-warning-200
   )
 );
@@ -58,5 +62,13 @@ $alert-types: (
     background-color: map-get($value, 'body');
     color: map-get($value, 'text');
     border: 1px solid map-get($value, 'border');
+
+    a {
+      color: map-get($value, "text");
+      text-decoration: underline;
+      &:hover {
+        color: map-get($value, "text_hover");
+      }
+    }
   }
 }
