@@ -1851,6 +1851,10 @@ form .grid [class*=col-] > label textarea,
   content: "\e694";
 }
 
+.icon-gxp:before {
+  content: "\e695";
+}
+
 svg {
   fill: #000;
 }
