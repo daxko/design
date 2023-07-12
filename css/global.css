@@ -912,7 +912,7 @@ input.input-block {
 input:focus,
 select:focus,
 textarea:focus {
-  border: 1px solid #89baeb;
+  border: 1px solid #89baeb !important;
   z-index: 10;
 }
 
