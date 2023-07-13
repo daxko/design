@@ -34,7 +34,6 @@ textarea {
   border-radius: .2em !important;
   padding: 6px 11px !important;
   vertical-align: middle !important;
-  outline: 0;
   position: relative;
   height: auto !important;
   width: 220px;
@@ -44,7 +43,7 @@ textarea {
   }
 
   &.error {
-    border-color: $primary-danger-400;
+    border-color: $primary-danger-400 !important;
   }
 }
 
