@@ -922,7 +922,6 @@ textarea {
   border-radius: .2em !important;
   padding: 6px 11px !important;
   vertical-align: middle !important;
-  outline: 0;
   position: relative;
   height: auto !important;
   width: 220px;
@@ -958,7 +957,7 @@ input[type=time].error,
 input[type=date].error,
 select.error,
 textarea.error {
-  border-color: #F84845;
+  border-color: #F84845 !important;
 }
 
 select {
