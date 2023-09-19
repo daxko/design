@@ -82,6 +82,11 @@ select {
   }
 }
 
+// Don't show the up/down arrow image when it's a multiple select
+select[multiple] {
+  background-image: none;
+}
+
 input.input-large,
 select.input-large {
   font-size: $input-large-font-size;
