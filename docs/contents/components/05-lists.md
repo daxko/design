@@ -19,20 +19,20 @@ You can also use list items in combination with `<a>` elements to create interac
   <li>
     <a href="#" class="list-item">
       List Item
-      <div class="list-icons pull-right tooltip" aria-label="Edit"><span class="icon-pencil"></span></div>
+      <div class="list-icons pull-right tooltip" aria-label="Edit"><i class="fa-regular fa-pen"></i></div>
     </a>
   </li>
   <!-- ... -->
   <li>
     <a href="#" class="list-item">
       List Item
-      <div class="list-icons pull-right tooltip" aria-label="Edit"><span class="icon-pencil"></span></div>
+      <div class="list-icons pull-right tooltip" aria-label="Edit"><i class="fa-regular fa-pen"></i></div>
     </a>
   </li>
   <li>
     <a href="#" class="list-item">
       List Item
-      <div class="list-icons pull-right tooltip" aria-label="Edit"><span class="icon-pencil"></span></div>
+      <div class="list-icons pull-right tooltip" aria-label="Edit"><i class="fa-regular fa-pen"></i></div>
     </a>
   </li>
   <!-- /... -->

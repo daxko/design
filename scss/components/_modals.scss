@@ -11,7 +11,7 @@ $modal-close-hover: $text-dark;
 .modal {
   opacity: 0;
   display: none;
-  border-radius: 3px;
+  border-radius: 4px;
   background-clip: padding-box;
   padding: 1rem;
   border: 1px solid $modal-border-color;
@@ -40,17 +40,15 @@ $modal-close-hover: $text-dark;
 }
 
 .close {
-  cursor: pointer;
-  color: $modal-close-color;
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 400;
 
   &:hover {
     color: $modal-close-hover;
   }
 
   &:before {
-    content: "×";
-    font-size: $typography-font-size + 8px;
-    line-height: 1em;
+    content: "\f00d";
   }
 }
 
@@ -62,7 +60,8 @@ $modal-close-hover: $text-dark;
   margin-left: -1rem;
 }
 
-.modal-header .close {
+.modal-header .close,
+.modal-header button {
   position: absolute;
   top: 0;
   right: 0;

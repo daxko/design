@@ -7,7 +7,7 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 {{#example 'html'}}
 <div class="dropdown">
   <button type="button" id="thingy" class="btn" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -17,7 +17,7 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 </div>
 <div class="dropdown">
   <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -27,7 +27,7 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 </div>
 <div class="dropdown">
   <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -37,7 +37,7 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 </div>
 <div class="dropdown">
   <button type="button" class="btn btn-success" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -47,7 +47,7 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 </div>
 <div class="dropdown">
   <button type="button" class="btn btn-danger" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -57,7 +57,7 @@ You can create a dropdown component by wrapping the trigger and menu within a `.
 </div>
 <div class="dropdown">
   <button type="button" class="btn btn-link" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -74,7 +74,7 @@ By default, dropdown menus are automatically aligned along the left side of its 
 {{#example 'html'}}
 <div class="dropdown">
   <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu right">
     <li><a href="#">Bacon</a></li>
@@ -91,7 +91,7 @@ Need to add some spacing to your menu? You can add a `.divider` class to a `li` 
 {{#example 'html'}}
 <div class="dropdown">
   <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
-    Dropdown <span class="caret"></span>
+    Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -110,7 +110,7 @@ The caret on the drop down menu can be positions on the right as well or on both
 {{#example 'html'}}
 <div class="dropdown">
   <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
-    <span class="caret"></span> Dropdown
+    <span class="caret btn-icon-left"></span> Dropdown
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>
@@ -122,7 +122,7 @@ The caret on the drop down menu can be positions on the right as well or on both
 </div>
 <div class="dropdown">
   <button type="button" class="btn" data-toggle="dropdown" aria-expanded="false">
-    <span class="caret"></span> Dropdown <span class="caret"></span>
+    <span class="caret btn-icon-left"></span> Dropdown <span class="caret btn-icon-right"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">Bacon</a></li>

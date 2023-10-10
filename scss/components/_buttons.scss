@@ -72,7 +72,7 @@ $btn-primary-colors: (
     background: transparent,
     borderColor: transparent,
     border: 1px solid transparent,
-    text: $primary-default-700,
+    text: $primary-default-500,
     hover: $secondary-000,
     active: $secondary-100,
     focus: transparent,
@@ -109,6 +109,13 @@ $btn-primary-colors: (
     width: inherit;
     height: inherit;
     margin: 0;
+  }
+
+  .btn-icon-right {
+    margin-left: 8px;
+  }
+  .btn-icon-left {
+    margin-right: 8px;
   }
 
   &:focus,
@@ -181,6 +188,67 @@ $btn-primary-colors: (
       background-color: map-get($value, 'disabled');
       border-color: map-get($value, 'borderColor');
     }
+  }
+}
+
+// Toggle groups
+.toggle-group {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  vertical-align: middle;
+
+  > input[type=checkbox],
+  > input[type=radio] {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    &:focus + label,
+    &:hover + label,
+    &:active + label {
+      @extend .btn:focus;
+      box-shadow: none;
+      background-color: $primary-default-100 !important;
+      border-color: $primary-default-200 !important;
+    }
+
+    &:checked + label,
+    &:checked + label:focus {
+      @extend .btn.active;
+      box-shadow: none;
+      background-color: $primary-default-000 !important;
+      border-color: $primary-default-200 !important;
+    }
+
+    &:checked:focus + label,
+    &:checked:focus + label:focus  {
+      @extend .btn.active;
+      background-color: $primary-default-000;
+    }
+  }
+
+  .btn ~ .btn,
+  .toggle-group ~ .toggle-group,
+  .btn ~ .toggle-group,
+  .toggle-group ~ .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+  }
+
+  > .btn:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .toggle-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
   }
 }
 
