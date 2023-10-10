@@ -1,5 +1,4 @@
 ## Tooltips
-<!-- TODO: use all reports popover as example. Update all docs and styles based on example and react tooltip -->
 ### React tooltips
 Customized react tooltip based on react-tooltip@4 https://www.npmjs.com/package/react-tooltip
 Make sure to include `react-tooltip.js` in your react_entry_point dependency list.
@@ -56,7 +55,6 @@ export default function app(props){
 Add tooltips to almost any element. Just add a `.tooltip` class along with an `aria-label` attribute containing the tooltip text.
 
 > Tooltips can not be added to elements that have `:before` or `:after` psuedo elements. If you need a tooltip on an element with psuedo-elements, you will need to add the tooltip to the parent instead.
-<!-- TODO: update docs to use icon tooltip -->
 {{#example 'html'}}
 <!-- hide -->
 <p>
