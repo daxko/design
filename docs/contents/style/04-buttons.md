@@ -89,11 +89,76 @@ Button links allow you to place buttons that de-emphasize its button appearance,
 <a href="javascript:void(0)" class="btn-link btn disabled" role="button"><div class="loader"></div></a>
 {{/example}}
 
+### With Icons
+
+`<button>` elements can have icons with their text
+
+{{#example 'html'}}
+<button type="button" class="btn">
+    <i class="btn-icon-left fa-regular fa-circle-question"></i>
+    <span>Normal Button</span>
+</button>
+<button type="button" class="btn btn-mini">
+    <i class="btn-icon-left fa-regular fa-circle-question"></i>
+    Mini Button
+</button>
+<br/>
+<button type="button" class="btn btn-secondary">
+    Secondary Button
+    <i class="btn-icon-right fa-regular fa-triangle-exclamation"></i>
+</button>
+<button type="button" class="btn btn-mini btn-secondary">
+    Mini Secondary Button
+    <i class="btn-icon-right fa-regular fa-triangle-exclamation"></i>
+</button>
+<br/>
+<button type="button" class="btn btn-primary">
+    <i class="btn-icon-left fa-regular fa-circle-info"></i>
+    Primary Button
+    <i class="btn-icon-right fa-regular fa-circle-info"></i>
+</button>
+<button type="button" class="btn btn-mini btn-primary">
+    <i class="btn-icon-left fa-regular fa-circle-info"></i>
+    Mini Primary Button
+    <i class="btn-icon-right fa-regular fa-circle-info"></i>
+</button>
+<br/>
+<button type="button" class="btn btn-success">
+    <i class="btn-icon-left fa-regular fa-circle-check"></i>
+    Success Button
+</button>
+<button type="button" class="btn btn-mini btn-success">
+    <i class="btn-icon-left fa-regular fa-circle-check"></i>
+    Mini Success Button
+</button>
+<br/>
+<button type="button" class="btn btn-danger">
+    Danger Button
+    <i class="btn-icon-right fa-regular fa-circle-xmark"></i>
+</button>
+<button type="button" class="btn btn-mini btn-danger">
+    Mini Danger Button
+    <i class="btn-icon-right fa-regular fa-circle-xmark"></i>
+</button>
+<br/>
+<a href="javascript:void(0)" class="btn btn-link">
+    <i class="btn-icon-left fa-regular fa-circle-exclamation"></i>
+    Button Link
+    <i class="btn-icon-right fa-regular fa-circle-exclamation"></i>
+</a>
+<a href="javascript:void(0)" class="btn btn-mini btn-link">
+    <i class="btn-icon-left fa-regular fa-circle-exclamation"></i>
+    Mini Button Link
+    <i class="btn-icon-right fa-regular fa-circle-exclamation"></i>
+</a>
+{{/example}}
+
 ### Button Groups
 
 Buttons can also be combined into button groups. Wrap them with a `.btn-group` class and your buttons will automatically be displayed with the correct spacing.
 
 {{#example 'html'}}
+
 <div class="btn-group">
   <button class="btn">Button</button>
   <button class="btn">Button</button>
@@ -110,40 +175,21 @@ Buttons can also be combined into button groups. Wrap them with a `.btn-group` c
 Button groups can also use all of the available button colors
 
 {{#example 'html'}}
+
 <div class="btn-group">
-  <button class="btn">Button</button>
-  <button class="btn">Button</button>
-  <button class="btn">Button</button>
+  <button class="btn">First</button>
+  <button class="btn">Second</button>
+  <button class="btn">Third</button>
+  <button class="btn">Fourth</button>
+  <button class="btn">Fifth</button>
 </div>
 <br/>
 <div class="btn-group">
-  <button class="btn btn-secondary">Button</button>
-  <button class="btn btn-secondary">Button</button>
-  <button class="btn btn-secondary">Button</button>
-</div>
-<br/>
-<div class="btn-group">
-  <button class="btn btn-primary">Button</button>
-  <button class="btn btn-primary">Button</button>
-  <button class="btn btn-primary">Button</button>
-</div>
-<br/>
-<div class="btn-group">
-  <button class="btn btn-success">Button</button>
-  <button class="btn btn-success">Button</button>
-  <button class="btn btn-success">Button</button>
-</div>
-<br/>
-<div class="btn-group">
-  <button class="btn btn-danger">Button</button>
-  <button class="btn btn-danger">Button</button>
-  <button class="btn btn-danger">Button</button>
-</div>
-<br/>
-<div class="btn-group">
-  <button class="btn btn-link">Button</button>
-  <button class="btn btn-link">Button</button>
-  <button class="btn btn-link">Button</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-link">Link</button>
+  <button class="btn btn-success">Success</button>
+  <button class="btn btn-danger">Danger</button>
 </div>
 {{/example}}
 
@@ -155,4 +201,3 @@ You can make any button take up the full width of its container by adding a `.bt
 <button class="btn btn-block">Button</button>
 <button class="btn btn-mini btn-block">Mini Button</button>
 {{/example}}
- 
