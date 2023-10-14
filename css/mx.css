@@ -2304,15 +2304,17 @@ form .grid [class*=col-] > label textarea,
 
 .react-tooltip {
   border-radius: 4px !important;
-  padding: 8px 12px;
+  padding: 8px 12px !important;
   opacity: 1 !important;
-  background-color: #424242 !important;
+  background: #424242 !important;
   border: 1px solid #757575 !important;
+  color: #FFFFFF !important;
 }
 
 .react-tooltip.light {
-  background-color: #F5F5F5 !important;
+  background: #F5F5F5 !important;
   border: 1px solid #D9D9D9 !important;
+  color: #0F0F0F !important;
 }
 
 .tooltip {
