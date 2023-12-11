@@ -5,16 +5,14 @@ $tooltip-tail-size: 5px;
 // React Tooltips
 .react-tooltip {
   border-radius: 4px !important;
-  padding: 8px 12px !important;
+  padding: 8px 12px;
   opacity: 1 !important;
-  background: $secondary-700 !important;
+  background-color: $secondary-700 !important;
   border: 1px solid $secondary-500 !important;
-  color: $text-light !important;
 
   &.light {
-    background: $secondary-000 !important;
+    background-color: $secondary-000 !important;
     border: 1px solid $secondary-200 !important;
-    color: $text-dark !important;
   }
 }
 

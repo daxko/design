@@ -38,10 +38,10 @@ export default function app(props){
   <!-- ... -->
   return (
     <!-- ... -->
-      <i className="fa-regular fa-info-circle" data-tip data-for="tooltip-info" />
-      <ReactTooltip id="tooltip-info" className="react-tooltip light" effect="solid">
+      <i className="fa-regular fa-info-circle" data-tip data-for="popover-info" />
+      <ReactTooltip id="popover-info" className="react-tooltip light" effect="solid">
         <div className="tooltip-title">
-          <h3>Tooltip Title Area</h3>
+            <h3>Tooltip Title Area</h3>
         </div>
         <p>Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
       </ReactTooltip>
