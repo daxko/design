@@ -36,7 +36,7 @@ textarea {
   vertical-align: middle !important;
   position: relative;
   height: auto !important;
-  width: 160px;
+  width: 220px;
   &:disabled {
     background: $input-disabled-background-color;
     cursor: not-allowed;   
@@ -90,7 +90,6 @@ select[multiple] {
 input.input-large,
 select.input-large {
   font-size: $input-large-font-size;
-  width: 290px;
 }
 
 input.input-mini,
@@ -98,7 +97,6 @@ select.input-mini {
   @extend %bdy1;
   
   padding: 3px 7px;
-  width: 70px;
 }
 
 select.input-mini {
@@ -138,7 +136,6 @@ form label,
   @extend %lbl1;
 
   color: $typography-color;
-  margin-right: 16px;
 }
 
 fieldset {
@@ -234,21 +231,7 @@ form .grid,
   input[type=date], 
   select,
   textarea{
-    width: 160px;
-  }
-
-  input.input-large,
-  select.input-large {
-    font-size: $input-large-font-size;
-    width: 290px;
-  }
-  
-  input.input-mini,
-  select.input-mini {
-    @extend %bdy1;
-    
-    padding: 3px 7px;
-    width: 70px;
+    width: auto;
   }
 
   .control-group {
@@ -256,7 +239,7 @@ form .grid,
     > label {
       text-align: right;
       width: 9em;
-      margin-right: 16px;
+      margin-right: 1em;
       float: left;
       padding: 5px 0;
       vertical-align: middle;

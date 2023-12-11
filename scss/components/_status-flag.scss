@@ -1,20 +1,8 @@
 $theme-colors: (
-  'active': ( 
-    background-color: $primary-success-000,
-    border: 1px solid $primary-success-200
-    ),
-  'on-hold': ( 
-    background-color: $primary-warning-000,
-    border: 1px solid $primary-warning-200
-    ),
-  'prospect': ( 
-    background-color: $primary-default-000,
-    border: 1px solid $primary-default-200
-    ),
-  'danger': ( 
-    background-color: $primary-danger-000,
-    border: 1px solid $primary-danger-200
-    ),
+  'active': $primary-success-200,
+  'on-hold': $primary-warning-200,
+  'prospect': $primary-default-200,
+  'danger': $primary-danger-200
 );
 
 .status-flag {
@@ -26,9 +14,8 @@ $theme-colors: (
   margin-right: 4px;
 }
 
-@each $color, $value in $theme-colors {
-  .status-flag--#{$color} {
-    background-color: map-get($value, 'background-color');
-    border: map-get($value, 'border');
+@each $value, $color in $theme-colors {
+  .status-flag--#{$value} {
+    background-color: #{$color};  
   }
 }

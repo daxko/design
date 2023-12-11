@@ -1,5 +1,19 @@
 ## Forms
 
+### Example Form
+
+By default, forms don't have a standard layout. You will need to use one of the [below](#horizontal-forms) layout patterns to organize your forms.
+
+{{#example 'html'}}
+<form>
+  <label>Name</label>
+  <input type="text"/>
+  <label>Phone Number</label>
+  <input type="tel"/>
+  <button type="submit" class="btn">Submit</button>
+</form>
+{{/example}}
+
 ### Form Styling
 
 Form styling can be applied using the `<form>` tag or by using the `<div class="form">` class instead. 
@@ -67,8 +81,6 @@ Like [buttons](#button-default), there are two sizes of inputs. Just add `.input
 {{#example 'html'}}
 <input type="text" placeholder="text input"/>
 <input type="text" placeholder=".input-mini" class="input-mini" />
-<input type="text" placeholder=".input-large" class="input-large" />
-<br/>
 <select>
   <option>Apple</option>
   <option>Banana</option>
@@ -79,15 +91,6 @@ Like [buttons](#button-default), there are two sizes of inputs. Just add `.input
   <!-- /... -->
 </select>
 <select class="input-mini">
-  <option>Apple</option>
-  <option>Banana</option>
-  <!-- ... -->
-  <option>Orange</option>
-  <option>Peach</option>
-  <option>Pear</option>
-  <!-- /... -->
-</select>
-<select class="input-large">
   <option>Apple</option>
   <option>Banana</option>
   <!-- ... -->
@@ -190,7 +193,7 @@ Layout your forms horizontally with `.form-horizontal`. You can group form label
     <div class="control-group">
       <label for="name">Name</label>
       <div class="controls">
-        <input id="name" type="text" class="input-large" />
+        <input id="name" type="text" />
       </div>
     </div>
     <!-- ... -->
@@ -320,7 +323,7 @@ For more complex layouts, we recommend you use the [grid](#grid). Input widths w
           <input type="text" />
         </label>
       </div>
-      <div class="col-3">
+      <div class="col-2">
         <label>
           State
           <select>
@@ -383,11 +386,9 @@ For more complex layouts, we recommend you use the [grid](#grid). Input widths w
       <div class="col-1">
         <label>
           Zip
-          <input type="text" class="input-mini"/>
+          <input type="text"/>
         </label>
       </div>
-    </div>
-    <div class="grid">
       <div class="col-6">
         <label>
           <input type="checkbox"/> Default Address
