@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .tabs {
   border-bottom: 1px solid #F0F0F0;
 }
@@ -28,7 +29,7 @@
   left: 0;
   width: 100%;
   display: block;
-  border-bottom: 3px solid #0070CB;
+  border-bottom: 3px solid #9BD2FF;
   -ms-transform: scaleY(0);
       transform: scaleY(0);
   transition: transform ease-in-out .15s;
@@ -59,7 +60,7 @@
   right: 0;
   top: 0;
   left: auto;
-  border-right: 5px solid #0070CB;
+  border-right: 5px solid #9BD2FF;
 }
 
 .tabs-vertical ul, .tabs-vertical.left ul {
@@ -80,7 +81,7 @@
   top: 0;
   right: 0;
   border-right: none;
-  border-left: 3px solid #0070CB;
+  border-left: 3px solid #9BD2FF;
 }
 
 .tabs-vertical.right ul {
@@ -102,7 +103,7 @@
 
 .tabs-vertical a:before {
   border-bottom: none;
-  border-right: 3px solid #0070CB;
+  border-right: 3px solid #9BD2FF;
   -ms-transform: scaleX(0);
       transform: scaleX(0);
   -ms-transform-origin: right top;
@@ -523,8 +524,7 @@ th {
 
 html,
 body, input.input-mini,
-select.input-mini, .form-horizontal input.input-mini,
-.form-horizontal select.input-mini, .dropdown-menu, .dropdown-menu a,
+select.input-mini, .dropdown-menu, .dropdown-menu a,
 .dropdown-menu .dropdown-menu-item {
   font-size: 14px;
   font-weight: 400;
@@ -924,7 +924,7 @@ textarea {
   vertical-align: middle !important;
   position: relative;
   height: auto !important;
-  width: 160px;
+  width: 220px;
 }
 
 input[type=text]:disabled,
@@ -1001,13 +1001,11 @@ select[multiple] {
 input.input-large,
 select.input-large {
   font-size: 18px;
-  width: 290px;
 }
 
 input.input-mini,
 select.input-mini {
   padding: 3px 7px;
-  width: 70px;
 }
 
 select.input-mini {
@@ -1041,7 +1039,6 @@ textarea:focus {
 form label,
 .form label {
   color: #0F0F0F;
-  margin-right: 16px;
 }
 
 fieldset {
@@ -1138,25 +1135,13 @@ form .grid [class*=col-] > label textarea,
 .form-horizontal input[type=date],
 .form-horizontal select,
 .form-horizontal textarea {
-  width: 160px;
-}
-
-.form-horizontal input.input-large,
-.form-horizontal select.input-large {
-  font-size: 18px;
-  width: 290px;
-}
-
-.form-horizontal input.input-mini,
-.form-horizontal select.input-mini {
-  padding: 3px 7px;
-  width: 70px;
+  width: auto;
 }
 
 .form-horizontal .control-group > label {
   text-align: right;
   width: 9em;
-  margin-right: 16px;
+  margin-right: 1em;
   float: left;
   padding: 5px 0;
   vertical-align: middle;
@@ -1498,20 +1483,7 @@ form .grid [class*=col-] > label textarea,
   margin: 0;
 }
 
-.btn .btn-icon-right {
-  margin-left: 8px;
-}
-
-.btn .btn-icon-left {
-  margin-right: 8px;
-}
-
-.btn:focus, .toggle-group > input[type=checkbox]:focus + label,
-.toggle-group > input[type=checkbox]:hover + label,
-.toggle-group > input[type=checkbox]:active + label,
-.toggle-group > input[type=radio]:focus + label,
-.toggle-group > input[type=radio]:hover + label,
-.toggle-group > input[type=radio]:active + label, .btn-group > input[type=checkbox]:focus + label,
+.btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label, .btn.focus {
   box-shadow: 0 0 0 2px #89baeb;
   z-index: 10;
@@ -1521,31 +1493,11 @@ form .grid [class*=col-] > label textarea,
   text-decoration: none;
 }
 
-.btn.active, .toggle-group > input[type=checkbox]:checked + label,
-.toggle-group > input[type=checkbox]:checked + label:focus,
-.toggle-group > input[type=radio]:checked + label,
-.toggle-group > input[type=radio]:checked + label:focus, .toggle-group > input[type=checkbox]:checked:focus + label,
-.toggle-group > input[type=checkbox]:checked:focus + label:focus,
-.toggle-group > input[type=radio]:checked:focus + label,
-.toggle-group > input[type=radio]:checked:focus + label:focus, .btn-group > input[type=checkbox]:checked + label,
+.btn.active, .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label, .btn-group > input[type=checkbox]:checked:focus + label,
-.btn-group > input[type=radio]:checked:focus + label, .btn:active, .btn.active:focus, .toggle-group > input[type=checkbox]:focus + label.active,
-.toggle-group > input[type=checkbox]:hover + label.active,
-.toggle-group > input[type=checkbox]:active + label.active,
-.toggle-group > input[type=radio]:focus + label.active,
-.toggle-group > input[type=radio]:hover + label.active,
-.toggle-group > input[type=radio]:active + label.active,
-.toggle-group > input[type=checkbox]:checked + label:focus,
-.toggle-group > input[type=radio]:checked + label:focus,
-.toggle-group > input[type=checkbox]:checked:focus + label:focus,
-.toggle-group > input[type=radio]:checked:focus + label:focus, .btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:checked:focus + label, .btn:active, .btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
 .btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
-.btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .toggle-group > input[type=checkbox]:focus + label:active,
-.toggle-group > input[type=checkbox]:hover + label:active,
-.toggle-group > input[type=checkbox]:active + label:active,
-.toggle-group > input[type=radio]:focus + label:active,
-.toggle-group > input[type=radio]:hover + label:active,
-.toggle-group > input[type=radio]:active + label:active, .btn-group > input[type=checkbox]:focus + label:active,
+.btn-group > input[type=radio]:checked + label:focus, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
 .btn-group > input[type=radio]:focus + label:active {
   background-image: none;
   box-shadow: none;
@@ -1576,30 +1528,10 @@ form .grid [class*=col-] > label textarea,
   color: #0F0F0F;
 }
 
-.btn:active, .btn.active, .toggle-group > input[type=checkbox]:checked + label,
-.toggle-group > input[type=checkbox]:checked + label:focus,
-.toggle-group > input[type=radio]:checked + label,
-.toggle-group > input[type=radio]:checked + label:focus, .toggle-group > input[type=checkbox]:checked:focus + label,
-.toggle-group > input[type=checkbox]:checked:focus + label:focus,
-.toggle-group > input[type=radio]:checked:focus + label,
-.toggle-group > input[type=radio]:checked:focus + label:focus, .btn-group > input[type=checkbox]:checked + label,
+.btn:active, .btn.active, .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label, .btn-group > input[type=checkbox]:checked:focus + label,
-.btn-group > input[type=radio]:checked:focus + label, .btn:active:focus, .toggle-group > input[type=checkbox]:focus + label:active,
-.toggle-group > input[type=checkbox]:hover + label:active,
-.toggle-group > input[type=checkbox]:active + label:active,
-.toggle-group > input[type=radio]:focus + label:active,
-.toggle-group > input[type=radio]:hover + label:active,
-.toggle-group > input[type=radio]:active + label:active, .btn-group > input[type=checkbox]:focus + label:active,
-.btn-group > input[type=radio]:focus + label:active, .btn.active:focus, .toggle-group > input[type=checkbox]:focus + label.active,
-.toggle-group > input[type=checkbox]:hover + label.active,
-.toggle-group > input[type=checkbox]:active + label.active,
-.toggle-group > input[type=radio]:focus + label.active,
-.toggle-group > input[type=radio]:hover + label.active,
-.toggle-group > input[type=radio]:active + label.active,
-.toggle-group > input[type=checkbox]:checked + label:focus,
-.toggle-group > input[type=radio]:checked + label:focus,
-.toggle-group > input[type=checkbox]:checked:focus + label:focus,
-.toggle-group > input[type=radio]:checked:focus + label:focus, .btn-group > input[type=checkbox]:focus + label.active,
+.btn-group > input[type=radio]:checked:focus + label, .btn:active:focus, .btn-group > input[type=checkbox]:focus + label:active,
+.btn-group > input[type=radio]:focus + label:active, .btn.active:focus, .btn-group > input[type=checkbox]:focus + label.active,
 .btn-group > input[type=radio]:focus + label.active, .btn-group > input[type=checkbox]:checked + label:focus,
 .btn-group > input[type=radio]:checked + label:focus {
   background-color: #D9D9D9;
@@ -1607,12 +1539,7 @@ form .grid [class*=col-] > label textarea,
   color: #0F0F0F;
 }
 
-.btn:focus, .toggle-group > input[type=checkbox]:focus + label,
-.toggle-group > input[type=checkbox]:hover + label,
-.toggle-group > input[type=checkbox]:active + label,
-.toggle-group > input[type=radio]:focus + label,
-.toggle-group > input[type=radio]:hover + label,
-.toggle-group > input[type=radio]:active + label, .btn-group > input[type=checkbox]:focus + label,
+.btn:focus, .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label {
   border-color: #B8B8B8;
   color: #0F0F0F;
@@ -1749,7 +1676,7 @@ form .grid [class*=col-] > label textarea,
 }
 
 .btn-link {
-  color: #0070CB;
+  color: #004175;
   background-color: transparent;
   border: 1px solid transparent;
   padding: 8px;
@@ -1758,88 +1685,24 @@ form .grid [class*=col-] > label textarea,
 .btn-link:hover {
   background-color: #F5F5F5;
   border-color: transparent;
-  color: #0070CB;
+  color: #004175;
 }
 
 .btn-link:active, .btn-link.active, .btn-link:active:focus, .btn-link.active:focus {
   background-color: #F0F0F0;
   border-color: transparent;
-  color: #0070CB;
+  color: #004175;
 }
 
 .btn-link:focus {
   border-color: transparent;
-  color: #0070CB;
+  color: #004175;
 }
 
 .btn-link:disabled, .btn-link.disabled, .btn-link:disabled:hover, .btn-link.disabled:hover {
   color: #B8B8B8;
   background-color: transparent;
   border-color: transparent;
-}
-
-.toggle-group {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  vertical-align: middle;
-}
-
-.toggle-group > input[type=checkbox],
-.toggle-group > input[type=radio] {
-  opacity: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-
-.toggle-group > input[type=checkbox]:focus + label,
-.toggle-group > input[type=checkbox]:hover + label,
-.toggle-group > input[type=checkbox]:active + label,
-.toggle-group > input[type=radio]:focus + label,
-.toggle-group > input[type=radio]:hover + label,
-.toggle-group > input[type=radio]:active + label {
-  box-shadow: none;
-  background-color: #CBE7FF !important;
-  border-color: #9BD2FF !important;
-}
-
-.toggle-group > input[type=checkbox]:checked + label,
-.toggle-group > input[type=checkbox]:checked + label:focus,
-.toggle-group > input[type=radio]:checked + label,
-.toggle-group > input[type=radio]:checked + label:focus {
-  box-shadow: none;
-  background-color: #E9F6FF !important;
-  border-color: #9BD2FF !important;
-}
-
-.toggle-group > input[type=checkbox]:checked:focus + label,
-.toggle-group > input[type=checkbox]:checked:focus + label:focus,
-.toggle-group > input[type=radio]:checked:focus + label,
-.toggle-group > input[type=radio]:checked:focus + label:focus {
-  background-color: #E9F6FF;
-}
-
-.toggle-group .btn ~ .btn,
-.toggle-group .toggle-group ~ .toggle-group,
-.toggle-group .btn ~ .toggle-group,
-.toggle-group .toggle-group ~ .btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-left: -1px;
-}
-
-.toggle-group > .btn:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.toggle-group .toggle-group:not(:first-child):not(:last-child) > .btn {
-  border-radius: 0;
 }
 
 .btn-group {
@@ -1895,7 +1758,7 @@ form .grid [class*=col-] > label textarea,
 }
 
 .btn-group .btn-link {
-  color: #0070CB;
+  color: #004175;
 }
 
 .btn-group .btn-link:not(:first-child) {
@@ -1932,10 +1795,6 @@ form .grid [class*=col-] > label textarea,
 .btn-group > .btn:hover,
 .btn-group > .btn:active,
 .btn-group > .btn:focus,
-.toggle-group.btn-group > input[type=checkbox]:hover + label,
-.toggle-group.btn-group > input[type=checkbox]:active + label,
-.toggle-group.btn-group > input[type=radio]:hover + label,
-.toggle-group.btn-group > input[type=radio]:active + label,
 .btn-group > input[type=checkbox]:focus + label,
 .btn-group > input[type=radio]:focus + label {
   z-index: 2;
@@ -2101,7 +1960,6 @@ form .grid [class*=col-] > label textarea,
 
 .list .list-icons {
   color: #B8B8B8;
-  margin-right: 4px;
 }
 
 .list .list-icons:hover {
@@ -2182,7 +2040,7 @@ form .grid [class*=col-] > label textarea,
 .modal {
   opacity: 0;
   display: none;
-  border-radius: 4px;
+  border-radius: 3px;
   background-clip: padding-box;
   padding: 1rem;
   border: 1px solid #D9D9D9;
@@ -2212,8 +2070,8 @@ form .grid [class*=col-] > label textarea,
 }
 
 .close {
-  font-family: 'Font Awesome 6 Pro';
-  font-weight: 400;
+  cursor: pointer;
+  color: #8C8C8C;
 }
 
 .close:hover {
@@ -2221,7 +2079,9 @@ form .grid [class*=col-] > label textarea,
 }
 
 .close:before {
-  content: "\f00d";
+  content: "×";
+  font-size: 22px;
+  line-height: 1em;
 }
 
 .modal-header,
@@ -2232,8 +2092,7 @@ form .grid [class*=col-] > label textarea,
   margin-left: -1rem;
 }
 
-.modal-header .close,
-.modal-header button {
+.modal-header .close {
   position: absolute;
   top: 0;
   right: 0;
@@ -2248,8 +2107,7 @@ form .grid [class*=col-] > label textarea,
   margin: 0;
 }
 
-.modal-header .close:hover,
-.modal-header button:hover {
+.modal-header .close:hover {
   color: #0F0F0F;
 }
 
@@ -2372,8 +2230,8 @@ form .grid [class*=col-] > label textarea,
 }
 
 .toggle-switch input:checked ~ .switch {
-  background-color: #008011;
-  border: 1px solid #008011;
+  background-color: #4DC860;
+  border: 1px solid #22A135;
 }
 
 .toggle-switch input:checked ~ .switch:after {
@@ -2421,19 +2279,6 @@ form .grid [class*=col-] > label textarea,
 .toggle-switch.toggle-switch-small input:checked ~ .switch:after {
   -ms-transform: translateX(24px);
       transform: translateX(24px);
-}
-
-.react-tooltip {
-  border-radius: 4px !important;
-  padding: 8px 12px;
-  opacity: 1 !important;
-  background-color: #424242 !important;
-  border: 1px solid #757575 !important;
-}
-
-.react-tooltip.light {
-  background-color: #F5F5F5 !important;
-  border: 1px solid #D9D9D9 !important;
 }
 
 .tooltip {
@@ -2556,23 +2401,19 @@ form .grid [class*=col-] > label textarea,
 }
 
 .status-flag--active {
-  background-color: #DCFBE0;
-  border: 1px solid #86E196;
+  background-color: #86E196;
 }
 
 .status-flag--on-hold {
-  background-color: #FFF1D2;
-  border: 1px solid #E8C780;
+  background-color: #E8C780;
 }
 
 .status-flag--prospect {
-  background-color: #E9F6FF;
-  border: 1px solid #9BD2FF;
+  background-color: #9BD2FF;
 }
 
 .status-flag--danger {
-  background-color: #FFEFF0;
-  border: 1px solid #FFB1B0;
+  background-color: #FFB1B0;
 }
 
 .icon {
@@ -2598,13 +2439,7 @@ form .grid [class*=col-] > label textarea,
   background-color: #F0F0F0;
 }
 
-.btn.active, .toggle-group > input[type=checkbox]:checked + label,
-.toggle-group > input[type=checkbox]:checked + label:focus,
-.toggle-group > input[type=radio]:checked + label,
-.toggle-group > input[type=radio]:checked + label:focus, .toggle-group > input[type=checkbox]:checked:focus + label,
-.toggle-group > input[type=checkbox]:checked:focus + label:focus,
-.toggle-group > input[type=radio]:checked:focus + label,
-.toggle-group > input[type=radio]:checked:focus + label:focus, .btn-group > input[type=checkbox]:checked + label,
+.btn.active, .btn-group > input[type=checkbox]:checked + label,
 .btn-group > input[type=radio]:checked + label, .btn-group > input[type=checkbox]:checked:focus + label,
 .btn-group > input[type=radio]:checked:focus + label,
 .btn:active {
